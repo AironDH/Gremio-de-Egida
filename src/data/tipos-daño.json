@@ -1,0 +1,57 @@
+{
+  "categoria": "Todos los Tipos de Daño (D&D 2024)",
+  "total": 13,
+  "tipos": [{
+        "nombre": "Contundente",
+        "ejemplos": "Objetos contundentes, constricción, caídas[reference:2]"
+      },
+      {
+        "nombre": "Perforante",
+        "ejemplos": "Colmillos, objetos que perforan[reference:3]"
+      },
+      {
+        "nombre": "Cortante",
+        "ejemplos": "Espadas, hachas[reference:4]"
+      },
+      {
+        "nombre": "Ácido",
+        "ejemplos": "Líquidos corrosivos, enzimas digestivas[reference:5]"
+      },
+      {
+        "nombre": "Frío",
+        "ejemplos": "Agua helada, ráfagas gélidas[reference:6]"
+      },
+      {
+        "nombre": "Fuego",
+        "ejemplos": "Llamas, calor abrasador[reference:7]"
+      },
+      {
+        "nombre": "Relámpago",
+        "ejemplos": "Electricidad[reference:8]"
+      },
+      {
+        "nombre": "Trueno",
+        "ejemplos": "Energía sónica o de impacto sónic[reference:9]"
+      },
+      {
+        "nombre": "Fuerza",
+        "ejemplos": "Energía mágica pura[reference:10]"
+      },
+      {
+        "nombre": "Necrótico",
+        "ejemplos": "Energía que drena la vida[reference:11]"
+      },
+      {
+        "nombre": "Psíquico",
+        "ejemplos": "Energía que desgarra la mente[reference:12]"
+      },
+      {
+        "nombre": "Radiante",
+        "ejemplos": "Energía sagrada, radiación abrasadora[reference:13]"
+      },
+      {
+        "nombre": "Venenoso",
+        "ejemplos": "Gas tóxico, veneno[reference:14]"
+      }
+    ]
+}

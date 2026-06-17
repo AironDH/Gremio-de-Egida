@@ -1,0 +1,110 @@
+{
+  "clases": [
+    {
+      "nombre": "Bárbaro",
+      "dado_golpe": "d12",
+      "competencia_salvacion": ["Fuerza", "Constitución"],
+      "tipo_conjurador": "ninguno",
+      "subclases": [
+        {
+          "nombre": "Senda del Berserker",
+          "niveles": {
+            "3": ["Ira implacable"],
+            "6": ["Ataque temerario"],
+            "10": ["Presencia intimidante"],
+            "14": ["Ira inagotable"]
+          }
+        }
+      ],
+      "rasgos": {
+        "1": ["Ira", "Defensa sin armadura"],
+        "2": ["Peligro instintivo", "Ataque salvaje"],
+        "3": ["Senda de la ira"],
+        "4": ["Mejora de característica"],
+        "5": ["Ataque extra"],
+        "7": ["Instinto feral"],
+        "9": ["Crítico brutal"],
+        "11": ["Ira indómita"],
+        "13": ["Crítico brutal mejorado"],
+        "15": ["Ira persistente"],
+        "17": ["Crítico brutal superior"],
+        "18": ["Poder indomable"],
+        "20": ["Campeón primordial"]
+      }
+    },
+    {
+      "nombre": "Mago",
+      "dado_golpe": "d6",
+      "competencia_salvacion": ["Inteligencia", "Sabiduría"],
+      "tipo_conjurador": "completo",
+      "subclases": [
+        {
+          "nombre": "Escuela de Evocación",
+          "niveles": {
+            "2": ["Saber de evocación"],
+            "6": ["Evocador potente"],
+            "10": ["Evocación potenciada"],
+            "14": ["Sobrecarga"]
+          }
+        }
+      ],
+      "rasgos": {
+        "1": ["Lanzamiento de conjuros", "Recuperación arcana"],
+        "2": ["Tradición arcana"],
+        "4": ["Mejora de característica"],
+        "8": ["Mejora de característica"],
+        "12": ["Mejora de característica"],
+        "16": ["Mejora de característica"],
+        "19": ["Mejora de característica"]
+      }
+    }
+  ],
+  
+  "especies": [
+    {
+      "nombre": "Elfo",
+      "razas": [
+        {
+          "nombre": "Alto Elfo",
+          "bonificadores": { "destreza": 2, "inteligencia": 1 },
+          "rasgos": ["Visión en la oscuridad", "Sentidos agudizados", "Linaje feérico", "Truco de alto elfo"]
+        },
+        {
+          "nombre": "Elfo de los Bosques",
+          "bonificadores": { "destreza": 2, "sabiduria": 1 },
+          "rasgos": ["Visión en la oscuridad", "Sentidos agudizados", "Linaje feérico", "Pie ligero"]
+        }
+      ]
+    }
+  ],
+  
+  "trasfondos": [
+    {
+      "nombre": "Sabio",
+      "competencias_habilidad": ["Conocimiento arcano", "Historia"],
+      "rasgos": ["Especialidad", "Investigador"]
+    },
+    {
+      "nombre": "Soldado",
+      "competencias_habilidad": ["Atletismo", "Intimidación"],
+      "rasgos": ["Rango militar"]
+    }
+  ],
+  
+  "dotes": [
+    {
+      "nombre": "Iniciado en Magia",
+      "descripcion": "Elige una clase de lanzador de conjuros. Aprendes dos trucos y un hechizo de nivel 1 de esa clase.",
+      "requisito": null,
+      "efectos": {},
+      "hechizos": ["truco_fuego", "mano_maga", "proyectil_magico"]
+    },
+    {
+      "nombre": "Centinela",
+      "descripcion": "Cuando golpeas a una criatura con un ataque de oportunidad...",
+      "requisito": null,
+      "efectos": {},
+      "hechizos": []
+    }
+  ]
+}
