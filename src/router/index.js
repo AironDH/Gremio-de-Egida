@@ -17,7 +17,7 @@ const routes = [
     name: 'edit-character',
     // La vista de edición se construirá siguiendo la misma lógica de creación,
     // reutilizando el componente CharacterForm.
-    component: () => import('../views/CharacterCreateView.vue'), 
+    component: () => import('../views/CharacterEditView.vue'), 
     props: true
   }
 ]

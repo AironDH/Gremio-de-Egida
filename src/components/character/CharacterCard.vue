@@ -3,13 +3,13 @@
     <template #header>
       <div class="character-card__header">
         <h3>{{ personaje.nombre }}</h3>
-        <span class="character-card__level">Niv. {{ personaje.nivel }}</span>
+        <span class="character-card__level">Niv. {{ nivelTotal }}</span>
       </div>
     </template>
 
     <div class="character-card__info">
       <p><strong>Especie:</strong> {{ personaje.especie }}</p>
-      <p><strong>Clase:</strong> {{ personaje.clase }}</p>
+      <p><strong>Clases:</strong> {{ textoClases }}</p>
       <div class="character-card__hp">
         <div class="hp-bar-container">
           <div class="hp-bar" :style="{ width: porcentajeVida + '%' }"></div>
@@ -20,12 +20,8 @@
 
     <template #footer>
       <div class="character-card__actions">
-        <BaseButton variant="secondary" @click="$emit('editar', personaje.id)">
-          Editar
-        </BaseButton>
-        <BaseButton variant="danger" @click="$emit('eliminar', personaje.id)">
-          Eliminar
-        </BaseButton>
+        <BaseButton variant="secondary" @click="$emit('editar', personaje.id)">Editar</BaseButton>
+        <BaseButton variant="danger" @click="$emit('eliminar', personaje.id)">Eliminar</BaseButton>
       </div>
     </template>
   </BaseCard>
@@ -44,6 +40,18 @@ const props = defineProps({
 })
 
 defineEmits(['editar', 'eliminar'])
+
+// Cálculo del nivel sumando todas las clases
+const nivelTotal = computed(() => {
+  if (!props.personaje.clases) return 0
+  return props.personaje.clases.reduce((suma, c) => suma + (c.nivel || 0), 0)
+})
+
+// Concatenación de nombres para visualización (ej. "Mago / Pícaro")
+const textoClases = computed(() => {
+  if (!props.personaje.clases || props.personaje.clases.length === 0) return 'Sin clase'
+  return props.personaje.clases.map(c => c.nombre).join(' / ')
+})
 
 const porcentajeVida = computed(() => {
   if (!props.personaje.puntosVidaMax) return 0

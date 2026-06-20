@@ -47,11 +47,14 @@ const emit = defineEmits(['guardar', 'cancelar'])
 const esEdicion = ref(false)
 const formData = ref({
   nombre: '',
-  clase: '',
+  clases: [
+    { nombre: '', nivel: 1, subclase: '' } // <-- Estructura multiclase 
+  ],
   especie: '',
-  nivel: 1,
+  raza: '',
   puntosVidaMax: 10,
   puntosVidaActuales: 10,
+  pgTemp: 0,
   caracteristicasBase: { 
     fuerza: 10, 
     destreza: 10, 

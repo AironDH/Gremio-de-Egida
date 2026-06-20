@@ -11,7 +11,7 @@
       <div v-for="(item, index) in equipo" :key="item.id" class="equipment-item">
         <input class="item-name" type="text" v-model="item.nombre" placeholder="Nombre del objeto" required />
         <input class="item-qty" type="number" min="1" v-model.number="item.cantidad" placeholder="Cant." title="Cantidad" required />
-        <input class="item-weight" type="number" min="0" step="0.1" v-model.number="item.peso" placeholder="Peso" title="Peso" />
+        <input class="item-weight" type="number" min="0" step="0.01" v-model.number="item.peso" placeholder="Peso en kilos" title="Peso en Kg" />
         <input class="item-notes" type="text" v-model="item.notas" placeholder="Notas (opcional)" />
         <BaseButton variant="danger" type="button" @click="eliminarItem(index)">X</BaseButton>
       </div>

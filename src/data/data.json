@@ -62,17 +62,232 @@
   
   "especies": [
     {
+      "nombre": "Aasimar",
+      "razas": [
+        {
+          "nombre": "Aasimar",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Resistencia al daño Necrótico y Radiante",
+            "Sanación celestial (cura con d4)",
+            "Revelación celestial (3 opciones: alas, resplandor o sudario)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Dracónido (Dragonborn)",
+      "razas": [
+        {
+          "nombre": "Dracónido (Cromático)",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Resistencia al daño según el tipo de dragón",
+            "Arma de aliento (cono de 4,5 m o línea de 9 m, 1d10 de daño)",
+            "Vuelo draconiano (nivel 5, alas espectrales)"
+          ]
+        },
+        {
+          "nombre": "Dracónido (Metálico)",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Resistencia al daño según el tipo de dragón",
+            "Arma de aliento (cono de 4,5 m o línea de 9 m, 1d10 de daño)",
+            "Vuelo draconiano (nivel 5, alas espectrales)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Enano",
+      "razas": [
+        {
+          "nombre": "Enano",
+          "rasgos": [
+            "Visión en la oscuridad 120 pies",
+            "Resistencia enana (aumento de Puntos de Golpe)",
+            "Sentido de la piedra (Tremorsense sobre piedra)",
+            "Velocidad 30 pies"
+          ]
+        }
+      ]
+    },
+    {
       "nombre": "Elfo",
       "razas": [
         {
-          "nombre": "Alto Elfo",
-          "bonificadores": { "destreza": 2, "inteligencia": 1 },
-          "rasgos": ["Visión en la oscuridad", "Sentidos agudizados", "Linaje feérico", "Truco de alto elfo"]
+          "nombre": "Elfo Oscuro (Drow)",
+          "rasgos": [
+            "Visión en la oscuridad 120 pies",
+            "Ancestros feéricos (ventaja contra Hechizado)",
+            "Trance (4h de descanso)",
+            "Linaje élfico: *Dancing Lights* (nivel 1), *Faerie Fire* (nivel 3), *Darkness* (nivel 5)"
+          ]
         },
         {
-          "nombre": "Elfo de los Bosques",
-          "bonificadores": { "destreza": 2, "sabiduria": 1 },
-          "rasgos": ["Visión en la oscuridad", "Sentidos agudizados", "Linaje feérico", "Pie ligero"]
+          "nombre": "Alto Elfo",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Ancestros feéricos (ventaja contra Hechizado)",
+            "Trance (4h de descanso)",
+            "Linaje élfico: *Prestidigitation* (nivel 1), *Detect Magic* (nivel 3), *Misty Step* (nivel 5)"
+          ]
+        },
+        {
+          "nombre": "Elfo del Bosque",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Ancestros feéricos (ventaja contra Hechizado)",
+            "Trance (4h de descanso)",
+            "Linaje élfico: *Druidcraft* y velocidad 35 pies (nivel 1), *Longstrider* (nivel 3), *Pass without Trace* (nivel 5)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Gnomo",
+      "razas": [
+        {
+          "nombre": "Gnomo del Bosque",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Linaje gnómico: *Minor Illusion* y *Speak with Animals* siempre preparado",
+            "Astucia gnómica (ventaja en salvaciones de Inteligencia, Sabiduría y Carisma contra magia)"
+          ]
+        },
+        {
+          "nombre": "Gnomo de las Rocas",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Linaje gnómico: *Mending* y *Prestidigitation*",
+            "Astucia gnómica (ventaja en salvaciones de Inteligencia, Sabiduría y Carisma contra magia)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Goliat",
+      "razas": [
+        {
+          "nombre": "Goliat (Nube)",
+          "rasgos": [
+            "Ascendencia gigante: *Cloud's Jaunt* (teletransportarse 30 pies como acción bonus)",
+            "Forma grande (nivel 5, aumentar de tamaño)",
+            "Constitución robusta (ventaja para escapar de agarres)"
+          ]
+        },
+        {
+          "nombre": "Goliat (Fuego)",
+          "rasgos": [
+            "Ascendencia gigante: *Fire's Burn* (1d10 de daño de fuego extra al golpear)",
+            "Forma grande (nivel 5, aumentar de tamaño)",
+            "Constitución robusta (ventaja para escapar de agarres)"
+          ]
+        },
+        {
+          "nombre": "Goliat (Hielo)",
+          "rasgos": [
+            "Ascendencia gigante: *Frost's Chill* (1d6 de frío y reduce velocidad 3 m)",
+            "Forma grande (nivel 5, aumentar de tamaño)",
+            "Constitución robusta (ventaja para escapar de agarres)"
+          ]
+        },
+        {
+          "nombre": "Goliat (Colina)",
+          "rasgos": [
+            "Ascendencia gigante: *Hill's Tumble* (derribar al golpear)",
+            "Forma grande (nivel 5, aumentar de tamaño)",
+            "Constitución robusta (ventaja para escapar de agarres)"
+          ]
+        },
+        {
+          "nombre": "Goliat (Piedra)",
+          "rasgos": [
+            "Ascendencia gigante: *Stone's Endurance* (reducir daño 1d12 + Con)",
+            "Forma grande (nivel 5, aumentar de tamaño)",
+            "Constitución robusta (ventaja para escapar de agarres)"
+          ]
+        },
+        {
+          "nombre": "Goliat (Tormenta)",
+          "rasgos": [
+            "Ascendencia gigante: *Storm's Thunder* (1d8 de trueno al recibir daño)",
+            "Forma grande (nivel 5, aumentar de tamaño)",
+            "Constitución robusta (ventaja para escapar de agarres)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Mediano",
+      "razas": [
+        {
+          "nombre": "Mediano",
+          "rasgos": [
+            "Suerte (reroll 1 en d20)",
+            "Valiente (ventaja contra Miedo)",
+            "Agilidad mediana (moverse por espacios de criaturas más grandes)",
+            "Sigilo natural (ocultarse tras criaturas más grandes)",
+            "Velocidad 30 pies"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Humano",
+      "razas": [
+        {
+          "nombre": "Humano",
+          "rasgos": [
+            "Versátil (dote de origen adicional)",
+            "Hábil (competencia en una habilidad)",
+            "Recurso (Inspiración heroica al terminar un descanso largo)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Orco",
+      "razas": [
+        {
+          "nombre": "Orco",
+          "rasgos": [
+            "Visión en la oscuridad 120 pies",
+            "Adrenalina (acción bonus para Dash y PG temporales)",
+            "Resistencia implacable (caer a 0 PG y quedar a 1)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Tiefling",
+      "razas": [
+        {
+          "nombre": "Tiefling (Abisal)",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Legado infernal: *Poison Spray* (nivel 1), *Ray of Sickness* (nivel 3), *Stinking Cloud* (nivel 5)",
+            "Resistencia al daño de veneno",
+            "Presencia sobrenatural (*Thaumaturgy*)"
+          ]
+        },
+        {
+          "nombre": "Tiefling (Ctónico)",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Legado infernal: *Chill Touch* (nivel 1), *False Life* (nivel 3), *Ray of Enfeeblement* (nivel 5)",
+            "Resistencia al daño necrótico",
+            "Presencia sobrenatural (*Thaumaturgy*)"
+          ]
+        },
+        {
+          "nombre": "Tiefling (Infernal)",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Legado infernal: *Fire Bolt* (nivel 1), *Hellish Rebuke* (nivel 3), *Darkness* (nivel 5)",
+            "Resistencia al daño de fuego",
+            "Presencia sobrenatural (*Thaumaturgy*)"
+          ]
         }
       ]
     }
@@ -80,14 +295,100 @@
   
   "trasfondos": [
     {
+      "nombre": "Acólito",
+      "bonificador_caracteristica": ["Inteligencia", "Sabiduría", "Carisma"],
+      "competencias_habilidad": ["Perspicacia", "Religión"],
+      "dote": "Iniciado en Magia (Clérigo)"
+    },
+    {
+      "nombre": "Artesano",
+      "bonificador_caracteristica": ["Fuerza", "Destreza", "Inteligencia"],
+      "competencias_habilidad": ["Investigación", "Persuasión"],
+      "dote": "Artesano"
+    },
+    {
+      "nombre": "Charlatán",
+      "bonificador_caracteristica": ["Destreza", "Constitución", "Carisma"],
+      "competencias_habilidad": ["Engaño", "Juego de Manos"],
+      "dote": "Hábil"
+    },
+    {
+      "nombre": "Criminal",
+      "bonificador_caracteristica": ["Destreza", "Constitución", "Inteligencia"],
+      "competencias_habilidad": ["Juego de Manos", "Sigilo"],
+      "dote": "Alerta"
+    },
+    {
+      "nombre": "Animador",
+      "bonificador_caracteristica": ["Fuerza", "Destreza", "Carisma"],
+      "competencias_habilidad": ["Acrobacias", "Interpretación"],
+      "dote": "Músico"
+    },
+    {
+      "nombre": "Granjero",
+      "bonificador_caracteristica": ["Fuerza", "Constitución", "Sabiduría"],
+      "competencias_habilidad": ["Trato con Animales", "Naturaleza"],
+      "dote": "Robusto"
+    },
+    {
+      "nombre": "Guardia",
+      "bonificador_caracteristica": ["Fuerza", "Inteligencia", "Sabiduría"],
+      "competencias_habilidad": ["Atletismo", "Percepción"],
+      "dote": "Alerta"
+    },
+    {
+      "nombre": "Guía",
+      "bonificador_caracteristica": ["Destreza", "Constitución", "Sabiduría"],
+      "competencias_habilidad": ["Sigilo", "Supervivencia"],
+      "dote": "Iniciado en Magia (Druida)"
+    },
+    {
+      "nombre": "Ermitaño",
+      "bonificador_caracteristica": ["Constitución", "Sabiduría", "Carisma"],
+      "competencias_habilidad": ["Medicina", "Religión"],
+      "dote": "Sanador"
+    },
+    {
+      "nombre": "Mercader",
+      "bonificador_caracteristica": ["Constitución", "Inteligencia", "Carisma"],
+      "competencias_habilidad": ["Trato con Animales", "Persuasión"],
+      "dote": "Afortunado"
+    },
+    {
+      "nombre": "Noble",
+      "bonificador_caracteristica": ["Fuerza", "Inteligencia", "Carisma"],
+      "competencias_habilidad": ["Historia", "Persuasión"],
+      "dote": "Hábil"
+    },
+    {
       "nombre": "Sabio",
-      "competencias_habilidad": ["Conocimiento arcano", "Historia"],
-      "rasgos": ["Especialidad", "Investigador"]
+      "bonificador_caracteristica": ["Constitución", "Inteligencia", "Sabiduría"],
+      "competencias_habilidad": ["Arcano", "Historia"],
+      "dote": "Iniciado en Magia (Mago)"
+    },
+    {
+      "nombre": "Marinero",
+      "bonificador_caracteristica": ["Fuerza", "Destreza", "Sabiduría"],
+      "competencias_habilidad": ["Acrobacias", "Percepción"],
+      "dote": "Peleón de Taberna"
+    },
+    {
+      "nombre": "Escriba",
+      "bonificador_caracteristica": ["Destreza", "Inteligencia", "Sabiduría"],
+      "competencias_habilidad": ["Investigación", "Percepción"],
+      "dote": "Hábil"
     },
     {
       "nombre": "Soldado",
+      "bonificador_caracteristica": ["Fuerza", "Destreza", "Constitución"],
       "competencias_habilidad": ["Atletismo", "Intimidación"],
-      "rasgos": ["Rango militar"]
+      "dote": "Atacante Salvaje"
+    },
+    {
+      "nombre": "Caminante",
+      "bonificador_caracteristica": ["Destreza", "Sabiduría", "Carisma"],
+      "competencias_habilidad": ["Perspicacia", "Sigilo"],
+      "dote": "Afortunado"
     }
   ],
   

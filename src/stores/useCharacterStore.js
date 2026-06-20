@@ -16,6 +16,15 @@ export const useCharacterStore = defineStore('character', {
       this.personajes = this.personajes.filter(p => p.id !== id)
       this.guardarEnLocalStorage()
     },
+
+    // Acción para actualizar un personaje existente
+    actualizarPersonaje(personajeActualizado) {
+      const index = this.personajes.findIndex(p => p.id === personajeActualizado.id)
+      if (index !== -1) {
+        this.personajes[index] = personajeActualizado
+        this.guardarEnLocalStorage()
+      }
+    },
     
     importarPersonajes(archivo) {
       return new Promise((resolve, reject) => {
@@ -23,21 +32,34 @@ export const useCharacterStore = defineStore('character', {
         lector.onload = (e) => {
           try {
             const importados = JSON.parse(e.target.result)
-            // Asegura compatibilidad tanto si es un array como si es un único objeto
             const lista = Array.isArray(importados) ? importados : [importados]
             
             lista.forEach(p => {
-              this.personajes.push({
+              // 1. Migración de formato antiguo a nuevo si es necesario
+              const clasesArray = p.clases || [
+                {
+                  nombre: p.clase || 'Guerrero',
+                  nivel: p.nivel || 1,
+                  subclase: p.subclase || ''
+                }
+              ];
+
+              const nuevoPersonaje = {
+                ...p,
                 id: p.id || uuidv4(),
                 nombre: p.nombre || 'Héroe sin nombre',
-                nivel: p.nivel || 1,
-                clase: p.clase || 'Guerrero',
                 especie: p.especie || 'Humano',
                 puntosVidaMax: p.puntosVidaMax || 10,
                 puntosVidaActuales: p.puntosVidaActuales || 10,
-                // Mantiene el resto de propiedades si vienen de un archivo extendido
-                ...p 
-              })
+                clases: clasesArray // Asignamos el arreglo multiclase
+              }
+
+              // 2. Limpieza de propiedades legadas para que no se exporten
+              delete nuevoPersonaje.clase
+              delete nuevoPersonaje.nivel
+              delete nuevoPersonaje.subclase
+
+              this.personajes.push(nuevoPersonaje)
             })
             
             this.guardarEnLocalStorage()

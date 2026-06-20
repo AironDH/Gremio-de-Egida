@@ -71,7 +71,11 @@ const clasesDisponibles = computed(() => {
 const personajesFiltrados = computed(() => {
   return characterStore.personajes.filter(p => {
     const coincideTexto = p.nombre.toLowerCase().includes(filtroTexto.value.toLowerCase())
-    const coincideClase = !filtroClase.value || p.clase === filtroClase.value
+    
+    // Evalúa si la clase seleccionada en el filtro existe dentro del arreglo de clases del personaje
+    const coincideClase = !filtroClase.value || 
+      (p.clases && p.clases.some(c => c.nombre === filtroClase.value))
+      
     return coincideTexto && coincideClase
   })
 })
