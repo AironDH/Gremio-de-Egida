@@ -15,7 +15,9 @@
       <div class="form-group full-width class-container">
         <div class="class-header">
           <label>Clases y Niveles</label>
-          <span class="total-level">Nivel Total: {{ nivelTotal }}</span>
+          <div class="badges-group">
+            <span class="total-level">Nivel Total: {{ nivelTotal }}</span>
+          </div>
         </div>
         
         <div v-for="(claseItem, index) in datos.clases" :key="index" class="class-row">
@@ -104,6 +106,7 @@
 import { computed } from 'vue'
 import datosMundo from '../../data/data.json'
 import BaseButton from '../common/BaseButton.vue'
+import { calcularNivelTotal, calcularPB } from '../../utils/calculations.js'
 
 const props = defineProps({
   modelValue: {
@@ -138,10 +141,12 @@ const eliminarClase = (index) => {
 
 // Cálculo del Nivel Total 
 const nivelTotal = computed(() => {
-  if (!datos.value.clases) return 0
-  return datos.value.clases.reduce((total, claseItem) => {
-    return total + (typeof claseItem.nivel === 'number' ? claseItem.nivel : 0)
-  }, 0)
+  return calcularNivelTotal(datos.value.clases)
+})
+
+// Calculamos reactivamente el Bonificador de Competencia
+const bonificadorCompetencia = computed(() => {
+  return calcularPB(nivelTotal.value)
 })
 
 // === Lógica de Especies ===
@@ -174,14 +179,28 @@ const alCambiarEspecie = () => {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
-.total-level {
+.badges-group {
+  display: flex;
+  gap: 0.5rem;
+}
+.total-level, .pb-badge {
   font-weight: bold;
-  color: var(--color-primary, #7b1fa2);
-  background: white;
+  font-size: 0.9rem;
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
+}
+.total-level {
+  color: var(--color-primary, #7b1fa2);
+  background: white;
   border: 1px solid var(--color-primary-light, #ae52d4);
+}
+.pb-badge {
+  color: white;
+  background: var(--color-success, #ae52d4);
+  border: 1px solid var(--color-success, #4caf50);
 }
 .class-row {
   display: flex;

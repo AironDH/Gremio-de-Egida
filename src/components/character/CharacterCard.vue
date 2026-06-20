@@ -31,6 +31,7 @@
 import { computed } from 'vue'
 import BaseCard from '../common/BaseCard.vue'
 import BaseButton from '../common/BaseButton.vue'
+import { calcularNivelTotal } from '../../utils/calculations.js'
 
 const props = defineProps({
   personaje: {
@@ -41,10 +42,8 @@ const props = defineProps({
 
 defineEmits(['editar', 'eliminar'])
 
-// Cálculo del nivel sumando todas las clases
 const nivelTotal = computed(() => {
-  if (!props.personaje.clases) return 0
-  return props.personaje.clases.reduce((suma, c) => suma + (c.nivel || 0), 0)
+  return calcularNivelTotal(props.personaje.clases)
 })
 
 // Concatenación de nombres para visualización (ej. "Mago / Pícaro")
