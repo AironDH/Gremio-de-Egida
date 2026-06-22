@@ -20,38 +20,50 @@
           </div>
         </div>
         
-        <div v-for="(claseItem, index) in datos.clases" :key="index" class="class-row">
-          <select v-model="claseItem.nombre" required>
-            <option disabled value="">Selecciona una clase</option>
-            <option v-for="c in listadoClases" :key="c.nombre" :value="c.nombre">
-              {{ c.nombre }}
-            </option>
-          </select>
+        <div v-for="(clase, index) in datos.clases" :key="index" class="class-row">
+          
+          <div class="form-group">
+            <label>Clase</label>
+            <select v-model="clase.nombre" @change="alCambiarClase(index)">
+              <option value="">Selecciona...</option>
+              <option v-for="c in listadoClases" :key="c.nombre" :value="c.nombre">
+                {{ c.nombre }}
+              </option>
+            </select>
+          </div>
 
-          <input 
-            type="number" 
-            v-model.number="claseItem.nivel" 
-            min="1" 
-            max="20" 
-            title="Nivel"
-            required 
-          />
+          <div class="form-group level-control-group">
+            <label>Nivel</label>
+            <div class="level-display">
+              <span class="level-text">{{ clase.nivel }}</span>
+              <BaseButton 
+                variant="primary" 
+                type="button" 
+                @click="subirNivel(index)" 
+                :disabled="clase.nivel >= 20 || !clase.nombre"
+                class="btn-levelup"
+              >
+                +
+              </BaseButton>
+            </div>
+          </div>
 
-          <select v-model="claseItem.subclase">
-            <option value="">Sin subclase</option>
-            <option 
-              v-for="sub in obtenerSubclases(claseItem.nombre)" 
-              :key="sub.nombre" 
-              :value="sub.nombre">
-              {{ sub.nombre }}
-            </option>
-          </select>
-
+          <div class="form-group" v-if="obtenerSubclases(clase.nombre).length > 0">
+            <label>Subclase</label>
+            <select v-model="clase.subclase">
+              <option value="">Selecciona...</option>
+              <option v-for="sub in obtenerSubclases(clase.nombre)" :key="sub.nombre" :value="sub.nombre">
+                {{ sub.nombre }}
+              </option>
+            </select>
+          </div>
+          
           <BaseButton 
             v-if="datos.clases.length > 1" 
             variant="danger" 
             type="button" 
-            @click="eliminarClase(index)"
+            @click="eliminarClase(index)" 
+            class="btn-delete"
           >
             X
           </BaseButton>
@@ -72,7 +84,7 @@
         </select>
       </div>
 
-      <div class="form-group" v-if="razasDisponibles.length > 0">
+      <div class="form-group">
         <label for="raza">Linaje / Raza</label>
         <select id="raza" v-model="datos.raza" required>
           <option disabled value="">Selecciona un linaje</option>
@@ -137,6 +149,16 @@ const agregarClase = () => {
 
 const eliminarClase = (index) => {
   datos.value.clases.splice(index, 1)
+}
+
+const subirNivel = (index) => {
+  const claseActual = datos.value.clases[index]
+  
+  // Aseguramos que sea un número entero antes de sumar
+  let nivelActual = parseInt(claseActual.nivel) || 1
+  
+  claseActual.nivel = nivelActual + 1
+  
 }
 
 // Cálculo del Nivel Total 
@@ -208,15 +230,36 @@ const alCambiarEspecie = () => {
   margin-bottom: 0.75rem;
   align-items: center;
 }
-.class-row select:first-child { flex: 2; }
-.class-row input { width: 60px; text-align: center; }
-.class-row select:nth-child(3) { flex: 2; }
+/* Hacemos que los contenedores de los selectores crezcan para llenar el espacio */
+.class-row > .form-group {
+  flex: 1; 
+}
+
+/* El control de nivel solo toma el espacio que necesita */
+.class-row > .level-control-group {
+  flex: 0 0 auto;
+}
+
+/* Aseguramos que los selectores ocupen el 100% de su contenedor elástico */
+.class-row select {
+  width: 100%;
+}
+
+/* El botón de eliminar (si existe) se mantiene con tamaño fijo */
+.class-row > .btn-delete {
+  flex: 0 0 auto;
+  align-self: flex-end; /* Lo alinea con los inputs */
+  margin-bottom: 2px; /* Ajuste visual ligero */
+}
 
 @media (max-width: 640px) {
   .class-row {
     flex-wrap: wrap;
   }
-  .class-row select:first-child, .class-row select:nth-child(3) { flex: 1 1 100%; }
+  /* En móviles, forzamos a que todos los grupos ocupen el 100% del ancho */
+  .class-row > .form-group { 
+    flex: 1 1 100%; 
+  }
 }
 .character-section {
   padding: 1rem;
@@ -249,6 +292,32 @@ const alCambiarEspecie = () => {
 .form-group input, .form-group select {
   padding: 0.5rem;
   border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.level-control-group {
+  display: flex;
+  flex-direction: column;
+}
+.level-display {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-background, #f5f0e8);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  height: 38px; /* Para que coincida con la altura de los selects */
+}
+.level-text {
+  font-weight: bold;
+  font-size: 1.1rem;
+  min-width: 20px;
+  text-align: center;
+}
+.btn-levelup {
+  padding: 0.1rem 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1;
   border-radius: 4px;
 }
 </style>
