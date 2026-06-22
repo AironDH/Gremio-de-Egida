@@ -181,7 +181,16 @@ const razasDisponibles = computed(() => {
 })
 
 const alCambiarEspecie = () => {
+  // 1. Limpiamos cualquier selección previa de raza
   datos.value.raza = ''
+  
+  // 2. Revisamos cuántas razas tiene la especie recién seleccionada
+  const razas = razasDisponibles.value
+  
+  // 3. Si solo hay una opción disponible, se selecciona automáticamente
+  if (razas.length === 1) {
+    datos.value.raza = razas[0].nombre
+  }
 }
 </script>
 
