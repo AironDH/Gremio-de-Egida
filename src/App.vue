@@ -7,13 +7,15 @@
 <style>
 /* Estilos globales básicos que complementan el CSS del PRD */
 body {
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
   font-family: var(--font-family, 'Arial', sans-serif);
   background-color: var(--color-background, #f5f0e8);
   color: var(--color-text, #212121);
 }
 
 .app-container {
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
 }
 </style>

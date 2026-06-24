@@ -6,31 +6,171 @@
       "competencia_salvacion": ["Fuerza", "Constitución"],
       "tipo_conjurador": "ninguno",
       "subclases": [
-        {
-          "nombre": "Senda del Berserker",
-          "niveles": {
-            "3": ["Ira implacable"],
-            "6": ["Ataque temerario"],
-            "10": ["Presencia intimidante"],
-            "14": ["Ira inagotable"]
-          }
-        }
+        { "nombre": "Senda del Berserker (2024)", "tipo_conjurador": "ninguno", "niveles": { "3": ["Frenesí"], "6": ["Ira sin mente"], "10": ["Presencia intimidante"], "14": ["Represalia"] } },
+        { "nombre": "Senda del Corazón Salvaje (2024)", "tipo_conjurador": "ninguno", "niveles": { "3": ["Habitante de la naturaleza", "Aspecto animal"], "6": ["Poder de la naturaleza"], "10": ["Cazador de la naturaleza"], "14": ["Ira de la naturaleza"] } },
+        { "nombre": "Senda del Árbol del Mundo (2024)", "tipo_conjurador": "ninguno", "niveles": { "3": ["Ramas vitales"], "6": ["Caminos de las raíces"], "10": ["Zarcillos del árbol"], "14": ["Viaje por las raíces"] } },
+        { "nombre": "Senda de la Magia Salvaje (2024)", "tipo_conjurador": "ninguno", "niveles": { "3": ["Conciencia mágica", "Oleada salvaje"], "6": ["Magia de infusión"], "10": ["Oleada inestable"], "14": ["Oleada controlada"] } },
+        { "nombre": "Senda de la Bestia (Tasha)", "tipo_conjurador": "ninguno", "niveles": { "3": ["Forma de la bestia"], "6": ["Alma de la bestia"], "10": ["Ira infecciosa"], "14": ["Llamado de la caza"] } },
+        { "nombre": "Senda del Guerrero Psiónico (Tasha)", "tipo_conjurador": "ninguno", "niveles": { "3": ["Poder psiónico", "Ira telequinética"], "6": ["Escudo mental"], "10": ["Salto telequinético"], "14": ["Baluarte psíquico"] } },
+        { "nombre": "Senda del fanático (2024)", "tipo_conjurador": "ninguno", "niveles": {"3": ["Furia divina", "Guerrero de los dioses"],"6": ["Foco fanático"],"10": ["Presencia ferviente"],"14": ["Furia de los dioses"] } }
       ],
-      "rasgos": {
-        "1": ["Ira", "Defensa sin armadura"],
-        "2": ["Peligro instintivo", "Ataque salvaje"],
-        "3": ["Senda de la ira"],
-        "4": ["Mejora de característica"],
-        "5": ["Ataque extra"],
-        "7": ["Instinto feral"],
-        "9": ["Crítico brutal"],
-        "11": ["Ira indómita"],
-        "13": ["Crítico brutal mejorado"],
-        "15": ["Ira persistente"],
-        "17": ["Crítico brutal superior"],
-        "18": ["Poder indomable"],
-        "20": ["Campeón primordial"]
-      }
+      "rasgos": { "1": ["Ira", "Defensa sin armadura"], "2": ["Ataque temerario", "Sentido del peligro"], "3": ["Subclase de Bárbaro", "Primal Knowledge"], "4": ["Mejora de característica"], "5": ["Ataque extra", "Movimiento rápido"], "7": ["Feral Pounce"], "9": ["Golpe brutal"], "11": ["Ira implacable"], "13": ["Golpe brutal mejorado"], "15": ["Ira persistente"], "17": ["Indomable"], "18": ["Poder indomable"], "19": ["Mejora de característica"], "20": ["Campeón primordial"] }
+    },
+    {
+      "nombre": "Bardo",
+      "dado_golpe": "d8",
+      "competencia_salvacion": ["Destreza", "Carisma"],
+      "tipo_conjurador": "completo",
+      "subclases": [
+        { "nombre": "Colegio del Conocimiento (2024)", "niveles": { "3": ["Palabras cortantes", "Competencias adicionales"], "6": ["Secretos mágicos adicionales"], "14": ["Habilidad entre las normas"] } },
+        { "nombre": "Colegio del Valor (2024)", "niveles": { "3": ["Competencias de combate", "Inspiración de combate"], "6": ["Ataque extra"], "14": ["Magia de batalla"] } },
+        { "nombre": "Colegio del Glamour (2024)", "niveles": { "3": ["Manto de inspiración", "Actuación cautivadora"], "6": ["Manto de majestad"], "14": ["Majestat inquebrantable"] } },
+        { "nombre": "Colegio de la Elocuencia (Tasha)", "niveles": { "3": ["Llamado persuasivo", "Palabras de plata"], "6": ["Inspiración infalible"], "14": ["Inspiración infecciosa"] } },
+        { "nombre": "Colegio de la Creación (Tasha)", "niveles": { "3": ["Mote de potencial", "Performance de creación"], "6": ["Animar objeto animado"], "14": ["Crecimiento creativo"] } },
+        { "nombre": "Colegio de la Danza (2024)", "niveles": { "3": ["Danza descalza", "Inspiración deslumbrante"], "6": ["Movimiento tándem"], "14": ["Danza de la evasión"] } }
+      ],
+      "rasgos": { "1": ["Lanzamiento de conjuros", "Inspiración bárdica"], "2": ["Polifacético", "Canción de descanso"], "3": ["Subclase de Bardo", "Pericia"], "4": ["Mejora de característica"], "5": ["Inspiración fontana"], "7": ["Contraconjuro bárdico"], "8": ["Mejora de característica"], "10": ["Secretos mágicos", "Pericia"], "12": ["Mejora de característica"], "16": ["Mejora de característica"], "18": ["Inspiración superior"], "19": ["Mejora de característica"], "20": ["Palabras de poder"] }
+    },
+    {
+      "nombre": "Clérigo",
+      "dado_golpe": "d8",
+      "competencia_salvacion": ["Sabiduría", "Carisma"],
+      "tipo_conjurador": "completo",
+      "subclases": [
+        { "nombre": "Dominio de la Vida (2024)", "niveles": { "3": ["Discípulo de la vida", "Conjuros de dominio"], "6": ["Curación bendita"], "17": ["Curación suprema"] } },
+        { "nombre": "Dominio de la Luz (2024)", "niveles": { "3": ["Destello de luz", "Conjuros de dominio"], "6": ["Destello mejorado"], "17": ["Corona de luz"] } },
+        { "nombre": "Dominio del Engaño (2024)", "niveles": { "3": ["Duplicidad ilusoria", "Conjuros de dominio"], "6": ["Capa de sombras"], "17": ["Duplicidad mejorada"] } },
+        { "nombre": "Dominio de la Guerra (2024)", "niveles": { "3": ["Sacerdote de guerra", "Conjuros de dominio"], "6": ["Guía guiada"], "17": ["Avatar de la guerra"] } },
+        { "nombre": "Dominio del Orden (Tasha)", "niveles": { "1": ["Voz de la autoridad"], "6": ["Embozo de orden"], "17": ["Ira de la ley"] } },
+        { "nombre": "Dominio de la Paz (Tasha)", "niveles": { "1": ["Vínculo emparentado"], "6": ["Bálsamo de paz"], "17": ["Vínculo expansivo"] } },
+        { "nombre": "Dominio del Crepúsculo (Tasha)", "niveles": { "1": ["Ojos de la noche"], "6": ["Pasos del crepúsculo"], "17": ["Sudario crepuscular"] } }
+      ],
+      "rasgos": { "1": ["Lanzamiento de conjuros", "Orden sagrado"], "2": ["Canalizar divinidad"], "3": ["Subclase de Clérigo"], "4": ["Mejora de característica"], "5": ["Destruir zombis"], "8": ["Golpe bendito"], "10": ["Intervención divina"], "12": ["Mejora de característica"], "16": ["Mejora de característica"], "19": ["Mejora de característica"], "20": ["Intervención divina verdadera"] }
+    },
+    {
+      "nombre": "Dibujante",
+      "dado_golpe": "d8",
+      "competencia_salvacion": ["Destreza", "Carisma"],
+      "tipo_conjurador": "completo",
+      "subclases": [
+        { "nombre": "Estilo Creador", "niveles": { "3": ["Partícula de potencial", "Obra de la creación"], "6": ["Dibujo animado"], "14": ["Cénit creativo"] } },
+        { "nombre": "Estilo Arquitectónico", "niveles": { "3": ["Trazo estructural"], "6": ["Plataforma de tinta"], "14": ["Geometría Suprema"] } },
+        { "nombre": "Estilo Retratista", "niveles": { "3": ["Retrato vivo","Disfraz de tinta"]}, "6":["Retrato cautivador"], "14":["Captura de escencia"]}
+      ],
+      "rasgos": { "1": ["Inspiración artística", "Lanzamiento de conjuros"], "2": ["Pinceladas de poder", "Pericia"], "3": ["Subclase de dibujante"], "4": ["Mejora de característica"], "5": ["Fuente de inspiración"], "7": ["Runa de Contrahechizo"], "8": ["Mejora de característica"], "9": ["Pericia"], "10": ["Simbología Arcana Universal"], "12": ["Mejora de Característica"], "16": ["Mejora de Característica"], "18": ["Inspiración Maestra"], "19": ["Don épico"], "20": ["Glifos de la Creación"] }
+    },
+    {
+      "nombre": "Druida",
+      "dado_golpe": "d8",
+      "competencia_salvacion": ["Inteligencia", "Sabiduría"],
+      "tipo_conjurador": "completo",
+      "subclases": [
+        { "nombre": "Círculo de la Tierra (2024)", "niveles": { "3": ["Círculo de conjuros", "Recuperación natural"], "6": ["Zancada de la tierra"], "14": ["Santuario de la naturaleza"] } },
+        { "nombre": "Círculo de la Luna (2024)", "niveles": { "3": ["Forma salvaje de combate"], "6": ["Golpes lunares"], "14": ["Forma milenaria"] } },
+        { "nombre": "Círculo de las Espinas (2024)", "niveles": { "3": ["Espinas del círculo"], "6": ["Crecimiento espinoso"], "14": ["Voz del bosque"] } },
+        { "nombre": "Círculo de las Estrellas (Tasha)", "niveles": { "2": ["Mapa estelar", "Forma estrellada"], "6": ["Presagio cósmico"], "10": ["Constelación centelleante"], "14": ["Llamarada pura"] } },
+        { "nombre": "Círculo de los Sueños (2024 / Tasha)", "niveles": { "3": ["Bálsamo de la corte del verano"], "6": ["Hearth of Moonlight and Shadow"], "14": ["Caminos de ensueño"] } },
+        { "nombre": "Círculo del Fuego Salvaje (Tasha)", "niveles": { "2": ["Espíritu de fuego salvaje"], "6": ["Lazo mejorado"], "10": ["Crecimiento cauterizador"], "14": ["Fénix llameante"] } }
+      ],
+      "rasgos": { "1": ["Lanzamiento de conjuros", "Druídico"], "2": ["Forma salvaje", "Compañero salvaje"], "3": ["Subclase de Druida"], "4": ["Mejora de característica"], "5": ["Golpes elementales"], "8": ["Mejora de característica"], "18": ["Conjuros bestiales"], "19": ["Mejora de característica"], "20": ["Archidruida"] }
+    },
+    {
+      "nombre": "Guerrero",
+      "dado_golpe": "d10",
+      "competencia_salvacion": ["Fuerza", "Constitución"],
+      "tipo_conjurador": "ninguno",
+      "subclases": [
+        { "nombre": "Campeón (2024)", "tipo_conjurador": "ninguno", "niveles": { "3": ["Crítico mejorado"], "6": ["Atleta notable"], "10": ["Estilo de combate adicional"], "14": ["Superviviente"] } },
+        { "nombre": "Maestro de Batalla (2024)", "tipo_conjurador": "ninguno", "niveles": { "3": ["Superioridad de combate", "Estudiante de la guerra"], "6": ["Conoce a tu enemigo"], "10": ["Superioridad mejorada"], "14": ["Implacable"] } },
+        { "nombre": "Caballero Arcano (2024)", "tipo_conjurador": "tercio", "niveles": { "3": ["Lanzamiento de conjuros", "Vínculo con el arma"], "6": ["Magia de guerra"], "10": ["Embestida mística"], "14": ["Magia de guerra mejorada"] } },
+        { "nombre": "Guerrero Psiónico (Tasha)", "tipo_conjurador": "ninguno", "niveles": { "3": ["Poder psiónico"], "6": ["Escudo telequinético"], "10": ["Salto de la mente"], "14": ["Baluarte mental"] } },
+        { "nombre": "Caballero Rúnico (Tasha)", "tipo_conjurador": "ninguno", "niveles": { "3": ["Magia rúnica", "Gigante de la forja"], "6": ["Escudo rúnico"], "10": ["Gran estatura"], "14": ["Juggernaut rúnico"] } }
+      ],
+      "rasgos": { "1": ["Estilo de combate", "Recuperación de fuerzas"], "2": ["Oleada de acción"], "3": ["Subclase de Guerrero", "Maestría en armas"], "4": ["Mejora de característica"], "5": ["Ataque extra"], "6": ["Mejora de característica"], "9": ["Indomable"], "11": ["Ataque extra (2)"], "13": ["Uso táctico"], "14": ["Mejora de característica"], "17": ["Oleada de acción (2)", "Indomable (2)"], "19": ["Mejora de característica"], "20": ["Ataque extra (3)"] }
+    },
+    {
+      "nombre": "Monje",
+      "dado_golpe": "d8",
+      "competencia_salvacion": ["Fuerza", "Destreza"],
+      "tipo_conjurador": "ninguno",
+      "subclases": [
+        { "nombre": "Camino de la Mano Abierta (2024)", "tipo_conjurador": "ninguno", "niveles": { "3": ["Técnica de la mano abierta"], "6": ["Plenitud corporal"], "11": ["Tranquilidad"], "17": ["Palma temblorosa"] } },
+        { "nombre": "Camino de la Sombra (2024)", "tipo_conjurador": "ninguno", "niveles": { "3": ["Artes de la sombra"], "6": ["Paso de la sombra"], "11": ["Ataque de la sombra"], "17": ["Oportunista de las sombras"] } },
+        { "nombre": "Camino de los Elementos (2024)", "tipo_conjurador": "ninguno", "niveles": { "3": ["Discípulos de los elementos"], "6": ["Defensa elemental"], "11": ["Zancada elemental"], "17": ["Forma elemental"] } },
+        { "nombre": "Camino de la Misericordia (Tasha)", "tipo_conjurador": "ninguno", "niveles": { "3": ["Manos de curación", "Manos de daño"], "6": ["Toque del médico"], "11": ["Ráfaga de misericordia"], "17": ["Mano de la clemencia extrema"] } },
+        { "nombre": "Camino del Yo Astral (Tasha)", "tipo_conjurador": "ninguno", "niveles": { "3": ["Brazos del yo astral"], "6": ["Rostro del yo astral"], "11": ["Despertar del yo astral"], "17": ["Aspecto del yo astral"] } }
+      ],
+      "rasgos": { "1": ["Artes marciales", "Defensa sin armadura"], "2": ["Foco de Ki", "Movimiento sin armadura"], "3": ["Subclase de Monje", "Deflactar proyectiles"], "4": ["Mejora de característica", "Caída lenta"], "5": ["Ataque extra", "Golpe aturdidor"], "7": ["Evasión", "Mente en calma"], "9": ["Movimiento sin armadura mejorado"], "10": ["Pureza corporal"], "13": ["Deflactar energía"], "14": ["Alma de diamante"], "15": ["Cuerpo atemporal"], "18": ["Cuerpo vacío"], "19": ["Mejora de característica"], "20": ["Cuerpo e mente perfectos"] }
+    },
+    {
+      "nombre": "Paladín",
+      "dado_golpe": "d10",
+      "competencia_salvacion": ["Sabiduría", "Carisma"],
+      "tipo_conjurador": "medio",
+      "subclases": [
+        { "nombre": "Juramento de Devoción (2024)", "niveles": { "3": ["Arma sagrada", "Conjuros de juramento"], "7": ["Aura de devoción"], "15": ["Pureza de espíritu"], "20": ["Halo sagrado"] } },
+        { "nombre": "Juramento de los Antiguos (2024)", "niveles": { "3": ["Ira de la naturaleza", "Conjuros de juramento"], "7": ["Aura de guardián"], "15": ["Centinela inmortal"], "20": ["Campeón anciano"] } },
+        { "nombre": "Juramento de Venganza (2024)", "niveles": { "3": ["Voto de enemistad", "Conjuros de juramento"], "7": ["Vengador implacable"], "15": ["Alma de venganza"], "20": ["Ángel de la venganza"] } },
+        { "nombre": "Juramento de la Corona (2024 / Tasha)", "niveles": { "3": ["Desafío de campeones", "Conjuros de juramento"], "7": ["Lealtad divina"], "15": ["Corazón inflexible"], "20": ["Campeón excelso"] } },
+        { "nombre": "Juramento de la Gloria (Tasha)", "niveles": { "3": ["Atleta sin parangón", "Conjuros de juramento"], "7": ["Aura de presteza"], "15": ["Defensa gloriosa"], "20": ["Leyenda viviente"] } },
+        { "nombre": "Juramento de los Vigilantes (Tasha)", "niveles": { "3": ["Voluntad del vigilante", "Conjuros de juramento"], "7": ["Aura de centinela"], "15": ["Reprimenda del vigilante"], "20": ["Baluarte mortal"] } }
+      ],
+      "rasgos": { "1": ["Sentido divino", "Imposición de manos"], "2": ["Estilo de combate", "Lanzamiento de conjuros", "Castigo divino"], "3": ["Subclase de Paladín", "Salud divina"], "4": ["Mejora de característica"], "5": ["Ataque extra"], "6": ["Aura de protección"], "10": ["Aura de coraje"], "11": ["Castigo radiante"], "14": ["Toque purificador"], "18": ["Mejora de auras"], "19": ["Mejora de característica"] }
+    },
+    {
+      "nombre": "Explorador",
+      "dado_golpe": "d10",
+      "competencia_salvacion": ["Fuerza", "Destreza"],
+      "tipo_conjurador": "medio",
+      "subclases": [
+        { "nombre": "Cazador (2024)", "niveles": { "3": ["Presa del cazador"], "6": ["Tácticas defensivas"], "11": ["Ataque múltiple"], "15": ["Defensa de cazador superior"] } },
+        { "nombre": "Señor de las Bestias (2024)", "niveles": { "3": ["Compañero del explorador"], "6": ["Entrenamiento excepcional"], "11": ["Furia bestial"], "15": ["Vínculo compartido"] } },
+        { "nombre": "Acechador Gloom (2024)", "niveles": { "3": ["Emboscador temible", "Visión umbría"], "6": ["Mente de hierro"], "11": ["Ráfaga del acechador"], "15": ["Esquiva sombría"] } },
+        { "nombre": "Errante Feérico (2024)", "niveles": { "3": ["Golpe pavoroso", "Magia fey"], "6": ["Giro seductor"], "11": ["Refuerzos fey"], "15": ["Pasos brumosos"] } },
+        { "nombre": "Guardián de Enjambres (Tasha)", "niveles": { "3": ["Enjambre reunido"], "6": ["Dispersión del alma"], "11": ["Tormenta del enjambre"], "15": ["Dispersión brumosa"] } }
+      ],
+      "rasgos": { "1": ["Enemigo predilecto", "Explorador de la naturaleza"], "2": ["Estilo de combate", "Lanzamiento de conjuros"], "3": ["Subclase de Explorador"], "4": ["Mejora de característica"], "5": ["Ataque extra"], "8": ["Zancada de la tierra"], "10": ["Ocultación de la naturaleza"], "14": ["Desvanecerse"], "18": ["Sentidos de la naturaleza"], "19": ["Mejora de característica"], "20": ["Cazador de enemigos"] }
+    },
+    {
+      "nombre": "Pícaro",
+      "dado_golpe": "d8",
+      "competencia_salvacion": ["Destreza", "Inteligencia"],
+      "tipo_conjurador": "ninguno",
+      "subclases": [
+        { "nombre": "Ladronzuelo / Ladrón (2024)", "tipo_conjurador": "ninguno", "niveles": { "3": ["Manos rápidas", "Trabajo del tejado"], "9": ["Sigilo supremo"], "13": ["Usar objeto mágico"], "17": ["Reflejos de ladrón"] } },
+        { "nombre": "Asesino (2024)", "tipo_conjurador": "ninguno", "niveles": { "3": ["Competencias de asesino", "Asesinar"], "9": ["Infiltración experta"], "13": ["Impostor"], "17": ["Golpe mortal"] } },
+        { "nombre": "Embaucador Arcano (2024)", "tipo_conjurador": "tercio", "niveles": { "3": ["Lanzamiento de conjuros", "Mano de mago ladina"], "9": ["Emboscada mágica"], "13": ["Distracción versátil"], "17": ["Ladrón de conjuros"] } },
+        { "nombre": "Cuchillo Psiónico / Soulknife (Tasha)", "tipo_conjurador": "ninguno", "niveles": { "3": ["Hojas psiónicas", "Poder psiónico"], "9": ["Hojas de alma"], "13": ["Velo psíquico"], "17": ["Rendición mental"] } },
+        { "nombre": "Fantasma (Tasha)", "tipo_conjurador": "ninguno", "niveles": { "3": ["Susurros de la tumba", "Lamentos de los muertos"], "9": ["Foco de fichas de alma"], "13": ["Paseo fantasmal"], "17": ["Amigos de la tumba"] } }
+      ],
+      "rasgos": { "1": ["Ataque furtivo", "Jerga de ladrones", "Pericia"], "2": ["Acción astuta"], "3": ["Subclase de Pícaro"], "4": ["Mejora de característica"], "5": ["Esquiva asombrosa"], "6": ["Pericia (2)"], "7": ["Evasión"], "11": ["Talento fiable"], "14": ["Sentido ciego"], "15": ["Mente resbaladiza"], "18": ["Evasión elusiva"], "19": ["Mejora de característica"], "20": ["Golpe de suerte"] }
+    },
+    {
+      "nombre": "Hechicero",
+      "dado_golpe": "d6",
+      "competencia_salvacion": ["Constitución", "Carisma"],
+      "tipo_conjurador": "completo",
+      "subclases": [
+        { "nombre": "Magia Salvaje (2024)", "niveles": { "3": ["Oleada de magia salvaje", "Mareas de caos"], "6": ["Predecir el caos"], "14": ["Caos controlado"], "18": ["Bombardeo de conjuros"] } },
+        { "nombre": "Linaje Dracónico (2024)", "niveles": { "3": ["Resiliencia dracónica", "Ancestro dracónico"], "6": ["Afinidad elemental"], "14": ["Alas dracónicas"], "18": ["Presencia dracónica"] } },
+        { "nombre": "Mente Aberrante (Tasha)", "niveles": { "1": ["Habla telepática", "Conjuros psiónicos"], "6": ["Defensa psiónica"], "14": ["Forma de carne revelada"], "18": ["Implosión de deformación"] } },
+        { "nombre": "Alma de Relojería (Tasha)", "niveles": { "1": ["Manifestación mecánica", "Conjuros de relojería"], "6": ["Baluarte de orden"], "14": ["Trance de la ley"], "18": ["Cavalcade de reloj"] } }
+      ],
+      "rasgos": { "1": ["Lanzamiento de conjuros", "Innate Sorcery"], "2": ["Fuente de magia"], "3": ["Subclase de Hechicero", "Metamagia"], "4": ["Mejora de característica"], "5": ["Innate Sorcery mejorado"], "20": ["Apoteosis de hechicero"] }
+    },
+    {
+      "nombre": "Brujo",
+      "dado_golpe": "d8",
+      "competencia_salvacion": ["Sabiduría", "Carisma"],
+      "tipo_conjurador": "pacto",
+      "subclases": [
+        { "nombre": "El Archihada (2024)", "niveles": { "3": ["Paso de la niebla", "Conjuros de patrón"], "6": ["Escape brumoso"], "10": ["Defensa de engaño"], "14": ["Delirio fey"] } },
+        { "nombre": "El Fiador / Demonio (2024)", "niveles": { "3": ["Bendición del oscuro", "Conjuros de patrón"], "6": ["Suerte de los oscuros"], "10": ["Resiliencia demoníaca"], "14": ["Arrojar al infierno"] } },
+        { "nombre": "El Gran Antiguo (2024)", "niveles": { "3": ["Despertar de la mente", "Conjuros de patrón"], "6": ["Escudo entrópico"], "10": ["Escudo de pensamiento"], "14": ["Crear siervo"] } },
+        { "nombre": "El Genio (Tasha)", "niveles": { "1": ["Vasija del genio", "Regalo del elemento"], "6": ["Vuelo elemental"], "10": ["Resguardo del genio"], "14": ["Deseo limitado"] } },
+        { "nombre": "El Muerto Viviente / Undead (Tasha)", "niveles": { "1": ["Forma de pavor"], "6": ["Toque sepulcral"], "10": ["Fortaleza necrótica"], "14": ["Proyección espiritual"] } }
+      ],
+      "rasgos": { "1": ["Pacto del Patrón", "Trucos mágicos"], "2": ["Invocaciones eldritch"], "3": ["Subclase de Brujo"], "4": ["Mejora de característica"], "11": ["Arcanum místico"], "20": ["Recuperación del maestro"] }
     },
     {
       "nombre": "Mago",
@@ -38,29 +178,43 @@
       "competencia_salvacion": ["Inteligencia", "Sabiduría"],
       "tipo_conjurador": "completo",
       "subclases": [
-        {
-          "nombre": "Escuela de Evocación",
-          "niveles": {
-            "2": ["Saber de evocación"],
-            "6": ["Evocador potente"],
-            "10": ["Evocación potenciada"],
-            "14": ["Sobrecarga"]
-          }
-        }
+        { "nombre": "Escuela de Evocación (2024)", "niveles": { "3": ["Saber de evocación", "Esculpir conjuros"], "6": ["Evocador potente"], "10": ["Evocación potenciada"], "14": ["Sobrecarga"] } },
+        { "nombre": "Escuela de Abjuración (2024)", "niveles": { "3": ["Saber de abjuración", "Resguardo arcano"], "6": ["Resguardo proyectado"], "10": ["Abjuración mejorada"], "14": ["Resistencia al hechizo"] } },
+        { "nombre": "Escuela de Adivinación (2024)", "niveles": { "3": ["Saber de adivinación", "Portento"], "6": ["El tercer ojo"], "10": ["Portento mayor"], "14": ["Adivino experto"] } },
+        { "nombre": "Escuela de Ilusión (2024)", "niveles": { "3": ["Saber de ilusión", "Ilusión menor mejorada"], "6": ["Ilusiones maleables"], "10": ["Yo ilusorio"], "14": ["Ilusiones ilusorias"] } },
+        { "nombre": "Cantor de la Hoja / Bladesinging (Tasha)", "niveles": { "3": ["Entrenamiento de guerra", "Canto de la hoja"], "6": ["Ataque extra arcano"], "10": ["Canción de defensa"], "14": ["Canción de victoria"] } }
       ],
-      "rasgos": {
-        "1": ["Lanzamiento de conjuros", "Recuperación arcana"],
-        "2": ["Tradición arcana"],
-        "4": ["Mejora de característica"],
-        "8": ["Mejora de característica"],
-        "12": ["Mejora de característica"],
-        "16": ["Mejora de característica"],
-        "19": ["Mejora de característica"]
-      }
+      "rasgos": { "1": ["Lanzamiento de conjuros", "Recuperación arcana", "Trucos diestros"], "2": ["Estudio académico"], "3": ["Subclase de Mago"], "4": ["Mejora de característica"], "5": ["Memoria de conjuros"], "18": ["Maestría en conjuros"], "19": ["Mejora de característica"], "20": ["Firma de conjuros"] }
+    },
+    {
+      "nombre": "Artífice",
+      "dado_golpe": "d8",
+      "competencia_salvacion": ["Constitución", "Inteligencia"],
+      "tipo_conjurador": "medio-bonus",
+      "subclases": [
+        { "nombre": "Alquimista", "niveles": { "3": ["Saber de alquimista", "Elixir experimental"], "5": ["Alquimista de renombre"], "9": ["Reactivos reconstituyentes"], "15": ["Maestría química"] } },
+        { "nombre": "Armero", "niveles": { "3": ["Herramientas de armero", "Modelo de armadura"], "5": ["Ataque extra"], "9": ["Modificaciones de armadura"], "15": ["Efecto perfeccionado"] } },
+        { "nombre": "Artillero", "niveles": { "3": ["Herramientas de artillero", "Cañón arcano"], "5": ["Arma de fuego arcana"], "9": ["Fuego explosivo"], "15": ["Defensa fortificada"] } },
+        { "nombre": "Guardián de batalla", "niveles": { "3": ["Competencias de batalla", "Defensor de acero"], "5": ["Ataque extra"], "9": ["Jolt arcano"], "15": ["Defensor mejorado"] } }
+      ],
+      "rasgos": { "1": ["Artilugios mágicos", "Lanzamiento de conjuros"], "2": ["Infundir objeto"], "3": ["Especialidad de artífice", "Herramienta adecuada"], "4": ["Mejora de característica"], "6": ["Experto en herramientas"], "7": ["Destello de genialidad"], "11": ["Objeto de almacenamiento de conjuros"], "20": ["Alma del artilugio"] }
     }
   ],
   
   "especies": [
+    {
+      "nombre": "Aarakocra",
+      "razas": [
+        {
+          "nombre": "Aarakocra",
+          "rasgos": [
+            "Velocidad de vuelo 50 pies (no disponible con armadura media o pesada)",
+            "Garras (ataque desarmado de 1d6 + Fue/Des cortante)",
+            "Magia del viento (puedes lanzar Ráfaga de viento a partir del nivel 3)"
+          ]
+        }
+      ]
+    },
     {
       "nombre": "Aasimar",
       "razas": [
@@ -76,24 +230,193 @@
       ]
     },
     {
+      "nombre": "Cambiante (Changeling)",
+      "razas": [
+        {
+          "nombre": "Cambiante",
+          "rasgos": [
+            "Tipo de criatura: Feérico",
+            "Cambiaformas (acción para alterar tu apariencia física e incluso tu voz)",
+            "Instintos de cambiante (competencia en 2 habilidades a elegir entre Engaño, Intimidación, Persuasión e Interpretación)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Centauro",
+      "razas": [
+        {
+          "nombre": "Centauro",
+          "rasgos": [
+            "Tipo de criatura: Feérico",
+            "Velocidad 40 pies",
+            "Carga (ataque adicional con pezuñas si te mueves 30 pies en línea recta)",
+            "Pezuñas (ataque desarmado de 1d6 + Fue contundente)",
+            "Complexión equina (cuentas como un tamaño mayor para capacidad de carga, pero cuesta 4 pies por cada pie escalado verticalmente)"
+          ]
+        }
+      ]
+    },
+    {
       "nombre": "Dracónido (Dragonborn)",
       "razas": [
         {
-          "nombre": "Dracónido (Cromático)",
+          "nombre": "Dracónido Azul",
           "rasgos": [
             "Visión en la oscuridad 60 pies",
-            "Resistencia al daño según el tipo de dragón",
-            "Arma de aliento (cono de 4,5 m o línea de 9 m, 1d10 de daño)",
+            "Resistencia al daño de Relámpago",
+            "Arma de aliento (cono de 4,5 m o línea de 9 m, 1d10 de daño, tipo Relámpago)",
             "Vuelo draconiano (nivel 5, alas espectrales)"
           ]
         },
         {
-          "nombre": "Dracónido (Metálico)",
+          "nombre": "Dracónido Blanco",
           "rasgos": [
             "Visión en la oscuridad 60 pies",
-            "Resistencia al daño según el tipo de dragón",
-            "Arma de aliento (cono de 4,5 m o línea de 9 m, 1d10 de daño)",
+            "Resistencia al daño de Frío",
+            "Arma de aliento (cono de 4,5 m o línea de 9 m, 1d10 de daño, Tipo Frío)",
             "Vuelo draconiano (nivel 5, alas espectrales)"
+          ]
+        },
+        {
+          "nombre": "Dracónido Bronce",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Resistencia al daño de Relámpago",
+            "Arma de aliento (cono de 4,5 m o línea de 9 m, 1d10 de daño, Tipo Relámpago)",
+            "Vuelo draconiano (nivel 5, alas espectrales)"
+          ]
+        },
+        {
+          "nombre": "Dracónido Cobre",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Resistencia al daño de Ácido",
+            "Arma de aliento (cono de 4,5 m o línea de 9 m, 1d10 de daño, Tipo Ácido)",
+            "Vuelo draconiano (nivel 5, alas espectrales)"
+          ]
+        },
+        {
+          "nombre": "Dracónido Latón",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Resistencia al daño de Fuego",
+            "Arma de aliento (cono de 4,5 m o línea de 9 m, 1d10 de daño, Tipo Fuego)",
+            "Vuelo draconiano (nivel 5, alas espectrales)"
+          ]
+        },
+        {
+          "nombre": "Dracónido Negro",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Resistencia al daño de Ácido",
+            "Arma de aliento (cono de 4,5 m o línea de 9 m, 1d10 de daño, Tipo Ácido)",
+            "Vuelo draconiano (nivel 5, alas espectrales)"
+          ]
+        },
+        {
+          "nombre": "Dracónido Oro",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Resistencia al daño de Fuego",
+            "Arma de aliento (cono de 4,5 m o línea de 9 m, 1d10 de daño, Tipo Fuego)",
+            "Vuelo draconiano (nivel 5, alas espectrales)"
+          ]
+        },
+        {
+          "nombre": "Dracónido Plata",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Resistencia al daño de Frío",
+            "Arma de aliento (cono de 4,5 m o línea de 9 m, 1d10 de daño, Tipo Frío)",
+            "Vuelo draconiano (nivel 5, alas espectrales)"
+          ]
+        },
+        {
+          "nombre": "Dracónido Rojo",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Resistencia al daño de Fuego",
+            "Arma de aliento (cono de 4,5 m o línea de 9 m, 1d10 de daño, Tipo Fuego)",
+            "Vuelo draconiano (nivel 5, alas espectrales)"
+          ]
+        },
+        {
+          "nombre": "Dracónido Verde",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Resistencia al daño de Veneno",
+            "Arma de aliento (cono de 4,5 m o línea de 9 m, 1d10 de daño, Tipo Veneno)",
+            "Vuelo draconiano (nivel 5, alas espectrales)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Elfo",
+      "razas": [
+        {
+          "nombre": "Elfo Alto",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Linaje feérico (ventaja contra Hechizado)",
+            "Trance (descanso largo en 4 horas)",
+            "Sentidos agudos (competencia en Percepción)",
+            "Magia de elfo alto (1 truco de mago, Detectar magia y Paso brumoso)"
+          ]
+        },
+        {
+          "nombre": "Elfo de los Bosques",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Linaje feérico",
+            "Trance",
+            "Sentidos agudos",
+            "Velocidad 35 pies",
+            "Magia de elfo de los bosques (Zancada prodigiosa y Pasar sin rastro)"
+          ]
+        },
+        {
+          "nombre": "Elfo Drow",
+          "rasgos": [
+            "Visión en la oscuridad 120 pies",
+            "Linaje feérico",
+            "Trance",
+            "Sentidos agudos",
+            "Magia drow (Luces danzantes, Fuego feérico y Oscuridad)"
+          ]
+        },
+        {
+          "nombre": "Eladrin",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Linaje feérico",
+            "Trance",
+            "Sentidos agudos",
+            "Paso feérico (teletransporte como acción adicional con efecto secundario según la estación: Otoño, Invierno, Primavera o Verano)"
+          ]
+        },
+        {
+          "nombre": "Elfo Marino",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Linaje feérico",
+            "Trance",
+            "Sentidos agudos",
+            "Velocidad de nado 30 pies y Anfibio",
+            "Amigo del mar (comunicar ideas simples a bestias con velocidad de nado)",
+            "Resistencia al daño de Frío"
+          ]
+        },
+        {
+          "nombre": "Shadar-kai",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Linaje feérico",
+            "Trance",
+            "Sentidos agudos",
+            "Resistencia al daño Necrótico",
+            "Paso de la Reina Cuervo (teletransporte como acción adicional que otorga resistencia a todo el daño)"
           ]
         }
       ]
@@ -105,41 +428,127 @@
           "nombre": "Enano",
           "rasgos": [
             "Visión en la oscuridad 120 pies",
-            "Resistencia enana (aumento de Puntos de Golpe)",
-            "Sentido de la piedra (Tremorsense sobre piedra)",
-            "Velocidad 30 pies"
+            "Resistencia enana (ventaja en salvaciones contra veneno y resistencia a daño por veneno)",
+            "Dureza enana (+1 PG máximo por nivel)",
+            "Afinidad con la piedra (Sentido de la vibración 60 pies en superficies de piedra)"
+          ]
+        },
+        {
+          "nombre": "Duergar",
+          "rasgos": [
+            "Visión en la oscuridad 120 pies",
+            "Resistencia duergar (ventaja en salvaciones para evitar Encantos o Estupefacción)",
+            "Magia duergar (Agrandar/Reducir e Invisibilidad psiónica)",
+            "Resistencia psiónica"
           ]
         }
       ]
     },
     {
-      "nombre": "Elfo",
+      "nombre": "Fiero (Shifter)",
       "razas": [
         {
-          "nombre": "Elfo Oscuro (Drow)",
+          "nombre": "Fiero de Piel de Bestia (Beasthide)",
           "rasgos": [
-            "Visión en la oscuridad 120 pies",
-            "Ancestros feéricos (ventaja contra Hechizado)",
-            "Trance (4h de descanso)",
-            "Linaje élfico: *Dancing Lights* (nivel 1), *Faerie Fire* (nivel 3), *Darkness* (nivel 5)"
+            "Visión en la oscuridad 60 pies",
+            "Transformación fiera (obtienes 1d6 extra de PG temporales y +1 a la CA)"
           ]
         },
         {
-          "nombre": "Alto Elfo",
+          "nombre": "Fiero de Diente Largo (Longtooth)",
           "rasgos": [
             "Visión en la oscuridad 60 pies",
-            "Ancestros feéricos (ventaja contra Hechizado)",
-            "Trance (4h de descanso)",
-            "Linaje élfico: *Prestidigitation* (nivel 1), *Detect Magic* (nivel 3), *Misty Step* (nivel 5)"
+            "Transformación fiera (puedes realizar un ataque de mordisco de 1d6 perforante como acción adicional)"
           ]
         },
         {
-          "nombre": "Elfo del Bosque",
+          "nombre": "Fiero de Paso Veloz (Swiftstride)",
           "rasgos": [
             "Visión en la oscuridad 60 pies",
-            "Ancestros feéricos (ventaja contra Hechizado)",
-            "Trance (4h de descanso)",
-            "Linaje élfico: *Druidcraft* y velocidad 35 pies (nivel 1), *Longstrider* (nivel 3), *Pass without Trace* (nivel 5)"
+            "Velocidad 35 pies",
+            "Transformación fiera (velocidad aumenta 10 pies y obtienes reacción para alejarte 10 pies sin recibir ataque de oportunidad)"
+          ]
+        },
+        {
+          "nombre": "Fiero de Caza Salvaje (Wildhunt)",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Transformación fiera (ventaja en pruebas de Sabiduría y ninguna criatura a 30 pies puede atacarte con ventaja)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Firbolg",
+      "razas": [
+        {
+          "nombre": "Firbolg",
+          "rasgos": [
+            "Magia firbolg (Detectar magia y Disfrazarse)",
+            "Paso oculto (acción adicional para volverte invisible hasta el inicio de tu siguiente turno)",
+            "Hablar con bestias y plantas (comunicar de forma limitada ideas simples)",
+            "Complexión poderosa"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Genasí",
+      "razas": [
+        {
+          "nombre": "Genasí de Aire",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Velocidad 35 pies",
+            "Resistencia al daño de Relámpago",
+            "Contener la respiración indefinidamente",
+            "Magia de Madi (Agarre electrizante, Caída de pluma y Levitar)"
+          ]
+        },
+        {
+          "nombre": "Genasí de Agua",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Velocidad de nado 30 pies y Anfibio",
+            "Resistencia al daño de Ácido",
+            "Llamada de la ola (Salpicadura ácida, Crear o destruir agua y Caminar sobre las aguas)"
+          ]
+        },
+        {
+          "nombre": "Genasí de Fuego",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies (ves en tonos rojizos)",
+            "Resistencia al daño de Fuego",
+            "Magia de la llama (Producir llama, Manos ardientes y Esfera flamígera)"
+          ]
+        },
+        {
+          "nombre": "Genasí de Tierra",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Paso de tierra (puedes moverte por terreno difícil de tierra o piedra sin coste adicional de movimiento)",
+            "Magia de la piedra (Protección contra las armas y Pasar sin rastro)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Gith",
+      "razas": [
+        {
+          "nombre": "Githyanki",
+          "rasgos": [
+            "Conocimiento astral (puedes cambiar una competencia en habilidad o arma tras cada descanso largo)",
+            "Resistencia astral (resistencia al daño Psíquico)",
+            "Psiónica githyanki (Mano del mago invisible, Salto y Paso brumoso)"
+          ]
+        },
+        {
+          "nombre": "Githzerai",
+          "rasgos": [
+            "Disciplina mental (ventaja en salvaciones para evitar estar Hechizado o Asustado)",
+            "Resistencia psíquica (resistencia al daño Psíquico)",
+            "Psiónica githzerai (Mano del mago invisible, Escudo y Detectar pensamientos)"
           ]
         }
       ]
@@ -151,16 +560,41 @@
           "nombre": "Gnomo del Bosque",
           "rasgos": [
             "Visión en la oscuridad 60 pies",
-            "Linaje gnómico: *Minor Illusion* y *Speak with Animals* siempre preparado",
-            "Astucia gnómica (ventaja en salvaciones de Inteligencia, Sabiduría y Carisma contra magia)"
+            "Astucia gnoma (ventaja en salvaciones de Int, Sab y Car contra magia)",
+            "Hablar con bestias pequeñas",
+            "Ilusión menor"
           ]
         },
         {
           "nombre": "Gnomo de las Rocas",
           "rasgos": [
             "Visión en la oscuridad 60 pies",
-            "Linaje gnómico: *Mending* y *Prestidigitation*",
-            "Astucia gnómica (ventaja en salvaciones de Inteligencia, Sabiduría y Carisma contra magia)"
+            "Astucia gnoma",
+            "Artilugio (crear pequeños dispositivos mecánicos o usar Prestidigitación)"
+          ]
+        },
+        {
+          "nombre": "Gnomo de las Profundidades (Svirfneblin)",
+          "rasgos": [
+            "Visión en la oscuridad 120 pies",
+            "Astucia gnoma",
+            "Magia svirfneblin (Disfrazarse e Indetectabilidad)",
+            "Camuflaje de las profundidades (ventaja en Sigilo PB veces por descanso largo)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Goblin",
+      "razas": [
+        {
+          "nombre": "Goblin",
+          "rasgos": [
+            "Tipo de criatura: Humanoide (Goblinoide)",
+            "Visión en la oscuridad 60 pies",
+            "Ancestros feéricos (ventaja contra Hechizado)",
+            "Furia de los pequeños (añade tu PB al daño infligido a una criatura de mayor tamaño, PB veces por descanso largo)",
+            "Escape ágil (Desengancharse o Esconderse como acción adicional)"
           ]
         }
       ]
@@ -169,66 +603,115 @@
       "nombre": "Goliat",
       "razas": [
         {
-          "nombre": "Goliat (Nube)",
+          "nombre": "Goliat de las Nubes",
           "rasgos": [
-            "Ascendencia gigante: *Cloud's Jaunt* (teletransportarse 30 pies como acción bonus)",
-            "Forma grande (nivel 5, aumentar de tamaño)",
-            "Constitución robusta (ventaja para escapar de agarres)"
+            "Velocidad 35 pies",
+            "Forma grande (nivel 5)",
+            "Complexión poderosa",
+            "Salto de las nubes (teletransporte como acción adicional)"
           ]
         },
         {
-          "nombre": "Goliat (Fuego)",
+          "nombre": "Goliat de la Escarcha",
           "rasgos": [
-            "Ascendencia gigante: *Fire's Burn* (1d10 de daño de fuego extra al golpear)",
-            "Forma grande (nivel 5, aumentar de tamaño)",
-            "Constitución robusta (ventaja para escapar de agarres)"
+            "Velocidad 35 pies",
+            "Forma grande (nivel 5)",
+            "Complexión poderosa",
+            "Frío de la escarcha (daño por frío extra y reduce velocidad del objetivo)"
           ]
         },
         {
-          "nombre": "Goliat (Hielo)",
+          "nombre": "Goliat del Fuego",
           "rasgos": [
-            "Ascendencia gigante: *Frost's Chill* (1d6 de frío y reduce velocidad 3 m)",
-            "Forma grande (nivel 5, aumentar de tamaño)",
-            "Constitución robusta (ventaja para escapar de agarres)"
+            "Velocidad 35 pies",
+            "Forma grande (nivel 5)",
+            "Complexión poderosa",
+            "Quemadura del fuego (daño por fuego extra en un ataque)"
           ]
         },
         {
-          "nombre": "Goliat (Colina)",
+          "nombre": "Goliat de las Colinas",
           "rasgos": [
-            "Ascendencia gigante: *Hill's Tumble* (derribar al golpear)",
-            "Forma grande (nivel 5, aumentar de tamaño)",
-            "Constitución robusta (ventaja para escapar de agarres)"
+            "Velocidad 35 pies",
+            "Forma grande (nivel 5)",
+            "Complexión poderosa",
+            "Tumbo de las colinas (derriba al objetivo al impactar)"
           ]
         },
         {
-          "nombre": "Goliat (Piedra)",
+          "nombre": "Goliat de la Piedra",
           "rasgos": [
-            "Ascendencia gigante: *Stone's Endurance* (reducir daño 1d12 + Con)",
-            "Forma grande (nivel 5, aumentar de tamaño)",
-            "Constitución robusta (ventaja para escapar de agarres)"
+            "Velocidad 35 pies",
+            "Forma grande (nivel 5)",
+            "Complexión poderosa",
+            "Resistencia de la piedra (reduce daño recibido usando tu reacción)"
           ]
         },
         {
-          "nombre": "Goliat (Tormenta)",
+          "nombre": "Goliat de la Tormenta",
           "rasgos": [
-            "Ascendencia gigante: *Storm's Thunder* (1d8 de trueno al recibir daño)",
-            "Forma grande (nivel 5, aumentar de tamaño)",
-            "Constitución robusta (ventaja para escapar de agarres)"
+            "Velocidad 35 pies",
+            "Forma grande (nivel 5)",
+            "Complexión poderosa",
+            "Trueno de la tormenta (reacción para infligir daño por relámpago a quien te ataque)"
           ]
         }
       ]
     },
     {
-      "nombre": "Mediano",
+      "nombre": "Hada",
       "razas": [
         {
-          "nombre": "Mediano",
+          "nombre": "Hada",
           "rasgos": [
-            "Suerte (reroll 1 en d20)",
-            "Valiente (ventaja contra Miedo)",
-            "Agilidad mediana (moverse por espacios de criaturas más grandes)",
-            "Sigilo natural (ocultarse tras criaturas más grandes)",
-            "Velocidad 30 pies"
+            "Tipo de criatura: Feérico",
+            "Velocidad de vuelo igual a tu velocidad de caminar (no disponible con armadura media o pesada)",
+            "Magia feérica (Truco: Saber Druídico. Nivel 3 fuego feérico. Nivel 5: agrandar/reducir. 1 vez gratis cada descanso largo)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Liebrén",
+      "razas": [
+        {
+          "nombre": "Harengon",
+          "rasgos": [
+            "Iniciativa de liebre (sumas tu PB a las tiradas de iniciativa)",
+            "Sentidos de liebre (competencia en Percepción)",
+            "Salto de conejo (saltar como acción adicional sin provocar ataques de oportunidad, PB veces por descanso largo)",
+            "Juego de pies afortunado (reacción para añadir un d4 a una tirada de salvación de Destreza fallida)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Hobgoblin",
+      "razas": [
+        {
+          "nombre": "Hobgoblin",
+          "rasgos": [
+            "Tipo de criatura: Humanoide (Goblinoide)",
+            "Visión en la oscuridad 60 pies",
+            "Ancestros feéricos",
+            "Don de la hospitalidad feérica (puedes usar la acción de Ayudar como acción adicional con efectos beneficiosos extra)",
+            "Fortuna de los muchos (añade +1 a una tirada fallida por cada aliado a 30 pies, máximo +3)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Hombre Lagarto",
+      "razas": [
+        {
+          "nombre": "Hombre Lagarto",
+          "rasgos": [
+            "Velocidad de nado 30 pies",
+            "Mordisco (ataque desarmado de 1d6 perforante)",
+            "Contener la respiración (15 minutos)",
+            "Armadura natural (CA base de 13 + mod. Destreza)",
+            "Alimentarse hambriento (ataque de mordisco como acción adicional que te cura PB puntos de vida)",
+            "Cazador de la naturaleza (competencia en 2 habilidades a elegir entre Medicina, Naturaleza, Percepción, Sigilo y Supervivencia)"
           ]
         }
       ]
@@ -239,9 +722,64 @@
         {
           "nombre": "Humano",
           "rasgos": [
-            "Versátil (dote de origen adicional)",
-            "Hábil (competencia en una habilidad)",
-            "Recurso (Inspiración heroica al terminar un descanso largo)"
+            "Ingenioso (obtienes Inspiración heroica tras un descanso largo)",
+            "Hábil (obtienes competencia en una habilidad a tu elección)",
+            "Versátil (obtienes una dote de origen adicional)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Kenku",
+      "razas": [
+        {
+          "nombre": "Kenku",
+          "rasgos": [
+            "Recuerdo experto (ventaja en pruebas de habilidad en las que seas competente, PB veces por descanso largo)",
+            "Falsificación experta (ventaja en tiradas para duplicar objetos o caligrafía)",
+            "Mimetismo (puedes imitar sonidos que hayas escuchado con total precisión)",
+            "Competencias kenku (2 habilidades a elegir entre Acrobacias, Arcanos, Engaño, Juego de Manos y Sigilo)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Kóbold",
+      "razas": [
+        {
+          "nombre": "Kóbold",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Grito dracónico (acción adicional para dar ventaja a tus aliados contra enemigos a 10 pies de ti)",
+            "Legado dracónico (elige una: ventaja contra estar Asustado, un truco de la lista de Hechicero, o atacar con la cola)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Mediano (Halfling)",
+      "razas": [
+        {
+          "nombre": "Mediano",
+          "rasgos": [
+            "Valiente (ventaja en salvaciones para evitar estar Asustado)",
+            "Agilidad de mediano (puedes moverte a través del espacio de criaturas de tamaño Superior)",
+            "Suerte (repites las tiradas de 1 en d20)",
+            "Sigilo natural (puedes intentar esconderte tras criaturas de tamaño Superior)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Minotauro",
+      "razas": [
+        {
+          "nombre": "Minotauro",
+          "rasgos": [
+            "Cuernos (ataque desarmado de 1d6 + Fue perforante)",
+            "Ataque de cuernos en carga (si te mueves 20 pies en línea recta, puedes atacar con cuernos como acción adicional)",
+            "Empujón con los cuernos (al impactar con cuernos, puedes intentar empujar al objetivo 10 pies)",
+            "Imponente (competencia en Intimidación)"
           ]
         }
       ]
@@ -252,9 +790,56 @@
         {
           "nombre": "Orco",
           "rasgos": [
-            "Visión en la oscuridad 120 pies",
-            "Adrenalina (acción bonus para Dash y PG temporales)",
-            "Resistencia implacable (caer a 0 PG y quedar a 1)"
+            "Visión en la oscuridad 60 pies",
+            "Subidón de adrenalina (puedes usar Correr como acción adicional y obtienes PG temporales)",
+            "Aguante implacable (cuando te reducen a 0 PG pero no te matan directamente, caes a 1 PG)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Osgo",
+      "razas": [
+        {
+          "nombre": "Osgo",
+          "rasgos": [
+            "Tipo de criatura: Humanoide (Goblinoide)",
+            "Visión en la oscuridad 60 pies",
+            "Ancestros feéricos",
+            "Brazos largos (+5 pies de alcance en tus ataques cuerpo a cuerpo en tu turno)",
+            "Complexión poderosa",
+            "Sigiloso (competencia en Sigilo)",
+            "Ataque sorpresa (2d6 de daño extra en tu primer turno contra criaturas que aún no hayan actuado)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Sátiro",
+      "razas": [
+        {
+          "nombre": "Sátiro",
+          "rasgos": [
+            "Tipo de criatura: Feérico",
+            "Velocidad 35 pies",
+            "Carnero (ataque desarmado de 1d6 contundente)",
+            "Saltos de sátiro (añade un d8 a la distancia de tus saltos)",
+            "Resistencia a la magia (ventaja en salvaciones contra hechizos)",
+            "Juerguista (competencia en Interpretación y Persuasión)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Tabaxi",
+      "razas": [
+        {
+          "nombre": "Tabaxi",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Agilidad felina (puedes duplicar tu velocidad hasta el final del turno; se recarga cuando pasas un turno sin moverte)",
+            "Garras de gato (velocidad de escalada de 20 pies y ataque desarmado de 1d4 cortante)",
+            "Talento felino (competencia en Percepción y Sigilo)"
           ]
         }
       ]
@@ -263,35 +848,123 @@
       "nombre": "Tiefling",
       "razas": [
         {
-          "nombre": "Tiefling (Abisal)",
+          "nombre": "Tiflin Abisal",
           "rasgos": [
             "Visión en la oscuridad 60 pies",
-            "Legado infernal: *Poison Spray* (nivel 1), *Ray of Sickness* (nivel 3), *Stinking Cloud* (nivel 5)",
-            "Resistencia al daño de veneno",
-            "Presencia sobrenatural (*Thaumaturgy*)"
+            "Resistencia al daño de Veneno",
+            "Magia infernal abisal (Rociada venenosa, Rayo de enfermedad e Inmovilizar persona)",
+            "Alas de otro mundo (nivel 5)"
           ]
         },
         {
-          "nombre": "Tiefling (Ctónico)",
+          "nombre": "Tiflin Ctónico",
           "rasgos": [
             "Visión en la oscuridad 60 pies",
-            "Legado infernal: *Chill Touch* (nivel 1), *False Life* (nivel 3), *Ray of Enfeeblement* (nivel 5)",
-            "Resistencia al daño necrótico",
-            "Presencia sobrenatural (*Thaumaturgy*)"
+            "Resistencia al daño Necrótico",
+            "Magia infernal ctónica (Toque helado, Falsa vida y Rayo de debilitamiento)",
+            "Alas de otro mundo (nivel 5)"
           ]
         },
         {
-          "nombre": "Tiefling (Infernal)",
+          "nombre": "Tiflin Infernal",
           "rasgos": [
             "Visión en la oscuridad 60 pies",
-            "Legado infernal: *Fire Bolt* (nivel 1), *Hellish Rebuke* (nivel 3), *Darkness* (nivel 5)",
-            "Resistencia al daño de fuego",
-            "Presencia sobrenatural (*Thaumaturgy*)"
+            "Resistencia al daño de Fuego",
+            "Magia infernal diabólica (Descarga de fuego, Reprensión infernal y Oscuridad)",
+            "Alas de otro mundo (nivel 5)"
           ]
         }
       ]
-    }
-  ],
+    },
+    {
+      "nombre": "Tortoga",
+      "razas": [
+        {
+          "nombre": "Tortoga",
+          "rasgos": [
+            "Garras (ataque desarmado de 1d6 cortante)",
+            "Contener la respiración (puedes aguantar la respiración 1 hora)",
+            "Armadura natural (tu CA base es 17, no puedes usar armaduras)",
+            "Refugio de caparazón (acción para retirarte: +4 a la CA, ventaja en salvaciones de Fue/Con, desventaja en Des)",
+            "Intuición de la naturaleza (competencia en 1 habilidad a elegir entre Medicina, Naturaleza, Percepción, Sigilo o Supervivencia)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Tritón",
+      "razas": [
+        {
+          "nombre": "Tritón",
+          "rasgos": [
+            "Velocidad de nado 30 pies y Anfibio",
+            "Controlar el aire y el agua (Nube de niebla, Ráfaga de viento y Caminar sobre las aguas)",
+            "Emisario del mar (puedes comunicar ideas simples a cualquier bestia con velocidad de nado)",
+            "Guardia de las profundidades (Visión en la oscuridad 60 pies y resistencia al daño de Frío)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Yuan-ti",
+      "razas": [
+        {
+          "nombre": "Yuan-ti",
+          "rasgos": [
+            "Visión en la oscuridad 60 pies",
+            "Resistencia a la magia (ventaja en tiradas de salvación contra hechizos)",
+            "Resistencia al veneno (ventaja en salvaciones contra veneno y resistencia al daño de veneno)",
+            "Lanzamiento de conjuros serpentino (Rociada venenosa, Amistad con los animales solo en serpientes y Sugestión)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Dhampir",
+      "razas": [
+        {
+          "nombre": "Dhampir",
+          "rasgos": [
+            "Velocidad caminando 35 pies",
+            "Legado Ancestral (mantener competencias y velocidades previas, o ganar 2 habilidades de elección)",
+            "Visión en la Oscuridad 60 pies",
+            "Naturaleza Imperecedera (no necesitas respirar)",
+            "Trepar cual Arácnido (velocidad de trepar igual a caminar, nivel 3 boca abajo en techos)",
+            "Mordisco Vampírico (arma natural d4 perforante, usa Constitución, ventaja con la mitad de PG o menos, potenciar curación o bonificador de prueba/ataque usos igual a competencia)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Renacido",
+      "razas": [
+        {
+          "nombre": "Renacido",
+          "rasgos": [
+            "Velocidad caminando 30 pies",
+            "Legado Ancestral (mantener competencias y velocidades previas, o ganar 2 habilidades de elección)",
+            "Naturaleza Imperecedera (ventaja contra enfermedades, envenenamiento y muerte; resistencia a veneno; no comer, beber, respirar ni dormir; descanso largo en 4 horas)",
+            "Conocimiento de una Vida Pasada (sumar 1d6 a una prueba de característica con habilidad, usos igual a competencia)"
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Sangre Maléfica",
+      "razas": [
+        {
+          "nombre": "Sangre Maléfica",
+          "rasgos": [
+            "Tipo de criatura Feérico",
+            "Velocidad caminando 30 pies",
+            "Legado Ancestral (mantener competencias y velocidades previas, o ganar 2 habilidades de elección)",
+            "Visión en la Oscuridad 60 pies",
+            "Símbolo Espeluznante (crear objeto mágico para mensaje telepático a 10 millas o visión remota de 1 minuto)",
+            "Magia Maléfica (lanzar Disfrazarse y Maleficio gratis una vez por descanso largo usando Inteligencia, Sabiduría o Carisma)"
+          ]
+        }
+      ]
+    }],
   
   "trasfondos": [
     {
@@ -310,7 +983,7 @@
       "nombre": "Charlatán",
       "bonificador_caracteristica": ["Destreza", "Constitución", "Carisma"],
       "competencias_habilidad": ["Engaño", "Juego de Manos"],
-      "dote": "Hábil"
+      "dote": "Habilidoso"
     },
     {
       "nombre": "Criminal",
@@ -325,10 +998,10 @@
       "dote": "Músico"
     },
     {
-      "nombre": "Granjero",
+      "nombre": "Campesino",
       "bonificador_caracteristica": ["Fuerza", "Constitución", "Sabiduría"],
       "competencias_habilidad": ["Trato con Animales", "Naturaleza"],
-      "dote": "Robusto"
+      "dote": "Duro"
     },
     {
       "nombre": "Guardia",
@@ -358,7 +1031,7 @@
       "nombre": "Noble",
       "bonificador_caracteristica": ["Fuerza", "Inteligencia", "Carisma"],
       "competencias_habilidad": ["Historia", "Persuasión"],
-      "dote": "Hábil"
+      "dote": "Habilidoso"
     },
     {
       "nombre": "Sabio",
@@ -370,13 +1043,13 @@
       "nombre": "Marinero",
       "bonificador_caracteristica": ["Fuerza", "Destreza", "Sabiduría"],
       "competencias_habilidad": ["Acrobacias", "Percepción"],
-      "dote": "Peleón de Taberna"
+      "dote": "Matón de Taberna"
     },
     {
       "nombre": "Escriba",
       "bonificador_caracteristica": ["Destreza", "Inteligencia", "Sabiduría"],
       "competencias_habilidad": ["Investigación", "Percepción"],
-      "dote": "Hábil"
+      "dote": "Habilidoso"
     },
     {
       "nombre": "Soldado",
@@ -394,18 +1067,466 @@
   
   "dotes": [
     {
-      "nombre": "Iniciado en Magia",
-      "descripcion": "Elige una clase de lanzador de conjuros. Aprendes dos trucos y un hechizo de nivel 1 de esa clase.",
-      "requisito": null,
-      "efectos": {},
-      "hechizos": ["truco_fuego", "mano_maga", "proyectil_magico"]
+      "nombre": "Afortunado",
+      "Tipo": "Origen",
+      "descripcion": "Obtienes puntos de suerte igual a tu bonificador por competencia para conseguir ventaja en tus pruebas de d20 o imponer desventaja en ataques enemigos. Los recuperas tras un descanso largo.",
+      "requisito": null
+    },
+    {
+      "nombre": "Alerta",
+      "Tipo": "Origen",
+      "descripcion": "Sumas tu bonificador por competencia a la iniciativa y puedes intercambiar tu iniciativa con la de un aliado dispuesto justo después de tirar, siempre que ninguno esté incapacitado.",
+      "requisito": null
+    },
+    {
+      "nombre": "Atacante Salvaje",
+      "Tipo": "Origen",
+      "descripcion": "Una vez por turno, cuando aciertes a un objetivo con un arma, podrás tirar dos veces los dados de daño del arma y usar el resultado que prefieras.",
+      "requisito": null
+    },
+    {
+      "nombre": "Duro",
+      "Tipo": "Origen",
+      "descripcion": "Tus puntos de golpe máximos aumentan en una cantidad igual al doble de tu nivel cuando adquieres esta dote, y vuelven a aumentar en 2 puntos cada vez que subes de nivel.",
+      "requisito": null
+    },
+    {
+      "nombre": "Fabricante",
+      "Tipo": "Origen",
+      "descripcion": "Ganas competencia con tres herramientas de artesano, obtienes un 20% de descuento al comprar objetos no mágicos y puedes fabricar temporalmente equipo rápido tras un descanso largo.",
+      "requisito": null
+    },
+    {
+      "nombre": "Habilidoso",
+      "Tipo": "Origen",
+      "descripcion": "Ganas competencia en cualquier combinación de tres habilidades o herramientas que elijas. Esta dote es repetible.",
+      "requisito": null
+    },
+    {
+      "nombre": "Iniciado en Magia (Clérigo)",
+      "Tipo": "Origen",
+      "descripcion": "Aprendes dos trucos y un conjuro de nivel 1 de la lista de clérigo, druida o mago, el cual puedes lanzar gratis una vez por descanso largo. Permite cambiar un conjuro al subir de nivel y es repetible.",
+      "requisito": null
+    },
+    {
+      "nombre": "Iniciado en Magia (Druida)",
+      "Tipo": "Origen",
+      "descripcion": "Aprendes dos trucos y un conjuro de nivel 1 de la lista de clérigo, druida o mago, el cual puedes lanzar gratis una vez por descanso largo. Permite cambiar un conjuro al subir de nivel y es repetible.",
+      "requisito": null
+    },
+    {
+      "nombre": "Iniciado en Magia (Mago)",
+      "Tipo": "Origen",
+      "descripcion": "Aprendes dos trucos y un conjuro de nivel 1 de la lista de clérigo, druida o mago, el cual puedes lanzar gratis una vez por descanso largo. Permite cambiar un conjuro al subir de nivel y es repetible.",
+      "requisito": null
+    },
+    {
+      "nombre": "Matón de Taberna",
+      "Tipo": "Origen",
+      "descripcion": "Mejora tu ataque sin armas a 1d4, permite repetir los 1s en sus dados de daño, otorga competencia con armas improvisadas y permite empujar a una criatura 1,5 m una vez por turno.",
+      "requisito": null
+    },
+    {
+      "nombre": "Músico",
+      "Tipo": "Origen",
+      "descripcion": "Ganas competencia con tres instrumentos musicales. Tras un descanso corto o largo, puedes tocar para dar inspiración heroica a un número de aliados igual a tu bonificador por competencia.",
+      "requisito": null
+    },
+    {
+      "nombre": "Sanador",
+      "Tipo": "Origen",
+      "descripcion": "Permite usar útiles de sanador en combate para que una criatura gaste un dado de golpe y se cure, y permite volver a tirar los resultados de 1 en dados de curación por conjuros o esta dote.",
+      "requisito": null
+    },
+    {
+      "nombre": "Acechador",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Destreza en 1. Otorga visión ciega hasta 3 m, ventaja en pruebas de Sigilo al esconderse en combate, y fallar un ataque oculto no revela tu ubicación.",
+      "requisito": "Nivel 4 o más, Destreza 13 o más"
+    },
+    {
+      "nombre": "Actor",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Carisma en 1. Otorga ventaja en pruebas de Engaño o Interpretación al suplantar a alguien y te permite imitar perfectamente sonidos e idiomas de otras criaturas.",
+      "requisito": "Nivel 4 o más, Carisma 13 o más"
+    },
+    {
+      "nombre": "Apresador",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Fuerza o Destreza en 1. Permite dañar y agarrar simultáneamente con un ataque sin armas (1/turno), da ventaja contra criaturas agarradas y elimina el coste extra de movimiento para moverlas.",
+      "requisito": "Nivel 4 o más, Fuerza o Destreza 13 o más"
+    },
+    {
+      "nombre": "Atacante a la Carga",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Fuerza o Destreza en 1. Aumenta tu velocidad 3 m al correr y, si te mueves 3 m en línea recta antes de un ataque cuerpo a cuerpo, sumas 1d8 al daño o empujas al objetivo 3 m (1/turno).",
+      "requisito": "Nivel 4 o más, Fuerza o Destreza 13 o más"
+    },
+    {
+      "nombre": "Atleta",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Fuerza o Destreza en 1. Obtienes velocidad trepando igual a tu velocidad base, te levantas del estado derribado con solo 1,5 m de movimiento y realizas saltos con carrerilla tras moverte solo 1,5 m.",
+      "requisito": "Nivel 4 o más, Fuerza o Destreza 13 o más"
+    },
+    {
+      "nombre": "Azote de Magos",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Fuerza o Destreza en 1. Impone desventaja en salvaciones de concentración a las criaturas que dañes, y te permite convertir una salvación mental fallida en un éxito (1/descanso).",
+      "requisito": "Nivel 4 o más"
     },
     {
       "nombre": "Centinela",
-      "descripcion": "Cuando golpeas a una criatura con un ataque de oportunidad...",
-      "requisito": null,
-      "efectos": {},
-      "hechizos": []
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Fuerza o Destreza en 1. Permite hacer un ataque de oportunidad si un enemigo a 1,5 m usa destrabarse o daña a un aliado, y reduce a 0 la velocidad de la criatura si aciertas el ataque.",
+      "requisito": "Nivel 4 o más, Fuerza o Destreza 13 o más"
+    },
+    {
+      "nombre": "Chef",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Constitución o Sabiduría en 1 y otorga competencia con útiles de cocinero. Permite preparar comidas que añaden 1d8 de curación en descansos cortos y tentempiés que otorgan puntos de golpe temporales.",
+      "requisito": "Nivel 4 o más"
+    },
+    {
+      "nombre": "Combatiente con Dos Armas",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Fuerza o Destreza en 1. Permite hacer un ataque extra como acción adicional con un arma cuerpo a cuerpo no pesada tras atacar con una ligera, y desenvainar/envainar dos armas a la vez.",
+      "requisito": "Nivel 4 o más, Fuerza o Destreza 13 o más"
+    },
+    {
+      "nombre": "Combatiente Montado",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Fuerza, Destreza o Sabiduría en 1. Otorga ventaja contra enemigos más pequeños que tu montura a 1,5 m, protege a la montura con un efecto similar a esquivar, y permite redirigir ataques hacia ti.",
+      "requisito": "Nivel 4 o más"
+    },
+    {
+      "nombre": "Duelista Defensivo",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Destreza en 1. Si empuñas un arma sutil y te aciertan cuerpo a cuerpo, puedes usar tu reacción para sumar tu bonificador por competencia a tu CA hasta el principio de tu siguiente turno.",
+      "requisito": "Nivel 4 o más, Destreza 13 o más"
+    },
+    {
+      "nombre": "Entrenamiento con Armas Marciales",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Fuerza o Destreza en 1 y obtienes competencia con todas las armas marciales.",
+      "requisito": "Nivel 4 o más"
+    },
+    {
+      "nombre": "Envenenador",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Destreza o Inteligencia en 1. Tus ataques ignoran la resistencia al daño de veneno. Puedes fabricar dosis de veneno potente y aplicarlas como acción adicional para infligir 2d8 de daño y envenenar.",
+      "requisito": "Nivel 4 o más"
+    },
+    {
+      "nombre": "Experto en Ballestas",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Destreza en 1. Ignoras la propiedad de recarga y cargas munición sin manos libres. Disparar a 1,5 m de un enemigo no impone desventaja y sumas tu modificador al daño en ataques extra ligeros.",
+      "requisito": "Nivel 4 o más, Destreza 13 o más"
+    },
+    {
+      "nombre": "Experto en Habilidades",
+      "Tipo": "General",
+      "descripcion": "Aumenta una puntuación de característica a tu elección en 1. Ganas competencia en una habilidad de tu elección y pericia en otra habilidad en la que ya seas competente.",
+      "requisito": "Nivel 4 o más"
+    },
+    {
+      "nombre": "Influencia Feérica",
+      "Tipo": "General",
+      "descripcion": "Aumenta Inteligencia, Sabiduría o Carisma en 1. Aprendes un conjuro de nivel 1 (adivinación o encantamiento) y paso brumoso, permitiéndote lanzar cada uno gratis una vez por descanso largo.",
+      "requisito": "Nivel 4 o más"
+    },
+    {
+      "nombre": "Influencia Sombría",
+      "Tipo": "General",
+      "descripcion": "Aumenta Inteligencia, Sabiduría o Carisma en 1. Aprendes un conjuro de nivel 1 (ilusionismo o nigromancia) y invisibilidad, permitiéndote lanzar cada uno gratis una vez por descanso largo.",
+      "requisito": "Nivel 4 o más"
+    },
+    {
+      "nombre": "Lanzador en Combatiente",
+      "Tipo": "General",
+      "descripcion": "Aumenta Inteligencia, Sabiduría o Carisma en 1. Tienes ventaja en salvaciones para mantener concentración, puedes lanzar un conjuro como reacción de oportunidad y ejecutas componentes somáticos con manos ocupadas.",
+      "requisito": "Nivel 4 o más, rasgo Lanzamiento de conjuros o Magia del pacto"
+    },
+    {
+      "nombre": "Lanzador Preciso",
+      "Tipo": "General",
+      "descripcion": "Aumenta Inteligencia, Sabiduría o Carisma en 1. Tus ataques de conjuro ignoran cobertura media y tres cuartos, no tienen desventaja a 1,5 m de un enemigo y su alcance aumenta en 18 m.",
+      "requisito": "Nivel 4 o más, rasgo Lanzamiento de conjuros o Magia del pacto"
+    },
+    {
+      "nombre": "Lanzador Ritual",
+      "Tipo": "General",
+      "descripcion": "Aumenta Inteligencia, Sabiduría o Carisma en 1. Preparas conjuros rituales de nivel 1 igual a tu competencia, y puedes realizar un ritual rápido usando su tiempo habitual sin gastar espacio (1/descanso largo).",
+      "requisito": "Nivel 4 o más; Inteligencia, Sabiduría o Carisma 13 o más"
+    },
+    {
+      "nombre": "Líder Inspirador",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Sabiduría o Carisma en 1. Al terminar un descanso, puedes realizar una interpretación para otorgar puntos de golpe temporales a hasta seis aliados igual a tu nivel más tu modificador de característica.",
+      "requisito": "Nivel 4 o más, Sabiduría o Carisma 13 o más"
+    },
+    {
+      "nombre": "Ligeramente Acorazado",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Fuerza o Destreza en 1 y obtienes entrenamiento con armaduras ligeras y escudos.",
+      "requisito": "Nivel 4 o más"
+    },
+    {
+      "nombre": "Maestro de Armas",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Fuerza o Destreza en 1 y te permite utilizar la propiedad de maestría de un tipo de arma que elijas. Puedes cambiar el arma elegida tras finalizar un descanso largo.",
+      "requisito": "Nivel 4 o más"
+    },
+    {
+      "nombre": "Maestro en Armaduras Medias",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Fuerza o Destreza en 1. Te permite sumar hasta 3 puntos (en lugar de 2) de tu Destreza a la CA mientras vistas una armadura media, si tu Destreza es 16 o más.",
+      "requisito": "Nivel 4 o más, entrenamiento con armaduras medias"
+    },
+    {
+      "nombre": "Maestro en Armaduras Pesadas",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Constitución o Fuerza en 1. Reduce cualquier daño contundente, cortante y perforante que recibas en una cantidad igual a tu bonificador por competencia mientras lleves armadura pesada.",
+      "requisito": "Nivel 4 o más, entrenamiento con armaduras pesadas"
+    },
+    {
+      "nombre": "Maestro en Armas de Asta",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Destreza o Fuerza en 1. Permite atacar con el otro extremo del arma como acción adicional (daño 1d4) y realizar un ataque de oportunidad cuerpo a cuerpo cuando una criatura entra en tu alcance.",
+      "requisito": "Nivel 4 o más, Fuerza o Destreza 13 o más"
+    },
+    {
+      "nombre": "Maestro en Armas Pesadas",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Fuerza en 1. Añade tu bonificador por competencia al daño al golpear con un arma pesada (1/turno) y permite realizar un ataque extra como acción adicional al infligir un crítico o reducir a 0 PG.",
+      "requisito": "Nivel 4 o más, Fuerza 13 o más"
+    },
+    {
+      "nombre": "Maestro en Escudos",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Fuerza en 1. Permite empujar o derribar a un enemigo con el escudo al acertar un ataque (1/turno) y usar tu reacción para evitar por completo el daño de efectos de salvación de Destreza.",
+      "requisito": "Nivel 4 o más, entrenamiento con escudos"
+    },
+    {
+      "nombre": "Mejora de Característica",
+      "Tipo": "General",
+      "descripcion": "Aumenta en 2 una puntuación de característica que elijas o aumenta dos características en 1 cada una, hasta un máximo de 20. Esta dote es repetible.",
+      "requisito": "Nivel 4 o más"
+    },
+    {
+      "nombre": "Mente Aguda",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Inteligencia en 1. Otorga competencia o pericia en una habilidad de conocimiento a tu elección y te permite llevar a cabo la acción de estudiar como una acción adicional.",
+      "requisito": "Nivel 4 o más, Inteligencia 13 o más"
+    },
+    {
+      "nombre": "Moderadamente Acorazado",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Fuerza o Destreza en 1 y obtienes entrenamiento con armaduras medias.",
+      "requisito": "Nivel 4 o más, entrenamiento con armaduras ligeras"
+    },
+    {
+      "nombre": "Muy Acorazado",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Constitución o Fuerza en 1 y obtienes entrenamiento con armaduras pesadas.",
+      "requisito": "Nivel 4 o más, entrenamiento con armaduras medias"
+    },
+    {
+      "nombre": "Observador",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Inteligencia o Sabiduría en 1. Otorga competencia o pericia en Investigación, Percepción o Perspicacia, y te permite realizar la acción de buscar como acción adicional.",
+      "requisito": "Nivel 4 o más, Inteligencia o Sabiduría 13 o más"
+    },
+    {
+      "nombre": "Perforador",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Fuerza o Destreza en 1. Permite volver a tirar un dado de daño perforante por turno, y añade un dado de daño adicional a las tiradas de daño por impactos críticos perforantes.",
+      "requisito": "Nivel 4 o más"
+    },
+    {
+      "nombre": "Rebanador",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Fuerza o Destreza en 1. Permite reducir la velocidad de un objetivo en 3 m tras dañarlo con daño cortante (1/turno) e impone desventaja en sus ataques si le infliges un impacto crítico.",
+      "requisito": "Nivel 4 o más"
+    },
+    {
+      "nombre": "Resiliente",
+      "Tipo": "General",
+      "descripcion": "Aumenta en 1 una puntuación de característica en la que no tengas competencia en salvaciones, y obtienes competencia en las tiradas de salvación de dicha característica.",
+      "requisito": "Nivel 4 o más"
+    },
+    {
+      "nombre": "Resistente",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Constitución en 1. Tienes ventaja en las tiradas de salvación contra muerte y puedes gastar un dado de golpe como acción adicional para recuperar puntos de golpe inmediatamente.",
+      "requisito": "Nivel 4 o más"
+    },
+    {
+      "nombre": "Telepático",
+      "Tipo": "General",
+      "descripcion": "Aumenta Inteligencia, Sabiduría o Carisma en 1. Te permite hablar telepáticamente con cualquier criatura que veas a 18 m (en un idioma común) y preparas el conjuro detectar pensamientos, lanzable una vez gratis.",
+      "requisito": "Nivel 4 o más"
+    },
+    {
+      "nombre": "Telequinético",
+      "Tipo": "General",
+      "descripcion": "Aumenta Inteligencia, Sabiduría o Carisma en 1. Aprendes mano de mago (invisible, sin componentes y con +9 m de alcance) y obtienes un empellón telequinético como acción adicional para mover criaturas 1,5 m.",
+      "requisito": "Nivel 4 o más"
+    },
+    {
+      "nombre": "Tirador de Primera",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Destreza en 1. Tus ataques a distancia con armas ignoran cobertura media y tres cuartos, no sufren desventaja a largo alcance ni por disparar a 1,5 m de un enemigo.",
+      "requisito": "Nivel 4 o más, Destreza 13 o más"
+    },
+    {
+      "nombre": "Triturador",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Fuerza o Constitución en 1. Permite mover a una criatura 1,5 m al dañarla con daño contundente (1/turno) y otorga ventaja en todos los ataques contra ella si le infliges un crítico.",
+      "requisito": "Nivel 4 o más"
+    },
+    {
+      "nombre": "Veloz",
+      "Tipo": "General",
+      "descripcion": "Aumenta tu Destreza o Constitución en 1. Tu velocidad aumenta en 3 m, correr ignora el coste de terreno difícil por el resto del turno y los ataques de oportunidad hechos contra ti tienen desventaja.",
+      "requisito": "Nivel 4 o más, Destreza o Constitución 13 o más"
+    },
+    {
+      "nombre": "Versado en un Elemento",
+      "Tipo": "General",
+      "descripcion": "Aumenta Inteligencia, Sabiduría o Carisma en 1. Elige un tipo de daño elemental; tus conjuros ignoran su resistencia y tratan los 1s en los dados de daño como 2s. Esta dote es repetible.",
+      "requisito": "Nivel 4 o más, rasgo Lanzamiento de conjuros o Magia del pacto"
+    },
+    {
+      "nombre": "Combate con Armas a Dos Manos",
+      "Tipo": "Estilo de combate",
+      "descripcion": "Al tirar el daño de un ataque con un arma cuerpo a cuerpo a dos manos o versátil empuñada con ambas manos, puedes tratar cualquier 1 o 2 en los dados de daño como un 3.",
+      "requisito": "rasgo Estilo de combate"
+    },
+    {
+      "nombre": "Combate con Armas Arrojadizas",
+      "Tipo": "Estilo de combate",
+      "descripcion": "Obtienes un bonificador de +2 a la tirada de daño cuando aciertas con una tirada de ataque a distancia utilizando un arma que tenga la propiedad arrojadiza.",
+      "requisito": "rasgo Estilo de combate"
+    },
+    {
+      "nombre": "Combate con Dos Armas",
+      "Tipo": "Estilo de combate",
+      "descripcion": "Cuando realizas un ataque extra como resultado de utilizar un arma ligera, puedes sumar tu modificador por característica al daño de ese ataque.",
+      "requisito": "rasgo Estilo de combate"
+    },
+    {
+      "nombre": "Combate Sin Armas",
+      "Tipo": "Estilo de combate",
+      "descripcion": "Tus ataques sin armas infligen 1d6 (o 1d8 si no llevas armas ni escudo) más Fuerza. Además, puedes infligir 1d4 de daño contundente al principio de cada turno a una criatura agarrada.",
+      "requisito": "rasgo Estilo de combate"
+    },
+    {
+      "nombre": "Defensa",
+      "Tipo": "Estilo de combate",
+      "descripcion": "Mientras lleves puesta una armadura ligera, media o pesada, recibes un bonificador de +1 a tu Clase de Armadura.",
+      "requisito": "rasgo Estilo de combate"
+    },
+    {
+      "nombre": "Duelo",
+      "Tipo": "Estilo de combate",
+      "descripcion": "Cuando empuñes un arma cuerpo a cuerpo con una mano y ninguna otra arma en la otra, recibes un bonificador de +2 a tus tiradas de daño con esa arma.",
+      "requisito": "rasgo Estilo de combate"
+    },
+    {
+      "nombre": "Intercepción",
+      "Tipo": "Estilo de combate",
+      "descripcion": "Si llevas escudo o arma, puedes usar tu reacción para reducir el daño causado a un aliado a 1,5 m o menos en un valor de 1d10 más tu bonificador por competencia.",
+      "requisito": "rasgo Estilo de combate"
+    },
+    {
+      "nombre": "Lucha a Ciegas",
+      "Tipo": "Estilo de combate",
+      "descripcion": "Obtienes visión ciega con un alcance de hasta 3 m.",
+      "requisito": "rasgo Estilo de combate"
+    },
+    {
+      "nombre": "Protección",
+      "Tipo": "Estilo de combate",
+      "descripcion": "Si embrazas un escudo, usas tu reacción para imponer desventaja a un ataque contra un aliado a 1,5 m. La desventaja se mantiene para el resto de ataques contra él si te quedas cerca.",
+      "requisito": "rasgo Estilo de combate"
+    },
+    {
+      "nombre": "Tiro con Arco",
+      "Tipo": "Estilo de combate",
+      "descripcion": "Recibes un bonificador de +2 a las tiradas de ataque realizadas con armas a distancia.",
+      "requisito": "rasgo Estilo de combate"
+    },
+    {
+      "nombre": "Don de la Fortaleza",
+      "Tipo": "Don épico",
+      "descripcion": "Aumenta una característica en 1 (máx. 30). Tus puntos de golpe máximos aumentan en 40 y recuperas salud extra igual a tu modificador de Constitución cada vez que te cures (1/turno).",
+      "requisito": "nivel 19 o más"
+    },
+    {
+      "nombre": "Don de la Habilidad",
+      "Tipo": "Don épico",
+      "descripcion": "Aumenta una característica en 1 (máx. 30). Ganas competencia en absolutamente todas las habilidades del juego y obtienes pericia en una habilidad que elijas.",
+      "requisito": "nivel 19 o más"
+    },
+    {
+      "nombre": "Don de la Pericia en Combatiente",
+      "Tipo": "Don épico",
+      "descripcion": "Aumenta una característica en 1 (máx. 30). Cuando falles con una tirada de ataque, puedes transformar ese fallo directamente en un impacto acertado (1/turno).",
+      "requisito": "nivel 19 o más"
+    },
+    {
+      "nombre": "Don de la Recuperación",
+      "Tipo": "Don épico",
+      "descripcion": "Aumenta una característica en 1 (máx. 30). Si tus PG caen a 0, te quedas con 1 PG y te curas la mitad de tus PG máximos (1/descanso largo). Otorga una reserva de 10d10 de curación adicional.",
+      "requisito": "nivel 19 o más"
+    },
+    {
+      "nombre": "Don de la Resistencia a Energías",
+      "Tipo": "Don épico",
+      "descripcion": "Aumenta una característica en 1 (máx. 30). Elige dos resistencias elementales modificables tras descansos largos. Te permite usar tu reacción para redirigir 2d12+Con de daño recibido a un enemigo.",
+      "requisito": "nivel 19 o más"
+    },
+    {
+      "nombre": "Don de la Velocidad",
+      "Tipo": "Don épico",
+      "descripcion": "Aumenta una característica en 1 (máx. 30). Tu velocidad aumenta en 9 m y puedes usar una acción adicional para realizar la acción de destrabarse, lo cual también finaliza el estado agarrado.",
+      "requisito": "nivel 19 o más"
+    },
+    {
+      "nombre": "Don de la Visión Verdadera",
+      "Tipo": "Don épico",
+      "descripcion": "Aumenta una característica de tu elección en 1 (hasta un máximo de 30) y obtienes visión verdadera con un alcance de hasta 18 m.",
+      "requisito": "nivel 19 o más"
+    },
+    {
+      "nombre": "Don del Ataque Imparable",
+      "Tipo": "Don épico",
+      "descripcion": "Aumenta tu Fuerza o Destreza en 1 (máx. 30). Tu daño físico siempre ignora la resistencia y, al sacar un 20 en el d20 de ataque, sumas tu puntuación de característica al daño.",
+      "requisito": "nivel 19 o más"
+    },
+    {
+      "nombre": "Don del Destino",
+      "Tipo": "Don épico",
+      "descripcion": "Aumenta una característica en 1 (máx. 30). Al fallar o superar una prueba de d20 tú o alguien a 18 m, puedes aplicar un bonificador o penalizador de 2d4 (se recarga con iniciativa o descansos).",
+      "requisito": "nivel 19 o más"
+    },
+    {
+      "nombre": "Don del Espíritu de la Noche",
+      "Tipo": "Don épico",
+      "descripcion": "Aumenta una característica en 1 (máx. 30). En luz tenue u oscuridad, puedes hacerte invisible como acción adicional (hasta actuar) y obtienes resistencia a todo daño excepto psíquico y radiante.",
+      "requisito": "nivel 19 o más"
+    },
+    {
+      "nombre": "Don del Recuerdo de Conjuros",
+      "Tipo": "Don épico",
+      "descripcion": "Aumenta Inteligencia, Sabiduría o Carisma en 1 (máx. 30). Al lanzar un conjuro con espacio de nivel 1 a 4, tiras 1d4; si el resultado coincide con el nivel del espacio, este no se gasta.",
+      "requisito": "nivel 19 o más, rasgo Lanzamiento de conjuros"
+    },
+    {
+      "nombre": "Don del Viaje Dimensional",
+      "Tipo": "Don épico",
+      "descripcion": "Aumenta una característica de tu elección en 1 (hasta un máximo de 30) e inmediatamente después de realizar la acción de atacar o de magia, te teletransportas hasta 9 m.",
+      "requisito": "nivel 19 o más"
     }
   ]
 }

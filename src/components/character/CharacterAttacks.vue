@@ -149,8 +149,8 @@ const eliminarAtaque = (index) => {
   border-radius: 4px;
 }
 .item-name { flex: 2; }
-.item-bonus { width: 110px; }
-.item-damage { width: 110px; }
+.item-bonus { width: 60px; }
+.item-damage { width: 60px; }
 .item-notes { flex: 3; }
 
 .type-selector-wrapper {

@@ -70,7 +70,7 @@ const formatearModificador = (valor) => {
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1rem;
+  gap: 0.1rem;
 }
 .stat-box {
   display: flex;

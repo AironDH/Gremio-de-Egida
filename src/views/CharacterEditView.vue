@@ -52,14 +52,11 @@ const volverAlInicio = () => {
 <style scoped>
 .view-container {
   padding: 2rem;
-  max-width: 900px;
   margin: 0 auto;
 }
-.error-msg {
-  text-align: center;
-  padding: 3rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+@media (min-width: 1024px){
+  .view-container {
+    max-width: 95vw;
+  }
 }
 </style>

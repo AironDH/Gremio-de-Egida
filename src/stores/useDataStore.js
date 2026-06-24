@@ -18,9 +18,9 @@ export const useDataStore = defineStore('data', {
         // Asumiendo que los archivos JSON se colocarán en public/data/ 
         // o son importados directamente si están en src/data/
         const [dataRes, slotsRes, spellsRes] = await Promise.all([
-          fetch('/data/data.json').then(res => res.json()),
-          fetch('/data/espacios-conjuro.json').then(res => res.json()),
-          fetch('/data/hechizos.json').then(res => res.json())
+          fetch('src/data/data.json').then(res => res.json()),
+          fetch('src/data/espacios-conjuro.json').then(res => res.json()),
+          fetch('src/data/hechizos.json').then(res => res.json())
         ])
         
         this.gameData = dataRes

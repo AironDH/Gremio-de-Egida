@@ -116,8 +116,12 @@ const importarDatos = async (event) => {
 <style scoped>
 .home-view {
   padding: 2rem;
-  max-width: 1200px;
   margin: 0 auto;
+}
+@media (min-width: 1024px){
+  .home-view {
+    max-width: 95vw;
+  }
 }
 .home-view__header {
   display: flex;

@@ -24,11 +24,14 @@
           
           <div class="form-group">
             <label>Clase</label>
-            <select v-model="clase.nombre" @change="alCambiarClase(index)">
-              <option value="">Selecciona...</option>
-              <option v-for="c in listadoClases" :key="c.nombre" :value="c.nombre">
-                {{ c.nombre }}
-              </option>
+            <select 
+              :value="clase.nombre" 
+              @change="(event) => alCambiarClase(event, index)"
+            >
+            <option value="">Selecciona...</option>
+            <option v-for="c in listadoClases" :key="c.nombre" :value="c.nombre">
+              {{ c.nombre }}
+            </option>
             </select>
           </div>
 
@@ -48,7 +51,7 @@
             </div>
           </div>
 
-          <div class="form-group" v-if="obtenerSubclases(clase.nombre).length > 0">
+          <div class="form-group">
             <label>Subclase</label>
             <select v-model="clase.subclase">
               <option value="">Selecciona...</option>
@@ -85,11 +88,31 @@
       </div>
 
       <div class="form-group">
-        <label for="raza">Linaje / Raza</label>
+        <label for="raza">Linaje</label>
         <select id="raza" v-model="datos.raza" required>
           <option disabled value="">Selecciona un linaje</option>
           <option v-for="raza in razasDisponibles" :key="raza.nombre" :value="raza.nombre">
             {{ raza.nombre }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="trasfondo">Trasfondo</label>
+        <select id="trasfondo" :value="datos.trasfondo || ''" @change="alCambiarTrasfondo" required>
+          <option disabled value="">Selecciona un trasfondo</option>
+          <option v-for="t in listadoTrasfondos" :key="t.nombre" :value="t.nombre">
+            {{ t.nombre }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group" v-if="esRazaVersatil">
+        <label for="doteVersatil">Dote Adicional (Versátil)</label>
+        <select id="doteVersatil" :value="doteVersatilSeleccionada" @change="alCambiarDoteVersatil" required>
+          <option disabled value="">Selecciona una dote</option>
+          <option v-for="dote in listadoDotesOrigen" :key="dote.nombre" :value="dote.nombre">
+            {{ dote.nombre }}
           </option>
         </select>
       </div>
@@ -111,11 +134,11 @@
       </div>
     </div>
 
-    </div>
+  </div>
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, watch } from 'vue' // Añadido watch para limpieza automática
 import datosMundo from '../../data/data.json'
 import BaseButton from '../common/BaseButton.vue'
 import { calcularNivelTotal, calcularPB } from '../../utils/calculations.js'
@@ -151,25 +174,47 @@ const eliminarClase = (index) => {
   datos.value.clases.splice(index, 1)
 }
 
-const subirNivel = (index) => {
-  const claseActual = datos.value.clases[index]
-  
-  // Aseguramos que sea un número entero antes de sumar
-  let nivelActual = parseInt(claseActual.nivel) || 1
-  
-  claseActual.nivel = nivelActual + 1
-  
+const alCambiarClase = (payload, index = 0) => {
+  let claseSeleccionada = payload?.target?.value !== undefined ? payload.target.value : payload;
+  if (!claseSeleccionada) return;
+
+  const personajeActualizado = { ...props.modelValue };
+  const nuevasClases = [...personajeActualizado.clases];
+
+  nuevasClases[index] = {
+    ...nuevasClases[index],
+    nombre: claseSeleccionada,
+    subclase: ''
+  };
+
+  personajeActualizado.clases = nuevasClases;
+  emit('update:modelValue', personajeActualizado);
 }
 
-// Cálculo del Nivel Total 
-const nivelTotal = computed(() => {
-  return calcularNivelTotal(datos.value.clases)
-})
+const alCambiarSubclase = (payload, index = 0) => {
+  let subclaseSeleccionada = payload?.target?.value !== undefined ? payload.target.value : payload;
+  if (!subclaseSeleccionada) return;
 
-// Calculamos reactivamente el Bonificador de Competencia
-const bonificadorCompetencia = computed(() => {
-  return calcularPB(nivelTotal.value)
-})
+  const personajeActualizado = { ...props.modelValue };
+  const nuevasClases = [...personajeActualizado.clases];
+
+  nuevasClases[index] = {
+    ...nuevasClases[index],
+    subclase: subclaseSeleccionada
+  };
+
+  personajeActualizado.clases = nuevasClases;
+  emit('update:modelValue', personajeActualizado);
+}
+
+const subirNivel = (index) => {
+  const claseActual = datos.value.clases[index]
+  let nivelActual = parseInt(claseActual.nivel) || 1
+  claseActual.nivel = nivelActual + 1
+}
+
+const nivelTotal = computed(() => calcularNivelTotal(datos.value.clases))
+const bonificadorCompetencia = computed(() => calcularPB(nivelTotal.value))
 
 // === Lógica de Especies ===
 const listadoEspecies = computed(() => datosMundo.especies || [])
@@ -181,21 +226,105 @@ const razasDisponibles = computed(() => {
 })
 
 const alCambiarEspecie = () => {
-  // 1. Limpiamos cualquier selección previa de raza
   datos.value.raza = ''
-  
-  // 2. Revisamos cuántas razas tiene la especie recién seleccionada
   const razas = razasDisponibles.value
-  
-  // 3. Si solo hay una opción disponible, se selecciona automáticamente
   if (razas.length === 1) {
     datos.value.raza = razas[0].nombre
   }
 }
+
+// === NUEVO: Lógica de Trasfondos y Dotes ===
+const listadoTrasfondos = computed(() => datosMundo.trasfondos || [])
+
+// Filtramos las dotes específicamente por Tipo: "Origen"
+const listadoDotesOrigen = computed(() => {
+  return (datosMundo.dotes || []).filter(dote => dote.Tipo === 'Origen')
+})
+
+const alCambiarTrasfondo = (event) => {
+  const nombreTrasfondo = event.target.value
+  if (!nombreTrasfondo) return
+
+  const personajeActualizado = { ...props.modelValue }
+  personajeActualizado.trasfondo = nombreTrasfondo
+  
+  // Clonamos el array de dotes para mantener reactividad limpia
+  let dotesActuales = personajeActualizado.dotes ? [...personajeActualizado.dotes] : []
+  
+  // Removemos la dote de trasfondo anterior en caso de que el jugador cambie de opinión
+  dotesActuales = dotesActuales.filter(d => d.fuente !== 'Trasfondo')
+  
+  // Buscamos el trasfondo y añadimos su dote
+  const trasfondoData = listadoTrasfondos.value.find(t => t.nombre === nombreTrasfondo)
+  if (trasfondoData && trasfondoData.dote) {
+    dotesActuales.push({
+      nombre: trasfondoData.dote,
+      tipo: 'Origen',
+      fuente: 'Trasfondo',
+      nivel_adquirido: 1
+    })
+  }
+  
+  personajeActualizado.dotes = dotesActuales
+  emit('update:modelValue', personajeActualizado)
+}
+
+// === NUEVO: Lógica de Raza Versátil ===
+// Computada para saber si mostramos el segundo selector
+const esRazaVersatil = computed(() => {
+  if (!datos.value.especie || !datos.value.raza) return false
+  const especieData = listadoEspecies.value.find(e => e.nombre === datos.value.especie)
+  if (!especieData || !especieData.razas) return false
+  
+  const razaData = especieData.razas.find(r => r.nombre === datos.value.raza)
+  if (!razaData || !razaData.rasgos) return false
+  
+  // Devuelve true si encuentra "Versátil" en algún lugar de los rasgos
+  return razaData.rasgos.some(rasgo => rasgo.toLowerCase().includes('versátil'))
+})
+
+// Watcher de limpieza: si cambias de raza a una que NO es versátil, borra la dote extra
+watch(esRazaVersatil, (esVersatil) => {
+  if (!esVersatil && props.modelValue.dotes) {
+    const dotesLimpias = props.modelValue.dotes.filter(d => d.fuente !== 'Raza (Versátil)')
+    // Solo emitimos si efectivamente se eliminó algo (evita ciclos infinitos)
+    if (dotesLimpias.length !== props.modelValue.dotes.length) {
+      emit('update:modelValue', { ...props.modelValue, dotes: dotesLimpias })
+    }
+  }
+})
+
+// Computada para mantener el valor visible en el <select> de dote versátil
+const doteVersatilSeleccionada = computed(() => {
+  if (!datos.value.dotes) return ''
+  const dote = datos.value.dotes.find(d => d.fuente === 'Raza (Versátil)')
+  return dote ? dote.nombre : ''
+})
+
+const alCambiarDoteVersatil = (event) => {
+  const nombreDote = event.target.value
+  if (!nombreDote) return
+
+  const personajeActualizado = { ...props.modelValue }
+  let dotesActuales = personajeActualizado.dotes ? [...personajeActualizado.dotes] : []
+  
+  // Limpiamos la elección previa del selector versátil
+  dotesActuales = dotesActuales.filter(d => d.fuente !== 'Raza (Versátil)')
+  
+  dotesActuales.push({
+    nombre: nombreDote,
+    tipo: 'Origen',
+    fuente: 'Raza (Versátil)',
+    nivel_adquirido: 1
+  })
+  
+  personajeActualizado.dotes = dotesActuales
+  emit('update:modelValue', personajeActualizado)
+}
 </script>
 
 <style scoped>
-/* Añade estos estilos específicos para el bloque de clases */
+/* Los estilos se mantienen idénticos, la clase .form-grid acomodará los nuevos campos de forma nativa */
 .full-width {
   grid-column: 1 / -1;
 }
@@ -239,33 +368,25 @@ const alCambiarEspecie = () => {
   margin-bottom: 0.75rem;
   align-items: center;
 }
-/* Hacemos que los contenedores de los selectores crezcan para llenar el espacio */
 .class-row > .form-group {
   flex: 1; 
 }
-
-/* El control de nivel solo toma el espacio que necesita */
 .class-row > .level-control-group {
   flex: 0 0 auto;
 }
-
-/* Aseguramos que los selectores ocupen el 100% de su contenedor elástico */
 .class-row select {
   width: 100%;
 }
-
-/* El botón de eliminar (si existe) se mantiene con tamaño fijo */
 .class-row > .btn-delete {
   flex: 0 0 auto;
-  align-self: flex-end; /* Lo alinea con los inputs */
-  margin-bottom: 2px; /* Ajuste visual ligero */
+  align-self: flex-end; 
+  margin-bottom: 2px; 
 }
 
 @media (max-width: 640px) {
   .class-row {
     flex-wrap: wrap;
   }
-  /* En móviles, forzamos a que todos los grupos ocupen el 100% del ancho */
   .class-row > .form-group { 
     flex: 1 1 100%; 
   }
@@ -315,7 +436,7 @@ const alCambiarEspecie = () => {
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 0.25rem 0.5rem;
-  height: 38px; /* Para que coincida con la altura de los selects */
+  height: 38px;
 }
 .level-text {
   font-weight: bold;
