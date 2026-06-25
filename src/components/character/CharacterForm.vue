@@ -13,6 +13,7 @@
     <CharacterFeatures 
       v-model:ca="formData.ca" 
       v-model:velocidad="formData.velocidad" 
+      v-model:modificadoresIniciativa="formData.modificadoresIniciativa"
       :combateCalculado="combateCalculado" 
       class="ancho-medio"
     />
@@ -114,6 +115,7 @@ const formData = ref({
     pgTemp: 0,
     ca: 10,
     velocidad: 30,
+    modificadoresIniciativa: [],
     dotes: [],
     ataques: [],
     equipo: [],

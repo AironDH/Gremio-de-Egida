@@ -68,7 +68,7 @@ export function useCharacterCalculations(personajeRef) {
       const valorCaracteristica = caracteristicas[caracteristicaBase] || 10
       let modTotal = calcularModificador(valorCaracteristica)
 
-      // Se aplica el multiplicador según el grado de competencia [cite: 538-556]
+      // Se aplica el multiplicador según el grado de competencia
       if (grado === 'competencia') {
         modTotal += pb.value
       } else if (grado === 'pericia') {
@@ -90,15 +90,29 @@ export function useCharacterCalculations(personajeRef) {
   // 3. useCombate
   // ==========================================
   const combateCalculado = computed(() => {
-    const destreza = (personajeRef.value.caracteristicasBase && personajeRef.value.caracteristicasBase.destreza) || 10
+    const caracteristicas = personajeRef.value.caracteristicasBase || {}
+    const destreza = caracteristicas.destreza || 10
     const modDestreza = calcularModificador(destreza)
 
-    // Valores derivados esenciales [cite: 461-465]
+    // Base de iniciativa ligada a Destreza
+    let iniciativaTotal = modDestreza
+    
+    // Sumamos los modificadores adicionales si existen
+    const modificadoresExtra = personajeRef.value.modificadoresIniciativa || []
+    
+    modificadoresExtra.forEach(mod => {
+      if (mod === 'medio_pb') iniciativaTotal += Math.floor(pb.value / 2)
+      if (mod === 'pb') iniciativaTotal += pb.value
+      if (mod === 'inteligencia') iniciativaTotal += calcularModificador(caracteristicas.inteligencia || 10)
+      if (mod === 'sabiduria') iniciativaTotal += calcularModificador(caracteristicas.sabiduria || 10)
+      if (mod === 'carisma') iniciativaTotal += calcularModificador(caracteristicas.carisma || 10)
+    })
+
     return {
-      iniciativa: modDestreza, // Base de iniciativa ligada a Destreza
-      ca: personajeRef.value.ca || (10 + modDestreza), // CA base sin armadura
-      velocidad: personajeRef.value.velocidad || 30, // Velocidad estándar por defecto
-      pb: pb.value // Se expone de forma informativa [cite: 465]
+      iniciativa: iniciativaTotal,
+      ca: personajeRef.value.ca || (10 + modDestreza),
+      velocidad: personajeRef.value.velocidad || 30,
+      pb: pb.value
     }
   })
 
