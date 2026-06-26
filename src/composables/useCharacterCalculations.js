@@ -1,5 +1,6 @@
 import { computed } from 'vue'
 import { calcularPB, calcularModificador, calcularNivelTotal } from '../utils/calculations.js'
+import datosMundo from '../data/data.json' // Importamos los datos estáticos para cruzar la información
 
 // Mapa constante que vincula cada una de las 18 habilidades con su característica base
 const MAPA_HABILIDADES = {
@@ -34,18 +35,39 @@ export function useCharacterCalculations(personajeRef) {
   const pb = computed(() => calcularPB(nivelTotal.value))
 
   // ==========================================
-  // 1. useSalvaciones
+  // 1. Estado Derivado: Salvaciones de Clase Principal (NUEVO)
+  // ==========================================
+  const salvacionesClasePrincipal = computed(() => {
+    const clases = personajeRef.value.clases || []
+    
+    // Cláusula de salvaguarda por si el formulario está vacío
+    if (clases.length === 0 || !clases[0].nombre) return []
+
+    const nombreClasePrincipal = clases[0].nombre
+    const claseData = datosMundo.clases?.find(c => c.nombre === nombreClasePrincipal)
+
+    if (!claseData || !Array.isArray(claseData.competencia_salvacion)) return []
+
+    // Normalizamos las strings para quitar acentos y pasarlas a minúsculas (ej: "Constitución" -> "constitucion")
+    return claseData.competencia_salvacion.map(salvacion => {
+      return salvacion.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    })
+  })
+
+  // ==========================================
+  // 2. useSalvaciones (ACTUALIZADO)
   // ==========================================
   const salvacionesCalculadas = computed(() => {
     const resultado = {}
     const caracteristicas = personajeRef.value.caracteristicasBase || {}
     const salvacionesProf = personajeRef.value.salvaciones || {}
+    const salvacionesFijas = salvacionesClasePrincipal.value
 
-    // Modificador de característica + PB (si es competente)
+    // Modificador de característica + PB (si es competente por dote o por clase principal)
     for (const [caracteristica, valor] of Object.entries(caracteristicas)) {
       let modTotal = calcularModificador(valor)
       
-      if (salvacionesProf[caracteristica]) {
+      if (salvacionesProf[caracteristica] || salvacionesFijas.includes(caracteristica)) {
         modTotal += pb.value
       }
       
@@ -56,7 +78,7 @@ export function useCharacterCalculations(personajeRef) {
   })
 
   // ==========================================
-  // 2. useHabilidades
+  // 3. useHabilidades
   // ==========================================
   const habilidadesCalculadas = computed(() => {
     const resultado = {}
@@ -87,17 +109,17 @@ export function useCharacterCalculations(personajeRef) {
   })
 
   // ==========================================
-  // 3. useCombate
+  // 4. useCombate
   // ==========================================
   const combateCalculado = computed(() => {
     const caracteristicas = personajeRef.value.caracteristicasBase || {}
     const destreza = caracteristicas.destreza || 10
     const modDestreza = calcularModificador(destreza)
 
-    // Base de iniciativa ligada a Destreza[cite: 15]
+    // Base de iniciativa ligada a Destreza
     let iniciativaTotal = modDestreza
     
-    // Sumamos los modificadores adicionales si existen[cite: 15]
+    // Sumamos los modificadores adicionales si existen
     const modificadoresExtra = personajeRef.value.modificadoresIniciativa || []
     
     modificadoresExtra.forEach(mod => {
@@ -117,7 +139,7 @@ export function useCharacterCalculations(personajeRef) {
   })
 
   // ==========================================
-  // 4. Inventario y Carga (NUEVO)
+  // 5. Inventario y Carga
   // ==========================================
   const pesoActualEquipado = computed(() => {
     const equipo = personajeRef.value.equipo || []
@@ -128,7 +150,7 @@ export function useCharacterCalculations(personajeRef) {
     }, 0)
   })
 
-    const capacidadCargaCalculada = computed(() => {
+  const capacidadCargaCalculada = computed(() => {
     const caracteristicas = personajeRef.value.caracteristicasBase || {}
     const fuerza = caracteristicas.fuerza || 10
     const tamano = personajeRef.value.tamano || 'mediano'
@@ -160,6 +182,7 @@ export function useCharacterCalculations(personajeRef) {
   return {
     nivelTotal,
     pb,
+    salvacionesClasePrincipal, 
     salvacionesCalculadas,
     habilidadesCalculadas,
     combateCalculado,

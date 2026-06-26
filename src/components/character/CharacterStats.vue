@@ -14,8 +14,16 @@
         <div class="stat-mod">Mod: {{ formatearModificador(calcularModificador(valor)) }}</div>
         
         <div class="saving-throw">
-          <label>
-            <input type="checkbox" v-model="salvaciones[nombre]" />
+          <label 
+            :title="esSalvacionClase(nombre) ? 'Activo por clase principal' : ''"
+            :class="{ 'label-bloqueada': esSalvacionClase(nombre) }"
+          >
+            <input 
+              type="checkbox" 
+              :checked="esSalvacionActiva(nombre)"
+              :disabled="esSalvacionClase(nombre)"
+              @change="toggleSalvacion(nombre, $event)"
+            />
             Salvación: <strong>{{ formatearModificador(salvacionesCalculadas[nombre]) }}</strong>
           </label>
         </div>
@@ -31,7 +39,9 @@ import { calcularModificador } from '../../utils/calculations.js'
 const props = defineProps({
   caracteristicas: { type: Object, required: true },
   salvaciones: { type: Object, required: true },
-  salvacionesCalculadas: { type: Object, required: true }
+  salvacionesCalculadas: { type: Object, required: true },
+  // NUEVO: Recibe las salvaciones base de la clase principal
+  salvacionesClasePrincipal: { type: Array, default: () => [] }
 })
 
 const emit = defineEmits(['update:caracteristicas', 'update:salvaciones'])
@@ -41,10 +51,23 @@ const caracteristicas = computed({
   set: (value) => emit('update:caracteristicas', value)
 })
 
-const salvaciones = computed({
-  get: () => props.salvaciones,
-  set: (value) => emit('update:salvaciones', value)
-})
+// === Lógica de Combinación de Salvaciones ===
+
+// Verifica si la salvación pertenece a la clase principal
+const esSalvacionClase = (nombre) => props.salvacionesClasePrincipal.includes(nombre)
+
+// Verifica si debe estar marcada (ya sea por clase o por dote manual)
+const esSalvacionActiva = (nombre) => {
+  return props.salvaciones[nombre] || esSalvacionClase(nombre)
+}
+
+// Emite el cambio solo para las salvaciones manuales (dotes)
+const toggleSalvacion = (nombre, event) => {
+  const nuevasSalvaciones = { ...props.salvaciones, [nombre]: event.target.checked }
+  emit('update:salvaciones', nuevasSalvaciones)
+}
+
+// === Utilidades ===
 
 const capitalizar = (str) => str.charAt(0).toUpperCase() + str.slice(1)
 
@@ -105,5 +128,14 @@ const formatearModificador = (valor) => {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+}
+
+/* Indicador visual para las salvaciones bloqueadas por clase */
+.label-bloqueada {
+  cursor: help;
+  color: var(--color-primary, #7b1fa2);
+}
+.label-bloqueada input {
+  cursor: help;
 }
 </style>

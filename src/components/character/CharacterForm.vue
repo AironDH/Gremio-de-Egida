@@ -22,8 +22,9 @@
       v-model:caracteristicas="formData.caracteristicasBase" 
       v-model:salvaciones="formData.salvaciones"
       :salvacionesCalculadas="salvacionesCalculadas"
+      :salvacionesClasePrincipal="salvacionesClasePrincipal" 
       class="ancho-medio"
-      />
+    />
 
     <CharacterSkills 
       v-model="formData.habilidades" 
@@ -245,7 +246,8 @@ const {
   habilidadesCalculadas, 
   combateCalculado,
   capacidadCargaCalculada,
-  pesoActualEquipado
+  pesoActualEquipado,
+  salvacionesClasePrincipal
       } = useCharacterCalculations(formData)
 
 onMounted(() => {
