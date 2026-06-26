@@ -41,7 +41,7 @@ export function useCharacterCalculations(personajeRef) {
     const caracteristicas = personajeRef.value.caracteristicasBase || {}
     const salvacionesProf = personajeRef.value.salvaciones || {}
 
-    // Modificador de característica + PB (si es competente) 
+    // Modificador de característica + PB (si es competente)
     for (const [caracteristica, valor] of Object.entries(caracteristicas)) {
       let modTotal = calcularModificador(valor)
       
@@ -94,10 +94,10 @@ export function useCharacterCalculations(personajeRef) {
     const destreza = caracteristicas.destreza || 10
     const modDestreza = calcularModificador(destreza)
 
-    // Base de iniciativa ligada a Destreza
+    // Base de iniciativa ligada a Destreza[cite: 15]
     let iniciativaTotal = modDestreza
     
-    // Sumamos los modificadores adicionales si existen
+    // Sumamos los modificadores adicionales si existen[cite: 15]
     const modificadoresExtra = personajeRef.value.modificadoresIniciativa || []
     
     modificadoresExtra.forEach(mod => {
@@ -116,6 +116,42 @@ export function useCharacterCalculations(personajeRef) {
     }
   })
 
+  // ==========================================
+  // 4. Inventario y Carga (NUEVO)
+  // ==========================================
+  const pesoActualEquipado = computed(() => {
+    const equipo = personajeRef.value.equipo || []
+    return equipo.reduce((total, item) => {
+      const peso = parseFloat(item.peso) || 0
+      const cantidad = parseInt(item.cantidad) || 0
+      return total + (peso * cantidad)
+    }, 0)
+  })
+
+    const capacidadCargaCalculada = computed(() => {
+    const caracteristicas = personajeRef.value.caracteristicasBase || {}
+    const fuerza = caracteristicas.fuerza || 10
+    const tamano = personajeRef.value.tamano || 'mediano'
+    
+    // Base de capacidad (Fuerza * 7.5 kg)
+    const capacidadBase = fuerza * 7.5
+    
+    // Multiplicador por tamaño
+    let multiplicador = 1
+    switch(tamano.toLowerCase()) {
+      case 'diminuto': multiplicador = 0.5; break;
+      case 'pequeño':
+      case 'pequeno':
+      case 'mediano': multiplicador = 1; break;
+      case 'grande': multiplicador = 2; break;
+      case 'enorme': multiplicador = 4; break;
+      case 'gargantuesco': multiplicador = 8; break;
+      default: multiplicador = 1; break;
+    }
+
+    return capacidadBase * multiplicador
+  })
+
   // Funciones auxiliares para formateo en la interfaz
   const formatearModificador = (valor) => {
     return valor >= 0 ? `+${valor}` : `${valor}`
@@ -127,6 +163,8 @@ export function useCharacterCalculations(personajeRef) {
     salvacionesCalculadas,
     habilidadesCalculadas,
     combateCalculado,
+    pesoActualEquipado,      
+    capacidadCargaCalculada, 
     formatearModificador
   }
 }

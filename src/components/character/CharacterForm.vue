@@ -43,7 +43,12 @@
 
     <CharacterAttacks v-model="formData.ataques" class="ancho-medio" />
 
-    <CharacterEquipment v-model="formData.equipo" class="ancho-medio" />
+    <CharacterEquipment 
+      v-model="formData.equipo" 
+      :pesoActualEquipado="pesoActualEquipado"
+      :capacidadCargaCalculada="capacidadCargaCalculada"
+      class="ancho-medio"
+    />
 
     <CharacterTraits :rasgos="rasgosPersonaje" class="columna-1"/>
 
@@ -110,6 +115,7 @@ const formData = ref({
     especie: '',
     raza: '',
     trasfondo: '',
+    tamano: 'mediano',
     puntosVidaMax: 10,
     puntosVidaActuales: 10,
     pgTemp: 0,
@@ -118,10 +124,17 @@ const formData = ref({
     modificadoresIniciativa: [],
     dotes: [],
     ataques: [],
-    equipo: [],
+    equipo: [
+      {
+        "id": "c8be5d5a-51eb-4adb-b11c-42217d0e6c10",
+        "nombre": "Piezas de Oro",
+        "cantidad": 0,
+        "peso": 0.01,
+        "notas": ""
+      }
+    ],
     mejoras: [],
-    
-    // NUEVO: Estado para rastrear los recursos consumibles
+
     recursosMagicos: {
       estandar: {}, // Guardará los slots actuales de la forma { "1": 4, "2": 2 }
       pacto: {}     // Guardará los slots actuales de pacto de la forma { "slots": 2, "slot_level": 1 }
@@ -227,7 +240,13 @@ const registrarMejora = (nuevaMejora) => {
   mostrarModalMejora.value = false 
 }
 
-const { salvacionesCalculadas, habilidadesCalculadas, combateCalculado } = useCharacterCalculations(formData)
+const { 
+  salvacionesCalculadas, 
+  habilidadesCalculadas, 
+  combateCalculado,
+  capacidadCargaCalculada,
+  pesoActualEquipado
+      } = useCharacterCalculations(formData)
 
 onMounted(() => {
   if (props.personajeInicial) {

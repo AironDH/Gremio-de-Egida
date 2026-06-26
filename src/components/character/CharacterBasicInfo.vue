@@ -98,6 +98,18 @@
       </div>
 
       <div class="form-group">
+        <label for="tamano">Tamaño</label>
+        <select id="tamano" v-model="datos.tamano" required>
+          <option value="diminuto">Diminuto</option>
+          <option value="pequeño">Pequeño</option>
+          <option value="mediano">Mediano</option>
+          <option value="grande">Grande</option>
+          <option value="enorme">Enorme</option>
+          <option value="gargantuesco">Gargantuesco</option>
+        </select>
+      </div>
+
+      <div class="form-group">
         <label for="trasfondo">Trasfondo</label>
         <select id="trasfondo" :value="datos.trasfondo || ''" @change="alCambiarTrasfondo" required>
           <option disabled value="">Selecciona un trasfondo</option>
@@ -138,7 +150,7 @@
 </template>
 
 <script setup>
-import { computed, watch } from 'vue' // Añadido watch para limpieza automática
+import { computed, watch } from 'vue' 
 import datosMundo from '../../data/data.json'
 import BaseButton from '../common/BaseButton.vue'
 import { calcularNivelTotal, calcularPB } from '../../utils/calculations.js'
@@ -236,7 +248,6 @@ const alCambiarEspecie = () => {
 // === NUEVO: Lógica de Trasfondos y Dotes ===
 const listadoTrasfondos = computed(() => datosMundo.trasfondos || [])
 
-// Filtramos las dotes específicamente por Tipo: "Origen"
 const listadoDotesOrigen = computed(() => {
   return (datosMundo.dotes || []).filter(dote => dote.Tipo === 'Origen')
 })
@@ -248,13 +259,9 @@ const alCambiarTrasfondo = (event) => {
   const personajeActualizado = { ...props.modelValue }
   personajeActualizado.trasfondo = nombreTrasfondo
   
-  // Clonamos el array de dotes para mantener reactividad limpia
   let dotesActuales = personajeActualizado.dotes ? [...personajeActualizado.dotes] : []
-  
-  // Removemos la dote de trasfondo anterior en caso de que el jugador cambie de opinión
   dotesActuales = dotesActuales.filter(d => d.fuente !== 'Trasfondo')
   
-  // Buscamos el trasfondo y añadimos su dote
   const trasfondoData = listadoTrasfondos.value.find(t => t.nombre === nombreTrasfondo)
   if (trasfondoData && trasfondoData.dote) {
     dotesActuales.push({
@@ -269,8 +276,7 @@ const alCambiarTrasfondo = (event) => {
   emit('update:modelValue', personajeActualizado)
 }
 
-// === NUEVO: Lógica de Raza Versátil ===
-// Computada para saber si mostramos el segundo selector
+// === Lógica de Raza Versátil ===
 const esRazaVersatil = computed(() => {
   if (!datos.value.especie || !datos.value.raza) return false
   const especieData = listadoEspecies.value.find(e => e.nombre === datos.value.especie)
@@ -279,22 +285,18 @@ const esRazaVersatil = computed(() => {
   const razaData = especieData.razas.find(r => r.nombre === datos.value.raza)
   if (!razaData || !razaData.rasgos) return false
   
-  // Devuelve true si encuentra "Versátil" en algún lugar de los rasgos
   return razaData.rasgos.some(rasgo => rasgo.toLowerCase().includes('versátil'))
 })
 
-// Watcher de limpieza: si cambias de raza a una que NO es versátil, borra la dote extra
 watch(esRazaVersatil, (esVersatil) => {
   if (!esVersatil && props.modelValue.dotes) {
     const dotesLimpias = props.modelValue.dotes.filter(d => d.fuente !== 'Raza (Versátil)')
-    // Solo emitimos si efectivamente se eliminó algo (evita ciclos infinitos)
     if (dotesLimpias.length !== props.modelValue.dotes.length) {
       emit('update:modelValue', { ...props.modelValue, dotes: dotesLimpias })
     }
   }
 })
 
-// Computada para mantener el valor visible en el <select> de dote versátil
 const doteVersatilSeleccionada = computed(() => {
   if (!datos.value.dotes) return ''
   const dote = datos.value.dotes.find(d => d.fuente === 'Raza (Versátil)')
@@ -308,7 +310,6 @@ const alCambiarDoteVersatil = (event) => {
   const personajeActualizado = { ...props.modelValue }
   let dotesActuales = personajeActualizado.dotes ? [...personajeActualizado.dotes] : []
   
-  // Limpiamos la elección previa del selector versátil
   dotesActuales = dotesActuales.filter(d => d.fuente !== 'Raza (Versátil)')
   
   dotesActuales.push({
@@ -324,7 +325,6 @@ const alCambiarDoteVersatil = (event) => {
 </script>
 
 <style scoped>
-/* Los estilos se mantienen idénticos, la clase .form-grid acomodará los nuevos campos de forma nativa */
 .full-width {
   grid-column: 1 / -1;
 }

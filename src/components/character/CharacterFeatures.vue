@@ -42,8 +42,8 @@
       </div>
       
       <div class="combat-box">
-        <label>Velocidad (pies)</label>
-        <input type="number" min="0" step="5" v-model.number="velocidad" />
+        <label>Velocidad (metros)</label>
+        <input type="number" min="0" step="1.5" v-model.number="velocidad" />
       </div>
       
       <div class="combat-box readonly-box">
