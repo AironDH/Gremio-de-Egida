@@ -38,6 +38,8 @@
       v-model:vidaActual="formData.puntosVidaActuales"
       v-model:vidaTemporal="formData.pgTemp"
       v-model:dadosGolpeActuales="formData.dadosGolpeActuales"
+      v-model:estadosFijos="formData.estadosFijos"
+      v-model:estadoPersonalizado="formData.estadoPersonalizado"
       :dadosGolpeMaximos="dadosGolpeMaximos"
       class="ancho-medio"
     />
@@ -142,6 +144,8 @@ const formData = ref({
     dadosGolpeActuales: {},
     ca: 10,
     velocidad: 9,
+    estadoPersonalizado: "",
+    estadosFijos: [],
     modificadoresIniciativa: [],
     dotes: [],
     ataques: [],
@@ -219,7 +223,7 @@ const {
     tipoFiltroDote 
 } = useLevelUp(formData, datosMundo)
 
-// NUEVO: Inicializamos el motor mágico
+// Inicializamos el motor mágico
 const { espaciosEstandar, espaciosPacto } = useSpellcasting(formData, datosMundo, espaciosConjuroData)
 
 // ==========================================

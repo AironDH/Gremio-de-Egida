@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "nombre_es": "Cegado",
+    "icon": "/src/assets/images/icons/cegado.png",
+    "descripcion": "No puedes ver; fallas automáticamente cualquier prueba de característica que requiera vista. Los ataques contra ti tienen ventaja y tus ataques tienen desventaja."
+  },
+  {
+    "id": 2,
+    "nombre_es": "Hechizado",
+    "icon": "/src/assets/images/icons/hechizado.png",
+    "descripcion": "No puedes atacar al hechizador ni dirigirle efectos dañinos. El hechizador tiene ventaja en las pruebas sociales contra ti."
+  },
+  {
+    "id": 3,
+    "nombre_es": "Ensordecido",
+    "icon": "/src/assets/images/icons/ensordecido.png",
+    "descripcion": "No puedes oír; fallas automáticamente cualquier prueba de característica que requiera oído."
+  },
+  {
+    "id": 4,
+    "nombre_es": "Agotamiento 1",
+    "icon": "/src/assets/images/icons/agotado1.png",
+    "descripcion": "Condición acumulativa con 6 niveles. Cada nivel resta 2 a todas tus pruebas con d20 y reduce tu velocidad en 5 pies. En el nivel 6 mueres."
+  },
+  {
+    "id": 5,
+    "nombre_es": "Agotamiento 2",
+    "icon": "/src/assets/images/icons/agotado2.png",
+    "descripcion": "Condición acumulativa con 6 niveles. Cada nivel resta 2 a todas tus pruebas con d20 y reduce tu velocidad en 5 pies. En el nivel 6 mueres."
+  },
+  {
+    "id": 6,
+    "nombre_es": "Agotamiento 3",
+    "icon": "/src/assets/images/icons/agotado3.png",
+    "descripcion": "Condición acumulativa con 6 niveles. Cada nivel resta 2 a todas tus pruebas con d20 y reduce tu velocidad en 5 pies. En el nivel 6 mueres."
+  },
+  {
+    "id": 7,
+    "nombre_es": "Agotamiento 4",
+    "icon": "/src/assets/images/icons/agotado4.png",
+    "descripcion": "Condición acumulativa con 6 niveles. Cada nivel resta 2 a todas tus pruebas con d20 y reduce tu velocidad en 5 pies. En el nivel 6 mueres."
+  },
+  {
+    "id": 8,
+    "nombre_es": "Agotamiento 5",
+    "icon": "/src/assets/images/icons/agotado5.png",
+    "descripcion": "Condición acumulativa con 6 niveles. Cada nivel resta 2 a todas tus pruebas con d20 y reduce tu velocidad en 5 pies. En el nivel 6 mueres."
+  },
+  {
+    "id": 9,
+    "nombre_es": "Agotamiento 6",
+    "icon": "/src/assets/images/icons/agotado6.png",
+    "descripcion": "Condición acumulativa con 6 niveles. Cada nivel resta 2 a todas tus pruebas con d20 y reduce tu velocidad en 5 pies. En el nivel 6 mueres."
+  },
+  {
+    "id": 10,
+    "nombre_es": "Asustado",
+    "icon": "/src/assets/images/icons/asustado.png",
+    "descripcion": "Tienes desventaja en pruebas de característica y tiradas de ataque mientras puedas ver a la fuente de tu miedo. No puedes moverte voluntariamente hacia ella."
+  },
+  {
+    "id": 11,
+    "nombre_es": "Agarrado",
+    "icon": "/src/assets/images/icons/agarrado.png",
+    "descripcion": "Tu velocidad pasa a ser 0 y no puedes aumentarla. Tienes desventaja en tiradas de ataque contra cualquier objetivo que no te esté agarrando."
+  },
+  {
+    "id": 12,
+    "nombre_es": "Incapacitado",
+    "icon": "/src/assets/images/icons/incapacitado.png",
+    "descripcion": "No puedes realizar acciones ni reacciones."
+  },
+  {
+    "id": 13,
+    "nombre_es": "Invisible",
+    "icon": "/src/assets/images/icons/invisible.png",
+    "descripcion": "Los ataques contra ti tienen desventaja y tus ataques tienen ventaja. No puedes ser visto (aunque se pueda rastrear tu ubicación por otros sentidos)."
+  },
+  {
+    "id": 14,
+    "nombre_es": "Paralizado",
+    "icon": "/src/assets/images/icons/paralizado.png",
+    "descripcion": "Estás incapacitado, no puedes moverte ni hablar. Fracasas automáticamente en salvaciones de Fuerza y Destreza. Los ataques contra ti tienen ventaja."
+  },
+  {
+    "id": 15,
+    "nombre_es": "Petrificado",
+    "icon": "/src/assets/images/icons/petrificado.png",
+    "descripcion": "Te conviertes en piedra (o similar). Estás incapacitado, tienes resistencia a todo daño, eres inmune a veneno y enfermedad, y no envejeces."
+  },
+  {
+    "id": 16,
+    "nombre_es": "Envenenado",
+    "icon": "/src/assets/images/icons/envenenado.png",
+    "descripcion": "Tienes desventaja en las tiradas de ataque y en las pruebas de característica."
+  },
+  {
+    "id": 17,
+    "nombre_es": "Tumbado",
+    "icon": "/src/assets/images/icons/tumbado.png",
+    "descripcion": "Tus ataques cuerpo a cuerpo tienen ventaja y los a distancia tienen desventaja. Los ataques contra ti tienen ventaja si el atacante está a 5 pies. Moverse cuesta el doble de movimiento."
+  },
+  {
+    "id": 18,
+    "nombre_es": "Apresado",
+    "icon": "/src/assets/images/icons/apresado.png",
+    "descripcion": "Tu velocidad es 0. Los ataques contra ti tienen ventaja. Tus ataques tienen desventaja y tienes desventaja en salvaciones de Destreza."
+  },
+  {
+    "id": 19,
+    "nombre_es": "Aturdido",
+    "icon": "/src/assets/images/icons/aturdido.png",
+    "descripcion": "Estás incapacitado, no puedes moverte y apenas puedes hablar. Fracasas automáticamente en salvaciones de Fuerza y Destreza. Los ataques contra ti tienen ventaja."
+  },
+  {
+    "id": 20,
+    "nombre_es": "Inconsciente",
+    "icon": "/src/assets/images/icons/inconsciente.png",
+    "descripcion": "Estás incapacitado, caes tumbado y sueltas lo que tengas. Fracasas automáticamente en salvaciones de Fuerza y Destreza. Los ataques contra ti tienen ventaja."
+  },
+  {
+    "id": 21,
+    "nombre_es":"Muerto",
+    "icon": "/src/assets/images/icons/muerto.png",
+    "descripcion":"Estás muerto, quizá puedas revivir si tus compañeros te quieren demasiado"
+  }
+]
