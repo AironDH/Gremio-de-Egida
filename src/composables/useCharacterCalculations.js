@@ -35,7 +35,7 @@ export function useCharacterCalculations(personajeRef) {
   const pb = computed(() => calcularPB(nivelTotal.value))
 
   // ==========================================
-  // 1. Estado Derivado: Salvaciones de Clase Principal (NUEVO)
+  // 1. Estado Derivado: Salvaciones de Clase Principal
   // ==========================================
   const salvacionesClasePrincipal = computed(() => {
     const clases = personajeRef.value.clases || []
@@ -55,7 +55,7 @@ export function useCharacterCalculations(personajeRef) {
   })
 
   // ==========================================
-  // 2. useSalvaciones (ACTUALIZADO)
+  // 2. useSalvaciones
   // ==========================================
   const salvacionesCalculadas = computed(() => {
     const resultado = {}
@@ -174,6 +174,35 @@ export function useCharacterCalculations(personajeRef) {
     return capacidadBase * multiplicador
   })
 
+  // ==========================================
+  // 6. Salud y Dados de Golpe (NUEVO)
+  // ==========================================
+  const dadosGolpeMaximos = computed(() => {
+    const clasesPersonaje = personajeRef.value.clases || []
+    const dadosAgrupados = {}
+
+    clasesPersonaje.forEach(clase => {
+      if (clase.nombre && clase.nivel > 0) {
+        // Busca la clase en el listado estático
+        const claseData = datosMundo.clases?.find(c => c.nombre === clase.nombre)
+        
+        if (claseData && claseData.dado_golpe) {
+          const tipoDado = claseData.dado_golpe // ej: "d12"
+          const nivel = parseInt(clase.nivel) || 1
+          
+          // Suma los dados si ya existe la clave, o la inicializa
+          if (dadosAgrupados[tipoDado]) {
+            dadosAgrupados[tipoDado] += nivel
+          } else {
+            dadosAgrupados[tipoDado] = nivel
+          }
+        }
+      }
+    })
+
+    return dadosAgrupados
+  })
+
   // Funciones auxiliares para formateo en la interfaz
   const formatearModificador = (valor) => {
     return valor >= 0 ? `+${valor}` : `${valor}`
@@ -187,7 +216,8 @@ export function useCharacterCalculations(personajeRef) {
     habilidadesCalculadas,
     combateCalculado,
     pesoActualEquipado,      
-    capacidadCargaCalculada, 
+    capacidadCargaCalculada,
+    dadosGolpeMaximos, // <-- NUEVA EXPORTACIÓN 
     formatearModificador
   }
 }

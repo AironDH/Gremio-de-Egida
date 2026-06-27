@@ -10,6 +10,7 @@
 
 
     <CharacterBasicInfo v-model="formData" class="ancho-medio"/>
+
     <CharacterFeatures 
       v-model:ca="formData.ca" 
       v-model:velocidad="formData.velocidad" 
@@ -29,6 +30,15 @@
     <CharacterSkills 
       v-model="formData.habilidades" 
       :habilidadesCalculadas="habilidadesCalculadas" 
+      class="ancho-medio"
+    />
+
+    <CharacterHealth 
+      v-model:vidaMaxima="formData.puntosVidaMax"
+      v-model:vidaActual="formData.puntosVidaActuales"
+      v-model:vidaTemporal="formData.pgTemp"
+      v-model:dadosGolpeActuales="formData.dadosGolpeActuales"
+      :dadosGolpeMaximos="dadosGolpeMaximos"
       class="ancho-medio"
     />
 
@@ -79,6 +89,7 @@
 import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import BaseButton from '../common/BaseButton.vue'
 import CharacterBasicInfo from './CharacterBasicInfo.vue'
+import CharacterHealth from './CharacterHealth.vue' // <-- IMPORTADO
 import CharacterStats from './CharacterStats.vue'
 import CharacterEquipment from './CharacterEquipment.vue'
 import CharacterPersonality from './CharacterPersonality.vue'
@@ -120,6 +131,7 @@ const formData = ref({
     puntosVidaMax: 10,
     puntosVidaActuales: 10,
     pgTemp: 0,
+    dadosGolpeActuales: {}, // <-- NUEVO ESTADO INICIAL
     ca: 10,
     velocidad: 30,
     modificadoresIniciativa: [],
@@ -247,7 +259,8 @@ const {
   combateCalculado,
   capacidadCargaCalculada,
   pesoActualEquipado,
-  salvacionesClasePrincipal
+  salvacionesClasePrincipal,
+  dadosGolpeMaximos // <-- Extraído del composable
       } = useCharacterCalculations(formData)
 
 onMounted(() => {

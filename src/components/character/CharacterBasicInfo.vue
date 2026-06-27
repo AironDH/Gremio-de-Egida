@@ -129,23 +129,6 @@
         </select>
       </div>
     </div>
-
-    <h3 class="section-subtitle">Puntos de Golpe</h3>
-    <div class="form-grid">
-      <div class="form-group">
-        <label for="pgMax">PG Máximos</label>
-        <input id="pgMax" type="number" min="1" v-model.number="datos.puntosVidaMax" required />
-      </div>
-      <div class="form-group">
-        <label for="pgActual">PG Actuales</label>
-        <input id="pgActual" type="number" min="0" :max="datos.puntosVidaMax" v-model.number="datos.puntosVidaActuales" required />
-      </div>
-      <div class="form-group">
-        <label for="pgTemp">PG Temporales</label>
-        <input id="pgTemp" type="number" min="0" v-model.number="datos.pgTemp" placeholder="0" />
-      </div>
-    </div>
-
   </div>
 </template>
 
