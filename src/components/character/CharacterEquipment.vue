@@ -27,7 +27,7 @@
 
       <div v-for="(item, index) in equipo" :key="item.id" class="equipment-item">
         <input class="col-name" type="text" v-model="item.nombre" placeholder="Nombre del objeto" required />
-        <input class="col-qty" type="number" min="1" v-model.number="item.cantidad" placeholder="Cant." title="Cantidad" required />
+        <input class="col-qty" type="number" min="0" v-model.number="item.cantidad" placeholder="Cant." title="Cantidad" required />
         <input class="col-weight" type="number" min="0" step="0.01" v-model.number="item.peso" placeholder="Peso" title="Peso en Kg" />
         <input class="col-notes" type="text" v-model="item.notas" placeholder="Notas (opcional)" />
         <div class="col-action">

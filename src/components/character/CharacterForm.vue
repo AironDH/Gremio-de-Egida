@@ -141,7 +141,7 @@ const formData = ref({
     pgTemp: 0,
     dadosGolpeActuales: {},
     ca: 10,
-    velocidad: 30,
+    velocidad: 9,
     modificadoresIniciativa: [],
     dotes: [],
     ataques: [],

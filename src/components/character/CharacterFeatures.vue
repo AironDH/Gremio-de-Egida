@@ -13,10 +13,14 @@
           <button 
             type="button" 
             class="btn-config" 
+            :class="{ 'is-active': mostrarOpcionesIniciativa }"
             @click="mostrarOpcionesIniciativa = !mostrarOpcionesIniciativa" 
             title="Configurar modificadores de iniciativa"
           >
-            ⚙️
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
           </button>
         </div>
         <div class="combat-value">{{ formatearModificador(combateCalculado.iniciativa) }}</div>
@@ -42,8 +46,9 @@
       </div>
       
       <div class="combat-box">
-        <label>Velocidad (metros)</label>
+        <label>Velocidad (Metros)</label>
         <input type="number" min="0" step="1.5" v-model.number="velocidad" />
+        <span class="speed-helper-text">Equivale a {{ casillasVelocidad }} casillas</span>
       </div>
       
       <div class="combat-box readonly-box">
@@ -61,7 +66,6 @@ const props = defineProps({
   ca: { type: Number, required: true },
   velocidad: { type: Number, required: true },
   combateCalculado: { type: Object, required: true },
-  // NUEVO: Recibe los modificadores desde CharacterForm
   modificadoresIniciativa: { type: Array, default: () => [] }
 })
 
@@ -79,7 +83,11 @@ const velocidad = computed({
   set: (value) => emit('update:velocidad', value)
 })
 
-// NUEVO: Computed bidireccional para el v-model de los checkboxes
+// Cálculo dinámico de casillas redondeando hacia abajo de manera segura
+const casillasVelocidad = computed(() => {
+  return Math.floor((velocidad.value || 0) / 1.5)
+})
+
 const modificadoresLocales = computed({
   get: () => props.modificadoresIniciativa,
   set: (value) => emit('update:modificadoresIniciativa', value)
@@ -117,7 +125,7 @@ const formatearModificador = (valor) => {
   background: var(--color-background, #f5f0e8);
   border-radius: 8px;
   border: 1px solid #e0e0e0;
-  position: relative; /* Para anclar el panel colapsable */
+  position: relative;
 }
 .combat-box label {
   font-weight: bold;
@@ -134,6 +142,16 @@ const formatearModificador = (valor) => {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+/* Estilo para el helper text de casillas de velocidad */
+.speed-helper-text {
+  font-size: 0.72rem;
+  color: var(--color-text-secondary, #757575);
+  margin-top: 0.35rem;
+  font-style: italic;
+  text-align: center;
+}
+
 .combat-value {
   font-size: 1.5rem;
   font-weight: bold;
@@ -148,30 +166,42 @@ const formatearModificador = (valor) => {
   border-color: #d7ccc8;
 }
 
-/* ESTILOS NUEVOS PARA LA INICIATIVA */
 .iniciativa-header {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 .iniciativa-header label {
-  margin-bottom: 0; /* Anula el margin-bottom heredado para alinearse con el botón */
+  margin-bottom: 0;
 }
 .btn-config {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 1.1rem;
-  padding: 0;
-  opacity: 0.6;
-  transition: opacity 0.2s;
+  padding: 0.2rem; /* padding ajustado para el icono */
+  color: var(--color-text-secondary, #757575); /* Color base del icono */
+  transition: transform 0.3s ease, color 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
   outline: none;
-}
-.btn-config:hover {
-  opacity: 1;
+  border-radius: 50%;
+  display: flex; /* para alinear svg */
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6; /* opacidad inicial baja como en la original */
 }
 
-/* Estilos del panel desplegable flotante */
+.btn-config:hover {
+  opacity: 1;
+  color: var(--color-primary, #7b1fa2); /* Color primario en hover */
+  background-color: rgba(0, 0, 0, 0.05); /* Fondo sutil en hover */
+  transform: rotate(30deg); /* Giro sutil en hover */
+}
+
+.btn-config.is-active {
+  opacity: 1;
+  color: var(--color-primary, #7b1fa2);
+  transform: rotate(90deg); /* Giro completo de 90 grados cuando está activo */
+}
+
 .iniciativa-config-panel {
   position: absolute;
   top: 100%;
@@ -221,7 +251,7 @@ const formatearModificador = (valor) => {
   align-items: center;
   gap: 8px;
   font-size: 0.85rem;
-  font-weight: normal !important; /* Sobrescribe la negrita de los labels de combat-box */
+  font-weight: normal !important;
   cursor: pointer;
 }
 </style>
