@@ -1,7 +1,7 @@
 {
-  "name": "gremio-de-egida",
+  "name": "Gremio de Égida",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.7",
   "type": "module",
   "scripts": {
     "dev": "vite",
