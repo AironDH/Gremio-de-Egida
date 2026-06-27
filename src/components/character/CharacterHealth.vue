@@ -296,7 +296,7 @@ const vOutsideClick = {
   padding: 0.25rem 0.5rem;
   background: var(--color-background, #f5f0e8);
   border: 1px solid #e0e0e0;
-  border-radius: 6px;
+  border-radius: 5px;
   flex: 1;
 }
 .health-input-group label {
@@ -307,7 +307,7 @@ const vOutsideClick = {
 }
 .health-input-group input {
   width: 100%;
-  min-width: 50px;
+  min-width: 30px;
   text-align: center;
   font-size: 1.1rem;
   font-weight: bold;
@@ -332,11 +332,14 @@ const vOutsideClick = {
   align-items: center;
 }
 .dice-pill {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+  grid-template-rows: repeat(2, auto);    /* 2 filas automáticas */
+  grid-auto-flow: column;
   align-items: center;
   background: var(--color-background, #f5f0e8);
   border: 1px solid #d7ccc8;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 0.15rem 0.25rem 0.15rem 0.75rem;
   gap: 0.5rem;
 }
@@ -350,6 +353,8 @@ const vOutsideClick = {
   font-size: 0.9rem;
 }
 .btn-consume-dice {
+  grid-column: 2;
+  grid-row: 2;
   background: var(--color-primary-light, #ae52d4);
   color: white;
   border: none;
@@ -425,7 +430,7 @@ const vOutsideClick = {
 }
 .custom-condition {
   flex: 1;
-  min-width: 200px;
+  min-width: 150px;
 }
 .custom-condition-input {
   width: 100%;
