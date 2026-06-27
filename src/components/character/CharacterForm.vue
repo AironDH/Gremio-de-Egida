@@ -61,6 +61,13 @@
       class="ancho-medio"
     />
 
+    <!-- Libro de Hechizos -->
+    <CharacterSpells 
+      v-model="formData.hechizos" 
+      :clasesPersonaje="formData.clases"
+      class="ancho-total"
+    />
+
     <CharacterTraits :rasgos="rasgosPersonaje" class="columna-1"/>
 
     <CharacterPersonality v-model="formData.personalidad" class="ancho-3"/>
@@ -89,7 +96,7 @@
 import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import BaseButton from '../common/BaseButton.vue'
 import CharacterBasicInfo from './CharacterBasicInfo.vue'
-import CharacterHealth from './CharacterHealth.vue' // <-- IMPORTADO
+import CharacterHealth from './CharacterHealth.vue'
 import CharacterStats from './CharacterStats.vue'
 import CharacterEquipment from './CharacterEquipment.vue'
 import CharacterPersonality from './CharacterPersonality.vue'
@@ -97,6 +104,7 @@ import CharacterAttacks from './CharacterAttacks.vue'
 import CharacterSkills from './CharacterSkills.vue'
 import CharacterFeatures from './CharacterFeatures.vue'
 import CharacterResources from './CharacterResources.vue'
+import CharacterSpells from './CharacterSpells.vue' // <-- IMPORTADO
 import { useCharacterCalculations } from '../../composables/useCharacterCalculations.js'
 import LevelUpAlert from './LevelUpAlert.vue'
 import LevelUpModal from './LevelUpModal.vue'
@@ -131,12 +139,13 @@ const formData = ref({
     puntosVidaMax: 10,
     puntosVidaActuales: 10,
     pgTemp: 0,
-    dadosGolpeActuales: {}, // <-- NUEVO ESTADO INICIAL
+    dadosGolpeActuales: {},
     ca: 10,
     velocidad: 30,
     modificadoresIniciativa: [],
     dotes: [],
     ataques: [],
+    hechizos: [], // <-- NUEVO ESTADO INICIAL
     equipo: [
       {
         "id": "c8be5d5a-51eb-4adb-b11c-42217d0e6c10",
@@ -260,7 +269,7 @@ const {
   capacidadCargaCalculada,
   pesoActualEquipado,
   salvacionesClasePrincipal,
-  dadosGolpeMaximos // <-- Extraído del composable
+  dadosGolpeMaximos 
       } = useCharacterCalculations(formData)
 
 onMounted(() => {
