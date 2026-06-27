@@ -41,9 +41,9 @@
         { "nombre": "Dominio de la Luz (2024)", "niveles": { "3": ["Destello de luz", "Conjuros de dominio"], "6": ["Destello mejorado"], "17": ["Corona de luz"] } },
         { "nombre": "Dominio del Engaño (2024)", "niveles": { "3": ["Duplicidad ilusoria", "Conjuros de dominio"], "6": ["Capa de sombras"], "17": ["Duplicidad mejorada"] } },
         { "nombre": "Dominio de la Guerra (2024)", "niveles": { "3": ["Sacerdote de guerra", "Conjuros de dominio"], "6": ["Guía guiada"], "17": ["Avatar de la guerra"] } },
-        { "nombre": "Dominio del Orden (Tasha)", "niveles": { "1": ["Voz de la autoridad"], "6": ["Embozo de orden"], "17": ["Ira de la ley"] } },
-        { "nombre": "Dominio de la Paz (Tasha)", "niveles": { "1": ["Vínculo emparentado"], "6": ["Bálsamo de paz"], "17": ["Vínculo expansivo"] } },
-        { "nombre": "Dominio del Crepúsculo (Tasha)", "niveles": { "1": ["Ojos de la noche"], "6": ["Pasos del crepúsculo"], "17": ["Sudario crepuscular"] } }
+        { "nombre": "Dominio del Orden (Tasha)", "niveles": { "3": ["Voz de la autoridad"], "6": ["Embozo de orden"], "17": ["Ira de la ley"] } },
+        { "nombre": "Dominio de la Paz (Tasha)", "niveles": { "3": ["Vínculo emparentado"], "6": ["Bálsamo de paz"], "17": ["Vínculo expansivo"] } },
+        { "nombre": "Dominio del Crepúsculo (Tasha)", "niveles": { "3": ["Ojos de la noche"], "6": ["Pasos del crepúsculo"], "17": ["Sudario crepuscular"] } }
       ],
       "rasgos": { "1": ["Lanzamiento de conjuros", "Orden sagrado"], "2": ["Canalizar divinidad"], "3": ["Subclase de Clérigo"], "4": ["Mejora de característica"], "5": ["Destruir zombis"], "8": ["Golpe bendito"], "10": ["Intervención divina"], "12": ["Mejora de característica"], "16": ["Mejora de característica"], "19": ["Mejora de característica"], "20": ["Intervención divina verdadera"] }
     },
@@ -70,7 +70,7 @@
         { "nombre": "Círculo de las Espinas (2024)", "niveles": { "3": ["Espinas del círculo"], "6": ["Crecimiento espinoso"], "14": ["Voz del bosque"] } },
         { "nombre": "Círculo de las Estrellas (Tasha)", "niveles": { "2": ["Mapa estelar", "Forma estrellada"], "6": ["Presagio cósmico"], "10": ["Constelación centelleante"], "14": ["Llamarada pura"] } },
         { "nombre": "Círculo de los Sueños (2024 / Tasha)", "niveles": { "3": ["Bálsamo de la corte del verano"], "6": ["Hearth of Moonlight and Shadow"], "14": ["Caminos de ensueño"] } },
-        { "nombre": "Círculo del Fuego Salvaje (Tasha)", "niveles": { "2": ["Espíritu de fuego salvaje"], "6": ["Lazo mejorado"], "10": ["Crecimiento cauterizador"], "14": ["Fénix llameante"] } }
+        { "nombre": "Círculo del Fuego Salvaje (Tasha)", "niveles": { "3": ["Espíritu de fuego salvaje"], "6": ["Lazo mejorado"], "10": ["Crecimiento cauterizador"], "14": ["Fénix llameante"] } }
       ],
       "rasgos": { "1": ["Lanzamiento de conjuros", "Druídico"], "2": ["Forma salvaje", "Compañero salvaje"], "3": ["Subclase de Druida"], "4": ["Mejora de característica"], "5": ["Golpes elementales"], "8": ["Mejora de característica"], "18": ["Conjuros bestiales"], "19": ["Mejora de característica"], "20": ["Archidruida"] }
     },
@@ -167,8 +167,8 @@
         { "nombre": "El Archihada (2024)", "niveles": { "3": ["Paso de la niebla", "Conjuros de patrón"], "6": ["Escape brumoso"], "10": ["Defensa de engaño"], "14": ["Delirio fey"] } },
         { "nombre": "El Fiador / Demonio (2024)", "niveles": { "3": ["Bendición del oscuro", "Conjuros de patrón"], "6": ["Suerte de los oscuros"], "10": ["Resiliencia demoníaca"], "14": ["Arrojar al infierno"] } },
         { "nombre": "El Gran Antiguo (2024)", "niveles": { "3": ["Despertar de la mente", "Conjuros de patrón"], "6": ["Escudo entrópico"], "10": ["Escudo de pensamiento"], "14": ["Crear siervo"] } },
-        { "nombre": "El Genio (Tasha)", "niveles": { "1": ["Vasija del genio", "Regalo del elemento"], "6": ["Vuelo elemental"], "10": ["Resguardo del genio"], "14": ["Deseo limitado"] } },
-        { "nombre": "El Muerto Viviente / Undead (Tasha)", "niveles": { "1": ["Forma de pavor"], "6": ["Toque sepulcral"], "10": ["Fortaleza necrótica"], "14": ["Proyección espiritual"] } }
+        { "nombre": "El Genio (Tasha)", "niveles": { "3": ["Vasija del genio", "Regalo del elemento"], "6": ["Vuelo elemental"], "10": ["Resguardo del genio"], "14": ["Deseo limitado"] } },
+        { "nombre": "El Muerto Viviente / Undead (Tasha)", "niveles": { "3": ["Forma de pavor"], "6": ["Toque sepulcral"], "10": ["Fortaleza necrótica"], "14": ["Proyección espiritual"] } }
       ],
       "rasgos": { "1": ["Pacto del Patrón", "Trucos mágicos"], "2": ["Invocaciones eldritch"], "3": ["Subclase de Brujo"], "4": ["Mejora de característica"], "11": ["Arcanum místico"], "20": ["Recuperación del maestro"] }
     },
