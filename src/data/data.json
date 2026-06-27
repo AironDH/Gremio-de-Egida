@@ -153,8 +153,8 @@
       "subclases": [
         { "nombre": "Magia Salvaje (2024)", "niveles": { "3": ["Oleada de magia salvaje", "Mareas de caos"], "6": ["Predecir el caos"], "14": ["Caos controlado"], "18": ["Bombardeo de conjuros"] } },
         { "nombre": "Linaje Dracónico (2024)", "niveles": { "3": ["Resiliencia dracónica", "Ancestro dracónico"], "6": ["Afinidad elemental"], "14": ["Alas dracónicas"], "18": ["Presencia dracónica"] } },
-        { "nombre": "Mente Aberrante (Tasha)", "niveles": { "1": ["Habla telepática", "Conjuros psiónicos"], "6": ["Defensa psiónica"], "14": ["Forma de carne revelada"], "18": ["Implosión de deformación"] } },
-        { "nombre": "Alma de Relojería (Tasha)", "niveles": { "1": ["Manifestación mecánica", "Conjuros de relojería"], "6": ["Baluarte de orden"], "14": ["Trance de la ley"], "18": ["Cavalcade de reloj"] } }
+        { "nombre": "Hechicería Aberrante (2024)", "niveles": { "1": ["Habla telepática", "Conjuros psiónicos"], "6": ["Defensa psiónica"], "14": ["Forma de carne revelada"], "18": ["Implosión de deformación"] } },
+        { "nombre": "Hechicería Mecánica (2024)", "niveles": { "1": ["Manifestación mecánica", "Conjuros de relojería"], "6": ["Baluarte de orden"], "14": ["Trance de la ley"], "18": ["Cavalcade de reloj"] } }
       ],
       "rasgos": { "1": ["Lanzamiento de conjuros", "Innate Sorcery"], "2": ["Fuente de magia"], "3": ["Subclase de Hechicero", "Metamagia"], "4": ["Mejora de característica"], "5": ["Innate Sorcery mejorado"], "20": ["Apoteosis de hechicero"] }
     },
