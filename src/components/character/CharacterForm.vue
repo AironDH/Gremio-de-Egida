@@ -70,7 +70,11 @@
       class="ancho-total"
     />
 
-    <CharacterTraits :rasgos="rasgosPersonaje" class="columna-1"/>
+    <CharacterTraits 
+      :rasgos="rasgosPersonaje" 
+      :clasesPersonaje="formData.clases" 
+      class="columna-1"
+    />
 
     <CharacterPersonality v-model="formData.personalidad" class="ancho-3"/>
 

@@ -276,14 +276,15 @@
           "nombre": "Colegio de la Elocuencia (Tasha)",
           "niveles": {
             "3": [
-              "Llamado persuasivo",
-              "Palabras de plata"
+              "Palabras inquietantes",
+              "Lengua de plata"
             ],
             "6": [
-              "Inspiración infalible"
+              "Inspiración constante",
+              "Discurso universal"
             ],
             "14": [
-              "Inspiración infecciosa"
+              "Inspiración contagiosa"
             ]
           }
         },
@@ -292,10 +293,10 @@
           "niveles": {
             "3": [
               "Mote de potencial",
-              "Performance de creación"
+              "Interpretación de la creación"
             ],
             "6": [
-              "Animar objeto animado"
+              "Interpretación animadora"
             ],
             "14": [
               "Crecimiento creativo"
@@ -327,114 +328,10 @@
         "Carisma"
       ],
       "tipo_conjurador": "completo",
-      "subclases": [
-        {
-          "nombre": "Dominio de la Vida (2024)",
-          "niveles": {
-            "3": [
-              "Discípulo de la vida",
-              "Conjuros de dominio"
-            ],
-            "6": [
-              "Curación bendita"
-            ],
-            "17": [
-              "Curación suprema"
-            ]
-          }
-        },
-        {
-          "nombre": "Dominio de la Luz (2024)",
-          "niveles": {
-            "3": [
-              "Destello de luz",
-              "Conjuros de dominio"
-            ],
-            "6": [
-              "Destello mejorado"
-            ],
-            "17": [
-              "Corona de luz"
-            ]
-          }
-        },
-        {
-          "nombre": "Dominio del Engaño (2024)",
-          "niveles": {
-            "3": [
-              "Duplicidad ilusoria",
-              "Conjuros de dominio"
-            ],
-            "6": [
-              "Capa de sombras"
-            ],
-            "17": [
-              "Duplicidad mejorada"
-            ]
-          }
-        },
-        {
-          "nombre": "Dominio de la Guerra (2024)",
-          "niveles": {
-            "3": [
-              "Sacerdote de guerra",
-              "Conjuros de dominio"
-            ],
-            "6": [
-              "Guía guiada"
-            ],
-            "17": [
-              "Avatar de la guerra"
-            ]
-          }
-        },
-        {
-          "nombre": "Dominio del Orden (Tasha)",
-          "niveles": {
-            "3": [
-              "Voz de la autoridad"
-            ],
-            "6": [
-              "Embozo de orden"
-            ],
-            "17": [
-              "Ira de la ley"
-            ]
-          }
-        },
-        {
-          "nombre": "Dominio de la Paz (Tasha)",
-          "niveles": {
-            "3": [
-              "Vínculo emparentado"
-            ],
-            "6": [
-              "Bálsamo de paz"
-            ],
-            "17": [
-              "Vínculo expansivo"
-            ]
-          }
-        },
-        {
-          "nombre": "Dominio del Crepúsculo (Tasha)",
-          "niveles": {
-            "3": [
-              "Ojos de la noche"
-            ],
-            "6": [
-              "Pasos del crepúsculo"
-            ],
-            "17": [
-              "Sudario crepuscular"
-            ]
-          }
-        }
-      ],
       "rasgos": {
         "1": [
           "Lanzamiento de conjuros",
-          "Orden sagrado"
+          "Orden divina"
         ],
         "2": [
           "Canalizar divinidad"
@@ -446,27 +343,160 @@
           "Mejora de característica"
         ],
         "5": [
-          "Destruir zombis"
+          "Abrasar muertos vivientes"
+        ],
+        "7": [
+          "Golpes benditos"
         ],
         "8": [
-          "Golpe bendito"
+          "Mejora de característica"
         ],
         "10": [
-          "Intervención divina"
+          "Intercesión divina"
         ],
         "12": [
           "Mejora de característica"
+        ],
+        "14":[
+          "Golpes benditos mejorados"
         ],
         "16": [
           "Mejora de característica"
         ],
         "19": [
-          "Mejora de característica"
+          "Don épico"
         ],
         "20": [
-          "Intervención divina verdadera"
+          "Intercesión divina verdadera"
         ]
-      }
+      },
+      "subclases": [
+        {
+          "nombre": "Dominio de la Guerra (2024)",
+          "niveles": {
+            "3": [
+              "Sacerdote guerrero",
+              "Conjuros del dominio de la guerra",
+              "Golpe guiado"
+            ],
+            "6": [
+              "Bendición del dios de la guerra"
+            ],
+            "17": [
+              "Avatar de la batalla"
+            ]
+          }
+        },
+        {
+          "nombre": "Dominio de la Luz (2024)",
+          "niveles": {
+            "3": [
+              "Fulgor protector",
+              "Conjuros del dominio de la luz",
+              "Resplandor del amanecer"
+            ],
+            "6": [
+              "Fulgor protector mejorado"
+            ],
+            "17": [
+              "Halo de luz"
+            ]
+          }
+        },
+        {
+          "nombre": "Dominio de la Vida (2024)",
+          "niveles": {
+            "3": [
+              "Discípulo de la vida",
+              "Conjuros del dominio de la vida",
+              "Preservar vida"
+            ],
+            "6": [
+              "Sanador bendito"
+            ],
+            "17": [
+              "Sanación suprema"
+            ]
+          }
+        },
+        {
+          "nombre": "Dominio del Engaño (2024)",
+          "niveles": {
+            "3": [
+              "Bendición del embaucador",
+              "Conjuros del dominio del engaño",
+              "invocar duplicidad"
+            ],
+            "6": [
+              "Transposición del embaucador"
+            ],
+            "17": [
+              "Duplicidad mejorada"
+            ]
+          }
+        },
+        {
+          "nombre": "Dominio del Orden (Tasha)",
+          "niveles": {
+            "3": [
+              "Conjuros del dominio del orden",
+              "Competencias adicionales del dominio del orden",
+              "Voz de la autoridad",
+              "Canalizar divinidad: demanda del orden"
+            ],
+            "6": [
+              "Encarnación de la ley"
+            ],
+            "8": [
+              "Golpe divino"
+            ],
+            "17": [
+              "Ira del orden"
+            ]
+          }
+        },
+        {
+          "nombre": "Dominio de la Paz (Tasha)",
+          "niveles": {
+            "3": [
+              "Conjuros del dominio de la paz",
+              "Vínculo incentivador",
+              "Instrumento de paz",
+              "Canalizar divinidad: bálsamo de paz"
+            ],
+            "6": [
+              "Vínculo protector"
+            ],
+            "8":[
+              "Lanzamiento potente"
+            ],
+            "17": [
+              "Vínculo expansivo"
+            ]
+          }
+        },
+        {
+          "nombre": "Dominio del Crepúsculo (Tasha)",
+          "niveles": {
+            "3": [
+              "Conjuros del dominio del crepúsculo",
+              "Competencias adicionales del crepúsculo",
+              "Ojos nocturnos",
+              "Bendición vigilante",
+              "Canalizar divinidad: santuario del crepúsculo"
+            ],
+            "6": [
+              "Pasos nocturnos"
+            ],
+            "8":[
+              "Golpe divino"
+            ],
+            "17": [
+              "Velo crepuscular"
+            ]
+          }
+        }
+      ]
     },
     {
       "nombre": "Dibujante",
@@ -476,52 +506,6 @@
         "Carisma"
       ],
       "tipo_conjurador": "completo",
-      "subclases": [
-        {
-          "nombre": "Estilo Creador",
-          "niveles": {
-            "3": [
-              "Partícula de potencial",
-              "Obra de la creación"
-            ],
-            "6": [
-              "Dibujo animado"
-            ],
-            "14": [
-              "Cénit creativo"
-            ]
-          }
-        },
-        {
-          "nombre": "Estilo Arquitectónico",
-          "niveles": {
-            "3": [
-              "Trazo estructural"
-            ],
-            "6": [
-              "Plataforma de tinta"
-            ],
-            "14": [
-              "Geometría Suprema"
-            ]
-          }
-        },
-        {
-          "6": [
-            "Retrato cautivador"
-          ],
-          "14": [
-            "Captura de escencia"
-          ],
-          "nombre": "Estilo Retratista",
-          "niveles": {
-            "3": [
-              "Retrato vivo",
-              "Disfraz de tinta"
-            ]
-          }
-        }
-      ],
       "rasgos": {
         "1": [
           "Inspiración artística",
@@ -567,7 +551,53 @@
         "20": [
           "Glifos de la Creación"
         ]
-      }
+      },
+      "subclases": [
+        {
+          "nombre": "Estilo Creador",
+          "niveles": {
+            "3": [
+              "Partícula de potencial",
+              "Obra de la creación"
+            ],
+            "6": [
+              "Dibujo animado"
+            ],
+            "14": [
+              "Cénit creativo"
+            ]
+          }
+        },
+        {
+          "nombre": "Estilo Arquitectónico",
+          "niveles": {
+            "3": [
+              "Trazo estructural"
+            ],
+            "6": [
+              "Plataforma de tinta"
+            ],
+            "14": [
+              "Geometría Suprema"
+            ]
+          }
+        },
+        {
+          "nombre": "Estilo Retratista",
+          "niveles": {
+            "3": [
+              "Retrato vivo",
+              "Disfraz de tinta"
+            ],
+            "6": [
+              "Retrato cautivador"
+            ],
+            "14": [
+              "Captura de escencia"
+          ]
+          }
+        }
+      ]
     },
     {
       "nombre": "Druida",
@@ -577,16 +607,63 @@
         "Sabiduría"
       ],
       "tipo_conjurador": "completo",
+      "rasgos": {
+        "1": [
+          "Lanzamiento de conjuros",
+          "Druídico",
+          "Orden primigenia"
+        ],
+        "2": [
+          "Forma salvaje",
+          "Compañero salvaje"
+        ],
+        "3": [
+          "Subclase de druida"
+        ],
+        "4": [
+          "Mejora de característica"
+        ],
+        "5": [
+          "Resurgimiento salvaje"
+        ],
+        "7":[
+          "Furia elemental"
+        ],
+        "8": [
+          "Mejora de característica"
+        ],
+        "12":[
+          "Mejora de Característica"
+        ],
+        "15":[
+          "Furia elemental mejorada"
+        ],
+        "16":[
+          "Mejora de Característica"
+        ],
+        "18": [
+          "Conjurar como bestia"
+        ],
+        "19": [
+          "Don épico"
+        ],
+        "20": [
+          "Archidruida"
+        ]
+      },
       "subclases": [
         {
           "nombre": "Círculo de la Tierra (2024)",
           "niveles": {
             "3": [
-              "Círculo de conjuros",
-              "Recuperación natural"
+              "Ayuda de la tierra",
+              "Conjuros del círculo de la tierra"
             ],
             "6": [
-              "Zancada de la tierra"
+              "Recuperación natural"
+            ],
+            "10":[
+              "Protección de la naturaleza"
             ],
             "14": [
               "Santuario de la naturaleza"
@@ -597,27 +674,35 @@
           "nombre": "Círculo de la Luna (2024)",
           "niveles": {
             "3": [
-              "Forma salvaje de combate"
+              "Conjuros del círculo de la luna",
+              "Formas del círculo de la luna"
             ],
             "6": [
-              "Golpes lunares"
+              "Formas del círculo de la luna mejoradas"
+            ],
+            "10":[
+              "Paso de la luz lunar"
             ],
             "14": [
-              "Forma milenaria"
+              "Forma lunar"
             ]
           }
         },
         {
-          "nombre": "Círculo de las Espinas (2024)",
+          "nombre": "Círculo del Mar (2024)",
           "niveles": {
             "3": [
-              "Espinas del círculo"
+              "Conjuros del círculo del mar",
+              "Ira de los mares"
             ],
             "6": [
-              "Crecimiento espinoso"
+              "Afinidad acuática"
+            ],
+            "10":[
+              "Nacido de la tempestad"
             ],
             "14": [
-              "Voz del bosque"
+              "Obsequio oceánico"
             ]
           }
         },
@@ -626,30 +711,35 @@
           "niveles": {
             "2": [
               "Mapa estelar",
-              "Forma estrellada"
+              "Forma estelar"
             ],
             "6": [
               "Presagio cósmico"
             ],
             "10": [
-              "Constelación centelleante"
+              "Constelaciones centelleantes"
             ],
             "14": [
-              "Llamarada pura"
+              "Colmado de luz estelar"
             ]
           }
         },
         {
-          "nombre": "Círculo de los Sueños (2024 / Tasha)",
+          "nombre": "Círculo de las esporas (Tasha)",
           "niveles": {
             "3": [
-              "Bálsamo de la corte del verano"
+              "Conjuros del círculo de las esporas",
+              "Halo de esporas",
+              "Entidad simbiótica"
             ],
             "6": [
-              "Hearth of Moonlight and Shadow"
+              "Plaga fúngica"
+            ],
+            "10":[
+              "Difusión de esporas"
             ],
             "14": [
-              "Caminos de ensueño"
+              "Cuerpo fúngico"
             ]
           }
         },
@@ -657,51 +747,21 @@
           "nombre": "Círculo del Fuego Salvaje (Tasha)",
           "niveles": {
             "3": [
-              "Espíritu de fuego salvaje"
+              "Conjuros del círculo del fuego salvaje",
+              "Invocar espíritu de fuego salvaje"
             ],
             "6": [
-              "Lazo mejorado"
+              "Vínculo mejorado"
             ],
             "10": [
-              "Crecimiento cauterizador"
+              "Llamas cauterizadoras"
             ],
             "14": [
-              "Fénix llameante"
+              "Renacer ardiente"
             ]
           }
         }
-      ],
-      "rasgos": {
-        "1": [
-          "Lanzamiento de conjuros",
-          "Druídico"
-        ],
-        "2": [
-          "Forma salvaje",
-          "Compañero salvaje"
-        ],
-        "3": [
-          "Subclase de Druida"
-        ],
-        "4": [
-          "Mejora de característica"
-        ],
-        "5": [
-          "Golpes elementales"
-        ],
-        "8": [
-          "Mejora de característica"
-        ],
-        "18": [
-          "Conjuros bestiales"
-        ],
-        "19": [
-          "Mejora de característica"
-        ],
-        "20": [
-          "Archidruida"
-        ]
-      }
+      ]
     },
     {
       "nombre": "Guerrero",
@@ -711,6 +771,50 @@
         "Constitución"
       ],
       "tipo_conjurador": "ninguno",
+      "rasgos": {
+        "1": [
+          "Estilo de combate",
+          "Recuperación de fuerzas"
+        ],
+        "2": [
+          "Oleada de acción"
+        ],
+        "3": [
+          "Subclase de Guerrero",
+          "Maestría en armas"
+        ],
+        "4": [
+          "Mejora de característica"
+        ],
+        "5": [
+          "Ataque adicional"
+        ],
+        "6": [
+          "Mejora de característica"
+        ],
+        "9": [
+          "Indomable"
+        ],
+        "11": [
+          "Ataque adicional (2)"
+        ],
+        "13": [
+          "Uso táctico"
+        ],
+        "14": [
+          "Mejora de característica"
+        ],
+        "17": [
+          "Oleada de acción (2)",
+          "Indomable (2)"
+        ],
+        "19": [
+          "Mejora de característica"
+        ],
+        "20": [
+          "Ataque adicional (3)"
+        ]
+      },
       "subclases": [
         {
           "nombre": "Campeón (2024)",
@@ -805,51 +909,7 @@
             ]
           }
         }
-      ],
-      "rasgos": {
-        "1": [
-          "Estilo de combate",
-          "Recuperación de fuerzas"
-        ],
-        "2": [
-          "Oleada de acción"
-        ],
-        "3": [
-          "Subclase de Guerrero",
-          "Maestría en armas"
-        ],
-        "4": [
-          "Mejora de característica"
-        ],
-        "5": [
-          "Ataque adicional"
-        ],
-        "6": [
-          "Mejora de característica"
-        ],
-        "9": [
-          "Indomable"
-        ],
-        "11": [
-          "Ataque adicional (2)"
-        ],
-        "13": [
-          "Uso táctico"
-        ],
-        "14": [
-          "Mejora de característica"
-        ],
-        "17": [
-          "Oleada de acción (2)",
-          "Indomable (2)"
-        ],
-        "19": [
-          "Mejora de característica"
-        ],
-        "20": [
-          "Ataque adicional (3)"
-        ]
-      }
+      ]
     },
     {
       "nombre": "Monje",
@@ -1169,103 +1229,15 @@
         "Destreza"
       ],
       "tipo_conjurador": "medio",
-      "subclases": [
-        {
-          "nombre": "Cazador (2024)",
-          "niveles": {
-            "3": [
-              "Presa del cazador"
-            ],
-            "6": [
-              "Tácticas defensivas"
-            ],
-            "11": [
-              "Ataque múltiple"
-            ],
-            "15": [
-              "Defensa de cazador superior"
-            ]
-          }
-        },
-        {
-          "nombre": "Señor de las Bestias (2024)",
-          "niveles": {
-            "3": [
-              "Compañero del explorador"
-            ],
-            "6": [
-              "Entrenamiento excepcional"
-            ],
-            "11": [
-              "Furia bestial"
-            ],
-            "15": [
-              "Vínculo compartido"
-            ]
-          }
-        },
-        {
-          "nombre": "Acechador Gloom (2024)",
-          "niveles": {
-            "3": [
-              "Emboscador temible",
-              "Visión umbría"
-            ],
-            "6": [
-              "Mente de hierro"
-            ],
-            "11": [
-              "Ráfaga del acechador"
-            ],
-            "15": [
-              "Esquiva sombría"
-            ]
-          }
-        },
-        {
-          "nombre": "Errante Feérico (2024)",
-          "niveles": {
-            "3": [
-              "Golpe pavoroso",
-              "Magia fey"
-            ],
-            "6": [
-              "Giro seductor"
-            ],
-            "11": [
-              "Refuerzos fey"
-            ],
-            "15": [
-              "Pasos brumosos"
-            ]
-          }
-        },
-        {
-          "nombre": "Guardián de Enjambres (Tasha)",
-          "niveles": {
-            "3": [
-              "Enjambre reunido"
-            ],
-            "6": [
-              "Dispersión del alma"
-            ],
-            "11": [
-              "Tormenta del enjambre"
-            ],
-            "15": [
-              "Dispersión brumosa"
-            ]
-          }
-        }
-      ],
       "rasgos": {
         "1": [
+          "Lanzamiento de conjuros",
           "Enemigo predilecto",
-          "Explorador de la naturaleza"
+          "Maestría con armas"
         ],
         "2": [
           "Estilo de combate",
-          "Lanzamiento de conjuros"
+          "Explorador hábil"
         ],
         "3": [
           "Subclase de Explorador"
@@ -1276,25 +1248,136 @@
         "5": [
           "Ataque adicional"
         ],
+        "6":[
+          "Errante"
+        ],
         "8": [
-          "Zancada de la tierra"
-        ],
-        "10": [
-          "Ocultación de la naturaleza"
-        ],
-        "14": [
-          "Desvanecerse"
-        ],
-        "18": [
-          "Sentidos de la naturaleza"
-        ],
-        "19": [
           "Mejora de característica"
         ],
+        "9":[
+          "Pericia"
+        ],
+        "10": [
+          "Infatigable"
+        ],
+        "12":[
+          "Mejora de Característica"
+        ],
+        "13":[
+          "Cazador persistente"
+        ],
+        "14": [
+          "Velo de la naturaleza"
+        ],
+        "16":[
+          "Mejora de Característica"
+        ],
+        "17":[
+          "Cazador preciso"
+        ],
+        "18": [
+          "Sentidos salvajes"
+        ],
+        "19": [
+          "Don épico"
+        ],
         "20": [
-          "Cazador de enemigos"
+          "Azote de enemigos"
         ]
-      }
+      },
+      "subclases": [
+        {
+          "nombre": "Acechador en la penumbra (2024)",
+          "niveles": {
+            "3": [
+              "Conjuros del acechador en la penumbra",
+              "Emboscador pavoroso",
+              "Visión umbría"
+            ],
+            "7": [
+              "Mente de hierro"
+            ],
+            "11": [
+              "Oleada del acechador"
+            ],
+            "15": [
+              "Esquiva sombría"
+            ]
+          }
+        },
+        {
+          "nombre": "Cazador (2024)",
+          "niveles": {
+            "3": [
+              "El cazador y la presa",
+              "Sabiduría del cazador"
+            ],
+            "7": [
+              "Tácticas defensivas"
+            ],
+            "11": [
+              "El cazador experto y la presa"
+            ],
+            "15": [
+              "Defensa de cazador experto"
+            ]
+          }
+        },
+        {
+          "nombre": "Errante Feérico (2024)",
+          "niveles": {
+            "3": [
+              "Conjuros del errante feérico",
+              "Golpes pavorosos",
+              "Glamour sobrenatural"
+            ],
+            "7": [
+              "Giro seductor"
+            ],
+            "11": [
+              "Refuerzos feéricos"
+            ],
+            "15": [
+              "Errante brumoso"
+            ]
+          }
+        },
+        {
+          "nombre": "Señor de las Bestias (2024)",
+          "niveles": {
+            "3": [
+              "Compañero primigenio"
+            ],
+            "7": [
+              "Entrenamiento excepcional"
+            ],
+            "11": [
+              "Furia bestial"
+            ],
+            "15": [
+              "Compartir conjuros"
+            ]
+          }
+        },
+        {
+          "nombre": "Guardián de Enjambres (Tasha)",
+          "niveles": {
+            "3": [
+              "Enjambre reunido",
+              "Conjuros de guardaenjambres"
+            ],
+            "7": [
+              "Marea retorcida"
+            ],
+            "11": [
+              "Enjambre poderoso"
+            ],
+            "15": [
+              "Dispersión en el enjambre"
+            ]
+          }
+        }
+      ]
     },
     {
       "nombre": "Pícaro",
@@ -1558,104 +1641,13 @@
         "Carisma"
       ],
       "tipo_conjurador": "pacto",
-      "subclases": [
-        {
-          "nombre": "El Archihada (2024)",
-          "niveles": {
-            "3": [
-              "Paso de la niebla",
-              "Conjuros de patrón"
-            ],
-            "6": [
-              "Escape brumoso"
-            ],
-            "10": [
-              "Defensa de engaño"
-            ],
-            "14": [
-              "Delirio fey"
-            ]
-          }
-        },
-        {
-          "nombre": "El Fiador / Demonio (2024)",
-          "niveles": {
-            "3": [
-              "Bendición del oscuro",
-              "Conjuros de patrón"
-            ],
-            "6": [
-              "Suerte de los oscuros"
-            ],
-            "10": [
-              "Resiliencia demoníaca"
-            ],
-            "14": [
-              "Arrojar al infierno"
-            ]
-          }
-        },
-        {
-          "nombre": "El Gran Antiguo (2024)",
-          "niveles": {
-            "3": [
-              "Despertar de la mente",
-              "Conjuros de patrón"
-            ],
-            "6": [
-              "Escudo entrópico"
-            ],
-            "10": [
-              "Escudo de pensamiento"
-            ],
-            "14": [
-              "Crear siervo"
-            ]
-          }
-        },
-        {
-          "nombre": "El Genio (Tasha)",
-          "niveles": {
-            "3": [
-              "Vasija del genio",
-              "Regalo del elemento"
-            ],
-            "6": [
-              "Vuelo elemental"
-            ],
-            "10": [
-              "Resguardo del genio"
-            ],
-            "14": [
-              "Deseo limitado"
-            ]
-          }
-        },
-        {
-          "nombre": "El Muerto Viviente / Undead (Tasha)",
-          "niveles": {
-            "3": [
-              "Forma de pavor"
-            ],
-            "6": [
-              "Toque sepulcral"
-            ],
-            "10": [
-              "Fortaleza necrótica"
-            ],
-            "14": [
-              "Proyección espiritual"
-            ]
-          }
-        }
-      ],
       "rasgos": {
         "1": [
-          "Pacto del Patrón",
-          "Trucos mágicos"
+          "Magia del pacto",
+          "Invocaciones sobrenaturales"
         ],
         "2": [
-          "Invocaciones eldritch"
+          "Astucia mágica"
         ],
         "3": [
           "Subclase de Brujo"
@@ -1663,13 +1655,151 @@
         "4": [
           "Mejora de característica"
         ],
+        "8": [
+          "Mejora de característica"
+        ],
+        "9": [
+          "Contactar patrón"
+        ],
         "11": [
           "Arcanum místico"
         ],
+        "12": [
+          "Mejora de Característica"
+        ],
+        "13": [
+          "Arcanum místico"
+        ],
+        "15": [
+          "Arcanum místico"
+        ],
+        "16": [
+          "Mejora de Característica"
+        ],
+        "17": [
+          "Arcanum místico"
+        ],
+        "19": [
+          "Don épico"
+        ],
         "20": [
-          "Recuperación del maestro"
+          "Maestro Sobrenatural"
         ]
-      }
+      },
+      "subclases": [
+        {
+          "nombre": "Patrón Celestial (2024)",
+          "niveles": {
+            "3": [
+              "Luz sanadora",
+              "Conjuros del celestial"
+            ],
+            "6": [
+              "Alma radiante"
+            ],
+            "10": [
+              "Resiliencia celestial"
+            ],
+            "14": [
+              "Venganza ardiente"
+            ]
+          }
+        },
+        {
+          "nombre": "Patrón Feérico (2024)",
+          "niveles": {
+            "3": [
+              "Pasos feéricos",
+              "Conjuros del señor feérico"
+            ],
+            "6": [
+              "Escape brumoso"
+            ],
+            "10": [
+              "Defensas seductoras"
+            ],
+            "14": [
+              "Magia embrujadora"
+            ]
+          }
+        },
+        {
+          "nombre": "Patrón infernal (2024)",
+          "niveles": {
+            "3": [
+              "Bendición del oscuro",
+              "Conjuros del infernal"
+            ],
+            "6": [
+              "La suerte del oscuro"
+            ],
+            "10": [
+              "Resistencia infernal"
+            ],
+            "14": [
+              "Arrastrar por el infierno"
+            ]
+          }
+        },
+        {
+          "nombre": "Patrón primigenio (2024)",
+          "niveles": {
+            "3": [
+              "Conjuros psíquicos",
+              "Conjuros del primigenio",
+              "Mente iluminada"
+            ],
+            "6": [
+              "Combatiente clarividente"
+            ],
+            "10": [
+              "Escudo mental",
+              "Maleficio Sobrenatural"
+            ],
+            "14": [
+              "Crear siervo"
+            ]
+          }
+        },
+        {
+          "nombre": "Patrón Genio (Tasha)",
+          "niveles": {
+            "3": [
+              "Recipiente del genio",
+              "Conjuros del genio"
+            ],
+            "6": [
+              "Don elemental"
+            ],
+            "10": [
+              "Recipiente santuario"
+            ],
+            "14": [
+              "Deseo limitado"
+            ]
+          }
+        },
+        {
+          "nombre": "Patrón insondable (Tasha)",
+          "niveles": {
+            "3": [
+              "Lista de conjuros insondable",
+              "Tentáculo de las profundidades",
+              "Don de los mares"
+            ],
+            "6": [
+              "Alma oceánica",
+              "Bucle guardián"
+            ],
+            "10": [
+              "Tentáculos prensiles"
+            ],
+            "14": [
+              "Zambullida insondable"
+            ]
+          }
+        }
+      ]
     },
     {
       "nombre": "Mago",
@@ -1679,6 +1809,34 @@
         "Sabiduría"
       ],
       "tipo_conjurador": "completo",
+      "rasgos": {
+        "1": [
+          "Lanzamiento de conjuros",
+          "Recuperación arcana",
+          "Trucos diestros"
+        ],
+        "2": [
+          "Estudio académico"
+        ],
+        "3": [
+          "Subclase de Mago"
+        ],
+        "4": [
+          "Mejora de característica"
+        ],
+        "5": [
+          "Memoria de conjuros"
+        ],
+        "18": [
+          "Maestría en conjuros"
+        ],
+        "19": [
+          "Mejora de característica"
+        ],
+        "20": [
+          "Firma de conjuros"
+        ]
+      },
       "subclases": [
         {
           "nombre": "Escuela de Evocación (2024)",
@@ -1770,35 +1928,7 @@
             ]
           }
         }
-      ],
-      "rasgos": {
-        "1": [
-          "Lanzamiento de conjuros",
-          "Recuperación arcana",
-          "Trucos diestros"
-        ],
-        "2": [
-          "Estudio académico"
-        ],
-        "3": [
-          "Subclase de Mago"
-        ],
-        "4": [
-          "Mejora de característica"
-        ],
-        "5": [
-          "Memoria de conjuros"
-        ],
-        "18": [
-          "Maestría en conjuros"
-        ],
-        "19": [
-          "Mejora de característica"
-        ],
-        "20": [
-          "Firma de conjuros"
-        ]
-      }
+      ]
     },
     {
       "nombre": "Artífice",
@@ -2882,6 +3012,32 @@
         "Sigilo"
       ],
       "dote": "Afortunado"
+    },
+    {
+      "nombre": "Sintoísta",
+      "bonificador_caracteristica": [
+        "Destreza",
+        "Constitución",
+        "Carisma"
+      ],
+      "competencias_habilidad": [
+        "Percepción",
+        "Religión"
+      ],
+      "dote": "Iniciado en Magia (Clérigo)"
+    },
+    {
+      "nombre": "Pintor de la corte",
+      "bonificador_caracteristica": [
+        "Destreza",
+        "Sabiduría",
+        "Carisma"
+      ],
+      "competencias_habilidad": [
+        "Persuasión",
+        "Historia"
+      ],
+      "dote": "Habilidoso"
     }
   ],
   "dotes": [

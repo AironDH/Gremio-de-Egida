@@ -2,7 +2,7 @@
   {
     "id": "abrir",
     "nombre": "Abrir",
-    "clase": ["bardo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Transmutación",
@@ -58,7 +58,7 @@
   {
     "id": "agrandar-reducir",
     "nombre": "Agrandar/Reducir",
-    "clase": ["bardo", "druida", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "druida", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Transmutación",
@@ -128,7 +128,7 @@
   {
     "id": "alterar-los-recuerdos",
     "nombre": "Alterar los Recuerdos",
-    "clase": ["bardo", "mago"],
+    "clase": ["bardo", "dibujante", "mago"],
     "tipo": "Hechizo",
     "nivel": 5,
     "escuela": "Encantamiento",
@@ -142,7 +142,7 @@
   {
     "id": "alzar-a-los-muertos",
     "nombre": "Alzar a los Muertos",
-    "clase": ["bardo", "clerigo", "paladin"],
+    "clase": ["bardo", "dibujante", "clerigo", "paladin"],
     "tipo": "Hechizo",
     "nivel": 5,
     "escuela": "Nigromancia",
@@ -156,7 +156,7 @@
   {
     "id": "amistad",
     "nombre": "Amistad",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 0,
     "escuela": "Encantamiento",
@@ -184,7 +184,7 @@
   {
     "id": "animar-objetos",
     "nombre": "Animar Objetos",
-    "clase": ["bardo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 5,
     "escuela": "Transmutación",
@@ -198,7 +198,7 @@
   {
     "id": "antipatia-simpatia",
     "nombre": "Antipatía/Simpatía",
-    "clase": ["bardo", "druida", "mago"],
+    "clase": ["bardo", "dibujante", "druida", "mago"],
     "tipo": "Hechizo",
     "nivel": 8,
     "escuela": "Encantamiento",
@@ -212,7 +212,7 @@
   {
     "id": "apariencia",
     "nombre": "Apariencia",
-    "clase": ["bardo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 5,
     "escuela": "Ilusionismo",
@@ -296,7 +296,7 @@
   {
     "id": "asesino-fantasmall",
     "nombre": "Asesino Fantasmal",
-    "clase": ["bardo", "mago"],
+    "clase": ["bardo", "dibujante", "mago"],
     "tipo": "Hechizo",
     "nivel": 4,
     "escuela": "Ilusionismo",
@@ -324,7 +324,7 @@
   {
     "id": "atadura-planar",
     "nombre": "Atadura Planar",
-    "clase": ["bardo", "brujo", "clerigo", "druida", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "clerigo", "druida", "mago"],
     "tipo": "Hechizo",
     "nivel": 5,
     "escuela": "Abjuración",
@@ -422,7 +422,7 @@
   {
     "id": "auxilio",
     "nombre": "Auxilio",
-    "clase": ["bardo", "clerigo", "druida", "explorador", "paladin"],
+    "clase": ["bardo", "dibujante", "clerigo", "druida", "explorador", "paladin"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Abjuración",
@@ -436,7 +436,7 @@
   {
     "id": "baile-irresistible-de-otto",
     "nombre": "Baile Irresistible de Otto",
-    "clase": ["bardo", "mago"],
+    "clase": ["bardo", "dibujante", "mago"],
     "tipo": "Hechizo",
     "nivel": 6,
     "escuela": "Encantamiento",
@@ -478,7 +478,7 @@
   {
     "id": "boca-magica",
     "nombre": "Boca Mágica",
-    "clase": ["bardo", "mago"],
+    "clase": ["bardo", "dibujante", "mago"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Ilusionismo",
@@ -562,7 +562,7 @@
   {
     "id": "caida-de-pluma",
     "nombre": "Caída de Pluma",
-    "clase": ["bardo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Transmutación",
@@ -590,7 +590,7 @@
   {
     "id": "calentar-metal",
     "nombre": "Calentar Metal",
-    "clase": ["bardo", "druida"],
+    "clase": ["bardo", "dibujante", "druida"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Transmutación",
@@ -604,7 +604,7 @@
   {
     "id": "calmar-emociones",
     "nombre": "Calmar Emociones",
-    "clase": ["bardo", "clerigo"],
+    "clase": ["bardo", "dibujante", "clerigo"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Encantamiento",
@@ -842,7 +842,7 @@
   {
     "id": "circulo-de-teletransportacion",
     "nombre": "Círculo de Teletransportación",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 5,
     "escuela": "Conjuración",
@@ -870,7 +870,7 @@
   {
     "id": "clarividencia",
     "nombre": "Clarividencia",
-    "clase": ["bardo", "clerigo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "clerigo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 3,
     "escuela": "Adivinación",
@@ -968,7 +968,7 @@
   {
     "id": "confusion",
     "nombre": "Confusión",
-    "clase": ["bardo", "druida", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "druida", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 4,
     "escuela": "Encantamiento",
@@ -1108,7 +1108,7 @@
   {
     "id": "conocer-las-leyendas",
     "nombre": "Conocer las Leyendas",
-    "clase": ["bardo", "clerigo", "mago"],
+    "clase": ["bardo", "dibujante", "clerigo", "mago"],
     "tipo": "Hechizo",
     "nivel": 5,
     "escuela": "Adivinación",
@@ -1262,7 +1262,7 @@
   {
     "id": "corona-de-la-locura",
     "nombre": "Corona de la Locura",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Encantamiento",
@@ -1360,7 +1360,7 @@
   {
     "id": "crecimiento-vegetal",
     "nombre": "Crecimiento Vegetal",
-    "clase": ["bardo", "druida", "explorador"],
+    "clase": ["bardo", "dibujante", "druida", "explorador"],
     "tipo": "Hechizo",
     "nivel": 3,
     "escuela": "Transmutación",
@@ -1416,7 +1416,7 @@
   {
     "id": "curar-heridas",
     "nombre": "Curar Heridas",
-    "clase": ["bardo", "clerigo", "druida", "explorador", "paladin"],
+    "clase": ["bardo", "dibujante", "clerigo", "druida", "explorador", "paladin"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Abjuración",
@@ -1430,7 +1430,7 @@
   {
     "id": "curar-heridas-en-masa",
     "nombre": "Curar Heridas en Masa",
-    "clase": ["bardo", "clerigo", "druida"],
+    "clase": ["bardo", "dibujante", "clerigo", "druida"],
     "tipo": "Hechizo",
     "nivel": 5,
     "escuela": "Abjuración",
@@ -1542,7 +1542,7 @@
   {
     "id": "despertar",
     "nombre": "Despertar",
-    "clase": ["bardo", "druida"],
+    "clase": ["bardo", "dibujante", "druida"],
     "tipo": "Hechizo",
     "nivel": 5,
     "escuela": "Transmutación",
@@ -1612,7 +1612,7 @@
   {
     "id": "detectar-magia",
     "nombre": "Detectar Magia",
-    "clase": ["bardo", "brujo", "clerigo", "druida", "explorador", "hechicero", "mago", "paladin"],
+    "clase": ["bardo", "dibujante", "brujo", "clerigo", "druida", "explorador", "hechicero", "mago", "paladin"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Adivinación",
@@ -1626,7 +1626,7 @@
   {
     "id": "detectar-pensamientos",
     "nombre": "Detectar Pensamientos",
-    "clase": ["bardo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Adivinación",
@@ -1682,7 +1682,7 @@
   {
     "id": "disfrazarse",
     "nombre": "Disfrazarse",
-    "clase": ["bardo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Ilusionismo",
@@ -1710,7 +1710,7 @@
   {
     "id": "disipar-magia",
     "nombre": "Disipar Magia",
-    "clase": ["bardo", "brujo", "clerigo", "druida", "explorador", "hechicero", "mago", "paladin"],
+    "clase": ["bardo", "dibujante", "brujo", "clerigo", "druida", "explorador", "hechicero", "mago", "paladin"],
     "tipo": "Hechizo",
     "nivel": 3,
     "escuela": "Abjuración",
@@ -1738,7 +1738,7 @@
   {
     "id": "dominar-monstruo",
     "nombre": "Dominar Monstruo",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 8,
     "escuela": "Encantamiento",
@@ -1752,7 +1752,7 @@
   {
     "id": "dominar-persona",
     "nombre": "Dominar Persona",
-    "clase": ["bardo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 5,
     "escuela": "Encantamiento",
@@ -1766,7 +1766,7 @@
   {
     "id": "don-de-lenguas",
     "nombre": "Don de Lenguas",
-    "clase": ["bardo", "brujo", "clerigo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "clerigo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 3,
     "escuela": "Adivinación",
@@ -1780,7 +1780,7 @@
   {
     "id": "dormir",
     "nombre": "Dormir",
-    "clase": ["bardo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Encantamiento",
@@ -1836,7 +1836,7 @@
   {
     "id": "embelesar",
     "nombre": "Embesar",
-    "clase": ["bardo", "brujo"],
+    "clase": ["bardo", "dibujante", "brujo"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Encantamiento",
@@ -1850,7 +1850,7 @@
   {
     "id": "encantar-animal",
     "nombre": "Encantar Animal",
-    "clase": ["bardo", "druida", "explorador"],
+    "clase": ["bardo", "dibujante", "druida", "explorador"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Encantamiento",
@@ -1864,7 +1864,7 @@
   {
     "id": "encontrar-el-camino",
     "nombre": "Encontrar el Camino",
-    "clase": ["bardo", "clerigo", "druida"],
+    "clase": ["bardo", "dibujante", "clerigo", "druida"],
     "tipo": "Hechizo",
     "nivel": 6,
     "escuela": "Adivinación",
@@ -1892,7 +1892,7 @@
   {
     "id": "enganar",
     "nombre": "Engañar",
-    "clase": ["bardo", "brujo", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "mago"],
     "tipo": "Hechizo",
     "nivel": 5,
     "escuela": "Ilusionismo",
@@ -1906,7 +1906,7 @@
   {
     "id": "enlace-telepatico-de-rary",
     "nombre": "Enlace Telepático de Rary",
-    "clase": ["bardo", "mago"],
+    "clase": ["bardo", "dibujante", "mago"],
     "tipo": "Hechizo",
     "nivel": 5,
     "escuela": "Adivinación",
@@ -1948,7 +1948,7 @@
   {
     "id": "ensueno",
     "nombre": "Ensueño",
-    "clase": ["bardo", "brujo", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "mago"],
     "tipo": "Hechizo",
     "nivel": 5,
     "escuela": "Ilusionismo",
@@ -1962,7 +1962,7 @@
   {
     "id": "entender-idiomas",
     "nombre": "Entender Idiomas",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Adivinación",
@@ -2018,7 +2018,7 @@
   {
     "id": "escrutinar",
     "nombre": "Escudriñar",
-    "clase": ["bardo", "brujo", "clerigo", "druida", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "clerigo", "druida", "mago"],
     "tipo": "Hechizo",
     "nivel": 5,
     "escuela": "Adivinación",
@@ -2088,7 +2088,7 @@
   {
     "id": "espada-de-mordenkainen",
     "nombre": "Espada de Mordenkainen",
-    "clase": ["bardo", "mago"],
+    "clase": ["bardo", "dibujante", "mago"],
     "tipo": "Hechizo",
     "nivel": 7,
     "escuela": "Evocación",
@@ -2102,7 +2102,7 @@
   {
     "id": "espejismo-arcano",
     "nombre": "Espejismo Arcano",
-    "clase": ["bardo", "druida", "mago"],
+    "clase": ["bardo", "dibujante", "druida", "mago"],
     "tipo": "Hechizo",
     "nivel": 7,
     "escuela": "Ilusionismo",
@@ -2144,7 +2144,7 @@
   {
     "id": "estatica-sinaptica",
     "nombre": "Estática Sináptica",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 5,
     "escuela": "Encantamiento",
@@ -2158,7 +2158,7 @@
   {
     "id": "excursion-eterea",
     "nombre": "Excusión Etérea",
-    "clase": ["bardo", "brujo", "clerigo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "clerigo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 7,
     "escuela": "Conjuración",
@@ -2228,7 +2228,7 @@
   {
     "id": "festin-de-heroes",
     "nombre": "Festín de Héroes",
-    "clase": ["bardo", "clerigo", "druida"],
+    "clase": ["bardo", "dibujante", "clerigo", "druida"],
     "tipo": "Hechizo",
     "nivel": 6,
     "escuela": "Conjuración",
@@ -2242,7 +2242,7 @@
   {
     "id": "fingir-muerte",
     "nombre": "Fingir Muerte",
-    "clase": ["bardo", "clerigo", "druida", "mago"],
+    "clase": ["bardo", "dibujante", "clerigo", "druida", "mago"],
     "tipo": "Hechizo",
     "nivel": 3,
     "escuela": "Nigromancia",
@@ -2312,7 +2312,7 @@
   {
     "id": "fuego-feerico",
     "nombre": "Fuego Feérico",
-    "clase": ["bardo", "druida"],
+    "clase": ["bardo", "dibujante", "druida"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Evocación",
@@ -2326,7 +2326,7 @@
   {
     "id": "fuente-de-luz-lunar",
     "nombre": "Fuente de Luz Lunar",
-    "clase": ["bardo", "druida"],
+    "clase": ["bardo", "dibujante", "druida"],
     "tipo": "Hechizo",
     "nivel": 4,
     "escuela": "Evocación",
@@ -2340,7 +2340,7 @@
   {
     "id": "fuerza-fantasmal",
     "nombre": "Fuerza Fantasmal",
-    "clase": ["bardo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Ilusionismo",
@@ -2368,7 +2368,7 @@
   {
     "id": "geas",
     "nombre": "Geas",
-    "clase": ["bardo", "clerigo", "druida", "mago", "paladin"],
+    "clase": ["bardo", "dibujante", "clerigo", "druida", "mago", "paladin"],
     "tipo": "Hechizo",
     "nivel": 5,
     "escuela": "Encantamiento",
@@ -2382,7 +2382,7 @@
   {
     "id": "glifo-custodio",
     "nombre": "Glifo Custodio",
-    "clase": ["bardo", "clerigo", "mago"],
+    "clase": ["bardo", "dibujante", "clerigo", "mago"],
     "tipo": "Hechizo",
     "nivel": 3,
     "escuela": "Abjuración",
@@ -2480,7 +2480,7 @@
   {
     "id": "guardas-y-guardias",
     "nombre": "Guardas y Guardias",
-    "clase": ["bardo", "mago"],
+    "clase": ["bardo", "dibujante", "mago"],
     "tipo": "Hechizo",
     "nivel": 6,
     "escuela": "Abjuración",
@@ -2494,7 +2494,7 @@
   {
     "id": "guardia-de-cuchillas",
     "nombre": "Guardia de Cuchillas",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 0,
     "escuela": "Abjuración",
@@ -2536,7 +2536,7 @@
   {
     "id": "hablar-con-las-plantas",
     "nombre": "Hablar con las Plantas",
-    "clase": ["bardo", "druida", "explorador"],
+    "clase": ["bardo", "dibujante", "druida", "explorador"],
     "tipo": "Hechizo",
     "nivel": 3,
     "escuela": "Transmutación",
@@ -2550,7 +2550,7 @@
   {
     "id": "hablar-con-los-animales",
     "nombre": "Hablar con los Animales",
-    "clase": ["bardo", "brujo", "druida", "explorador"],
+    "clase": ["bardo", "dibujante", "brujo", "druida", "explorador"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Adivinación",
@@ -2564,7 +2564,7 @@
   {
     "id": "hablar-con-los-muertos",
     "nombre": "Hablar con los Muertos",
-    "clase": ["bardo", "clerigo", "mago"],
+    "clase": ["bardo", "dibujante", "clerigo", "mago"],
     "tipo": "Hechizo",
     "nivel": 3,
     "escuela": "Nigromancia",
@@ -2578,7 +2578,7 @@
   {
     "id": "hacer-anicos",
     "nombre": "Hacer Añicos",
-    "clase": ["bardo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Evocación",
@@ -2620,7 +2620,7 @@
   {
     "id": "hechizar-monstruo",
     "nombre": "Hechizar Monstruo",
-    "clase": ["bardo", "brujo", "druida", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "druida", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 4,
     "escuela": "Encantamiento",
@@ -2634,7 +2634,7 @@
   {
     "id": "hechizar-persona",
     "nombre": "Hechizar Persona",
-    "clase": ["bardo", "brujo", "druida", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "druida", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Encantamiento",
@@ -2648,7 +2648,7 @@
   {
     "id": "heroismo",
     "nombre": "Heroísmo",
-    "clase": ["bardo", "paladin"],
+    "clase": ["bardo", "dibujante", "paladin"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Encantamiento",
@@ -2676,7 +2676,7 @@
   {
     "id": "identificar",
     "nombre": "Identificar",
-    "clase": ["bardo", "mago"],
+    "clase": ["bardo", "dibujante", "mago"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Adivinación",
@@ -2690,7 +2690,7 @@
   {
     "id": "ilusion-menor",
     "nombre": "Ilusión Menor",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 0,
     "escuela": "Ilusionismo",
@@ -2704,7 +2704,7 @@
   {
     "id": "ilusion-programada",
     "nombre": "Ilusión Programada",
-    "clase": ["bardo", "mago"],
+    "clase": ["bardo", "dibujante", "mago"],
     "tipo": "Hechizo",
     "nivel": 6,
     "escuela": "Ilusionismo",
@@ -2718,7 +2718,7 @@
   {
     "id": "imagen-mayor",
     "nombre": "Imagen Mayor",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 3,
     "escuela": "Ilusionismo",
@@ -2732,7 +2732,7 @@
   {
     "id": "imagen-multiple",
     "nombre": "Imagen Múltiple",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Ilusionismo",
@@ -2746,7 +2746,7 @@
   {
     "id": "imagen-silenciosa",
     "nombre": "Imagen Silenciosa",
-    "clase": ["bardo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Ilusionismo",
@@ -2760,7 +2760,7 @@
   {
     "id": "impacto-certero",
     "nombre": "Impacto Certero",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 0,
     "escuela": "Adivinación",
@@ -2774,7 +2774,7 @@
   {
     "id": "imponer-maldicion",
     "nombre": "Imponer Maldición",
-    "clase": ["bardo", "clerigo", "mago"],
+    "clase": ["bardo", "dibujante", "clerigo", "mago"],
     "tipo": "Hechizo",
     "nivel": 3,
     "escuela": "Nigromancia",
@@ -2788,7 +2788,7 @@
   {
     "id": "indetectable",
     "nombre": "Indetectable",
-    "clase": ["bardo", "explorador", "mago"],
+    "clase": ["bardo", "dibujante", "explorador", "mago"],
     "tipo": "Hechizo",
     "nivel": 3,
     "escuela": "Abjuración",
@@ -2816,7 +2816,7 @@
   {
     "id": "inmovilizar-monstruo",
     "nombre": "Inmovilizar Monstruo",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 5,
     "escuela": "Encantamiento",
@@ -2830,7 +2830,7 @@
   {
     "id": "inmovilizar-persona",
     "nombre": "Inmovilizar Persona",
-    "clase": ["bardo", "brujo", "clerigo", "druida", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "clerigo", "druida", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Encantamiento",
@@ -2872,7 +2872,7 @@
   {
     "id": "invisibilidad",
     "nombre": "Invisibilidad",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Ilusionismo",
@@ -2886,7 +2886,7 @@
   {
     "id": "invisibilidad-mejorada",
     "nombre": "Invisibilidad Mejorada",
-    "clase": ["bardo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 4,
     "escuela": "Ilusionismo",
@@ -3040,7 +3040,7 @@
   {
     "id": "jaula-de-fuerza",
     "nombre": "Jaula de Fuerza",
-    "clase": ["bardo", "brujo", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "mago"],
     "tipo": "Hechizo",
     "nivel": 7,
     "escuela": "Evocación",
@@ -3068,7 +3068,7 @@
   {
     "id": "labia",
     "nombre": "Labia",
-    "clase": ["bardo", "brujo"],
+    "clase": ["bardo", "dibujante", "brujo"],
     "tipo": "Hechizo",
     "nivel": 8,
     "escuela": "Encantamiento",
@@ -3124,7 +3124,7 @@
   {
     "id": "libertad-de-movimiento",
     "nombre": "Libertad de Movimiento",
-    "clase": ["bardo", "clerigo", "druida", "explorador"],
+    "clase": ["bardo", "dibujante", "clerigo", "druida", "explorador"],
     "tipo": "Hechizo",
     "nivel": 4,
     "escuela": "Abjuración",
@@ -3180,7 +3180,7 @@
   {
     "id": "localizar-animales-o-plantas",
     "nombre": "Localizar Animales o Plantas",
-    "clase": ["bardo", "druida", "explorador"],
+    "clase": ["bardo", "dibujante", "druida", "explorador"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Adivinación",
@@ -3194,7 +3194,7 @@
   {
     "id": "localizar-criatura",
     "nombre": "Localizar Criatura",
-    "clase": ["bardo", "clerigo", "druida", "explorador", "mago", "paladin"],
+    "clase": ["bardo", "dibujante", "clerigo", "druida", "explorador", "mago", "paladin"],
     "tipo": "Hechizo",
     "nivel": 4,
     "escuela": "Adivinación",
@@ -3208,7 +3208,7 @@
   {
     "id": "localizar-objeto",
     "nombre": "Localizar Objeto",
-    "clase": ["bardo", "clerigo", "druida", "explorador", "mago", "paladin"],
+    "clase": ["bardo", "dibujante", "clerigo", "druida", "explorador", "mago", "paladin"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Adivinación",
@@ -3222,7 +3222,7 @@
   {
     "id": "luces-danzantes",
     "nombre": "Luces Danzantes",
-    "clase": ["bardo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 0,
     "escuela": "Ilusionismo",
@@ -3236,7 +3236,7 @@
   {
     "id": "luz",
     "nombre": "Luz",
-    "clase": ["bardo", "clerigo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "clerigo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 0,
     "escuela": "Evocación",
@@ -3264,7 +3264,7 @@
   {
     "id": "mal-de-ojo",
     "nombre": "Mal de Ojo",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 6,
     "escuela": "Nigromancia",
@@ -3306,7 +3306,7 @@
   {
     "id": "mano-de-mago",
     "nombre": "Mano de Mago",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 0,
     "escuela": "Conjuración",
@@ -3334,7 +3334,7 @@
   {
     "id": "mansion-magnifica-de-mordenkainen",
     "nombre": "Mansión Magnífica de Mordenkainen",
-    "clase": ["bardo", "mago"],
+    "clase": ["bardo", "dibujante", "mago"],
     "tipo": "Hechizo",
     "nivel": 7,
     "escuela": "Conjuración",
@@ -3404,7 +3404,7 @@
   {
     "id": "mensaje",
     "nombre": "Mensaje",
-    "clase": ["bardo", "druida", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "druida", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 0,
     "escuela": "Transmutación",
@@ -3418,7 +3418,7 @@
   {
     "id": "mensajero-animal",
     "nombre": "Mensajero Animal",
-    "clase": ["bardo", "druida", "explorador"],
+    "clase": ["bardo", "dibujante", "druida", "explorador"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Encantamiento",
@@ -3432,7 +3432,7 @@
   {
     "id": "mente-en-blanco",
     "nombre": "Mente en Blanco",
-    "clase": ["bardo", "mago"],
+    "clase": ["bardo", "dibujante", "mago"],
     "tipo": "Hechizo",
     "nivel": 8,
     "escuela": "Abjuración",
@@ -3558,7 +3558,7 @@
   {
     "id": "muro-prismatico",
     "nombre": "Muro Prismático",
-    "clase": ["bardo", "mago"],
+    "clase": ["bardo", "dibujante", "mago"],
     "tipo": "Hechizo",
     "nivel": 9,
     "escuela": "Abjuración",
@@ -3586,7 +3586,7 @@
   {
     "id": "nube-apestosa",
     "nombre": "Nube Apestosa",
-    "clase": ["bardo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 3,
     "escuela": "Conjuración",
@@ -3600,7 +3600,7 @@
   {
     "id": "nube-de-dagas",
     "nombre": "Nube de Dagas",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Conjuración",
@@ -3642,7 +3642,7 @@
   {
     "id": "ofuscacion",
     "nombre": "Ofuscación",
-    "clase": ["bardo", "brujo", "druida", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "druida", "mago"],
     "tipo": "Hechizo",
     "nivel": 8,
     "escuela": "Encantamiento",
@@ -3670,7 +3670,7 @@
   {
     "id": "ola-atronadora",
     "nombre": "Ola Atronadora",
-    "clase": ["bardo", "druida", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "druida", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Evocación",
@@ -3712,7 +3712,7 @@
   {
     "id": "orden-imperiosa",
     "nombre": "Orden Imperiosa",
-    "clase": ["bardo", "clerigo", "paladin"],
+    "clase": ["bardo", "dibujante", "clerigo", "paladin"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Encantamiento",
@@ -3740,7 +3740,7 @@
   {
     "id": "palabra-de-curacion",
     "nombre": "Palabra de Curación",
-    "clase": ["bardo", "clerigo", "druida"],
+    "clase": ["bardo", "dibujante", "clerigo", "druida"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Abjuración",
@@ -3754,7 +3754,7 @@
   {
     "id": "palabra-de-curacion-en-masa",
     "nombre": "Palabra de Curación en Masa",
-    "clase": ["bardo", "clerigo"],
+    "clase": ["bardo", "dibujante", "clerigo"],
     "tipo": "Hechizo",
     "nivel": 3,
     "escuela": "Abjuración",
@@ -3768,7 +3768,7 @@
   {
     "id": "palabra-de-poder-aturdir",
     "nombre": "Palabra de Poder: Aturdir",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 8,
     "escuela": "Encantamiento",
@@ -3782,7 +3782,7 @@
   {
     "id": "palabra-de-poder-fortalecer",
     "nombre": "Palabra de Poder: Fortalecer",
-    "clase": ["bardo", "clerigo"],
+    "clase": ["bardo", "dibujante", "clerigo"],
     "tipo": "Hechizo",
     "nivel": 7,
     "escuela": "Encantamiento",
@@ -3796,7 +3796,7 @@
   {
     "id": "palabra-de-poder-matar",
     "nombre": "Palabra de Poder: Matar",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 9,
     "escuela": "Encantamiento",
@@ -3810,7 +3810,7 @@
   {
     "id": "palabra-de-poder-sanar",
     "nombre": "Palabra de Poder: Sanar",
-    "clase": ["bardo", "clerigo"],
+    "clase": ["bardo", "dibujante", "clerigo"],
     "tipo": "Hechizo",
     "nivel": 9,
     "escuela": "Encantamiento",
@@ -3936,7 +3936,7 @@
   {
     "id": "patron-hipnotico",
     "nombre": "Patrón Hipnótico",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 3,
     "escuela": "Ilusionismo",
@@ -3950,7 +3950,7 @@
   {
     "id": "pequena-ch-oza-de-leomund",
     "nombre": "Pequeña Choza de Leomund",
-    "clase": ["bardo", "mago"],
+    "clase": ["bardo", "dibujante", "mago"],
     "tipo": "Hechizo",
     "nivel": 3,
     "escuela": "Evocación",
@@ -3964,7 +3964,7 @@
   {
     "id": "perdicion",
     "nombre": "Perdición",
-    "clase": ["bardo", "clerigo", "brujo"],
+    "clase": ["bardo", "dibujante", "clerigo", "brujo"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Encantamiento",
@@ -4048,7 +4048,7 @@
   {
     "id": "polimorfar",
     "nombre": "Polimorfar",
-    "clase": ["bardo", "druida", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "druida", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 4,
     "escuela": "Transmutación",
@@ -4062,7 +4062,7 @@
   {
     "id": "polimorfar-verdadero",
     "nombre": "Polimorfar Verdadero",
-    "clase": ["bardo", "brujo", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "mago"],
     "tipo": "Hechizo",
     "nivel": 9,
     "escuela": "Transmutación",
@@ -4090,7 +4090,7 @@
   {
     "id": "potenciar-caracteristica",
     "nombre": "Potenciar Característica",
-    "clase": ["bardo", "clerigo", "druida", "explorador", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "clerigo", "druida", "explorador", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Transmutación",
@@ -4104,7 +4104,7 @@
   {
     "id": "presciencia",
     "nombre": "Presciencia",
-    "clase": ["bardo", "brujo", "druida", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "druida", "mago"],
     "tipo": "Hechizo",
     "nivel": 9,
     "escuela": "Adivinación",
@@ -4118,7 +4118,7 @@
   {
     "id": "presencia-regia-de-yolande",
     "nombre": "Presencia Regia de Yolande",
-    "clase": ["bardo", "mago"],
+    "clase": ["bardo", "dibujante", "mago"],
     "tipo": "Hechizo",
     "nivel": 5,
     "escuela": "Encantamiento",
@@ -4132,7 +4132,7 @@
   {
     "id": "prestidigitacion",
     "nombre": "Prestidigitación",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 0,
     "escuela": "Transmutación",
@@ -4216,7 +4216,7 @@
   {
     "id": "proyectar-imagen",
     "nombre": "Proyectar Imagen",
-    "clase": ["bardo", "mago"],
+    "clase": ["bardo", "dibujante", "mago"],
     "tipo": "Hechizo",
     "nivel": 7,
     "escuela": "Ilusionismo",
@@ -4258,7 +4258,7 @@
   {
     "id": "puerta-dimensional",
     "nombre": "Puerta Dimensional",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 4,
     "escuela": "Conjuración",
@@ -4300,7 +4300,7 @@
   {
     "id": "ralentizar",
     "nombre": "Ralentizar",
-    "clase": ["bardo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 3,
     "escuela": "Transmutación",
@@ -4412,7 +4412,7 @@
   {
     "id": "recado",
     "nombre": "Recado",
-    "clase": ["bardo", "clerigo", "mago"],
+    "clase": ["bardo", "dibujante", "clerigo", "mago"],
     "tipo": "Hechizo",
     "nivel": 3,
     "escuela": "Adivinación",
@@ -4454,7 +4454,7 @@
   {
     "id": "regenerar",
     "nombre": "Regenerar",
-    "clase": ["bardo", "clerigo", "druida"],
+    "clase": ["bardo", "dibujante", "clerigo", "druida"],
     "tipo": "Hechizo",
     "nivel": 7,
     "escuela": "Transmutación",
@@ -4496,7 +4496,7 @@
   {
     "id": "reparar",
     "nombre": "Reparar",
-    "clase": ["bardo", "clerigo", "druida", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "clerigo", "druida", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 0,
     "escuela": "Transmutación",
@@ -4552,7 +4552,7 @@
   {
     "id": "restablecimiento-mayor",
     "nombre": "Restablecimiento Mayor",
-    "clase": ["bardo", "clerigo", "druida", "explorador", "paladin"],
+    "clase": ["bardo", "dibujante", "clerigo", "druida", "explorador", "paladin"],
     "tipo": "Hechizo",
     "nivel": 5,
     "escuela": "Abjuración",
@@ -4566,7 +4566,7 @@
   {
     "id": "restablecimiento-menor",
     "nombre": "Restablecimiento Menor",
-    "clase": ["bardo", "clerigo", "druida", "explorador", "paladin"],
+    "clase": ["bardo", "dibujante", "clerigo", "druida", "explorador", "paladin"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Abjuración",
@@ -4580,7 +4580,7 @@
   {
     "id": "resurreccion",
     "nombre": "Resurrección",
-    "clase": ["bardo", "clerigo"],
+    "clase": ["bardo", "dibujante", "clerigo"],
     "tipo": "Hechizo",
     "nivel": 7,
     "escuela": "Nigromancia",
@@ -4636,7 +4636,7 @@
   {
     "id": "risa-horrible-de-tasha",
     "nombre": "Risa Horrible de Tasha",
-    "clase": ["bardo", "brujo", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "mago"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Encantamiento",
@@ -4650,7 +4650,7 @@
   {
     "id": "rociada-de-color",
     "nombre": "Rociada de Color",
-    "clase": ["bardo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Ilusionismo",
@@ -4664,7 +4664,7 @@
   {
     "id": "rociada-prismatica",
     "nombre": "Rociada Prismática",
-    "clase": ["bardo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 7,
     "escuela": "Evocación",
@@ -4832,7 +4832,7 @@
   {
     "id": "silencio",
     "nombre": "Silencio",
-    "clase": ["bardo", "clerigo", "explorador"],
+    "clase": ["bardo", "dibujante", "clerigo", "explorador"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Ilusionismo",
@@ -4846,7 +4846,7 @@
   {
     "id": "simbolo",
     "nombre": "Símbolo",
-    "clase": ["bardo", "clerigo", "druida", "mago"],
+    "clase": ["bardo", "dibujante", "clerigo", "druida", "mago"],
     "tipo": "Hechizo",
     "nivel": 7,
     "escuela": "Abjuración",
@@ -4874,7 +4874,7 @@
   {
     "id": "sirviente-invisible",
     "nombre": "Sirviente Invisible",
-    "clase": ["bardo", "brujo", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "mago"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Conjuración",
@@ -4888,7 +4888,7 @@
   {
     "id": "sordera-ceguera",
     "nombre": "Sordera/Ceguera",
-    "clase": ["bardo", "clerigo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "clerigo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Transmutación",
@@ -4902,7 +4902,7 @@
   {
     "id": "sugestion",
     "nombre": "Sugestión",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Encantamiento",
@@ -4916,7 +4916,7 @@
   {
     "id": "sugestion-en-masa",
     "nombre": "Sugestión en Masa",
-    "clase": ["bardo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 6,
     "escuela": "Encantamiento",
@@ -5014,7 +5014,7 @@
   {
     "id": "teletransporte",
     "nombre": "Teletransporte",
-    "clase": ["bardo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 7,
     "escuela": "Conjuración",
@@ -5056,7 +5056,7 @@
   {
     "id": "terreno-alucinatorio",
     "nombre": "Terreno Alucinatorio",
-    "clase": ["bardo", "brujo", "druida", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "druida", "mago"],
     "tipo": "Hechizo",
     "nivel": 4,
     "escuela": "Ilusionismo",
@@ -5070,7 +5070,7 @@
   {
     "id": "terror",
     "nombre": "Terror",
-    "clase": ["bardo", "brujo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 3,
     "escuela": "Ilusionismo",
@@ -5098,7 +5098,7 @@
   {
     "id": "texto-ilusorio",
     "nombre": "Texto Ilusorio",
-    "clase": ["bardo", "brujo", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "mago"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Ilusionismo",
@@ -5252,7 +5252,7 @@
   {
     "id": "tronar",
     "nombre": "Tronar",
-    "clase": ["bardo", "brujo", "druida", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "druida", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 0,
     "escuela": "Evocación",
@@ -5308,7 +5308,7 @@
   {
     "id": "ver-invisibilidad",
     "nombre": "Ver Invisibilidad",
-    "clase": ["bardo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Adivinación",
@@ -5392,7 +5392,7 @@
   {
     "id": "vision-veraz",
     "nombre": "Visión Veraz",
-    "clase": ["bardo", "brujo", "clerigo", "hechicero", "mago"],
+    "clase": ["bardo", "dibujante", "brujo", "clerigo", "hechicero", "mago"],
     "tipo": "Hechizo",
     "nivel": 6,
     "escuela": "Adivinación",
@@ -5420,7 +5420,7 @@
   {
     "id": "voluta-estelar",
     "nombre": "Voluta Estelar",
-    "clase": ["bardo", "druida"],
+    "clase": ["bardo", "dibujante", "druida"],
     "tipo": "Hechizo",
     "nivel": 0,
     "escuela": "Evocación",
@@ -5434,7 +5434,7 @@
   {
     "id": "zancada-prodigiosa",
     "nombre": "Zancada Prodigiosa",
-    "clase": ["bardo", "druida", "explorador", "mago"],
+    "clase": ["bardo", "dibujante", "druida", "explorador", "mago"],
     "tipo": "Hechizo",
     "nivel": 1,
     "escuela": "Transmutación",
@@ -5448,7 +5448,7 @@
   {
     "id": "zona-de-la-verdad",
     "nombre": "Zona de la Verdad",
-    "clase": ["bardo", "clerigo", "paladin"],
+    "clase": ["bardo", "dibujante", "clerigo", "paladin"],
     "tipo": "Hechizo",
     "nivel": 2,
     "escuela": "Encantamiento",
@@ -5458,5 +5458,131 @@
     "duracion": "10 minutos",
     "descripcion": "Creas una zona en una esfera de 4,5 m de radio. Una criatura que entra o comienza su turno allí hace salvación de Carisma; si falla, no puede decir mentiras voluntariamente. Sabes si supera o falla. Puede evitar responder o dar respuestas evasivas, pero debe ser sincera.",
     "materiales": ""
-  }
+  },
+  {
+"id": "caricatura-punzante",
+"nombre": "Caricatura punzante",
+"clase": ["dibujante"],
+"tipo": "Hechizo",
+"nivel": 0,
+"escuela": "Encantamiento",
+"tiempo_casteo": "Acción",
+"alcance": "18 metros",
+"componentes": "M",
+"duracion": "Instantánea",
+"descripcion": "Con un trazo rápido y agresivo, dibujas en el aire una caricatura grotesca, un glifo ofensivo o un símbolo humillante dirigido a una criatura que puedas ver dentro del alcance. La imagen, imbuida de energía arcana burlona, se imprime en la mente del objetivo. Este debe superar una tirada de salvación de Sabiduría o sufrir 1d6 de daño psíquico al sentirse plasmado de forma tan denigrante, y además tendrá desventaja en la próxima tirada de ataque que realice antes de que termine su siguiente turno, ya que la imagen perturbadora nubla su concentración y confianza. Mejora de truco. El daño de este truco aumenta en 1d6 cuando alcanzas los niveles 5 (2d6), 11 (3d6) y 17 (4d6).",
+"materiales": "un pincel o herramienta de artesano que uses para dibujar en el aire, o una superficie para dibujar con el dedo"
+},
+{
+"id": "glifo-de-curacion",
+"nombre": "Glifo de curación",
+"clase": ["dibujante"],
+"tipo": "Hechizo",
+"nivel": 1,
+"escuela": "Abjuración",
+"tiempo_casteo": "Acción adicional",
+"alcance": "18 metros",
+"componentes": "M",
+"duracion": "Instantánea",
+"descripcion": "Dibujas rápidamente un glifo sanador, un símbolo de vitalidad o un patrón de restauración en dirección a una criatura que puedas ver dentro del alcance. El símbolo brilla con una luz suave y se imprime sobre el objetivo, haciendo que recupere una cantidad de puntos de golpe igual a 2d4 + tu modificador por Carisma. Con un espacio de conjuro de nivel superior. La curación aumenta en 2d4 por cada nivel por encima de 1 que tenga el espacio de conjuro utilizado.",
+"materiales": "un pincel o herramienta de artesano que uses para dibujar en el aire, o una superficie para dibujar con el dedo"
+},
+{
+"id": "glifo-de-curacion-en-masa",
+"nombre": "Glifo de curación en masa",
+"clase": ["dibujante"],
+"tipo": "Hechizo",
+"nivel": 3,
+"escuela": "Abjuración",
+"tiempo_casteo": "Acción adicional",
+"alcance": "18 metros",
+"componentes": "M",
+"duracion": "Instantánea",
+"descripcion": "Dibujas un glifo sanador maestro que se expande en el aire, ramificándose en patrones luminosos. Hasta seis criaturas de tu elección que puedas ver dentro del alcance son tocadas por estos trazos de energía vital y recuperan una cantidad de puntos de golpe igual a 2d4 + tu modificador por Carisma. Con un espacio de conjuro de nivel superior. La curación aumenta en 1d4 por cada nivel por encima de 3 que tenga el espacio de conjuro utilizado.",
+"materiales": "un pincel o herramienta de artesano que uses para dibujar en el aire, o una superficie para dibujar con el dedo"
+},
+{
+"id": "simbolo-de-poder-aturdir",
+"nombre": "Símbolo de poder: Aturdir",
+"clase": ["dibujante"],
+"tipo": "Hechizo",
+"nivel": 8,
+"escuela": "Encantamiento",
+"tiempo_casteo": "Acción",
+"alcance": "18 metros",
+"componentes": "M",
+"duracion": "Instantánea",
+"descripcion": "Con un trazo definitivo, dibujas en el aire un glifo de poder abrumador, un símbolo intrincado y resonante que libera una onda de energía mental concentrada. Diriges este símbolo hacia una criatura que puedas ver dentro del alcance. Si el objetivo tiene 150 puntos de golpe o menos, queda aturdido por la abrumadora complejidad arcana impresa en su mente. De lo contrario, su velocidad se reduce a 0 hasta el principio de tu siguiente turno, mientras lucha por procesar el flujo de información mágica. El objetivo aturdido hace una tirada de salvación de Constitución al final de cada uno de sus turnos. Si tiene éxito, logra despejar su mente del glifo y se libera del estado.",
+"materiales": "un pincel o herramienta de artesano que uses para dibujar en el aire, o una superficie para dibujar con el dedo"
+},
+{
+"id": "simbolo-de-poder-fortalecer",
+"nombre": "Símbolo de poder: Fortalecer",
+"clase": ["dibujante"],
+"tipo": "Hechizo",
+"nivel": 7,
+"escuela": "Encantamiento",
+"tiempo_casteo": "Acción",
+"alcance": "18 metros",
+"componentes": "M",
+"duracion": "Instantánea",
+"descripcion": "Dibujas en el aire un glifo de resiliencia o un símbolo de vigor inquebrantable que emana una energía fortalecedora. El símbolo se divide en hasta seis trazos menores que se dirigen a criaturas de tu elección que puedas ver dentro del alcance. El conjuro proporciona 120 puntos de golpe temporales en total, que divides como prefieras entre los objetivos, representados como un aura visual de colores protectores o patrones luminosos que se superponen a su silueta.",
+"materiales": "un pincel o herramienta de artesano que uses para dibujar en el aire, o una superficie para dibujar con el dedo"
+},
+{
+"id": "simbolo-de-poder-matar",
+"nombre": "Símbolo de poder: Matar",
+"clase": ["dibujante"],
+"tipo": "Hechizo",
+"nivel": 9,
+"escuela": "Encantamiento",
+"tiempo_casteo": "Acción",
+"alcance": "18 metros",
+"componentes": "M",
+"duracion": "Instantánea",
+"descripcion": "Con un trazo final y absoluto, dibujas el glifo de la muerte, un símbolo arcano de color oscuro y líneas que parecen consumir la luz. Al completarlo, lo diriges hacia una criatura que puedas ver dentro del alcance. Si el objetivo tiene 100 puntos de golpe o menos, su esencia vital se deshace ante el símbolo y muere instantáneamente. De lo contrario, su mente es devastada por la visión del glifo, sufriendo 12d12 de daño psíquico.",
+"materiales": "un pincel o herramienta de artesano que uses para dibujar en el aire, o una superficie para dibujar con el dedo"
+},
+{
+"id": "simbolo-de-poder-sanar",
+"nombre": "Símbolo de poder: Sanar",
+"clase": ["dibujante"],
+"tipo": "Hechizo",
+"nivel": 9,
+"escuela": "Encantamiento",
+"tiempo_casteo": "Acción",
+"alcance": "18 metros",
+"componentes": "M",
+"duracion": "Instantánea",
+"descripcion": "Con un trazo maestro, dibujas el glifo de la vida plena, un símbolo de complejidad infinita y colores vibrantes que parece contener la esencia misma de la vitalidad. Al completarlo, lo diriges hacia una criatura que puedas ver dentro del alcance. El objetivo se ve envuelto por una oleada de energía sanadora pura que se manifiesta como patrones luminosos que se entrelazan con su cuerpo. El objetivo recupera todos sus puntos de golpe. Además, si la criatura está bajo los estados de asustada, aturdida, envenenada, hechizada o paralizada, estos estados terminan inmediatamente al ser purgados por la energía del glifo. Si la criatura está derribada, puede usar su reacción para levantarse, impulsada por el flujo restaurador.",
+"materiales": "un pincel o herramienta de artesano que uses para dibujar en el aire, o una superficie para dibujar con el dedo"
+},
+{
+"id": "simbolo-de-poder-carisma",
+"nombre": "Símbolo de poder: Carisma",
+"clase": ["dibujante"],
+"tipo": "Hechizo",
+"nivel": 8,
+"escuela": "Encantamiento",
+"tiempo_casteo": "Acción",
+"alcance": "Lanzador",
+"componentes": "M",
+"duracion": "1 hora",
+"descripcion": "Con un trazo preciso, dibujas sobre tu propio rostro o en el aire frente a ti un glifo de influencia suprema, un símbolo arcano que realza tu presencia y autoridad con una aura visual casi imperceptible pero poderosa. Hasta que el conjuro termine, cuando hagas una prueba de Carisma, puedes sustituir el resultado de la tirada por un 15, ya que el glifo proyecta una imagen de confianza, elocuencia y credibilidad perfectas. Además, cualquier magia usada para determinar si dices la verdad indicará que estás diciendo la verdad, ya que el símbolo altera sutilmente las percepciones mágicas y la lectura de tu intención para alinearse con tus palabras.",
+"materiales": "un pincel o herramienta de artesano que uses para dibujar en el aire, o una superficie para dibujar con el dedo"
+},
+{
+"id": "simbolo-estridente",
+"nombre": "Símbolo estridente",
+"clase": ["dibujante"],
+"tipo": "Hechizo",
+"nivel": 1,
+"escuela": "Encantamiento",
+"tiempo_casteo": "Acción",
+"alcance": "18 metros",
+"componentes": "M",
+"duracion": "Instantánea",
+"descripcion": "Dibujas en el aire un glifo de confusión o un símbolo visualmente estridente, un patrón de líneas y colores que desafía la percepción y se imprime directamente en la mente de una criatura que puedas ver dentro del alcance. El objetivo debe hacer una tirada de salvación de Sabiduría. Si falla, sufre 3d6 de daño psíquico por la abrumadora y discordante imagen mental, y debe usar su reacción inmediatamente (si es posible) para alejarse de ti tanto como pueda por la ruta más segura, impulsado por un instinto de huir de la fuente de la perturbación visual. Si tiene éxito en la tirada, sufre solo la mitad de ese daño y no se ve obligado a moverse. Con un espacio de conjuro de nivel superior. El daño aumenta en 1d6 por cada nivel por encima de 1 que tenga el espacio de conjuro utilizado.",
+"materiales": "un pincel o herramienta de artesano que uses para dibujar en el aire, o una superficie para dibujar con el dedo"
+}
 ]

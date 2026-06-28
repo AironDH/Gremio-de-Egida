@@ -41,7 +41,43 @@
               </template>
               
               <template v-else>
-                <p class="trait-description">{{ rasgo.nombre }}</p>
+                <div class="trait-name-row">
+                  <p class="trait-description">{{ rasgo.nombre }}</p>
+                  
+                  <div 
+                    v-if="(tipo === 'Clase' || tipo === 'Subclase') && obtenerInfoRasgo(rasgo)" 
+                    class="tooltip-container"
+                  >
+                    <button 
+                      type="button" 
+                      class="btn-info" 
+                      @click="toggleTooltip(`${rasgo.nombre}-${rasgo.origen}`)"
+                      v-outside-click="() => cerrarTooltip(`${rasgo.nombre}-${rasgo.origen}`)"
+                    >
+                      ?
+                    </button>
+                    
+                    <div v-if="tooltipActivoId === `${rasgo.nombre}-${rasgo.origen}`" class="trait-tooltip">
+                      <div class="tooltip-header">
+                        <h5>{{ obtenerInfoRasgo(rasgo).nombre }}</h5>
+                      </div>
+                      <hr />
+                      <p class="tooltip-effect">{{ obtenerInfoRasgo(rasgo).efecto }}</p>
+                      
+                      <div class="tooltip-details">
+                        <p v-if="obtenerInfoRasgo(rasgo).activacion">
+                          <strong>Activación:</strong> {{ obtenerInfoRasgo(rasgo).activacion }}
+                        </p>
+                        <p v-if="obtenerInfoRasgo(rasgo).usos">
+                          <strong>Usos:</strong> {{ obtenerInfoRasgo(rasgo).usos }}
+                        </p>
+                        <p v-if="obtenerInfoRasgo(rasgo).duración">
+                          <strong>Duración:</strong> {{ obtenerInfoRasgo(rasgo).duración }}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </template>
             </li>
           </ul>
@@ -53,16 +89,21 @@
 </template>
 
 <script setup>
-import { computed, ref, defineProps } from 'vue'
+import { computed, ref } from 'vue'
+import datosRasgosClase from '../../data/rasgos-clase.json'
 
 const props = defineProps({
   rasgos: {
     type: Array,
     default: () => []
+  },
+  clasesPersonaje: {
+    type: Array,
+    default: () => []
   }
 })
 
-// Añadimos el estado colapsable inicial para el nuevo bloque
+// === Estado de los Acordeones ===
 const gruposContraidos = ref({
   Raza: false,
   Clase: false,
@@ -75,7 +116,6 @@ const toggleGrupo = (tipo) => {
 }
 
 const rasgosAgrupados = computed(() => {
-  // Inicializamos incluyendo el nuevo contenedor de dotes
   const grupos = {
     Raza: [],
     Clase: [],
@@ -83,7 +123,6 @@ const rasgosAgrupados = computed(() => {
     Dotes: []
   }
 
-  // Clasificamos cada elemento según el tipo asignado en el motor de useLevelUp
   props.rasgos.forEach(rasgo => {
     if (grupos[rasgo.tipo]) {
       grupos[rasgo.tipo].push(rasgo)
@@ -92,7 +131,6 @@ const rasgosAgrupados = computed(() => {
     }
   })
 
-  // Limpiamos los grupos vacíos para no renderizar acordeones innecesarios
   const gruposConContenido = {}
   for (const key in grupos) {
     if (grupos[key] && grupos[key].length > 0) {
@@ -102,6 +140,54 @@ const rasgosAgrupados = computed(() => {
 
   return gruposConContenido
 })
+
+// === Lógica de Tooltips y Datos de Rasgos ===
+const tooltipActivoId = ref(null)
+
+const toggleTooltip = (id) => {
+  tooltipActivoId.value = tooltipActivoId.value === id ? null : id
+}
+
+const cerrarTooltip = (id) => {
+  if (tooltipActivoId.value === id) {
+    tooltipActivoId.value = null
+  }
+}
+
+const obtenerInfoRasgo = (rasgo) => {
+  if (!rasgo || !props.clasesPersonaje || props.clasesPersonaje.length === 0) return null
+
+  // Normalizamos las clases actuales del personaje a minúsculas para evitar fallos por mayúsculas
+  const nombresClasesActivas = props.clasesPersonaje
+    .map(c => c.nombre?.toLowerCase())
+    .filter(Boolean)
+
+  // Iteramos sobre las llaves del JSON (ej: "Bárbaro", "Pícaro")
+  for (const [claseJson, listaRasgos] of Object.entries(datosRasgosClase)) {
+    if (nombresClasesActivas.includes(claseJson.toLowerCase())) {
+      // Si el personaje tiene esta clase, buscamos el rasgo por nombre dentro de su array
+      const rasgoEncontrado = listaRasgos.find(r => r.nombre === rasgo.nombre)
+      if (rasgoEncontrado) return rasgoEncontrado
+    }
+  }
+
+  return null
+}
+
+// === Directivas ===
+const vOutsideClick = {
+  mounted(el, binding) {
+    el.clickOutsideEvent = (event) => {
+      if (!(el === event.target || el.contains(event.target))) {
+        binding.value(event)
+      }
+    }
+    document.addEventListener('click', el.clickOutsideEvent)
+  },
+  unmounted(el) {
+    document.removeEventListener('click', el.clickOutsideEvent)
+  }
+}
 </script>
 
 <style scoped>
@@ -132,7 +218,7 @@ const rasgosAgrupados = computed(() => {
   line-height: 1.4;
 }
 
-/* NUEVO: Diseño específico para el nombre destacado de las dotes */
+/* Diseño específico para el nombre destacado de las dotes */
 .dote-title {
   margin: 0 0 6px 0;
   font-size: 1rem;
@@ -148,7 +234,7 @@ const rasgosAgrupados = computed(() => {
   margin-bottom: 15px;
   border: 1px solid #e0e0e0;
   border-radius: 6px;
-  overflow: hidden;
+  overflow: visible; /* <-- CAMBIO CLAVE: Reemplaza 'hidden' por 'visible' para que el tooltip pueda salir */
 }
 
 /* Estilos del encabezado colapsable */
@@ -161,6 +247,9 @@ const rasgosAgrupados = computed(() => {
   background-color: #f5f5f5;
   transition: background-color 0.2s;
   user-select: none;
+  /* CAMBIO CLAVE: Redondeamos las esquinas superiores aquí directamente para compensar la falta del overflow: hidden */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .group-header:hover {
   filter: brightness(0.95);
@@ -229,5 +318,115 @@ const rasgosAgrupados = computed(() => {
   background-color: #eee;
   padding: 1px 5px;
   border-radius: 3px;
+}
+/* =========================================
+   NUEVAS CLASES PARA TOOLTIPS DE RASGOS
+   ========================================= */
+
+/* Contenedor de la fila para alinear el título del rasgo y el botón */
+.trait-name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.trait-name-row .trait-description {
+  margin: 0;
+  flex: 1; /* Permite que el texto respire y empuja el botón a la derecha */
+}
+
+/* Botón de información (?) sutil e integrado */
+.btn-info {
+  background: var(--color-primary-light, #ae52d4);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease;
+}
+.btn-info:hover {
+  background: var(--color-primary, #7b1fa2);
+}
+
+/* Posicionamiento relativo para anclar el tooltip al botón */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Diseño del Tooltip Flotante */
+.trait-tooltip {
+  position: absolute;
+  bottom: 130%; /* Flota por encima del botón */
+  right: -5px;  /* Anclado ligeramente a la derecha para no salirse de móviles */
+  z-index: 300;
+  width: 280px; 
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  font-size: 0.85rem;
+  text-align: left;
+  cursor: default;
+}
+
+/* Triángulo inferior del tooltip apuntando al botón */
+.trait-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 10px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: #2c3e50 transparent transparent transparent;
+}
+
+/* Tipografía interior y separación visual */
+.tooltip-header {
+  margin-bottom: 0.5rem;
+}
+.tooltip-header h5 {
+  margin: 0;
+  font-size: 1rem;
+  color: #f1c40f; /* Resalta el nombre en amarillo oro */
+}
+.trait-tooltip hr {
+  border: 0;
+  border-top: 1px solid #34495e;
+  margin: 0.5rem 0;
+}
+.tooltip-effect {
+  line-height: 1.4;
+  margin: 0 0 0.75rem 0;
+}
+
+/* Bloque destacado para variables mecánicas (Usos, Duración, Activación) */
+.tooltip-details {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  border-left: 3px solid #f1c40f; /* Acento visual a la izquierda */
+}
+.tooltip-details p {
+  margin: 0 0 0.4rem 0;
+  line-height: 1.3;
+}
+.tooltip-details p:last-child {
+  margin-bottom: 0;
+}
+.tooltip-details strong {
+  color: #bdc3c7; /* Un gris claro para separar la etiqueta del valor */
+  display: inline-block;
+  min-width: 70px;
 }
 </style>

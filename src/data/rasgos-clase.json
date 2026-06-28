@@ -484,6 +484,1416 @@
         "activacion": "inmediatamente después de lanzar un conjuro de 1 acción",
         "usos": "ilimitados (1 vez por turno, ya que consumes acción adicional)",
         "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Mota de potencial",
+        "efecto": "Al dar Inspiración bárdica, creas mota que orbita al receptor hasta que se gaste el dado. Al usarlo: en prueba de característica, tira el dado dos veces y elige; en ataque, objetivo y criaturas a 1,5 m (tu elección) hacen salvación de Constitución o reciben daño de trueno igual al dado; en salvación, receptor gana PG temporales = dado + Carisma.",
+        "activacion": "al conceder un dado de Inspiración bárdica (creación); al usar el dado (efecto adicional)",
+        "usos": "1 por Inspiración",
+        "duracion": "la mota dura hasta que se gaste el dado de Inspiración; los efectos adicionales son instantáneos"
+    },
+    {
+        "nombre": "Interpretación de la creación",
+        "efecto": "Acción: creas objeto no mágico (valor ≤ 20 × nivel de bardo, tamaño Mediano o menor; en nivel 6 Grande, en nivel 14 Enorme) en espacio vacío a 3 m. Brilla y suena música tenue. Desaparece tras horas = competencia.",
+        "activacion": "acción",
+        "usos": "1 vez; recuperas tras descanso largo o gastando espacio de conjuro de nivel 2+; solo 1 objeto a la vez",
+        "duracion": "horas = bonificador por competencia (o hasta que crees otro)"
+    },
+    {
+        "nombre": "Interpretación animadora",
+        "efecto": "Acción: animas objeto no mágico Grande o menor a 9 m (usa perfil Objeto Danzante, BC). Amistoso, obedece, dura 1 hora o hasta 0 PG o tu muerte. Comparte iniciativa (turno tras ti). En su turno solo esquiva, salvo que uses acción adicional para ordenar otra acción. Si incapacitado, elige su acción. Al usar Inspiración, puedes dar órdenes como parte de esa misma acción adicional.",
+        "activacion": "acción",
+        "usos": "1 vez; recuperas en descanso largo o gastando espacio de nivel 3+; solo 1 objeto a la vez",
+        "duracion": "1 hora, hasta 0 PG o hasta tu muerte"
+    },
+    {
+        "nombre": "Crecimiento creativo",
+        "efecto": "Al usar Interpretación de la Creación, creas múltiples objetos = mod Carisma (mínimo 2). Solo uno puede ser del tamaño máximo; el resto Pequeño o Diminuto. Ya no estás limitado por valor en po.",
+        "activacion": "al usar Interpretación de la Creación",
+        "usos": "aplica a cada uso de Interpretación de la Creación (limitado por ese rasgo)",
+        "duracion": "depende de los objetos creados (horas = competencia)"
+    },
+    {
+        "nombre": "Lengua de plata",
+        "efecto": "En pruebas de Carisma (Persuasión) o (Engaño), sustituyes un resultado de 9 o menos por 10.",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Palabras inquietantes",
+        "efecto": "Acción adicional: gastas Inspiración bárdica, tiras el dado; objetivo resta ese resultado en su siguiente salvación antes del inicio de tu siguiente turno.",
+        "activacion": "acción adicional (gasta 1 Inspiración)",
+        "usos": "según usos de Inspiración disponibles",
+        "duracion": "hasta el inicio de tu siguiente turno (o hasta que el objetivo haga la salvación)"
+    },
+    {
+        "nombre": "Inspiración constante",
+        "efecto": "Cuando una criatura usa tu dado de Inspiración bárdica en una prueba, ataque o salvación, puede conservar el dado (no se gasta).",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Discurso universal",
+        "efecto": "Acción: eliges criaturas a 18 m (hasta mod Carisma, mínimo 1); te entienden mágicamente durante 1 hora.",
+        "activacion": "acción",
+        "usos": "1 vez; recuperas en descanso largo o gastando un espacio de conjuro de cualquier nivel",
+        "duracion": "1 hora"
+    },
+    {
+        "nombre": "Inspiración contagiosa",
+        "efecto": "Reacción cuando una criatura a 18 m usa tu dado de Inspiración y supera la prueba: das un dado de Inspiración a otra criatura (sin gastar uso de Inspiración).",
+        "activacion": "reacción (cuando se cumple la condición)",
+        "usos": "igual a mod Carisma (mínimo 1); recuperas en descanso largo",
+        "duracion": "instantáneo (otorga el dado; el dado dura según reglas normales)"
+    }
+    ],
+    "Brujo": [
+        {
+        "nombre": "Invocaciones sobrenaturales",
+        "efecto": "Obtienes invocaciones (ej. Pacto del grimorio) según columna 'Invocaciones'. Debes cumplir requisitos de nivel. Sustituyes 1 al subir nivel de brujo. No repites la misma salvo que se indique.",
+        "activacion": "pasiva (al obtener el rasgo y al subir nivel)",
+        "usos": "ilimitados (las invocaciones son permanentes o según su descripción)",
+        "duracion": "permanente (hasta que las sustituyas)"
+    },
+    {
+        "nombre": "Magia del pacto",
+        "efecto": "Conoces 2 trucos (cambias 1 al subir nivel, +1 en niveles 4 y 10). Preparas conjuros de nivel 1+ según columna (máximo nivel = nivel de espacios). Espacios de conjuro: todos del mismo nivel (según columna), recuperas en descanso corto o largo. Cambias 1 conjuro al subir nivel. Aptitud: Carisma. Canalizador: canalizador arcano.",
+        "activacion": "pasiva; lanzar conjuros requiere acción apropiada",
+        "usos": "trucos: ilimitados; espacios de conjuro: según tabla, recuperas en descanso corto o largo",
+        "duracion": "preparación: permanente hasta cambio; efectos de conjuros según cada conjuro"
+    },
+    {
+        "nombre": "Astucia mágica",
+        "efecto": "Rito de 1 minuto: recuperas espacios de conjuro de Magia del pacto usados hasta la mitad de tu máximo (redondeando hacia arriba).",
+        "activacion": "ritual de 1 minuto",
+        "usos": "1 vez; recuperas en descanso largo",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Contactar patrón",
+        "efecto": "Siempre tienes preparado contactar con otro plano. Puedes lanzarlo sin gastar espacio para contactar con tu patrón; superas automáticamente la salvación del conjuro.",
+        "activacion": "al lanzar contactar con otro plano (sin espacio)",
+        "usos": "1 vez; recuperas en descanso largo",
+        "duracion": "según el conjuro"
+    },
+    {
+        "nombre": "Arcanum místico",
+        "efecto": "Eliges un conjuro de brujo de nivel 6 (luego nivel 7 en nivel 13, nivel 8 en 15, nivel 9 en 17). Puedes lanzarlo 1 vez sin gastar espacio. Sustituyes 1 al subir nivel de brujo.",
+        "activacion": "al lanzar el conjuro de arcanum",
+        "usos": "1 vez por arcanum; recuperas todos en descanso largo",
+        "duracion": "según el conjuro"
+    },
+    {
+        "nombre": "Maestro sobrenatural",
+        "efecto": "Al usar Astucia mágica, recuperas todos los espacios de conjuro de Magia del pacto usados (en lugar de la mitad).",
+        "activacion": "al usar Astucia mágica",
+        "usos": "aplica a cada uso de Astucia mágica",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Conjuros del celestial",
+        "efecto": "Siempre tienes preparados: nivel 3 (auxilio, curar heridas, llama sagrada, luz, restablecimiento menor, saeta guía), nivel 5 (luz del día, revivir), nivel 7 (guardián de la fe, muro de fuego), nivel 9 (invocar celestial, restablecimiento mayor).",
+        "activacion": "pasiva (siempre preparados)",
+        "usos": "ilimitados (los conjuros están siempre disponibles; lanzarlos gasta espacios)",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Luz sanadora",
+        "efecto": "Reserva de d6 (1 + nivel de brujo). Acción adicional: gastas dados (máximo = Carisma, mínimo 1) para curar a ti o a criatura a 18 m por el total de la tirada.",
+        "activacion": "acción adicional",
+        "usos": "limitado por dados de la reserva (1 + nivel); recuperas todos en descanso largo",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Alma radiante",
+        "efecto": "Resistencia a daño radiante. Una vez por turno, al causar daño radiante o de fuego con conjuro, sumas Carisma al daño contra un objetivo.",
+        "activacion": "pasiva (resistencia); al lanzar conjuro (bonificación)",
+        "usos": "ilimitados (resistencia); bonificación 1 vez por turno",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Resiliencia celestial",
+        "efecto": "Obtienes PG temporales = nivel de brujo + Carisma. Además, hasta 5 criaturas visibles obtienen PG temporales = ½ nivel de brujo + Carisma.",
+        "activacion": "Al usar Astucia mágica o al finalizar descanso corto/largo",
+        "usos": "cada vez que se cumple la condición",
+        "duracion": "los PG temporales duran hasta que se pierdan"
+    },
+    {
+        "nombre": "Venganza ardiente",
+        "efecto": "Cuando tú o aliado a 18 m vayáis a hacer salvación contra muerte, la criatura recupera ½ de sus PG máximos y termina derribada. Criaturas a 9 m (tu elección) reciben 2d8 + Carisma daño radiante y quedan cegadas hasta final del turno actual.",
+        "activacion": "cuando tú o aliado vayáis a hacer salvación contra muerte",
+        "usos": "1 vez; recuperas en descanso largo",
+        "duracion": "instantáneo (ceguera hasta final del turno actual)"
+    },
+    {
+        "nombre": "Conjuros del señor feérico",
+        "efecto": "Siempre tienes preparados: nivel 3 (calmar emociones, dormir, fuerza fantasmal, paso brumoso), nivel 5 (crecimiento vegetal, desplazamiento), nivel 7 (dominar bestia, invisibilidad mejorada), nivel 9 (apariencia, dominar persona).",
+        "activacion": "pasiva (siempre preparados)",
+        "usos": "ilimitados (los conjuros están disponibles; lanzarlos gasta espacios)",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Pasos feéricos",
+        "efecto": "Lanzas paso brumoso sin gastar espacio (veces = Carisma, mínimo 1). Al lanzarlo, eliges: Paso burlón (criaturas a 1,5 m del espacio abandonado hacen salvación de Sabiduría o tienen desventaja en ataques contra otros hasta inicio de tu siguiente turno) o Paso refrescante (tú o criatura a 3 m obtienen 1d10 PG temporales).",
+        "activacion": "acción (lanzar paso brumoso)",
+        "usos": "igual a mod Carisma (mínimo 1); recuperas en descanso largo",
+        "duracion": "efectos adicionales hasta inicio de tu siguiente turno o instantáneo (PG temporales)"
+    },
+    {
+        "nombre": "Escape brumoso",
+        "efecto": "Puedes lanzar paso brumoso como reacción al recibir daño. Añade a Pasos feéricos: Paso aterrador (criaturas a 1,5 m del espacio abandonado o de llegada, a elección, hacen salvación de Sabiduría o sufren 2d10 psíquico) y Paso desvanecedor (invisible hasta inicio de tu siguiente turno o hasta que ataques, causes daño o lances conjuro).",
+        "activacion": "reacción al recibir daño; efectos adicionales al lanzar paso brumoso",
+        "usos": "ilimitados (reacción según disponibilidad); efectos adicionales según usos de Pasos feéricos",
+        "duracion": "instantáneo (daño); invisible hasta inicio de siguiente turno o condición"
+    },
+    {
+        "nombre": "Defensas seductoras",
+        "efecto": "Inmune a hechizado. Reacción al ser alcanzado por ataque: reduces daño a la mitad y el atacante hace salvación de Sabiduría o sufre daño psíquico igual al daño recibido.",
+        "activacion": "pasiva (inmunidad); reacción al recibir ataque",
+        "usos": "reacción: 1 vez; recuperas en descanso largo o gastando un espacio de conjuro de Magia del pacto (sin acción)",
+        "duracion": "inmunidad permanente; reacción instantánea"
+    },
+    {
+        "nombre": "Magia embrujadora",
+        "efecto": "Inmediatamente después de lanzar un conjuro de encantamiento o ilusionismo con acción y espacio de conjuro, lanzas paso brumoso como parte de la misma acción sin gastar otro espacio.",
+        "activacion": "inmediatamente después de lanzar conjuro de encantamiento/ilusionismo con acción y espacio",
+        "usos": "ilimitados (1 vez por lanzamiento de conjuro que cumpla la condición)",
+        "duracion": "instantáneo (el paso brumoso se resuelve según el conjuro)"
+    },
+    {
+        "nombre": "Bendición del oscuro",
+        "efecto": "Al reducir un enemigo a 0 PG (o si un aliado lo hace a 3 m o menos), obtienes PG temporales = Carisma + nivel de brujo (mínimo 1).",
+        "activacion": "automática al cumplirse la condición",
+        "usos": "ilimitados",
+        "duracion": "los PG temporales duran hasta que se pierdan"
+    },
+    {
+        "nombre": "Conjuros del infernal",
+        "efecto": "Siempre preparados: nivel 3 (manos ardientes, orden imperiosa, rayo abrasador, sugestión), nivel 5 (bola de fuego, nube apestosa), nivel 7 (escudo de fuego, muro de fuego), nivel 9 (geas, plaga de insectos).",
+        "activacion": "pasiva (siempre preparados)",
+        "usos": "disponibles (lanzar gasta espacios)",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "La suerte del oscuro",
+        "efecto": "Al hacer prueba o salvación, sumas 1d10 después de ver el resultado (antes de efectos).",
+        "activacion": "al hacer prueba de característica o tirada de salvación",
+        "usos": "igual a mod Carisma (mínimo 1); recuperas en descanso largo (1 vez por tirada)",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Resistencia infernal",
+        "efecto": "Tras descanso corto o largo, eliges un tipo de daño (excepto fuerza) y ganas resistencia hasta que cambies la elección.",
+        "activacion": "al finalizar descanso corto o largo",
+        "usos": "ilimitados (1 elección por descanso)",
+        "duracion": "hasta que elijas uno distinto"
+    },
+    {
+        "nombre": "Arrastrar por el infierno",
+        "efecto": "Al acertar un ataque (1 vez por turno), objetivo hace salvación de Carisma o es teletransportado a los Planos Inferiores, sufre 8d10 daño psíquico y queda incapacitado hasta el final de tu siguiente turno (vuelve a su espacio o al más cercano).",
+        "activacion": "instantánea al acertar una tirada de ataque",
+        "usos": "1 vez cada descanso largo sin costo o gastando un espacio de conjuro de Magia del pacto (sin acción)",
+        "duracion": "hasta el final de tu siguiente turno (teletransporte y efectos)"
+    },
+    {
+        "nombre": "Conjuros del primigenio",
+        "efecto": "Siempre preparados: nivel 3 (detectar pensamientos, fuerza fantasmal, risa horrible de Tasha, susurros discordantes), nivel 5 (clarividencia, hambre de Hadar), nivel 7 (confusión, invocar aberración), nivel 9 (alterar los recuerdos, telequinesis).",
+        "activacion": "pasiva",
+        "usos": "ilimitados (disponibles; lanzar gasta espacios)",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Conjuros psíquicos",
+        "efecto": "Cambias el daño de un conjuro de brujo a psíquico. Lanzas conjuros de encantamiento o ilusionismo sin componentes verbales ni somáticos.",
+        "activacion": "al lanzar un conjuro (elección)",
+        "usos": "ilimitados",
+        "duracion": "instantáneo (para ese lanzamiento)"
+    },
+    {
+        "nombre": "Mente iluminada",
+        "efecto": "Acción adicional: enlace telepático con criatura a 9 m. Comunicación hasta 1,5 km × Carisma (mín 1,5 km) durante minutos = nivel de brujo. Termina al usar con otra criatura.",
+        "activacion": "acción adicional",
+        "usos": "ilimitados (solo un enlace a la vez)",
+        "duracion": "minutos = nivel de brujo (o hasta nuevo enlace)"
+    },
+    {
+        "nombre": "Combatiente clarividente",
+        "efecto": "Al usar Mente iluminada, objetivo hace salvación de Sabiduría; si falla, tiene desventaja en ataques contra ti y tú ventaja contra él hasta que termine el enlace.",
+        "activacion": "al establecer enlace telepático",
+        "usos": "1 vez; recuperas en descanso corto/largo o gastando espacio de Magia del pacto (sin acción)",
+        "duracion": "hasta que termine el enlace"
+    },
+    {
+        "nombre": "Escudo mental",
+        "efecto": "No pueden leerte pensamientos sin permiso. Resistencia a daño psíquico. Al recibir daño psíquico, el causante sufre el mismo daño.",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Maleficio sobrenatural",
+        "efecto": "Siempre tienes maleficio preparado. Al lanzarlo y elegir característica, el objetivo tiene desventaja en salvaciones de esa característica hasta que termine el conjuro.",
+        "activacion": "pasiva (preparado); al lanzar maleficio",
+        "usos": "ilimitados (disponible; lanzar gasta espacio)",
+        "duracion": "mientras dure maleficio"
+    },
+    {
+        "nombre": "Crear siervo",
+        "efecto": "Al lanzar invocar aberración, puede no requerir concentración (duración 1 minuto). La aberración obtiene PG temporales = nivel de brujo + Carisma. Primera vez que acierta en cada turno a criatura bajo maleficio, inflige daño psíquico extra igual al daño adicional del conjuro.",
+        "activacion": "al lanzar invocar aberración",
+        "usos": "ilimitados (cada lanzamiento)",
+        "duracion": "1 minuto (sin concentración)"
+    },
+    {
+        "nombre": "Conjuros del genio",
+        "efecto": "Añade a la lista de conjuros de brujo: nivel 1 (detectar el bien y el mal) + según patrón: dao (santuario), djinni (ola atronadora), efreeti (manos ardientes), marid (nube de oscurecimiento); nivel 2 (fuerza fantasmal) + dao (crecimiento espinoso), djinni (ráfaga de viento), efreeti (rayo abrasador), marid (contorno borroso); nivel 3 (crear comida y agua) + dao (fundirse con la piedra), djinni (muro de viento), efreeti (bola de fuego), marid (tormenta de aguanieve); nivel 4 (asesino fantasmal) + dao (moldear la piedra), djinni (invisibilidad mejorada), efreeti (escudo de fuego), marid (controlar agua); nivel 5 (creación) + dao (muro de piedra), djinni (apariencia), efreeti (golpe flamígero), marid (cono de frío); nivel 9 (deseo).",
+        "activacion": "pasiva (al aprender conjuros de brujo, tienes estas opciones adicionales)",
+        "usos": "ilimitados (depende de espacios de conjuro y preparación)",
+        "duracion": "permanente (mientras los tengas preparados)"
+    },
+    {
+        "nombre": "Recipiente del genio",
+        "efecto": "Objeto Diminuto (canalizador). Alivio Embotellado (acción): entras al recipiente (espacio extradimensional cilíndrico, 6 m radio y altura) por horas = 2 × competencia; sales con acción adicional, al morir o si es destruido. Ira del Genio (1 vez por turno al impactar): daño extra = competencia (tipo según patrón: contundente/trueno/fuego/frío). CA = CD de conjuros, PG = nivel + competencia, inmune a veneno y psíquico. Si destruido, ceremonia 1 hora para reemplazar.",
+        "activacion": "acción (Alivio); automático al impactar (Ira)",
+        "usos": "Alivio: 1 vez hasta descanso largo; Ira: 1 vez por turno (ilimitado)",
+        "duracion": "Alivio: horas = 2 × competencia; Ira: instantáneo; recipiente: permanente hasta destrucción"
+    },
+    {
+        "nombre": "Don elemental",
+        "efecto": "Resistencia a un tipo de daño según patrón: contundente (dao), trueno (djinni), fuego (efreeti) o frío (marid). Acción adicional: velocidad volando 9 m y levitar durante 10 min.",
+        "activacion": "pasiva (resistencia); acción adicional (vuelo)",
+        "usos": "vuelo: igual a bonificador por competencia; recuperas en descanso largo",
+        "duracion": "resistencia: permanente; vuelo: 10 minutos"
+    },
+    {
+        "nombre": "Recipiente santuario",
+        "efecto": "Al usar Alivio Embotellado, llevas hasta 5 voluntarios a 9 m al recipiente. Acción adicional para expulsar a voluntad; todos salen si tú sales, mueres o se destruye. Quienes permanezcan 10 min obtienen descanso corto; pueden sumar competencia a los PG recuperados con Dados de Golpe.",
+        "activacion": "al entrar al recipiente (Alivio); acción adicional para expulsar",
+        "usos": "según Alivio Embotellado (1 vez hasta descanso largo); expulsión ilimitada",
+        "duracion": "descanso corto (10 min); beneficios inmediatos"
+    },
+    {
+        "nombre": "Deseo limitado",
+        "efecto": "Acción: pides a tu recipiente el efecto de un conjuro de nivel 6 o inferior (tiempo 1 acción) de cualquier lista, sin cumplir requisitos ni componentes. El efecto ocurre como parte de la acción.",
+        "activacion": "acción",
+        "usos": "1 vez; recuperas tras 1d4 descansos largos",
+        "duracion": "según el conjuro solicitado"
+    },
+    {
+        "nombre": "Lista de conjuros ampliada",
+        "efecto": "Añade a la lista de brujo: nivel 1 (crear o destruir agua, ola atronadora), nivel 2 (ráfaga de viento, silencio), nivel 3 (relámpago, tormenta de aguanieve), nivel 4 (controlar agua, invocar elemental solo agua), nivel 5 (cono de frío, mano de Bigby en forma de tentáculo).",
+        "activacion": "pasiva (al aprender conjuros)",
+        "usos": "ilimitados (según espacios y preparación)",
+        "duracion": "permanente (mientras los tengas preparados)"
+    },
+    {
+        "nombre": "Tentáculo de las profundidades",
+        "efecto": "Acción adicional: creas tentáculo de 3 m en punto a 18 m, dura 1 min (o hasta crear otro). Al crearlo, ataque cuerpo a cuerpo a criatura a 3 m: 1d8 frío + reduce velocidad 3 m hasta inicio de tu siguiente turno (2d8 a nivel 10). Acción adicional: mueves tentáculo 9 m y repites ataque.",
+        "activacion": "acción adicional (crear o mover)",
+        "usos": "igual a bonificador por competencia; recuperas en descanso largo",
+        "duracion": "1 minuto o hasta crear otro tentáculo"
+    },
+    {
+        "nombre": "Don de los mares",
+        "efecto": "Velocidad nadando 12 m y respirar bajo el agua.",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Alma oceánica",
+        "efecto": "Resistencia al daño de frío. Cuando tú y otra criatura estáis totalmente sumergidos, os entendéis mutuamente.",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Bucle guardián",
+        "efecto": "Reacción cuando tú o criatura visible a 3 m o menos del tentáculo recibís daño: reduces el daño en 1d8 (2d8 a nivel 10).",
+        "activacion": "reacción al recibir daño (estando a 3 m del tentáculo)",
+        "usos": "ilimitados (1 reacción por ronda)",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Tentáculos prensiles",
+        "efecto": "Siempre tienes preparado tentáculos negros de Evard (no cuenta para total). Puedes lanzarlo 1 vez sin espacio; recuperas en descanso largo. Al lanzarlo, obtienes PG temporales = nivel de brujo y el daño no rompe concentración en este conjuro.",
+        "activacion": "pasiva (preparado); al lanzar (sin espacio)",
+        "usos": "ilimitado (disponible); 1 vez sin espacio por descanso largo",
+        "duracion": "según conjuro; PG temporales hasta que se pierdan; concentración irrompible por daño"
+    },
+    {
+        "nombre": "Zambullida insondable",
+        "efecto": "Acción: teletransportas a ti y hasta 5 voluntarios a 9 m hasta 1,6 km a una masa de agua vista (estanque o mayor), apareciendo a 9 m o menos de ella y a 9 m unos de otros.",
+        "activacion": "acción",
+        "usos": "1 vez; recuperas en descanso corto o largo",
+        "duracion": "instantáneo"
+    }
+    ],
+    "Clérigo": [
+        {
+        "nombre": "Lanzamiento de conjuros",
+        "efecto": "Conoces 3 trucos (cambias 1 al subir nivel, +1 en niveles 4 y 10). Preparas conjuntos de nivel 1+ según columna 'Conjuros preparados' (máximo nivel según espacios). Cambias preparados tras descanso largo. Aptitud: Sabiduría. Canalizador: símbolo sagrado.",
+        "activacion": "pasiva; lanzar conjuros requiere acción apropiada",
+        "usos": "trucos: ilimitados; espacios de conjuro: según tabla, recuperas en descanso largo",
+        "duracion": "preparación: permanente hasta cambio; efectos de conjuros según cada conjuro"
+    },
+    {
+        "nombre": "Orden divina",
+        "efecto": "Eliges: Protector (competencia con armas marciales y armaduras pesadas) o Taumaturgo (truco adicional de clérigo y bonificador en pruebas de Conocimiento arcano y Religión igual a Sabiduría, mínimo +1).",
+        "activacion": "pasiva (al obtener el rasgo)",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Canalizar divinidad",
+        "efecto": "2 usos (recuperas 1 en descanso corto, todos en largo; más usos según tabla). Chispa divina (acción): 1d8 + Sabiduría (escala a 2d8/3d8/4d8 en niveles 7/13/18) para curar o dañar (salvación Constitución, mitad en éxito). Expulsar muertos vivientes (acción): muertos vivientes a 9 m hacen salvación Sabiduría o asustados e incapacitados 1 minuto (se alejan; termina al recibir daño, incapacitado o muerte).",
+        "activacion": "acción de magia (acción)",
+        "usos": "2 usos base (más según tabla); recuperas 1 en descanso corto, todos en largo",
+        "duracion": "Chispa: instantáneo; Expulsar: 1 minuto o hasta condición"
+    },
+    {
+        "nombre": "Abrasarmuertos vivientes",
+        "efecto": "Al usar Expulsar muertos vivientes, tiras d8 = Sabiduría (mínimo 1) y los muertos vivientes que fallen la salvación reciben daño radiante igual al total. El daño no termina la expulsión.",
+        "activacion": "al usar Expulsar muertos vivientes",
+        "usos": "ilimitado (cada vez que uses Expulsar)",
+        "duracion": "instantáneo (daño)"
+    },
+    {
+        "nombre": "Golpes benditos",
+        "efecto": "Eliges: Golpe divino (1 vez por turno, al acertar con arma, +1d8 necrótico o radiante) o Lanzamiento potente (sumas Sabiduría al daño de trucos de clérigo).",
+        "activacion": "pasiva; al acertar ataque (Golpe divino) o al lanzar truco (Lanzamiento)",
+        "usos": "Golpe divino: 1 vez por turno; Lanzamiento: ilimitado",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Intercesión divina",
+        "efecto": "Acción de magia: lanzas cualquier conjuro de clérigo de nivel 5 o inferior (sin reacción) sin gastar espacio ni componentes materiales.",
+        "activacion": "acción de magia",
+        "usos": "1 vez; recuperas en descanso largo",
+        "duracion": "según el conjuro lanzado"
+    },
+    {
+        "nombre": "Golpes benditos mejorados",
+        "efecto": "Mejora la opción de Golpes benditos: Golpe divino (+2d8 en lugar de +1d8) o Lanzamiento potente (al causar daño con truco de clérigo, tú o aliado a 18 m obtienen PG temporales = 2 × Sabiduría).",
+        "activacion": "pasiva; al acertar ataque (Golpe divino) o al lanzar truco (Lanzamiento)",
+        "usos": "Golpe divino: 1 vez por turno; Lanzamiento: ilimitado",
+        "duracion": "permanente; PG temporales hasta que se pierdan"
+    },
+    {
+        "nombre": "Intercesión divina verdadera",
+        "efecto": "Al usar Intercesión divina, puedes elegir deseo en lugar de otro conjuro. Si lo haces, no puedes usar Intercesión divina hasta 2d4 descansos largos.",
+        "activacion": "al usar Intercesión divina (cuando eliges el conjuro)",
+        "usos": "1 vez; recuperas tras 2d4 descansos largos (si usas deseo)",
+        "duracion": "según deseo o conjuro elegido"
+    },
+    {
+        "nombre": "Conjuros del dominio de la guerra",
+        "efecto": "Siempre preparados: nivel 3 (arma espiritual, arma mágica, escudo de fe, saeta guía), nivel 5 (espíritus guardianes, manto del cruzado), nivel 7 (escudo de fuego, libertad del movimiento), nivel 9 (golpe de viento acerado, inmovilizar monstruo).",
+        "activacion": "pasiva (siempre preparados)",
+        "usos": "ilimitados (disponibles; lanzar gasta espacios)",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Golpe guiado",
+        "efecto": "Gastas Canalizar divinidad para dar +10 a una tirada de ataque fallida (tú o aliado a 9 m). Si es para otro, usas reacción.",
+        "activacion": "al fallar una tirada de ataque (tú o aliado a 9 m)",
+        "usos": "gasta 1 uso de Canalizar divinidad",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Sacerdote guerrero",
+        "efecto": "Acción adicional: realizas un ataque con arma o sin armas.",
+        "activacion": "acción adicional",
+        "usos": "igual a modificador por Sabiduría (mínimo 1); recuperas en descanso corto o largo",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Bendición del dios de la guerra",
+        "efecto": "Gastas Canalizar divinidad para lanzar arma espiritual o escudo de fe sin gastar espacio de conjuro. No requiere concentración; dura 1 minuto o hasta que lances de nuevo, quedes incapacitado o mueras.",
+        "activacion": "al lanzar arma espiritual o escudo de fe (gastando Canalizar divinidad)",
+        "usos": "gasta 1 uso de Canalizar divinidad",
+        "duracion": "1 minuto (o hasta condición de término)"
+    },
+    {
+        "nombre": "Avatar de la batalla",
+        "efecto": "Resistencia al daño contundente, cortante y perforante.",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Conjuros del dominio de la luz",
+        "efecto": "Siempre preparados: nivel 3 (fuego feérico, manos ardientes, rayo abrasador, ver invisibilidad), nivel 5 (bola de fuego, luz del día), nivel 7 (muro de fuego, ojo arcano), nivel 9 (escudriñar, golpe flamígero).",
+        "activacion": "pasiva (siempre preparados)",
+        "usos": "ilimitados (disponibles; lanzar gasta espacios)",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Fulgor protector",
+        "efecto": "Reacción cuando criatura a 9 m hace ataque: impones desventaja en su tirada.",
+        "activacion": "reacción al ver una criatura a 9 m hacer un ataque",
+        "usos": "igual a modificador por Sabiduría (mínimo 1); recuperas en descanso largo",
+        "duracion": "instantáneo (aplica a esa tirada de ataque)"
+    },
+    {
+        "nombre": "Resplandor del amanecer",
+        "efecto": "Acción de magia (gastas Canalizar divinidad): emanación de 9 m; disipas oscuridad mágica; criaturas elegidas hacen salvación de Constitución, reciben 2d10 + nivel de clérigo daño radiante (mitad en éxito).",
+        "activacion": "acción de magia (gasta 1 uso de Canalizar divinidad)",
+        "usos": "gasta 1 Canalizar divinidad",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Fulgor protector mejorado",
+        "efecto": "Recuperas usos de Fulgor protector en descanso corto o largo. Al usar Fulgor protector, otorgas PG temporales al objetivo del ataque = 2d6 + Sabiduría.",
+        "activacion": "pasiva (recuperación); al usar Fulgor protector (PG temporales)",
+        "usos": "recuperación: según descanso; PG temporales: cada vez que uses Fulgor",
+        "duracion": "recuperación: instantánea; PG temporales hasta que se pierdan"
+    },
+    {
+        "nombre": "Halo de luz",
+        "efecto": "Acción de magia: emites aura de luz solar 1 minuto (o hasta disipar). Luz brillante 18 m y tenue 9 m. Enemigos en brillante tienen desventaja en salvaciones contra Resplandor del amanecer y conjuros de daño fuego/radiante.",
+        "activacion": "acción de magia",
+        "usos": "igual a modificador por Sabiduría (mínimo 1); recuperas en descanso largo",
+        "duracion": "1 minuto o hasta disipar (sin acción)"
+    },
+    {
+        "nombre": "Conjuros del dominio de la vida",
+        "efecto": "Siempre preparados: nivel 3 (auxilio, bendición, curar heridas, restablecimiento menor), nivel 5 (palabra de curación en masa, revivir), nivel 7 (aura de vida, guarda contra la muerte), nivel 9 (curar heridas en masa, restablecimiento mayor).",
+        "activacion": "pasiva (siempre preparados)",
+        "usos": "ilimitados (disponibles; lanzar gasta espacios)",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Discípulo de la vida",
+        "efecto": "Al lanzar un conjuro que cure con espacio de conjuro, el objetivo recupera +2 PG por nivel del espacio de conjuro.",
+        "activacion": "al lanzar un conjuro curativo con espacio de conjuro",
+        "usos": "ilimitados (cada vez que lanzas un conjuro curativo)",
+        "duracion": "instantáneo (aplica al lanzamiento)"
+    },
+    {
+        "nombre": "Preservar vida",
+        "efecto": "Acción de magia (gastas Canalizar divinidad): restauras PG total = 5 × nivel de clérigo, repartidos entre criaturas maltrechas a 9 m (incluido tú). Cada criatura no puede superar la mitad de sus PG máximos.",
+        "activacion": "acción de magia (gasta 1 Canalizar divinidad)",
+        "usos": "gasta 1 uso de Canalizar divinidad",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Sanador bendito",
+        "efecto": "Tras usar un espacio de conjuro para lanzar un conjuro que cure a otras criaturas, recuperas PG = 2 + nivel del espacio.",
+        "activacion": "inmediatamente después de lanzar un conjuro curativo que afecte a otros",
+        "usos": "ilimitados (cada vez que lanzas un conjuro curativo a otros)",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Sanación suprema",
+        "efecto": "Al curar con un conjuro o Canalizar divinidad, usas el número máximo de cada dado en lugar de tirar.",
+        "activacion": "al curar con conjuro o Canalizar divinidad",
+        "usos": "ilimitados",
+        "duracion": "instantáneo (aplica a esa curación)"
+    },
+    {
+        "nombre": "Bendición del embaucador",
+        "efecto": "Acción de magia: tú o voluntario a 9 m obtienen ventaja en pruebas de Sigilo. Dura hasta descanso largo o hasta reutilizar el rasgo.",
+        "activacion": "acción de magia",
+        "usos": "ilimitados (puedes cambiar el objetivo cuando quieras)",
+        "duracion": "hasta descanso largo o hasta que reutilices el rasgo"
+    },
+    {
+        "nombre": "Conjuros del dominio del engaño",
+        "efecto": "Siempre preparados: nivel 3 (disfrazarse, hechizar persona, invisibilidad, pasar sin rastro), nivel 5 (indetectable, patrón hipnótico), nivel 7 (confusión, puerta dimensional), nivel 9 (alterar los recuerdos, dominar persona).",
+        "activacion": "pasiva",
+        "usos": "ilimitados (disponibles; lanzar gasta espacios)",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Invocar duplicidad",
+        "efecto": "Acción adicional (gastas Canalizar divinidad): creas duplicado ilusorio perfecto en espacio a 9 m, dura 1 minuto (o hasta disipar sin acción o incapacitado). Beneficios: Distraer (ventaja en ataques si tú e ilusión estáis a 1,5 m de la criatura), lanzar conjuros desde el espacio de la ilusión, mover la ilusión hasta 9 m como acción adicional (máx 36 m de ti).",
+        "activacion": "acción adicional (gasta 1 uso de Canalizar divinidad)",
+        "usos": "1 uso de Canalizar divinidad",
+        "duracion": "1 minuto o hasta disipar o incapacitado"
+    },
+    {
+        "nombre": "Transposición del embaucador",
+        "efecto": "Cuando usas acción adicional para crear o mover la ilusión de Invocar duplicidad, puedes teletransportarte intercambiando lugares con ella.",
+        "activacion": "al usar acción adicional para crear o mover la ilusión",
+        "usos": "ilimitados (cada vez que cumplas la condición)",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Duplicidad mejorada",
+        "efecto": "Distracción compartida: aliados tienen ventaja en ataques contra criaturas a 1,5 m de la ilusión. Ilusión sanadora: cuando la ilusión desaparece, tú o criatura a 1,5 m recuperan PG = nivel de clérigo.",
+        "activacion": "pasiva (distracción); al desaparecer la ilusión (curación)",
+        "usos": "ilimitados (distracción); curación 1 vez por desaparición de la ilusión",
+        "duracion": "distracción: mientras la ilusión exista; curación: instantánea"
+    },
+    {
+        "nombre": "Conjuros del dominio de la paz",
+        "efecto": "Siempre preparados: nivel 1 (heroísmo, santuario), nivel 3 (auxilio, vínculo protector), nivel 5 (recado, señal de esperanza), nivel 7 (aura de pureza, esfera elástica de Otiluke), nivel 9 (enlace telepático de Rary, restablecimiento mayor).",
+        "activacion": "pasiva",
+        "usos": "ilimitados (disponibles; lanzar gasta espacios)",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Instrumento de paz",
+        "efecto": "Ganas competencia en Perspicacia, Interpretación o Persuasión (a elección).",
+        "activacion": "pasiva (al obtener el rasgo)",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Vínculo incentivador",
+        "efecto": "Acción: creas vínculo entre criaturas voluntarias a 9 m (hasta igual a competencia), dura 10 min o hasta reutilizar. Mientras estén a 9 m, pueden sumar 1d4 a ataques, pruebas o salvaciones (1 vez por turno).",
+        "activacion": "acción",
+        "usos": "igual a bonificador por competencia; recuperas en descanso largo",
+        "duracion": "10 minutos o hasta reutilizar el rasgo"
+    },
+    {
+        "nombre": "Canalizar divinidad: bálsamo de paz",
+        "efecto": "Acción (gastas Canalizar divinidad): te mueves hasta tu velocidad sin AOs; cada criatura a la que te acerques a 1,5 m recupera 2d6 + Sabiduría (mínimo 1), una vez por acción.",
+        "activacion": "acción (gasta 1 Canalizar divinidad)",
+        "usos": "gasta 1 uso de Canalizar divinidad",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Vínculo protector",
+        "efecto": "Cuando una criatura vinculada vaya a recibir daño, otra vinculada a 30 m usa reacción para teletransportarse a 1,5 m de la primera y recibir todo el daño en su lugar.",
+        "activacion": "reacción cuando una criatura vinculada va a recibir daño",
+        "usos": "ilimitados (1 reacción por ronda)",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Lanzamiento potente",
+        "efecto": "Sumas tu modificador por Sabiduría al daño de tus trucos de clérigo.",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Vínculo expansivo",
+        "efecto": "Los beneficios de Vínculo incentivador y Vínculo protector funcionan hasta 60 m. Además, quien usa Vínculo protector para recibir daño tiene resistencia a ese daño.",
+        "activacion": "pasiva (extiende alcances y añade resistencia)",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Conjuros del dominio del crepúsculo",
+        "efecto": "Siempre preparados: nivel 1 (dormir, fuego feérico), nivel 3 (rayo de luna, ver invisibilidad), nivel 5 (aura de vitalidad, pequeña choza de Leomund), nivel 7 (aura de vida, invisibilidad mejorada), nivel 9 (círculo de poder, engañar).",
+        "activacion": "pasiva",
+        "usos": "ilimitados (disponibles; lanzar gasta espacios)",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Competencias adicionales del crepúsculo",
+        "efecto": "Ganas competencia con armas marciales y armaduras pesadas.",
+        "activacion": "pasiva (al obtener el rasgo)",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Ojos nocturnos",
+        "efecto": "Visión en la oscuridad hasta 90 m (luz tenue como brillante, oscuridad como tenue). Acción: compartes visión con voluntarios a 3 m (hasta mod Sabiduría, mínimo 1) durante 1 hora.",
+        "activacion": "pasiva (visión); acción (compartir)",
+        "usos": "compartir: 1 vez; recuperas en descanso largo o gastando espacio de conjuro de cualquier nivel",
+        "duracion": "visión: permanente; compartir: 1 hora"
+    },
+    {
+        "nombre": "Bendición vigilante",
+        "efecto": "Tocas a una criatura (incluido tú) y le das ventaja en la siguiente tirada de iniciativa.",
+        "activacion": "acción",
+        "usos": "ilimitados (solo un beneficiario a la vez; al usar de nuevo, el anterior termina)",
+        "duracion": "hasta la siguiente tirada de iniciativa o hasta reutilizar el rasgo"
+    },
+    {
+        "nombre": "Canalizar divinidad: santuario del crepúsculo",
+        "efecto": "Acción (gastas Canalizar divinidad): creas esfera de luz tenue de 9 m de radio centrada en ti, te sigue, dura 1 minuto o hasta incapacitado/muerte. Cuando una criatura (incluido tú) termina su turno dentro, le das PG temporales = 1d6 + nivel de clérigo o terminas un efecto de hechizado o asustado.",
+        "activacion": "acción (gasta 1 uso de Canalizar divinidad)",
+        "usos": "gasta 1 uso de Canalizar divinidad (usos según rasgo Canalizar divinidad)",
+        "duracion": "1 minuto o hasta incapacitado/muerte"
+    },
+    {
+        "nombre": "Pasos nocturnos",
+        "efecto": "Acción adicional (si hay luz tenue u oscuridad): velocidad volando = velocidad caminando durante 1 minuto.",
+        "activacion": "acción adicional (requiere luz tenue u oscuridad)",
+        "usos": "igual a bonificador por competencia; recuperas en descanso largo",
+        "duracion": "1 minuto"
+    },
+    {
+        "nombre": "Golpe divino",
+        "efecto": "Una vez por turno, al impactar con ataque con arma, infliges +1d8 de daño radiante (2d8 en nivel 14).",
+        "activacion": "al impactar con ataque con arma",
+        "usos": "1 vez por turno",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Velo crepuscular",
+        "efecto": "Tú y tus aliados tenéis cobertura media mientras estéis en la esfera de Santuario crepuscular.",
+        "activacion": "pasiva (dentro de la esfera del Santuario)",
+        "usos": "ilimitados",
+        "duracion": "mientras dure la esfera"
+    },
+    {
+        "nombre": "Conjuros del dominio del orden",
+        "efecto": "Siempre preparados: nivel 1 (heroísmo, orden imperiosa), nivel 3 (inmovilizar persona, zona de la verdad), nivel 5 (palabra de curación en masa, ralentizar), nivel 7 (compulsión, localizar criatura), nivel 9 (comunión, dominar persona).",
+        "activacion": "pasiva",
+        "usos": "ilimitados (disponibles; lanzar gasta espacios)",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Competencias adicionales del dominio del orden",
+        "efecto": "Ganas competencia con armaduras pesadas. Ganas competencia en Intimidación o Persuasión (a elección).",
+        "activacion": "pasiva (al obtener el rasgo)",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Voz de la autoridad",
+        "efecto": "Al lanzar un conjuro de nivel 1+ que tenga como objetivo a un aliado, ese aliado (o uno de tu elección si son varios) puede usar su reacción para hacer un ataque con arma contra una criatura que elijas.",
+        "activacion": "al lanzar un conjuro de nivel 1+ que afecte a un aliado",
+        "usos": "ilimitados (cada vez que lanzas un conjuro que cumpla la condición; gasta 1 espacio de conjuro)",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Canalizar divinidad: demanda del orden",
+        "efecto": "Acción (gastas Canalizar divinidad): criaturas elegidas a 9 m que te vean/oyan hacen salvación de Sabiduría o son hechizadas hasta final de tu siguiente turno o hasta recibir daño; si fallan, sueltan lo que sujetan.",
+        "activacion": "acción (gasta 1 uso de Canalizar divinidad)",
+        "usos": "gasta 1 uso de Canalizar divinidad",
+        "duracion": "hasta el final de tu siguiente turno o hasta que la criatura reciba daño"
+    },
+    {
+        "nombre": "Encarnación de la ley",
+        "efecto": "Al lanzar un conjuro de encantamiento de nivel 1+ con tiempo de 1 acción, puedes cambiarlo a 1 acción adicional.",
+        "activacion": "al lanzar un conjuro de encantamiento (con espacio de nivel 1+)",
+        "usos": "igual a modificador por Sabiduría (mínimo 1); recuperas en descanso largo",
+        "duracion": "instantáneo (cambia el tiempo de lanzamiento para ese conjuro)"
+    },
+    {
+        "nombre": "Golpe divino",
+        "efecto": "Una vez por turno, al impactar con ataque con arma, infliges +1d8 de daño psíquico (2d8 en nivel 14).",
+        "activacion": "al impactar con ataque con arma",
+        "usos": "1 vez por turno",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Ira del orden",
+        "efecto": "Al causar daño con Golpe Divino, maldices al objetivo hasta inicio de tu siguiente turno; el próximo aliado que impacte al objetivo le inflige 2d8 psíquico adicional y termina la maldición.",
+        "activacion": "al causar daño con Golpe Divino",
+        "usos": "1 vez por turno",
+        "duracion": "hasta el inicio de tu siguiente turno o hasta que un aliado impacte"
+    }
+    ],
+    "Dibujante": [
+        {
+        "nombre": "Inspiración artística",
+        "efecto": "Acción adicional: otorgas un dado (d6, escala a d8/d10/d12 en niveles 5/10/15) a una criatura a 18 m que vea tu creación (glifo, boceto o símbolo). Durante 1 hora, al fallar una prueba de d20, tira el dado y suma al resultado (se gasta).",
+        "activacion": "acción adicional",
+        "usos": "igual a modificador por Carisma (mínimo 1); recuperas en descanso largo",
+        "duracion": "1 hora o hasta que se gaste el dado"
+    },
+    {
+        "nombre": "Lanzamiento de conjuros",
+        "efecto": "Conoces 2 trucos (cambias 1 al subir nivel, +1 en niveles 4 y 10). Preparas conjuros de nivel 1+ según columna 'Conjuros preparados' (máximo nivel según espacios). Cambias 1 al subir nivel. Aptitud: Carisma. Canalizador: herramientas de artesano o pincel gigante.",
+        "activacion": "pasiva; lanzar conjuros requiere la acción apropiada",
+        "usos": "trucos: ilimitados; espacios de conjuro: según tabla, recuperas en descanso largo",
+        "duracion": "preparación: permanente hasta cambio; efectos de conjuros según cada conjuro"
+    },
+    {
+        "nombre": "Pinceladas de poder",
+        "efecto": "Crear talismanes (1 minuto, gasta espacio de conjuro de nivel 1+ y pergamino de 1 po). Máximo = Carisma (mínimo 1), el más antiguo se desvanece si excedes. Entregas a otra criatura (solo 1 a la vez). Efectos al activarse (se consume): Enfoque Arcano (en ataque/salvación, suma Carisma; si es ataque con arma, +1d8 radiante por nivel del espacio) o Protección Divina (reacción al ser objetivo: PG temporales = 5 × nivel del espacio + Carisma, duran hasta pérdida o descanso largo; ventaja en salvaciones contra asustado, hechizado y poseído mientras los tenga).",
+        "activacion": "acción/parte de acción (Enfoque) o reacción (Protección) al usar el talismán",
+        "usos": "ilimitados (limitado por espacios de conjuro y número máximo de talismanes existentes)",
+        "duracion": "talismán: permanente hasta que se use, te mueras, o excedas el máximo; PG temporales: hasta pérdida o descanso largo; efectos de Enfoque: instantáneos"
+    },
+    {
+        "nombre": "Pericia especializada",
+        "efecto": "Ganas pericia en dos habilidades de tu elección. En nivel 9, ganas pericia en otras dos habilidades.",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Fuente de inspiración",
+        "efecto": "Recuperas todos los usos de Inspiración artística en descanso corto o largo. Puedes gastar un espacio de conjuro (sin acción) para recuperar un uso gastado.",
+        "activacion": "pasiva al descansar; gastar espacio no requiere acción",
+        "usos": "ilimitados (según espacios disponibles)",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Runa de contrahechizo",
+        "efecto": "Reacción cuando tú o aliado a 9 m falláis salvación contra efecto de asustado o hechizado: repetís la salvación con ventaja.",
+        "activacion": "reacción al fallar la salvación",
+        "usos": "ilimitados (1 reacción por ronda)",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Simbología arcana universal",
+        "efecto": "Al subir nivel y aumentar conjuros preparados, puedes elegir los nuevos de listas de dibujante, clérigo, druida o mago. También al sustituir un conjuro preparado, puedes hacerlo de esas listas.",
+        "activacion": "al preparar o sustituir conjuros (al subir nivel)",
+        "usos": "según número de conjuros que puedas preparar/sustituir",
+        "duracion": "permanente (hasta que cambies los conjuros)"
+    },
+    {
+        "nombre": "Inspiración maestra",
+        "efecto": "Al tirar iniciativa, recuperas usos de Inspiración artística hasta tener 2 si tenías menos.",
+        "activacion": "al tirar iniciativa",
+        "usos": "1 vez por encuentro (cuando tiras iniciativa)",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Glifos de la creación",
+        "efecto": "Siempre tienes preparados símbolo de poder: sanar y símbolo de poder: matar. Al lanzar uno, puedes elegir un segundo objetivo a 3 m o menos del primero.",
+        "activacion": "pasiva (siempre preparados); al lanzar los conjuros (aplicas el efecto adicional)",
+        "usos": "según espacios de conjuro disponibles",
+        "duracion": "según cada conjuro"
+    },
+    {
+    "nombre": "Partícula de potencial",
+    "efecto": "Al dar Inspiración artística, creas partícula que orbita al receptor hasta que se gaste el dado. Al usarlo: en prueba de característica, tira el dado dos veces y elige; en ataque, objetivo y criaturas a 1,5 m (tu elección) hacen salvación de Constitución o reciben daño contundente igual al dado; en salvación, receptor gana PG temporales = dado + Carisma.",
+    "activacion": "al conceder un dado de Inspiración artística (creación); al usar el dado (efecto adicional)",
+    "usos": "ilimitados (cada vez que concedes Inspiración)",
+    "duracion": "la partícula dura hasta que se gaste el dado de Inspiración; los efectos adicionales son instantáneos"
+},
+{
+    "nombre": "Obra de la creación",
+    "efecto": "Acción: creas objeto no mágico (valor ≤ 20 × nivel de dibujante, tamaño Mediano o menor; en nivel 6 Grande, en nivel 14 Enorme) en espacio vacío a 3 m. Apariencia de dibujo en tinta, olor a tinta. Desaparece tras horas = competencia.",
+    "activacion": "acción",
+    "usos": "1 vez; recuperas en descanso largo o gastando espacio de conjuro de nivel 2+; solo 1 objeto a la vez",
+    "duracion": "horas = bonificador por competencia (o hasta que crees otro)"
+},
+{
+        "nombre": "Dibujo animado",
+        "efecto": "Acción: animas objeto no mágico Grande o menor a 9 m (usa perfil Objeto Animado, BC). Amistoso, obedece, dura 1 hora o hasta 0 PG o tu muerte. Comparte iniciativa (turno tras ti). En su turno solo esquiva, salvo que uses acción adicional para ordenar otra acción. Si incapacitado, elige su acción. Al usar Inspiración artística, puedes dar órdenes como parte de esa misma acción adicional.",
+        "activacion": "acción (animar); acción adicional (ordenar) o parte de Inspiración",
+        "usos": "1 vez; recuperas en descanso largo o gastando espacio de nivel 3+; solo 1 objeto a la vez",
+        "duracion": "1 hora, hasta 0 PG o hasta tu muerte"
+    },
+    {
+        "nombre": "Cénit creativo",
+        "efecto": "Al usar Obra de la creación, creas múltiples objetos = mod Carisma (mínimo 2). Solo uno puede ser del tamaño máximo; el resto Pequeño o Diminuto. Ya no estás limitado por valor en po.",
+        "activacion": "al usar Obra de la creación",
+        "usos": "aplica a cada uso de Obra de la creación (limitado por ese rasgo)",
+        "duracion": "depende de los objetos creados (horas = competencia)"
+    },
+    {
+    "nombre": "Trazo estructural",
+    "efecto": "Gastas Inspiración artística para: Línea de Fuerza (muro de energía de 3 m × 1,5 m a 18 m, da cobertura media; tú designas criaturas que lo ignoran) o Glifo de Confinamiento (área circular de 1,5 m a 9 m; criaturas que entren o empiecen turno hacen salvación de Destreza o velocidad 0 hasta inicio de su siguiente turno). Ganas competencia con herramientas de cartógrafo; estudiando 1 min un área, creas mapa esquemático que revela ubicación de puertas secretas y criaturas no ocultas mágicamente.",
+    "activacion": "acción (dibujar efecto, gasta Inspiración); 1 minuto de estudio (cartografía)",
+    "usos": "efectos: ilimitados (gasta 1 dado de Inspiración por uso); cartografía: ilimitada",
+    "duracion": "efectos: 1 minuto o hasta reutilizar el rasgo; mapa: esquemático (duración no especificada, se asume hasta que se use o se desvanezca según DM)"
+},
+{
+    "nombre": "Plataforma de tinta",
+    "efecto": "Acción (gastas Inspiración artística): creas estructura de tinta sólida de hasta cubo de 1,5 m (3 m en nivel 10, 4,5 m en nivel 14) en espacio vacío a 18 m. CA 14, PG = 10 + (5 × nivel), inmune a veneno y psíquico, soporta 226 kg; si excede o 0 PG, se desmorona. Fija, dura 10 min.",
+    "activacion": "acción (gasta 1 Inspiración artística)",
+    "usos": "igual a modificador por Carisma (mínimo 1); recuperas en descanso largo",
+    "duracion": "10 minutos o hasta que se destruya o reutilices el rasgo"
+},
+{
+    "nombre": "Geometría suprema",
+    "efecto": "Acción (gastas 2 usos de Inspiración artística): alteras terreno en cubo de 12 m a 36 m. Eliges: Trinchera (zanja de 3 m ancho y profundidad, terreno difícil, cobertura media); Muro (pared de 6×3×0,5 m, CA 15, 50 PG); Colapso (radio 6 m, terreno muy difícil, criaturas que entren o empiecen turno hacen salvación Destreza o caen tumbadas); Geometría desorientadora (terreno difícil, enemigos tienen desventaja en ataques que requieran ver al objetivo). Los cambios duran 10 min, vuelven a la normalidad en 1d10 rondas.",
+    "activacion": "acción (gasta 2 usos de Inspiración artística)",
+    "usos": "1 vez; recuperas en descanso largo",
+    "duracion": "10 minutos (vuelve a la normalidad en 1d10 rondas al terminar)"
+},
+{
+        "nombre": "Retrato vivo",
+        "efecto": "Ventaja en Engaño y Persuasión contra la criatura retratada. Reacción al ser impactado por ella: obtienes resistencia al daño de ese ataque (antes de la tirada), el retrato se destruye.",
+        "activacion": "acción (gasta 1 Inspiración Artística), requiere observar 1 minuto a la criatura",
+        "usos": "gasta 1 Inspiración; 1 retrato activo a la vez",
+        "duracion": "24 horas o hasta que tú o el sujeto muera, o crees otro retrato"
+    },
+    {
+        "nombre": "Disfraz de tinta",
+        "efecto": "Lanzas disfrazarse sin concentración y duración 8 horas usando herramientas de artesano como componente adicional. Es ilusión física; otros pueden hacer Investigación contra tu CD para notar que es ilusión (sin ver la forma real). Siempre tienes preparado disfrazarse (no cuenta para máximo).",
+        "activacion": "al lanzar disfrazarse (aplicas el beneficio)",
+        "usos": "ilimitados (gasta espacio de conjuro normalmente)",
+        "duracion": "8 horas (sin concentración)"
+    },
+    {
+        "nombre": "Retrato cautivador",
+        "efecto": "Al lanzar hechizar persona o sueño mostrando/dibujando un retrato del objetivo, gastas Inspiración artística y sumas el dado (d6/d8/d10/d12 según nivel) a la CD del conjuro. Siempre tienes preparado sueño (no cuenta para máximo).",
+        "activacion": "al lanzar hechizar persona o sueño (mostrando/dibujando retrato)",
+        "usos": "gasta 1 dado de Inspiración por lanzamiento; sueño disponible siempre",
+        "duracion": "instantáneo (efecto en la CD)"
+    },
+    {
+        "nombre": "Captura de esencia",
+        "efecto": "1 hora con objetivo dispuesto e inmóvil, gastas Inspiración. Crea Retrato de Esencia (1 activo). Mientras lo tengas: puedes localizar criatura (ritual sin componentes, mismo plano); si el sujeto muere, su alma queda anclada 7 días, puedes usar el retrato como diamante de 1000 po para resurrección (se consume). Pasados 7 días sin usar, pierde magia.",
+        "activacion": "ritual de 1 hora (gasta 1 Inspiración)",
+        "usos": "1 retrato activo a la vez; si creas otro, el anterior pierde magia",
+        "duracion": "localización: mientras tengas el retrato; anclaje: 7 días tras la muerte; resurrección: instantánea (consume el retrato)"
+    }
+    ],
+    "Druida": [
+        {
+        "nombre": "Lanzamiento de conjuros",
+        "efecto": "Conoces 2 trucos (cambias 1 al subir nivel, +1 en niveles 4 y 10). Preparas conjuntos de nivel 1+ según columna 'Conjuros preparados' (máximo nivel según espacios). Cambias preparados tras descanso largo. Aptitud: Sabiduría. Canalizador: canalizador druídico.",
+        "activacion": "pasiva; lanzar conjuros requiere la acción apropiada",
+        "usos": "trucos: ilimitados; espacios de conjuro: según tabla, recuperas en descanso largo",
+        "duracion": "preparación: permanente hasta cambio; efectos de conjuros según cada conjuro"
+    },
+    {
+        "nombre": "Druídico",
+        "efecto": "Sabes druídico. Siempre tienes preparado hablar con los animales. Puedes dejar mensajes ocultos en druídico; quien lo conoce los detecta; otros necesitan Investigación CD 15 para detectarlos, pero no descifrarlos sin magia.",
+        "activacion": "pasiva; al crear mensaje (requiere escritura/dibujo)",
+        "usos": "ilimitados",
+        "duracion": "mensajes ocultos: hasta que sean detectados o descifrados"
+    },
+    {
+        "nombre": "Orden primigenia",
+        "efecto": "Eliges: Guardián (competencia con armas marciales y armaduras medias) o Naturalista (truco adicional de druida y bonificador en Conocimiento arcano y Naturaleza igual a Sabiduría, mínimo +1).",
+        "activacion": "pasiva (al obtener el rasgo)",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Compañero salvaje",
+        "efecto": "Acción de magia: gastas espacio de conjuro o uso de Forma salvaje para lanzar encontrar familiar sin componentes materiales. El familiar es feérico y desaparece tras descanso largo.",
+        "activacion": "acción de magia (gasta espacio de conjuro o uso de Forma salvaje)",
+        "usos": "ilimitados (limitado por espacios de conjuro y usos de Forma salvaje)",
+        "duracion": "hasta que finalices un descanso largo (o hasta que muera el familiar)"
+    },
+    {
+        "nombre": "Forma salvaje",
+        "efecto": "Acción adicional: te transformas en bestia (4 formas conocidas, VD 1/4, sin vuelo; en nivel 4: 6 formas, VD 1/2; en nivel 8: 3 formas, VD 1, con vuelo). Obtienes PG temporales = nivel de druida. Conservas personalidad, recuerdos, habla, Int/Sab/Car, rasgos, idiomas, dotes, competencias; usas el mejor modificador de habilidad/salvación entre el tuyo y el de la bestia. No lanzas conjuros (no pierdes concentración). Equipo: cae, se funde o lo llevas (DM decide viabilidad).",
+        "activacion": "acción adicional",
+        "usos": "2 usos base (recuperas 1 en descanso corto, todos en largo); más usos según tabla",
+        "duracion": "horas = ½ nivel de druida (mínimo 1), o hasta reutilizar, incapacitado, muerte, o abandonar con acción adicional"
+    },
+    {
+        "nombre": "Resurgimiento salvaje",
+        "efecto": "Una vez por turno, si no tienes usos de Forma salvaje, gastas un espacio de conjuro (sin acción) para obtener un uso. Además, puedes gastar un uso de Forma salvaje (sin acción) para obtener un espacio de nivel 1 (1 vez por descanso largo).",
+        "activacion": "sin acción (en tu turno para lo primero; en cualquier momento para lo segundo)",
+        "usos": "lo primero: ilimitado (gasta espacio); lo segundo: 1 vez por descanso largo",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Furia elemental",
+        "efecto": "Eliges: Golpe primordial (1 vez por turno, al acertar con arma o ataque de bestia en Forma salvaje, +1d8 de frío/fuego/relámpago/trueno) o Lanzamiento potente (sumas Sabiduría al daño de trucos de druida).",
+        "activacion": "pasiva (elección); al acertar (Golpe) o al lanzar truco (Lanzamiento)",
+        "usos": "Golpe: 1 vez por turno; Lanzamiento: ilimitado",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Furia elemental mejorada",
+        "efecto": "Mejora la opción de Furia elemental: Golpe primordial (+2d8 en lugar de +1d8) o Lanzamiento potente (alcance de trucos de druida +90 m si el alcance base es de 3 m o más).",
+        "activacion": "pasiva (mejora de la elección previa)",
+        "usos": "Golpe primordial: 1 vez por turno; Lanzamiento potente: ilimitado",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Conjurar como bestia",
+        "efecto": "Mientras estés en Forma salvaje, puedes lanzar conjuros (excepto los que tengan componente material con coste o consumible).",
+        "activacion": "pasiva (mientras estés transformado)",
+        "usos": "ilimitados (según espacios de conjuro disponibles)",
+        "duracion": "mientras dure la Forma salvaje"
+    },
+    {
+        "nombre": "Archidruida",
+        "efecto": "Forma salvaje perenne (al tirar iniciativa sin usos, recuperas 1); Mago de la naturaleza (1 vez/descanso largo, conviertes usos de Forma salvaje en espacio de conjuro: cada uso = 2 niveles, sin acción); Longevidad (envejeces 1 año por cada 10).",
+        "activacion": "pasiva; iniciativa (recuperación); sin acción (conversión)",
+        "usos": "recuperación: 1 vez por iniciativa; conversión: 1 vez por descanso largo",
+        "duracion": "permanente (longevidad); instantáneo (recuperación y conversión)"
+    },
+    {
+        "nombre": "Conjuros del círculo de la luna",
+        "efecto": "Siempre preparados: nivel 3 (curar heridas, rayo de luna, voluta estelar), nivel 5 (conjurar animales), nivel 7 (fuente de luz lunar), nivel 9 (curar heridas en masa). Puedes lanzarlos en Forma salvaje.",
+        "activacion": "pasiva (siempre preparados); lanzamiento en Forma salvaje automático",
+        "usos": "ilimitados (disponibles; lanzar gasta espacios)",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Formas del círculo",
+        "efecto": "VD máximo = nivel de druida ÷ 3 (redondeado abajo). En Forma salvaje, CA = 13 + Sabiduría (si es mejor que la de la bestia). PG temporales al transformarte = triple de tu nivel de druida.",
+        "activacion": "pasiva (al usar Forma salvaje)",
+        "usos": "ilimitados (aplica a cada uso de Forma salvaje)",
+        "duracion": "mientras dure la Forma salvaje"
+    },
+    {
+        "nombre": "Formas del círculo mejoradas",
+        "efecto": "En Forma salvaje: ataques pueden hacer daño normal o radiante (decides al impactar). Sumas Sabiduría a salvaciones de Constitución.",
+        "activacion": "pasiva (mientras estés en Forma salvaje)",
+        "usos": "ilimitados",
+        "duracion": "mientras dure la Forma salvaje"
+    },
+    {
+        "nombre": "Paso de la luz lunar",
+        "efecto": "Acción adicional: teletransportas hasta 9 m a espacio visible y ganas ventaja en el siguiente ataque antes de fin de turno.",
+        "activacion": "acción adicional",
+        "usos": "igual a modificador por Sabiduría (mínimo 1); recuperas en descanso largo; puedes gastar un espacio de nivel 2+ (sin acción) para recuperar 1 uso",
+        "duracion": "instantáneo (ventaja hasta fin de turno)"
+    },
+    {
+        "nombre": "Forma lunar",
+        "efecto": "Al usar Paso de la luz lunar, puedes teletransportar también a una criatura voluntaria a 3 m o menos de ti a un espacio vacío a 3 m o menos de tu destino. Además, una vez por turno, al acertar un ataque en Forma salvaje, infliges +2d10 de daño radiante adicional.",
+        "activacion": "al usar Paso de la luz lunar (teletransporte); al acertar un ataque (daño adicional)",
+        "usos": "teletransporte: ilimitado (cada vez que uses Paso); daño adicional: 1 vez por turno",
+        "duracion": "instantáneo (ambos efectos)"
+    },
+    {
+        "nombre": "Ayuda de la tierra",
+        "efecto": "Acción de magia (gastas Forma salvaje): esfera de 3 m a 18 m; criaturas elegidas hacen salvación de Constitución o 2d6 necrótico (mitad en éxito); una criatura elegida recupera 2d6 PG. Escala a 3d6 en nivel 10, 4d6 en nivel 14.",
+        "activacion": "acción de magia (gasta 1 uso de Forma salvaje)",
+        "usos": "gasta 1 uso de Forma salvaje",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Conjuros del círculo de la tierra",
+        "efecto": "Tras descanso largo, eliges terreno (árido, polar, templado, tropical) y preparas sus conjuntos: Árido (3: contorno borroso, descarga de fuego, manos ardientes; 5: bola de fuego; 7: marchitar; 9: muro de piedra); Polar (3: inmovilizar persona, nube de oscurecimiento, rayo de escarcha; 5: tormenta de aguanieve; 7: tormenta de hielo; 9: cono de frío); Templado (3: agarre electrizante, dormir, paso brumoso; 5: relámpago; 7: libertad de movimiento; 9: paso arbóreo); Tropical (3: rayo nauseabundo, salpicadura ácida, telaraña; 5: nube apestosa; 7: polimorfar; 9: plaga de insectos).",
+        "activacion": "pasiva; elección tras descanso largo",
+        "usos": "ilimitados (los conjuros preparados; lanzar gasta espacios)",
+        "duracion": "permanente hasta el siguiente descanso largo (la elección de terreno)"
+    },
+    {
+        "nombre": "Recuperación natural",
+        "efecto": "Puedes lanzar un conjuro de nivel 1+ de los preparados por Conjuros de círculo sin gastar espacio (1 vez/descanso largo). Tras descanso corto, recuperas espacios gastados cuya suma de niveles sea ≤ mitad de nivel de druida (redondeado arriba, máximo nivel 5), 1 vez/descanso largo.",
+        "activacion": "al lanzar el conjuro (sin espacio); al finalizar descanso corto (elección de espacios)",
+        "usos": "ambos: 1 vez por descanso largo",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Protección de la naturaleza",
+        "efecto": "Inmune a envenenado. Resistencia a un tipo de daño según terreno elegido en Conjuros de círculo: Árido (fuego), Polar (frío), Templado (relámpago) o Tropical (veneno).",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Santuario de la naturaleza",
+        "efecto": "Acción de magia (gastas Forma salvaje): creas cubo de 4,5 m con árboles espectrales a 36 m, dura 1 min o hasta incapacitado/muerte; aliados y tú tenéis cobertura media dentro; aliados obtienen resistencia de Protección de la naturaleza. Acción adicional: mueves el cubo hasta 18 m (máx 36 m de ti).",
+        "activacion": "acción de magia (crear); acción adicional (mover)",
+        "usos": "creación: 1 uso de Forma salvaje; movimiento: ilimitado mientras dure",
+        "duracion": "1 minuto o hasta incapacitado/muerte"
+    },
+    {
+        "nombre": "Forma estelar",
+        "efecto": "Acción adicional (gastas Forma salvaje): adoptas forma luminosa (luz brillante 3 m, tenue 3 m más) por 10 min. Eliges constelación: Arquero (ataque de conjuro a distancia: 1d8 + Sabiduría radiante, acción adicional); Cáliz (al curar con espacio, tú o aliado a 9 m recuperan 1d8 + Sabiduría); Dragón (en pruebas de Int/Sab o salvación de Constitución para concentración, sustituyes 9 o menos por 10).",
+        "activacion": "acción adicional (gasta 1 uso de Forma salvaje)",
+        "usos": "gasta 1 uso de Forma salvaje",
+        "duracion": "10 minutos o hasta cancelar, incapacitado, muerte o reutilizar"
+    },
+    {
+        "nombre": "Mapa estelar",
+        "efecto": "Objeto Diminuto (canalizador). Siempre tienes preparados guía y saeta guía; lanzas saeta guía sin espacio (veces = Sabiduría, mínimo 1; recuperas en descanso largo). Si lo pierdes, ceremonia de 1 hora (en descanso corto/largo) para crear sustituto.",
+        "activacion": "pasiva; lanzar saeta guía sin espacio (elección)",
+        "usos": "saeta guía sin espacio: igual a mod Sabiduría; recuperas en descanso largo",
+        "duracion": "permanente (hasta pérdida o sustitución)"
+    },
+    {
+        "nombre": "Presagio cósmico",
+        "efecto": "Tras descanso largo, tiras 1d6. Si es impar (Desdicha): reacción para restar 1d6 a prueba de criatura a 9 m. Si es par (Fortuna): reacción para sumar 1d6 a prueba de criatura a 9 m.",
+        "activacion": "reacción cuando una criatura a 9 m hace una prueba de d20 (requiere haber tirado el presagio tras descanso)",
+        "usos": "igual a modificador por Sabiduría (mínimo 1); recuperas en descanso largo",
+        "duracion": "hasta el siguiente descanso largo (el presagio); el uso de la reacción es instantáneo"
+    },
+    {
+        "nombre": "Constelaciones centelleantes",
+        "efecto": "Mejora de Forma estelar: Arquero y Cáliz usan 2d8 en lugar de 1d8; Dragón otorga velocidad volando 6 m y levitar. Al inicio de cada turno en forma estelar, puedes cambiar la constelación activa.",
+        "activacion": "pasiva (mejora mientras estés en Forma estelar); cambio de constelación al inicio de cada turno",
+        "usos": "ilimitados",
+        "duracion": "mientras dure la Forma estelar"
+    },
+    {
+        "nombre": "Colmado de luz estelar",
+        "efecto": "Mientras estés en Forma estelar, tienes resistencia al daño contundente, cortante y perforante.",
+        "activacion": "pasiva (mientras estés en Forma estelar)",
+        "usos": "ilimitados",
+        "duracion": "mientras dure la Forma estelar"
+    },
+    {
+        "nombre": "Conjuros del círculo del mar",
+        "efecto": "Siempre preparados: nivel 3 (hacer añicos, nube de oscurecimiento, ola atronadora, ráfaga de viento, rayo de escarcha), nivel 5 (relámpago, respirar bajo el agua), nivel 7 (controlar agua, tormenta de hielo), nivel 9 (conjurar elemental, inmovilizar monstruo).",
+        "activacion": "pasiva (siempre preparados)",
+        "usos": "ilimitados (disponibles; lanzar gasta espacios)",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Ira de los mares",
+        "efecto": "Acción adicional (gastas Forma salvaje): creas emanación de 1,5 m que te rodea 10 min. Como acción adicional en turnos siguientes, eliges criatura en la emanación; hace salvación de Constitución o sufre daño de frío = tantos d6 como Sabiduría (mínimo 1d6) y si es Grande o menor, es empujada 4,5 m.",
+        "activacion": "acción adicional (crear); acción adicional (usar)",
+        "usos": "1 uso de Forma salvaje para crear; daño: ilimitado mientras dure la emanación (1 acción adicional por turno)",
+        "duracion": "10 minutos o hasta disipar, reutilizar o incapacitado"
+    },
+    {
+        "nombre": "Afinidad acuática",
+        "efecto": "El radio de la emanación de Ira de los mares aumenta a 3 m. Obtienes velocidad nadando igual a tu velocidad.",
+        "activacion": "pasiva (mejora permanente)",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Nacido de la tempestad",
+        "efecto": "Mientras Ira de los mares está activo, tienes resistencia a daño de frío, relámpago y trueno, y velocidad volando igual a tu velocidad.",
+        "activacion": "pasiva (mientras Ira de los mares esté activo)",
+        "usos": "ilimitados",
+        "duracion": "mientras dure Ira de los mares"
+    },
+    {
+        "nombre": "Obsequio oceánico",
+        "efecto": "Al usar Ira de los mares, puedes generar la emanación alrededor de una criatura voluntaria a 18 m en lugar de ti (usa tu CD y Sabiduría). Si gastas 2 usos de Forma salvaje en lugar de 1, generas la emanación alrededor de ti y de esa criatura.",
+        "activacion": "al usar Ira de los mares (elección al activar)",
+        "usos": "1 uso de Forma salvaje (normal) o 2 usos (para ambos); se consume al activar",
+        "duracion": "la misma que Ira de los mares (10 min o hasta disipar/incapacitado)"
+    },
+    {
+        "nombre": "Conjuros del círculo de las esporas",
+        "efecto": "Siempre preparados: Nivel 3 (toque helado, dulce descanso, sordera/ceguera), nivel 5 (animar a los muertos, forma gaseosa), nivel 7 (confusión, marchitar), nivel 9 (contagio, nube aniquiladora).",
+        "activacion": "pasiva (siempre preparados)",
+        "usos": "ilimitados (disponibles; lanzar gasta espacios)",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Halo de esporas",
+        "efecto": "Reacción cuando criatura visible se mueve a 3 m o empieza turno allí: salvación de Constitución o 1d4 necrótico (escala a 1d6/1d8/1d10 en niveles 6/10/14).",
+        "activacion": "reacción al cumplirse la condición",
+        "usos": "ilimitados (1 reacción por ronda)",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Entidad simbiótica",
+        "efecto": "Acción (gastas Forma salvaje): activas esporas, obtienes PG temporales = 4 × nivel de druida. Durante 10 min o hasta perder PG: Halo de esporas hace daño doble (tira 2 dados); ataques cuerpo a cuerpo +1d6 necrótico.",
+        "activacion": "acción (gasta 1 uso de Forma salvaje)",
+        "usos": "gasta 1 uso de Forma salvaje",
+        "duracion": "10 minutos o hasta perder PG temporales o reutilizar Forma salvaje"
+    },
+    {
+        "nombre": "Plaga fúngica",
+        "efecto": "Reacción cuando una bestia o humanoide Pequeño o Mediano muere a 3 m: lo reanimas como zombi (perfil de Zombi) con 1 PG, obedece órdenes mentales, solo ataque cuerpo a cuerpo, turno tras el tuyo, vive 1 hora.",
+        "activacion": "reacción al morir una criatura elegible a 3 m de ti",
+        "usos": "igual a modificador por Sabiduría (mínimo 1); recuperas en descanso largo",
+        "duracion": "1 hora (el zombi se desploma al terminar)"
+    },
+    {
+        "nombre": "Difusión de esporas",
+        "efecto": "Acción adicional (requiere Entidad simbiótica activa): creas cubo de esporas de 3 m a 9 m durante 1 min. Criaturas que entren o empiecen turno reciben daño de Halo de esporas (salvación Constitución, 1 vez por turno). Mientras dure, no puedes usar la reacción de Halo de esporas.",
+        "activacion": "acción adicional (requiere Entidad simbiótica activa)",
+        "usos": "ilimitados mientras dure Entidad simbiótica (1 cubo a la vez)",
+        "duracion": "1 minuto o hasta descartar, reutilizar o terminar Entidad simbiótica"
+    },
+    {
+        "nombre": "Cuerpo fúngico",
+        "efecto": "No puedes quedar cegado, ensordecido, asustado ni envenenado. Los golpes críticos contra ti cuentan como normales (a menos que estés incapacitado).",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente (excepto si incapacitado)"
+    },
+    {
+        "nombre": "Conjuros del círculo del fuego salvaje",
+        "efecto": "Siempre preparados: nivel 3 (curar heridas, manos ardientes, esfera de llamas, rayo abrasador), nivel 5 (crecimiento vegetal, revivir), nivel 7 (aura de vida, escudo de fuego), nivel 9 (curar heridas en masa, golpe flamígero).",
+        "activacion": "pasiva (siempre preparados)",
+        "usos": "ilimitados (disponibles; lanzar gasta espacios)",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Invocar espíritu del fuego salvaje",
+        "efecto": "Acción (gastas Forma salvaje): invocas espíritu a 9 m; al aparecer, criaturas a 3 m (excepto tú) hacen salvación Destreza o 2d6 fuego. Amistoso, obedece, turno tras el tuyo. Solo esquiva a menos que uses acción adicional para ordenar otra acción. Si incapacitado, elige su acción.",
+        "activacion": "acción (gasta 1 uso de Forma salvaje)",
+        "usos": "gasta 1 uso de Forma salvaje",
+        "duracion": "1 hora, hasta 0 PG, hasta reinvocar o hasta tu muerte"
+    },
+    {
+        "nombre": "Vínculo mejorado",
+        "efecto": "Mientras el espíritu esté invocado, al lanzar conjuro de fuego o curación, tiras 1d8 y sumas a una tirada de daño o curación. Los conjuros con alcance que no seas tú pueden originarse en ti o en el espíritu.",
+        "activacion": "al lanzar un conjuro de fuego o curación (mientras el espíritu esté invocado); al lanzar conjuro (elección de origen)",
+        "usos": "ilimitados (1d8 por conjuro); elección de origen: ilimitada",
+        "duracion": "instantáneo (bonificador); duración del conjuro (origen)"
+    },
+    {
+        "nombre": "Llamas cauterizadoras",
+        "efecto": "Cuando una criatura Pequeña o mayor muere a 9 m de ti o del espíritu, aparece llama espectral 1 min. Reacción al entrar una criatura en ese espacio: la extingues y curas o causas 2d10 + Sabiduría (fuego).",
+        "activacion": "reacción cuando una criatura entra en el espacio de la llama",
+        "usos": "igual a bonificador por competencia; recuperas en descanso largo",
+        "duracion": "la llama dura 1 minuto; la reacción es instantánea"
+    },
+    {
+        "nombre": "Renacer ardiente",
+        "efecto": "Si el espíritu está a 36 m o menos y tus PG bajan a 0, el espíritu se reduce a 0 PG y recuperas la mitad de tus PG máximos y te pones en pie.",
+        "activacion": "automática al caer a 0 PG (requiere espíritu a 36 m o menos)",
+        "usos": "1 vez; recuperas en descanso largo",
+        "duracion": "instantáneo"
+    }
+    ],
+    "Explorador":[
+        {
+        "nombre": "Lanzamiento de conjuros",
+        "efecto": "Preparas conjuros de nivel 1+ según columna 'Conjuros preparados' (máximo nivel según espacios). Cambias preparados tras descanso largo. Aptitud: Sabiduría. Canalizador: canalizador druídico.",
+        "activacion": "pasiva; lanzar conjuros requiere la acción apropiada",
+        "usos": "espacios de conjuro: según tabla, recuperas en descanso largo",
+        "duracion": "preparación: permanente hasta cambio; efectos de conjuros según cada conjuro"
+    },
+    {
+        "nombre": "Enemigo predilecto",
+        "efecto": "Siempre tienes preparado marca del cazador. Puedes lanzarlo sin gastar espacio de conjuro (veces según columna 'Enemigo predilecto', empieza con 2).",
+        "activacion": "al lanzar marca del cazador (opcional sin gastar espacio)",
+        "usos": "número de veces según columna de la tabla; recuperas en descanso largo",
+        "duracion": "instantáneo (el lanzamiento); efectos del conjuro según duración de marca del cazador"
+    },
+    {
+        "nombre": "Maestría con armas",
+        "efecto": "Usas propiedades de maestría con dos tipos de armas competentes a elegir. Cambias los tipos tras descanso largo.",
+        "activacion": "pasiva; cambio al finalizar descanso largo",
+        "usos": "ilimitado; 1 cambio por descanso largo",
+        "duracion": "permanente hasta cambio"
+    },
+    {
+        "nombre": "Estilo de combate",
+        "efecto": "Obtienes una dote de estilo de combate o la opción Guerrero druídico (2 trucos de druida, cuentan como explorador, Sabiduría, sustituyes 1 al subir nivel de explorador).",
+        "activacion": "pasiva (al obtener el rasgo)",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Explorador hábil",
+        "efecto": "Aprendes 2 idiomas de tu elección. Ganas pericia en una habilidad en la que no tengas pericia.",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Ataque adicional",
+        "efecto": "Al usar la acción de atacar, realizas dos ataques en lugar de uno.",
+        "activacion": "al usar la acción de atacar",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Errante",
+        "efecto": "Velocidad +3 m si no llevas armadura pesada. Velocidades de nado y trepa iguales a tu velocidad.",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente (mientras no lleves armadura pesada para el bonus de velocidad)"
+    },
+    {
+        "nombre": "Pericia",
+        "efecto": "Ganas pericia en dos habilidades en las que no tengas pericia.",
+        "activacion": "pasiva (al obtener el rasgo)",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Infatigable",
+        "efecto": "Acción de magia: obtienes 1d8 + Sabiduría PG temporales. Tras descanso corto, reduces cansancio en 1.",
+        "activacion": "acción de magia (PG temporales); pasiva (reducción de cansancio al descansar)",
+        "usos": "PG temporales: igual a mod Sabiduría (mínimo 1), recuperas en descanso largo; reducción de cansancio: ilimitada (1 por descanso corto)",
+        "duracion": "PG temporales: hasta que se pierdan; reducción: instantáneo"
+    },
+    {
+        "nombre": "Cazador persistente",
+        "efecto": "Sufrir daño no rompe tu concentración de marca del cazador.",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Velo de la naturaleza",
+        "efecto": "Acción adicional: te vuelves invisible hasta el final de tu siguiente turno.",
+        "activacion": "acción adicional",
+        "usos": "igual a mod Sabiduría (mínimo 1); recuperas en descanso largo",
+        "duracion": "hasta el final de tu siguiente turno"
+    },
+    {
+        "nombre": "Cazador preciso",
+        "efecto": "Ventaja en tiradas de ataque contra la criatura marcada con marca del cazador.",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Sentidos salvajes",
+        "efecto": "Visión ciega hasta 9 m.",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Azote de enemigos",
+        "efecto": "El dado de daño de marca del cazador pasa a ser un d10 (en lugar de d6).",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Conjuros de acechador en la penumbra",
+        "efecto": "Siempre preparados: nivel 3 (disfrazarse), nivel 5 (truco de la cuerda), nivel 9 (terror), nivel 13 (invisibilidad mejorada), nivel 17 (apariencia).",
+        "activacion": "pasiva (siempre preparados)",
+        "usos": "ilimitados (disponibles; lanzar gasta espacios)",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Emboscador pavoroso",
+        "efecto": "Sumas Sabiduría a la iniciativa. Golpe pavoroso: 1 vez por turno, al acertar ataque con arma, +2d6 psíquico (usos = Sabiduría, recuperas en descanso largo). Salto emboscador: +3 m de velocidad en el primer turno de cada combate.",
+        "activacion": "iniciativa (bonificador); al acertar ataque (Golpe); al comenzar el primer turno (Salto)",
+        "usos": "Golpe: igual a mod Sabiduría (mínimo 1), recuperas en descanso largo; Salto: 1 vez por combate; iniciativa: ilimitado",
+        "duracion": "Golpe: instantáneo; Salto: hasta el final del primer turno; iniciativa: aplica a esa tirada"
+    },
+    {
+        "nombre": "Visión umbría",
+        "efecto": "Visión en la oscuridad 18 m (o +18 m si ya la tenías). En oscuridad total, eres invisible frente a criaturas que dependan de visión en la oscuridad.",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Mente de hierro",
+        "efecto": "Ganas competencia en salvaciones de Sabiduría. Si ya la tienes, obtienes competencia en salvaciones de Inteligencia o Carisma (a elección).",
+        "activacion": "pasiva (al obtener el rasgo)",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Oleada del acechador",
+        "efecto": "El daño psíquico de Golpe pavoroso pasa a ser 2d8. Al usarlo, eliges: Ataque súbito (ataque adicional con misma arma a criatura distinta a 1,5 m del objetivo) o Terror masivo (objetivo y criaturas a 3 m hacen salvación Sabiduría o asustados hasta inicio de tu siguiente turno).",
+        "activacion": "al usar Golpe pavoroso (de Emboscador pavoroso)",
+        "usos": "Golpe: según usos de Golpe pavoroso (Sabiduría, recuperas en descanso largo); Ataque/Terror: ilimitados (1 por uso de Golpe)",
+        "duracion": "Ataque: instantáneo; Terror: hasta inicio de tu siguiente turno"
+    },
+    {
+        "nombre": "Esquiva sombría",
+        "efecto": "Reacción a un ataque contra ti: impones desventaja en la tirada; después, te teletransportas hasta 9 m a espacio vacío visible (independientemente de si el ataque acierta o no).",
+        "activacion": "reacción al ser objetivo de un ataque",
+        "usos": "ilimitados (1 reacción por ronda)",
+        "duracion": "desventaja: instantáneo (aplica a esa tirada); teletransporte: instantáneo"
+    },
+    {
+        "nombre": "El cazador y la presa",
+        "efecto": "Eliges: Azote de colosos (1 vez por turno, +1d8 daño con arma si el objetivo no tiene todos sus PG) o Destructor de hordas (1 vez por turno, al atacar, haces ataque adicional a criatura distinta a 1,5 m del objetivo que no hayas atacado este turno).",
+        "activacion": "pasiva (elección); al acertar ataque (Azote) o al atacar (Destructor)",
+        "usos": "Azote: 1 vez por turno; Destructor: 1 vez por turno; cambio de opción tras descanso corto o largo",
+        "duracion": "permanente hasta cambio (la elección)"
+    },
+    {
+        "nombre": "Sabiduría del cazador",
+        "efecto": "Mientras una criatura tenga tu marca del cazador, sabes si tiene inmunidad, resistencia o vulnerabilidad y cuáles.",
+        "activacion": "pasiva (mientras la marca esté activa)",
+        "usos": "ilimitados",
+        "duracion": "mientras dure la marca del cazador"
+    },
+    {
+        "nombre": "Tácticas defensivas",
+        "efecto": "Eliges: Defensa contra ataques múltiples (cuando te aciertan, el atacante tiene desventaja en ataques adicionales contra ti este turno) o Escapar de la horda (ataques de oportunidad contra ti tienen desventaja).",
+        "activacion": "pasiva (elección); al ser alcanzado (Defensa) o al provocar AOs (Escapar)",
+        "usos": "ilimitados; cambio de opción tras descanso corto o largo",
+        "duracion": "Defensa: hasta el final del turno actual; Escapar: permanente hasta cambio"
+    },
+    {
+        "nombre": "El cazador experto y la presa",
+        "efecto": "Una vez por turno, al infligir daño a una criatura con marca del cazador, puedes hacer el daño adicional del conjuro también a otra criatura visible a 9 m de la primera.",
+        "activacion": "al infligir daño a una criatura marcada",
+        "usos": "1 vez por turno",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Defensa de cazador experto",
+        "efecto": "Reacción al recibir daño: te concedes resistencia a ese daño y a cualquier daño del mismo tipo hasta el final del turno.",
+        "activacion": "reacción al recibir daño",
+        "usos": "ilimitados (1 reacción por ronda)",
+        "duracion": "hasta el final del turno actual (resistencia a ese tipo de daño)"
+    },
+    {
+        "nombre": "Conjuros del errante feérico",
+        "efecto": "Siempre preparados: nivel 3 (hechizar persona), nivel 5 (paso brumoso), nivel 9 (invocar feérico), nivel 13 (puerta dimensional), nivel 17 (engañar).",
+        "activacion": "pasiva",
+        "usos": "ilimitados (disponibles; lanzar gasta espacios)",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Glamur sobrenatural",
+        "efecto": "Sumas Sabiduría (mínimo +1) a pruebas de Carisma. Ganas competencia en Engaño, Interpretación o Persuasión (elección).",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Golpes pavorosos",
+        "efecto": "Al acertar con arma, +1d4 psíquico (1 vez por turno). Escala a 1d6 en nivel 11.",
+        "activacion": "al acertar un ataque con arma",
+        "usos": "1 vez por turno",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Giro seductor",
+        "efecto": "Ventaja en salvaciones contra asustado o hechizado. Reacción al tener éxito tú o aliado a 36 m en esa salvación: otra criatura a 36 m hace salvación Sabiduría o queda asustada/hechizada 1 minuto (repite al final de turnos).",
+        "activacion": "pasiva (ventaja); reacción al éxito en salvación",
+        "usos": "ventaja: ilimitada; reacción: ilimitada (1 reacción por ronda)",
+        "duracion": "ventaja: permanente; efecto: 1 minuto o hasta superar"
+    },
+    {
+        "nombre": "Refuerzos feéricos",
+        "efecto": "Lanzas invocar feérico sin componentes materiales. Puedes lanzarlo 1 vez sin espacio (recuperas en descanso largo). Al lanzarlo, puedes eliminar la concentración (duración 1 minuto).",
+        "activacion": "al lanzar invocar feérico",
+        "usos": "sin espacio: 1 vez/descanso largo; sin concentración: opcional cada lanzamiento",
+        "duracion": "según conjuro; sin concentración: 1 minuto"
+    },
+    {
+        "nombre": "Errante brumoso",
+        "efecto": "Lanzas paso brumoso sin espacio (veces = Sabiduría, mínimo 1; recuperas en descanso largo). Puedes llevar a un voluntario a 1,5 m contigo a tu espacio de destino.",
+        "activacion": "al lanzar paso brumoso",
+        "usos": "igual a mod Sabiduría (mínimo 1); recuperas en descanso largo",
+        "duracion": "instantáneo (según paso brumoso)"
+    },
+    {
+        "nombre": "Compañero primigenio",
+        "efecto": "Invocas bestia primigenia (perfil: mar, tierra o cielo). Amistosa, obedece, desaparece al morir. En combate, actúa en tu turno; solo esquiva a menos que uses acción adicional para ordenar otra acción. Puedes sacrificar un ataque de tu acción de atacar para ordenar golpe de bestia. Si incapacitado, actúa por cuenta propia. Resurrección: si murió en la última hora, acción de magia y espacio de conjuro, revive en 1 min con PG completos. Tras descanso largo, puedes invocar otra (desvanece la anterior).",
+        "activacion": "invocación: tras descanso largo (nueva); resurrección: acción de magia + espacio de conjuro; órdenes: acción adicional o sacrificio de ataque",
+        "usos": "invocación: 1 vez por descanso largo (renovable); resurrección: ilimitado (gasta espacios de conjuro); órdenes: ilimitadas mientras viva",
+        "duracion": "hasta que muera, la invoques de nuevo o mueras"
+    },
+    {
+        "nombre": "Entrenamiento excepcional",
+        "efecto": "Al usar acción adicional para ordenar a la bestia, también puede usar su acción adicional para ayudar, correr, destrabarse o esquivar. Además, al acertar, puede hacer daño de fuerza o su tipo normal.",
+        "activacion": "al usar acción adicional para ordenar a la bestia; al acertar ataque (elección de daño)",
+        "usos": "ilimitados (mientras la bestia esté activa)",
+        "duracion": "permanente (mientras la bestia exista)"
+    },
+    {
+        "nombre": "Furia bestial",
+        "efecto": "Al ordenar golpe de bestia, la bestia ataca dos veces. Primera vez que acierta en cada turno a una criatura con marca del cazador, inflige daño de fuerza adicional igual al daño adicional de marca del cazador.",
+        "activacion": "al ordenar golpe de bestia; al acertar a criatura marcada",
+        "usos": "golpe doble: ilimitado (cada vez que ordenes); daño adicional: 1 vez por turno",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Compartir conjuros",
+        "efecto": "Cuando lanzas un conjuro que te tenga como objetivo, también afecta a tu bestia primigenia si está a 9 m o menos.",
+        "activacion": "al lanzar un conjuro con objetivo en ti mismo",
+        "usos": "ilimitados (por cada conjuro que cumpla la condición)",
+        "duracion": "según duración del conjuro compartido"
+    },
+    {
+        "nombre": "Enjambre reunido",
+        "efecto": "Una vez por turno, tras impactar un ataque: +1d6 perforante, mueves objetivo 4,5 m (salvación Fuerza) o te mueves 1,5 m.",
+        "activacion": "justo después de impactar un ataque",
+        "usos": "1 vez por turno (ilimitado)",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Conjuros de guardaenjambres",
+        "efecto": "Aprendes mano de mago (forma de enjambre). Conjuros siempre preparados: nivel 3 (fuego feérico), nivel 5 (telaraña), nivel 9 (forma gaseosa), nivel 13 (ojo arcano), nivel 17 (plaga de insectos).",
+        "activacion": "pasiva",
+        "usos": "ilimitados (disponibles; lanzar gasta espacios)",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Marea retorcida",
+        "efecto": "Acción adicional: velocidad volando 3 m y levitar durante 1 min o hasta incapacitado.",
+        "activacion": "acción adicional",
+        "usos": "igual a bonificador por competencia; recuperas en descanso largo",
+        "duracion": "1 minuto o hasta incapacitado"
+    },
+    {
+        "nombre": "Enjambre poderoso",
+        "efecto": "Mejora: daño de Enjambre reunido a 1d8; si falla salvación contra movimiento, objetivo cae derribado; cuando el enjambre te mueve, obtienes cobertura media hasta inicio de tu siguiente turno.",
+        "activacion": "pasiva (aplica a Enjambre reunido)",
+        "usos": "ilimitados (mientras se cumplan condiciones)",
+        "duracion": "daño/derribo: instantáneo; cobertura: hasta inicio de tu siguiente turno"
+    },
+    {
+        "nombre": "Dispersión en el enjambre",
+        "efecto": "Reacción al recibir daño: te concedes resistencia a ese daño, te desvaneces y teletransportas hasta 9 m a espacio visible.",
+        "activacion": "reacción al recibir daño",
+        "usos": "igual a bonificador por competencia; recuperas en descanso largo",
+        "duracion": "resistencia: instantáneo (aplica al daño recibido); teletransporte: instantáneo"
     }
     ]
 }
