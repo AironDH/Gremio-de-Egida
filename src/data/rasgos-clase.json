@@ -1,0 +1,489 @@
+{
+    "Bárbaro": [
+        {
+            "nombre":"Furia",
+            "efecto": "Ganas resistencia a daño contundente cortante y perforante, bonificador al daño en ataques con Fuerza (según columna Daño por furia de la tabla), ventaja en pruebas y salvaciones de Fuerza, no puedes mantener concentración ni lanzar conjuros", 
+            "activacion": "acción adicional y solo si no llevas armadura pesada",
+            "usos": "Según columna N de furias de la tabla, recuperas 1 uso en descanso corto y todos en descanso largo",
+            "duración": "hasta el final de tu siguiente turno, puedes prolongar cada turno si haces ataque contra enemigo, obligas a salvación o usas acción adicional para extender, máximo 10 minutos, termina antes si usas armadura pesada o quedas incapacitado"
+        },
+        {
+            "nombre": "Defensa sin armadura",
+            "efecto": "Mientras no lleves armadura alguna, tu clase de armadura base será igual a 10 más tus modificadores por Destreza y Constitución. Obtienes este beneficio aunque lleves un escudo.",
+            "activacion": "pasiva (siempre activa mientras no lleves armadura)",
+            "usos": "ilimitados",
+            "duracion": "permanente mientras se cumpla la condición"
+        },
+        {
+        "nombre": "Maestría con armas",
+        "efecto": "Usas propiedades de maestría con 2 armas cuerpo a cuerpo sencillas o marciales a elegir. Tras descanso largo, cambias una elección. A niveles superiores obtienes más tipos (ver columna en tabla de bárbaro).",
+        "activacion": "pasiva; cambio al finalizar descanso largo",
+        "usos": "ilimitado; 1 cambio por descanso largo",
+        "duracion": "permanente mientras estén elegidas; el cambio aplica tras el descanso"
+        },
+        {
+        "nombre": "Ataque temerario",
+        "efecto": "Ventaja en tiradas de ataque con Fuerza hasta el principio de tu siguiente turno; los ataques contra ti también tienen ventaja durante ese tiempo.",
+        "activacion": "al realizar la primera tirada de ataque de tu turno (decides activarlo)",
+        "usos": "ilimitados",
+        "duracion": "hasta el principio de tu siguiente turno"
+        },
+        {
+        "nombre": "Sentir el peligro",
+        "efecto": "Ventaja en tiradas de salvación de Destreza.",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente, excepto si tienes el estado de incapacitado"
+        },
+        {
+        "nombre": "Conocimiento primigenio",
+        "efecto": "Ganas competencia en una habilidad de la lista de bárbaros (nivel 1). Mientras estés enfurecido, puedes usar Fuerza en lugar de la característica habitual en pruebas de Acrobacias, Intimidación, Percepción, Sigilo o Supervivencia.",
+        "activacion": "competencia: al obtener el rasgo; poder primigenio: al hacer una prueba de esas habilidades mientras estás enfurecido",
+        "usos": "ilimitados",
+        "duracion": "competencia: permanente; poder primigenio: mientras estés enfurecido"
+        },
+        {
+        "nombre": "Ataque adicional",
+        "efecto": "Cuando usas la acción de ataque, realizas dos ataques en lugar de uno.",
+        "activacion": "al usar la acción de ataque",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+        },
+        {
+        "nombre": "Movimiento rápido",
+        "efecto": "Tu velocidad aumenta en 3 m si no llevas armadura pesada.",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente mientras no lleves armadura pesada"
+        },
+        {
+        "nombre": "Instinto salvaje",
+        "efecto": "Ventaja en tiradas de iniciativa.",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+        },
+        {
+        "nombre": "Salto instintivo",
+        "efecto": "Como parte de la acción adicional para entrar en furia, puedes moverte hasta la mitad de tu velocidad.",
+        "activacion": "como parte de la acción adicional de furia",
+        "usos": "1 vez por entrada en furia",
+        "duracion": "instantáneo (el movimiento se realiza en ese momento)"
+        },
+        {
+        "nombre": "Golpe brutal",
+        "efecto": "Al usar Ataque temerario, puedes renunciar a ventaja en un ataque con Fuerza (sin desventaja). Si acierta, +1d10 de daño del mismo tipo y eliges: Golpe enérgico (empujar 4,5 m y moverte hasta mitad velocidad hacia él sin AOs) o Golpe ralentizador (velocidad -4,5 m hasta inicio de tu siguiente turno; solo el más reciente aplica).",
+        "activacion": "al realizar un ataque con Fuerza usando Ataque temerario (decides renunciar a la ventaja)",
+        "usos": "ilimitados (1 por ataque)",
+        "duracion": "instantáneo; ralentizador dura hasta inicio de tu siguiente turno"
+        },
+        {
+        "nombre": "Furia implacable",
+        "efecto": "Si tus PG bajan a 0 mientras estás enfurecido y no mueres, tiras Constitución CD 10. Si éxito, tus PG pasan a 2 × nivel de bárbaro. CD aumenta en 5 tras cada uso; se reinicia a 10 tras descanso corto o largo.",
+        "activacion": "automática al reducir tus PG a 0 mientras estás enfurecido",
+        "usos": "ilimitados (con CD creciente)",
+        "duracion": "instantáneo"
+        },
+        {
+        "nombre": "Golpe brutal mejorado",
+        "efecto": "Añade dos opciones a Golpe brutal: Golpe abrumador (objetivo tiene desventaja en su siguiente salvación y no puede hacer AOs hasta inicio de tu siguiente turno) y Golpe desgarrador (antes de tu siguiente turno, el próximo ataque de otro aliado contra el objetivo tiene +5 al ataque; solo un bonificador por ataque).",
+        "activacion": "al usar Golpe brutal (renunciar a ventaja en ataque con Fuerza al usar Ataque temerario)",
+        "usos": "ilimitados (1 por ataque)",
+        "duracion": "instantáneo; los efectos duran hasta el inicio de tu siguiente turno o hasta que se usen"
+        },
+        {
+        "nombre": "Furia persistente",
+        "efecto": "Al tirar iniciativa, recuperas todos los usos de furia gastados (1 vez por descanso largo). Además, tu furia dura 10 minutos sin necesidad de prolongarla; termina antes si quedas inconsciente (no solo incapacitado) o usas armadura pesada.",
+        "activacion": "recuperación: al tirar iniciativa; duración extendida: automática al entrar en furia",
+        "usos": "recuperación: 1 vez por descanso largo; duración extendida: ilimitada mientras dure la furia",
+        "duracion": "recuperación: instantánea; furia: 10 minutos (o hasta condiciones de terminación)"
+        },
+        {
+        "nombre": "Golpe brutal mejorado",
+        "efecto": "Daño adicional de Golpe brutal aumenta a 2d10. Puedes aplicar dos efectos diferentes de Golpe brutal al usar el rasgo.",
+        "activacion": "al usar Golpe brutal (renunciar a ventaja en ataque con Fuerza con Ataque temerario)",
+        "usos": "ilimitados (1 por ataque)",
+        "duracion": "instantáneo; efectos según duración individual"
+        },
+        {
+        "nombre": "Poderío indómito",
+        "efecto": "Si tu resultado en prueba o salvación de Fuerza es inferior a tu puntuación de Fuerza, usas esa puntuación en su lugar.",
+        "activacion": "al hacer una prueba o salvación de Fuerza (automático si el resultado es menor)",
+        "usos": "ilimitados",
+        "duracion": "instantáneo"
+        },
+        {
+        "nombre": "Campeón primordial",
+        "efecto": "Tus puntuaciones de Fuerza y Constitución aumentan en 4, hasta un máximo de 25.",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+        },
+        {
+        "nombre": "Vitalidad del árbol",
+        "efecto": "Al enfurecerte, obtienes PG temporales = nivel de bárbaro. Al inicio de cada turno mientras estés enfurecido, puedes dar PG temporales a otra criatura a 3 m o menos: tira d6 igual a bonificación de daño por furia. Los PG temporales se pierden al terminar la furia.",
+        "activacion": "Oleada: al entrar en furia. Fuerza revitalizante: al inicio de cada turno (mientras enfurecido).",
+        "usos": "ilimitados mientras dure la furia",
+        "duracion": "los PG temporales duran hasta que se pierdan por daño o hasta que termine la furia"
+        },
+        {
+        "nombre": "Ramas del árbol",
+        "efecto": "Reacción cuando una criatura visible comienza su turno a 9 m o menos mientras estás enfurecido. Debe superar salvación de Fuerza (CD 8 + Fuerza + competencia) o se teletransporta a 1,5 m de ti (o espacio más cercano). Luego reduces su velocidad a 0 hasta final del turno actual.",
+        "activacion": "reacción al inicio del turno de una criatura a 9 m o menos, mientras enfurecido",
+        "usos": "ilimitados (1 reacción por turno)",
+        "duracion": "teletransporte instantáneo; reducción de velocidad hasta final del turno actual"
+        },
+        {
+        "nombre": "Raíces apaleadoras",
+        "efecto": "Tu alcance con armas cuerpo a cuerpo pesadas o versátiles aumenta en 3 m. Al acertar con una, puedes activar la propiedad de maestría de derribar o empujar además de otra propiedad de maestría diferente que uses con esa arma.",
+        "activacion": "pasiva (alcance); al acertar un ataque con arma pesada o versátil (efecto adicional)",
+        "usos": "ilimitados (1 propiedad adicional por ataque)",
+        "duracion": "permanente mientras uses esas armas; el efecto adicional es instantáneo"
+        },
+        {
+        "nombre": "Viajar por el árbol",
+        "efecto": "Al enfurecerte o como acción adicional mientras enfurecido, teletransportarte hasta 18 m a espacio visible. Una vez por furia, alcance 45 m y puedes llevar hasta 6 criaturas voluntarias a 3 m o menos, cada una a un espacio sin ocupar a 3 m o menos de tu destino.",
+        "activacion": "al entrar en furia o como acción adicional mientras enfurecido",
+        "usos": "ilimitados (18 m); una vez por furia (45 m con transporte)",
+        "duracion": "instantáneo"
+        },
+        {
+        "nombre": "Frenesí",
+        "efecto": "Al usar Ataque temerario mientras enfurecido, el primer objetivo que aciertes en tu turno con ataque de Fuerza recibe daño adicional = d6 igual a bonificación de daño por furia, mismo tipo que el arma/ataque sin armas.",
+        "activacion": "al usar Ataque temerario y acertar un ataque de Fuerza en tu turno (mientras enfurecido)",
+        "usos": "ilimitados (1 vez por turno, al primer acierto)",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Furia irracional",
+        "efecto": "Inmunidad a asustado y hechizado mientras enfurecido. Si estás bajo esos estados al entrar en furia, terminan.",
+        "activacion": "pasiva mientras enfurecido; al entrar en furia (eliminación de estados)",
+        "usos": "ilimitados",
+        "duracion": "mientras dure la furia"
+    },
+    {
+        "nombre": "Represalia",
+        "efecto": "Reacción al recibir daño de una criatura a 1,5 m o menos para hacer un ataque cuerpo a cuerpo contra ella (arma o sin armas).",
+        "activacion": "reacción al recibir daño de criatura adyacente",
+        "usos": "ilimitados (1 reacción por ronda)",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Presencia intimidante",
+        "efecto": "Acción adicional: criaturas a 9 m (tu elección) hacen salvación de Sabiduría (CD 8 + Fuerza + competencia) o quedan asustadas 1 minuto. Repiten salvación al final de sus turnos para terminar. No reutilizable hasta descanso largo, a menos que gastes un uso de furia (sin acción) para reiniciarlo.",
+        "activacion": "acción adicional",
+        "usos": "1 uso por descanso largo; reiniciable gastando un uso de furia",
+        "duracion": "1 minuto o hasta superar la salvación"
+    },
+    {
+        "nombre": "Furia de lo salvaje",
+        "efecto": "Al enfurecerte, eliges: Águila (destrabarse y correr como parte de la acción adicional de furia; mientras enfurecido, acción adicional para ambas), Lobo (aliados tienen ventaja contra enemigos a 1,5 m de ti), Oso (resistencia a todo daño excepto fuerza, necrótico, psíquico y radiante).",
+        "activacion": "al entrar en furia (elección) y mientras estés enfurecido (efectos)",
+        "usos": "ilimitados",
+        "duracion": "hasta que termine la furia (o permanente mientras dure)"
+    },
+    {
+        "nombre": "Portavoz de los animales",
+        "efecto": "Lanzas hablar con animales y sentidos de la bestia solo como rituales. Aptitud: Sabiduría.",
+        "activacion": "Ritual",
+        "usos": "ilimitados",
+        "duracion": "según el conjuro"
+    },
+    {
+        "nombre": "Aspecto de lo salvaje",
+        "efecto": "Eliges entre: Búho (visión en oscuridad 18 m o +18 m si ya la tienes), Pantera (velocidad trepando = tu velocidad), Salmón (velocidad nadando = tu velocidad). Cambias tras descanso largo.",
+        "activacion": "pasiva; cambio al finalizar descanso largo",
+        "usos": "ilimitados",
+        "duracion": "permanente hasta que cambies"
+    },
+    {
+        "nombre": "Hablante de la naturaleza",
+        "efecto": "Lanzas comunión con la naturaleza solo como ritual. Aptitud: Sabiduría.",
+        "activacion": "Ritual",
+        "usos": "ilimitados",
+        "duracion": "según el conjuro"
+    },
+    {
+        "nombre": "Poder de lo salvaje",
+        "efecto": "Al enfurecerte, eliges: Carnero (al acertar ataque cuerpo a cuerpo a criatura Grande o menor, la derribas), Halcón (velocidad volando = tu velocidad, si no llevas armadura), León (enemigos a 1,5 m tienen desventaja en ataques contra otros que no seas tú u otro bárbaro con León).",
+        "activacion": "al entrar en furia (elección) y mientras estés enfurecido (efectos)",
+        "usos": "ilimitados",
+        "duracion": "hasta que termine la furia"
+    },
+    {
+        "nombre": "Furia divina",
+        "efecto": "En cada turno mientras enfurecido, la primera criatura a la que aciertes con arma o ataque sin armas recibe daño adicional = 1d6 + ½ nivel de bárbaro (redondeado abajo), daño necrótico o radiante (a elección cada vez).",
+        "activacion": "al acertar el primer ataque en tu turno (mientras enfurecido)",
+        "usos": "1 vez por turno",
+        "duracion": "mientras dure la furia"
+    },
+    {
+        "nombre": "Guerrero de los dioses",
+        "efecto": "Reserva de dados d12 para curarte (4 iniciales; aumenta a 5 en nivel 6, 6 en nivel 12, 7 en nivel 17). Acción adicional: gasta dados, tíralos y recuperas PG igual al total. Recuperas todos los dados tras descanso largo.",
+        "activacion": "acción adicional",
+        "usos": "limitado por dados de la reserva (máximo variable según nivel)",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Foco fanático",
+        "efecto": "Una vez por furia, si fallas una tirada de salvación, repites la tirada con bonificador = bonificación de daño por furia y usas el nuevo resultado.",
+        "activacion": "al fallar una tirada de salvación (mientras enfurecido)",
+        "usos": "1 vez por furia",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Presencia ferviente",
+        "efecto": "Hasta 10 criaturas a 18 m obtienen ventaja en ataques y salvaciones hasta inicio de tu siguiente turno.",
+        "activacion": "acción adicional",
+        "usos": "1 vez por descanso largo; reiniciable gastando un uso de furia (sin acción)",
+        "duracion": "hasta el inicio de tu siguiente turno"
+    },
+    {
+        "nombre": "Furia de los dioses",
+        "efecto": "Al enfurecerte, adoptas forma divina 1 minuto o hasta 0 PG: resistencia a necrótico, psíquico y radiante; velocidad volando = tu velocidad; reacción (gastas furia) para que criatura a 9 m que baje a 0 tenga PG = nivel de bárbaro.",
+        "activacion": "al entrar en furia",
+        "usos": "1 vez por descanso largo",
+        "duracion": "1 minuto o hasta que tus PG sean 0"
+    },
+    {
+        "nombre": "Forma de la bestia",
+        "efecto": "Al enfurecerte, manifiestas un arma natural (cuerpo a cuerpo sencilla, usa Fuerza). Eliges: Mordisco (1d8 perforante; 1 vez por turno, al causar daño y tener <50% PG, recuperas PG = competencia); Garras (1d6 cortante; 1 vez por turno, al atacar con garra, haces ataque adicional con garra como parte de la misma acción); Cola (1d8 perforante, alcance; reacción ante ataque de criatura a 3 m o menos: tira 1d8 y añade a CA contra ese ataque).",
+        "activacion": "al entrar en furia",
+        "usos": "Una vez por furia",
+        "duracion": "hasta que termine la furia"
+    },
+    {
+        "nombre": "Alma bestial",
+        "efecto": "Tus armas naturales de Forma de la bestia son mágicas (ignoran resistencias e inmunidades no mágicas). Tras descanso corto o largo, eliges un beneficio hasta el próximo descanso: velocidad nadando = caminando y respirar bajo agua; velocidad trepando = caminando y trepar sin pruebas; o una vez por turno, prueba de Atletismo para sumar resultado al salto.",
+        "activacion": "pasiva (armas mágicas); elección tras descanso corto o largo",
+        "usos": "ilimitados; elección renovable cada descanso",
+        "duracion": "armas mágicas: permanente; beneficio adaptativo: hasta el siguiente descanso corto o largo"
+    },
+    {
+        "nombre": "Furia infecciosa",
+        "efecto": "Al impactar con arma natural mientras enfurecido, objetivo hace salvación de Sabiduría (CD 8 + Constitución + competencia) o eliges: usa su reacción para ataque cuerpo a cuerpo contra otra criatura que elijas, o recibe 2d12 de daño psíquico.",
+        "activacion": "al impactar con arma natural (mientras enfurecido)",
+        "usos": "igual a bonificador por competencia; recuperas tras descanso largo",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Llamada a la caza",
+        "efecto": "Al enfurecerte, eliges criaturas voluntarias a 9 m o menos (hasta mod Constitución, mínimo 1). Ganas PG temporales = 5 por cada criatura que acepte. Hasta que termine la furia, cada criatura elegida puede 1 vez por turno, al impactar y causar daño, añadir 1d6 al daño.",
+        "activacion": "al entrar en furia",
+        "usos": "igual a bonificador por competencia; recuperas tras descanso largo",
+        "duracion": "hasta que termine la furia (los PG temporales duran hasta que se pierdan o termine la furia)"
+    },
+    {
+        "nombre": "Conciencia mágica",
+        "efecto": "Como acción, detectas ubicación de conjuros y objetos mágicos a 18 m (no tras cobertura total). Sabes la escuela de magia de los conjuros.",
+        "activacion": "acción",
+        "usos": "igual a bonificador por competencia; recuperas tras descanso largo",
+        "duracion": "hasta el final de tu siguiente turno"
+    },
+    {
+        "nombre": "Oleada salvaje",
+        "efecto": "Al enfurecerte, tira d8 en tabla de Magia Salvaje (CD = 8 + competencia + Constitución si aplica): 1) criaturas a 9 m (salvación Con) reciben 1d12 necrótico y tú ganas 1d12 PG temp; 2) teletransporte 9 m, repetible como acción adicional cada turno hasta fin furia; 3) invoca espíritu (explota, salvación Des, 1d6 fuerza), repetible como acción adicional; 4) arma cambia a daño fuerza, propiedades luz y lanzamiento (6/18 m), reaparece si se suelta; 5) quien te golpea recibe 1d6 fuerza; 6) +1 CA para ti y aliados a 3 m; 7) terreno difícil para enemigos en 4,5 m; 8) rayo a criatura a 9 m (salvación Con) 1d6 radiante y cegada hasta tu siguiente turno, repetible como acción adicional.",
+        "activacion": "al entrar en furia (automático)",
+        "usos": "ilimitados (cada vez que te enfureces)",
+        "duracion": "variable; los efectos con repetición o bonificaciones duran hasta que termine la furia, los instantáneos se resuelven al momento"
+    },
+    {
+        "nombre": "Magia estimulante",
+        "efecto": "Acción: tocas a una criatura (incluido tú) y eliges: (a) durante 10 min, tira d3 y suma a ataque o prueba; (b) tira d3 y recupera un espacio de conjuro de nivel ≤ resultado. Cada criatura solo puede beneficiarse 1 vez hasta descanso largo.",
+        "activacion": "acción",
+        "usos": "igual a bonificador por competencia; recuperas tras descanso largo",
+        "duracion": "10 minutos (beneficio a); instantáneo (beneficio b)"
+    },
+    {
+        "nombre": "Reacción inestable",
+        "efecto": "Reacción inmediata al recibir daño o fallar una salvación mientras enfurecido: tira en tabla de Magia Salvaje y aplica el efecto (reemplaza el efecto actual de Oleada Salvaje).",
+        "activacion": "reacción al recibir daño o fallar salvación (mientras enfurecido)",
+        "usos": "ilimitados (1 reacción por turno)",
+        "duracion": "instantáneo (efecto según tabla)"
+    },
+    {
+        "nombre": "Oleada controlada",
+        "efecto": "Al tirar en tabla de Magia Salvaje, tira 2 veces y eliges el efecto. Si ambos resultados son iguales, puedes ignorarlos y elegir cualquier efecto de la tabla.",
+        "activacion": "al realizar una tirada en la tabla de Magia Salvaje",
+        "usos": "ilimitados (cada vez que tires en la tabla)",
+        "duracion": "instantáneo (elección aplica al efecto correspondiente)"
+    }
+    ],
+    "Bardo": [
+        {
+        "nombre": "Inspiración bárdica",
+        "efecto": "Otorgas un dado (d6, escala a d8/d10/d12 en niveles 5/10/15) a una criatura a 18 m que te vea/oiga. Durante 1 hora, al fallar una prueba de d20, tira el dado y suma al resultado (se gasta).",
+        "activacion": "Acción adicional",
+        "usos": "igual a modificador por Carisma (mínimo 1); recuperas tras descanso largo",
+        "duracion": "1 hora o hasta que se gaste el dado"
+        },
+        {
+        "nombre": "Lanzamiento de conjuros",
+        "efecto": "Conoces 2 trucos (cambias 1 al subir nivel, +1 en niveles 4 y 10). Preparas conjuros de nivel 1+ según columna 'Conjuros preparados' (máximo nivel según espacios). Cambias 1 al subir nivel. Aptitud: Carisma. Canalizador: instrumento musical.",
+        "activacion": "pasiva; lanzar conjuros requiere la acción apropiada",
+        "usos": "trucos: ilimitados; espacios de conjuro: según tabla, recuperas en descanso largo",
+        "duracion": "preparación: permanente hasta cambio; efectos de conjuros según cada conjuro"
+        },
+        {
+        "nombre": "Aprendiz de mucho",
+        "efecto": "Sumas la mitad de tu bonificador por competencia (redondeado abajo) a pruebas de habilidad en las que no eres competente.",
+        "activacion": "pasiva (al hacer una prueba con habilidad no competente)",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Pericia",
+        "efecto": "Ganas pericia en dos habilidades de tu elección. En nivel 9, ganas pericia en otras dos habilidades.",
+        "activacion": "pasiva (al obtener el rasgo)",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Fuente de inspiración",
+        "efecto": "Recuperas todos los usos de Inspiración bárdica en descanso corto o largo. Puedes gastar un espacio de conjuro (sin acción) para recuperar un uso gastado.",
+        "activacion": "pasiva al descansar; gastar espacio no requiere acción",
+        "usos": "ilimitados (según espacios de conjuro disponibles)",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Contraencantamiento",
+        "efecto": "Reacción cuando tú o aliado a 9 m falláis salvación contra efecto de asustado o hechizado: repetís la salvación con ventaja.",
+        "activacion": "reacción al fallar la salvación",
+        "usos": "ilimitados (1 reacción por ronda)",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Secretos mágicos",
+        "efecto": "Al subir nivel y aumentar conjuros preparados, puedes elegir los nuevos de listas de bardo, clérigo, druida o mago. También al sustituir un conjuro preparado, puedes hacerlo de esas listas.",
+        "activacion": "al preparar o sustituir conjuros (al subir nivel)",
+        "usos": "según número de conjuros que puedas preparar/sustituir",
+        "duracion": "permanente (hasta que cambies los conjuros)"
+    },
+    {
+        "nombre": "Inspiración superior",
+        "efecto": "Al tirar iniciativa, recuperas usos de Inspiración bárdica hasta tener 2 si tenías menos.",
+        "activacion": "al tirar iniciativa",
+        "usos": "1 vez por encuentro (cuando tiras iniciativa)",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Palabras de creación",
+        "efecto": "Siempre tienes preparados palabra de poder: sanar y palabra de poder: matar. Al lanzar uno, puedes elegir un segundo objetivo a 3 m o menos del primero.",
+        "activacion": "pasiva (siempre preparados); al lanzar los conjuros (aplicas el efecto adicional)",
+        "usos": "según espacios de conjuro disponibles",
+        "duracion": "según cada conjuro"
+    },
+    {
+        "nombre": "Juego de pies deslumbrante",
+        "efecto": "Mientras no lleves armadura ni escudo: ventaja en Interpretación (baile); CA = 10 + Destreza + Carisma; al gastar Inspiración bárdica en acción/ad/rea, haces ataque sin armas; usas Destreza para ataque y daño (daño = dado de Inspiración + Destreza, sin gastar el dado).",
+        "activacion": "pasiva; el ataque adicional se activa al gastar Inspiración bárdica",
+        "usos": "ilimitados (ataque adicional cada vez que gastas Inspiración)",
+        "duracion": "permanente mientras no lleves armadura ni escudo"
+    },
+    {
+        "nombre": "Juego de pies conjunto",
+        "efecto": "Al tirar iniciativa, gastas Inspiración bárdica (si no estás incapacitado): tira el dado; tú y aliados a 9 m que te vean/oyan ganan bonificador a iniciativa igual al resultado.",
+        "activacion": "al tirar iniciativa (gastas Inspiración bárdica)",
+        "usos": "1 uso de Inspiración por tirada de iniciativa",
+        "duracion": "instantáneo (bonificador aplica a la iniciativa)"
+    },
+    {
+        "nombre": "Movimiento inspirador",
+        "efecto": "Reacción cuando enemigo visible termina su turno a 1,5 m: gastas Inspiración, te mueves mitad velocidad; luego aliado a 9 m puede moverse mitad velocidad con su reacción. Los movimientos no provocan AOs.",
+        "activacion": "reacción al final del turno de un enemigo adyacente",
+        "usos": "gasta 1 Inspiración bárdica por uso",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Evasión dirigida",
+        "efecto": "En salvación de Destreza para mitad de daño: éxito = 0 daño, fallo = mitad. Puedes compartir este beneficio con criaturas a 1,5 m que hagan la misma salvación. No funciona si estás incapacitado.",
+        "activacion": "al hacer una salvación de Destreza (o al compartirla)",
+        "usos": "ilimitados",
+        "duracion": "instantáneo (aplica a la salvación)"
+    },
+    {
+        "nombre": "Competencias adicionales",
+        "efecto": "Ganas competencia en 3 habilidades de tu elección.",
+        "activacion": "pasiva (al obtener el rasgo)",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Palabras cortantes",
+        "efecto": "Reacción cuando criatura a 18 m hace daño, prueba o ataque: gastas Inspiración bárdica, tiras el dado y restas al resultado (reduce daño o convierte éxito en fallo).",
+        "activacion": "reacción al ver una criatura a 18 m realizar daño, prueba o ataque",
+        "usos": "gasta 1 Inspiración bárdica por uso",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Descubrimientos mágicos",
+        "efecto": "Aprendes 2 conjuros de listas de clérigo, druida o mago (trucos o de nivel que tengas espacios). Siempre preparados. Puedes reemplazar 1 al subir nivel de bardo.",
+        "activacion": "pasiva (al aprenderlos); reemplazo al subir nivel",
+        "usos": "según espacios de conjuro disponibles (para lanzar)",
+        "duracion": "permanente (hasta que los reemplaces)"
+    },
+    {
+        "nombre": "Habilidad sin parangón",
+        "efecto": "Al fallar una prueba o ataque, gastas Inspiración bárdica, tiras el dado y sumas al d20. Si sigues fallando, la Inspiración no se gasta.",
+        "activacion": "al fallar una prueba de característica o tirada de ataque",
+        "usos": "ilimitados (gasta 1 Inspiración solo si el resultado final es éxito)",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Magia cautivadora",
+        "efecto": "Siempre tienes preparados hechizar persona e imagen múltiple. Tras lanzar conjuro de encantamiento o ilusionismo con espacio, criatura a 18 m hace salvación de Sabiduría; si falla, asustado o hechizado (1 minuto, repite al final de turnos).",
+        "activacion": "inmediatamente después de lanzar un conjuro de encantamiento o ilusionismo con espacio",
+        "usos": "1 vez; recuperas tras descanso largo o gastando 1 Inspiración bárdica (sin acción)",
+        "duracion": "1 minuto o hasta superar salvación"
+    },
+    {
+        "nombre": "Manto de inspiración",
+        "efecto": "Acción adicional: gastas Inspiración bárdica, tiras el dado; criaturas a 18 m (hasta mod Carisma, mínimo 1) reciben PG temporales = 2 × resultado y pueden usar reacción para moverse su velocidad sin AOs.",
+        "activacion": "acción adicional (gasta 1 Inspiración bárdica)",
+        "usos": "según usos de Inspiración disponibles",
+        "duracion": "PG temporales hasta que se pierdan; movimiento instantáneo"
+    },
+    {
+        "nombre": "Manto de majestad",
+        "efecto": "Siempre preparado orden imperiosa. Acción adicional: lanzas orden imperiosa sin gastar espacio, adoptas apariencia sobrenatural 1 minuto (o hasta perder concentración). Durante ese tiempo, puedes lanzar orden imperiosa como acción adicional sin espacio. Criaturas hechizadas fallan automáticamente la salvación.",
+        "activacion": "acción adicional",
+        "usos": "1 vez; recuperas tras descanso largo o gastando espacio de nivel 3+ (sin acción)",
+        "duracion": "1 minuto o hasta perder concentración"
+    },
+    {
+        "nombre": "Majestad inquebrantable",
+        "efecto": "Acción adicional: adoptas aspecto majestuoso 1 minuto (o hasta incapacitado). Cuando una criatura te acierta por primera vez en un turno, debe hacer salvación de Carisma contra tu CD o el ataque falla.",
+        "activacion": "acción adicional",
+        "usos": "1 vez; recuperas tras descanso corto o largo",
+        "duracion": "1 minuto o hasta quedar incapacitado"
+    },
+    {
+        "nombre": "Entrenamiento marcial",
+        "efecto": "Ganas competencia con armas marciales, armaduras medias y escudos. Puedes usar un arma sencilla o marcial como canalizador mágico para conjuros de bardo.",
+        "activacion": "pasiva",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Inspiración en combate",
+        "efecto": "Una criatura con tu dado de Inspiración puede usarlo para: Defensa (reacción al ser alcanzada: suma el dado a su CA contra ese ataque) u Ofensiva (al acertar un ataque: suma el dado al daño).",
+        "activacion": "cuando la criatura decide usar el dado (reacción para defensa, inmediato para ofensiva)",
+        "usos": "1 dado de Inspiración por uso",
+        "duracion": "instantáneo (aplica al ataque o a la CA contra ese ataque)"
+    },
+    {
+        "nombre": "Ataque adicional",
+        "efecto": "Al usar la acción de atacar, haces dos ataques en lugar de uno. Puedes lanzar un truco (tiempo 1 acción) en lugar de uno de esos ataques.",
+        "activacion": "al usar la acción de atacar en tu turno",
+        "usos": "ilimitados",
+        "duracion": "permanente"
+    },
+    {
+        "nombre": "Magia de batalla",
+        "efecto": "Tras lanzar un conjuro con tiempo de lanzamiento de 1 acción, puedes hacer un ataque con arma como acción adicional.",
+        "activacion": "inmediatamente después de lanzar un conjuro de 1 acción",
+        "usos": "ilimitados (1 vez por turno, ya que consumes acción adicional)",
+        "duracion": "instantáneo"
+    }
+    ]
+}
