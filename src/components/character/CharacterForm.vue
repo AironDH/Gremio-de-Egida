@@ -73,6 +73,7 @@
     <CharacterTraits 
       :rasgos="rasgosPersonaje" 
       :clasesPersonaje="formData.clases" 
+      v-model:opcionesRasgos="formData.opcionesRasgos"
       class="columna-1"
     />
 
@@ -153,7 +154,7 @@ const formData = ref({
     modificadoresIniciativa: [],
     dotes: [],
     ataques: [],
-    hechizos: [], // <-- NUEVO ESTADO INICIAL
+    hechizos: [],
     equipo: [
       {
         "id": "c8be5d5a-51eb-4adb-b11c-42217d0e6c10",
@@ -164,13 +165,13 @@ const formData = ref({
       }
     ],
     mejoras: [],
-
+    recursosPersonalizados: [], // Array de objetos { nombre, actual, maximo }
+    
     recursosMagicos: {
       estandar: {}, // Guardará los slots actuales de la forma { "1": 4, "2": 2 }
       pacto: {}     // Guardará los slots actuales de pacto de la forma { "slots": 2, "slot_level": 1 }
     },
-    recursosPersonalizados: [], // Array de objetos { nombre, actual, maximo }
-
+    opcionesRasgos: {},
     caracteristicasBase: { 
         fuerza: 10, 
         destreza: 10, 

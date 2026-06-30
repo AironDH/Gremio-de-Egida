@@ -2965,6 +2965,19 @@
       "dote": "Alerta"
     },
     {
+      "nombre": "Criminal de cola blanca",
+      "bonificador_caracteristica": [
+        "Destreza",
+        "Constitución",
+        "Inteligencia"
+      ],
+      "competencias_habilidad": [
+        "Juego de Manos",
+        "Sigilo"
+      ],
+      "dote": "Afortunado"
+    },
+    {
       "nombre": "Animador",
       "bonificador_caracteristica": [
         "Fuerza",
