@@ -16,10 +16,9 @@
         ],
         "2": [
           "Ataque temerario",
-          "Sentido del peligro"
+          "Sentir el peligro"
         ],
         "3": [
-          "Subclase de Bárbaro",
           "Conocimiento primigenio"
         ],
         "4": [
@@ -189,9 +188,6 @@
           "Aprendiz de mucho",
           "Pericia"
         ],
-        "3": [
-          "Subclase de Bardo"
-        ],
         "4": [
           "Mejora de característica"
         ],
@@ -335,9 +331,6 @@
         ],
         "2": [
           "Canalizar divinidad"
-        ],
-        "3": [
-          "Subclase de Clérigo"
         ],
         "4": [
           "Mejora de característica"
@@ -515,9 +508,6 @@
           "Pinceladas de poder",
           "Pericia"
         ],
-        "3": [
-          "Subclase de dibujante"
-        ],
         "4": [
           "Mejora de característica"
         ],
@@ -616,9 +606,6 @@
         "2": [
           "Forma salvaje",
           "Compañero salvaje"
-        ],
-        "3": [
-          "Subclase de druida"
         ],
         "4": [
           "Mejora de característica"
@@ -774,45 +761,54 @@
       "rasgos": {
         "1": [
           "Estilo de combate",
-          "Recuperación de fuerzas"
+          "Maestría con armas",
+          "Tomar aliento"
         ],
         "2": [
-          "Oleada de acción"
-        ],
-        "3": [
-          "Subclase de Guerrero",
-          "Maestría en armas"
+          "Acción súbita",
+          "Mente táctica"
         ],
         "4": [
           "Mejora de característica"
         ],
         "5": [
-          "Ataque adicional"
+          "Ataque adicional",
+          "Desplazamiento táctico"
         ],
         "6": [
           "Mejora de característica"
         ],
+        "8":[
+          "Mejora de característica"
+        ],
         "9": [
-          "Indomable"
+          "Indómito",
+          "Maestro táctico"
         ],
         "11": [
-          "Ataque adicional (2)"
+          "Dos ataques adicionales"
+        ],
+        "12":[
+          "Mejora de Característica"
         ],
         "13": [
-          "Uso táctico"
+          "Indómito"
         ],
         "14": [
           "Mejora de característica"
         ],
+        "16":[
+          "Mejora de Característica"
+        ],
         "17": [
-          "Oleada de acción (2)",
-          "Indomable (2)"
+          "Acción súbita",
+          "Indómito"
         ],
         "19": [
-          "Mejora de característica"
+          "Don épico"
         ],
         "20": [
-          "Ataque adicional (3)"
+          "Tres ataques adicionales"
         ]
       },
       "subclases": [
@@ -821,35 +817,42 @@
           "tipo_conjurador": "ninguno",
           "niveles": {
             "3": [
+              "Atleta sobresaliente",
               "Crítico mejorado"
             ],
-            "6": [
-              "Atleta notable"
-            ],
-            "10": [
+            "7": [
               "Estilo de combate adicional"
             ],
-            "14": [
+            "10": [
+              "Guerrero heroico"
+            ],
+            "15":[
+              "Crítico superior"
+            ],
+            "18": [
               "Superviviente"
             ]
           }
         },
         {
-          "nombre": "Maestro de Batalla (2024)",
+          "nombre": "Maestro del Combate (2024)",
           "tipo_conjurador": "ninguno",
           "niveles": {
             "3": [
-              "Superioridad de combate",
-              "Estudiante de la guerra"
+              "Supremacía en combate",
+              "Estudioso de la guerra"
             ],
-            "6": [
+            "7": [
               "Conoce a tu enemigo"
             ],
             "10": [
-              "Superioridad mejorada"
+              "Supremacía en combate mejorada"
             ],
-            "14": [
-              "Implacable"
+            "15": [
+              "Incansable"
+            ],
+            "18":[
+              "Supremacía en combate definitiva"
             ]
           }
         },
@@ -858,35 +861,41 @@
           "tipo_conjurador": "tercio",
           "niveles": {
             "3": [
-              "Lanzamiento de conjuros",
-              "Vínculo con el arma"
+              "Lanzamiento de conjuros del caballero arcano",
+              "Vínculo de guerra"
             ],
-            "6": [
+            "7": [
               "Magia de guerra"
             ],
             "10": [
-              "Embestida mística"
+              "Golpe sobrenatural"
             ],
-            "14": [
+            "15": [
+              "Carga arcana"
+            ],
+            "18":[
               "Magia de guerra mejorada"
             ]
           }
         },
         {
-          "nombre": "Guerrero Psiónico (Tasha)",
+          "nombre": "Guerrero Psiónico (2024)",
           "tipo_conjurador": "ninguno",
           "niveles": {
             "3": [
               "Poder psiónico"
             ],
-            "6": [
-              "Escudo telequinético"
+            "7": [
+              "Adepto telequinético"
             ],
             "10": [
-              "Salto de la mente"
+              "Mente robusta"
             ],
-            "14": [
-              "Baluarte mental"
+            "15": [
+              "Bastión de fuerza"
+            ],
+            "18":[
+              "Maestro telequinético"
             ]
           }
         },
@@ -895,17 +904,21 @@
           "tipo_conjurador": "ninguno",
           "niveles": {
             "3": [
-              "Magia rúnica",
-              "Gigante de la forja"
+              "Competencias adicionales del caballero rúnico",
+              "Tallador de runas",
+              "Fuerza de los gigantes"
             ],
-            "6": [
+            "7": [
               "Escudo rúnico"
             ],
             "10": [
-              "Gran estatura"
+              "Estatura imponente"
             ],
-            "14": [
-              "Juggernaut rúnico"
+            "15": [
+              "Maestro rúnico"
+            ],
+            "18":[
+              "Coloso rúnico"
             ]
           }
         }
@@ -919,6 +932,68 @@
         "Destreza"
       ],
       "tipo_conjurador": "ninguno",
+      "rasgos": {
+        "1": [
+          "Artes marciales",
+          "Defensa sin armadura"
+        ],
+        "2": [
+          "Concentración de monje",
+          "Movimiento sin armadura",
+          "Metabolismo asombroso"
+        ],
+        "3": [
+          "Desviar ataques"
+        ],
+        "4": [
+          "Mejora de característica",
+          "Caída lenta"
+        ],
+        "5": [
+          "Ataque adicional",
+          "Golpe aturdidor"
+        ],
+        "6":[
+          "Golpes potenciados"
+        ],
+        "7": [
+          "Evasión"
+        ],
+        "8":[
+          "Mejora de característica"
+        ],
+        "9": [
+          "Movimiento acrobático"
+        ],
+        "10": [
+          "Autorrestablecimiento",
+          "Concentración agudizada"
+        ],
+        "12":[
+          "Mejora de Característica"
+        ],
+        "13": [
+          "Desviar energía"
+        ],
+        "14": [
+          "Superviviente disciplinado"
+        ],
+        "15": [
+          "Concentración perfecta"
+        ],
+        "16":[
+          "Mejora de Característica"
+        ],
+        "18": [
+          "Defensa superior"
+        ],
+        "19": [
+          "Don épico"
+        ],
+        "20": [
+          "Cuerpo y mente"
+        ]
+      },
       "subclases": [
         {
           "nombre": "Camino de la Mano Abierta (2024)",
@@ -928,13 +1003,13 @@
               "Técnica de la mano abierta"
             ],
             "6": [
-              "Plenitud corporal"
+              "Plenitud de cuerpo"
             ],
             "11": [
-              "Tranquilidad"
+              "Paso veloz"
             ],
             "17": [
-              "Palma temblorosa"
+              "Palma estremecedora"
             ]
           }
         },
@@ -943,16 +1018,16 @@
           "tipo_conjurador": "ninguno",
           "niveles": {
             "3": [
-              "Artes de la sombra"
+              "Artes sombrías"
             ],
             "6": [
-              "Paso de la sombra"
+              "Paso entre sombras"
             ],
             "11": [
-              "Ataque de la sombra"
+              "Paso entre sombras mejorado"
             ],
             "17": [
-              "Oportunista de las sombras"
+              "Capa de sombras"
             ]
           }
         },
@@ -961,35 +1036,37 @@
           "tipo_conjurador": "ninguno",
           "niveles": {
             "3": [
-              "Discípulos de los elementos"
+              "Armonía con los elementos",
+              "Manipular los elementos"
             ],
             "6": [
-              "Defensa elemental"
+              "Explosión elemental"
             ],
             "11": [
-              "Zancada elemental"
+              "Paso de los elementos"
             ],
             "17": [
-              "Forma elemental"
+              "Paradigma elemental"
             ]
           }
         },
         {
-          "nombre": "Camino de la Misericordia (Tasha)",
+          "nombre": "Camino de la Misericordia (2024)",
           "tipo_conjurador": "ninguno",
           "niveles": {
             "3": [
-              "Manos de curación",
-              "Manos de daño"
+              "Mano de curación",
+              "Mano de aflicción",
+              "Instrumentos de misericordia"
             ],
             "6": [
-              "Toque del médico"
+              "Toque de galeno"
             ],
             "11": [
-              "Ráfaga de misericordia"
+              "Ráfaga de curación y aflicción"
             ],
             "17": [
-              "Mano de la clemencia extrema"
+              "Mano de misericordia suprema"
             ]
           }
         },
@@ -1004,64 +1081,14 @@
               "Rostro del yo astral"
             ],
             "11": [
-              "Despertar del yo astral"
+              "Cuerpo del yo astral"
             ],
             "17": [
-              "Aspecto del yo astral"
+              "Despertar del yo astral"
             ]
           }
         }
-      ],
-      "rasgos": {
-        "1": [
-          "Artes marciales",
-          "Defensa sin armadura"
-        ],
-        "2": [
-          "Foco de Ki",
-          "Movimiento sin armadura"
-        ],
-        "3": [
-          "Subclase de Monje",
-          "Deflactar proyectiles"
-        ],
-        "4": [
-          "Mejora de característica",
-          "Caída lenta"
-        ],
-        "5": [
-          "Ataque adicional",
-          "Golpe aturdidor"
-        ],
-        "7": [
-          "Evasión",
-          "Mente en calma"
-        ],
-        "9": [
-          "Movimiento sin armadura mejorado"
-        ],
-        "10": [
-          "Pureza corporal"
-        ],
-        "13": [
-          "Deflactar energía"
-        ],
-        "14": [
-          "Alma de diamante"
-        ],
-        "15": [
-          "Cuerpo atemporal"
-        ],
-        "18": [
-          "Cuerpo vacío"
-        ],
-        "19": [
-          "Mejora de característica"
-        ],
-        "20": [
-          "Cuerpo e mente perfectos"
-        ]
-      }
+      ]
     },
     {
       "nombre": "Paladín",
@@ -1071,19 +1098,70 @@
         "Carisma"
       ],
       "tipo_conjurador": "medio",
+      "rasgos": {
+        "1": [
+          "Maestría con armas",
+          "Lanzamiento de conjuros",
+          "Imponer las manos"
+        ],
+        "2": [
+          "Estilo de combate",
+          "Castigo de paladín"
+        ],
+        "3": [
+          "Canalizar divinidad"
+        ],
+        "4": [
+          "Mejora de característica"
+        ],
+        "5": [
+          "Ataque adicional",
+          "Corcél fiel"
+        ],
+        "6": [
+          "Aura de protección"
+        ],
+        "8":[
+          "Mejora de característica"
+        ],
+        "9":[
+          "Abjurar de los enemigos"
+        ],
+        "10": [
+          "Aura de coraje"
+        ],
+        "11": [
+          "Golpes radiantes"
+        ],
+        "12":[
+          "Mejora de Característica"
+        ],
+        "14": [
+          "Toque reparador"
+        ],
+        "16":[
+          "Mejora de Característica"
+        ],
+        "18": [
+          "Expansión de aura"
+        ],
+        "19": [
+          "Don épico"
+        ]
+      },
       "subclases": [
         {
-          "nombre": "Juramento de Devoción (2024)",
+          "nombre": "Juramento de Entrega (2024)",
           "niveles": {
             "3": [
               "Arma sagrada",
-              "Conjuros de juramento"
+              "Conjuros del juramento de entrega"
             ],
             "7": [
-              "Aura de devoción"
+              "Aura de entrega"
             ],
             "15": [
-              "Pureza de espíritu"
+              "Castigo protector"
             ],
             "20": [
               "Halo sagrado"
@@ -1095,16 +1173,16 @@
           "niveles": {
             "3": [
               "Ira de la naturaleza",
-              "Conjuros de juramento"
+              "Conjuros del juramento de los antiguos"
             ],
             "7": [
-              "Aura de guardián"
+              "Aura de salvaguarda"
             ],
             "15": [
-              "Centinela inmortal"
+              "Centinela imperecedero"
             ],
             "20": [
-              "Campeón anciano"
+              "Campeón ancestral"
             ]
           }
         },
@@ -1113,46 +1191,29 @@
           "niveles": {
             "3": [
               "Voto de enemistad",
-              "Conjuros de juramento"
+              "Conjuros del juramento de venganza"
             ],
             "7": [
               "Vengador implacable"
             ],
             "15": [
-              "Alma de venganza"
+              "Espíritu vengativo"
             ],
             "20": [
-              "Ángel de la venganza"
+              "Ángel vengador"
             ]
           }
         },
         {
-          "nombre": "Juramento de la Corona (2024 / Tasha)",
-          "niveles": {
-            "3": [
-              "Desafío de campeones",
-              "Conjuros de juramento"
-            ],
-            "7": [
-              "Lealtad divina"
-            ],
-            "15": [
-              "Corazón inflexible"
-            ],
-            "20": [
-              "Campeón excelso"
-            ]
-          }
-        },
-        {
-          "nombre": "Juramento de la Gloria (Tasha)",
+          "nombre": "Juramento de Gloria (2024)",
           "niveles": {
             "3": [
               "Atleta sin parangón",
-              "Conjuros de juramento"
+              "Conjuros del juramento de la gloria",
+              "Castigo inspirador"
             ],
             "7": [
-              "Aura de presteza"
+              "Aura de celeridad"
             ],
             "15": [
               "Defensa gloriosa"
@@ -1166,60 +1227,22 @@
           "nombre": "Juramento de los Vigilantes (Tasha)",
           "niveles": {
             "3": [
-              "Voluntad del vigilante",
-              "Conjuros de juramento"
+              "Canalizar divinidad: voluntad del vigilante",
+              "Canalizar divinidad: expulsar a los extraplanares",
+              "Conjuros del juramento de los vigilantes"
             ],
             "7": [
-              "Aura de centinela"
+              "Aura del centinela"
             ],
             "15": [
-              "Reprimenda del vigilante"
+              "Castigo del vigilante"
             ],
             "20": [
-              "Baluarte mortal"
+              "Bastión mortal"
             ]
           }
         }
-      ],
-      "rasgos": {
-        "1": [
-          "Sentido divino",
-          "Imposición de manos"
-        ],
-        "2": [
-          "Estilo de combate",
-          "Lanzamiento de conjuros",
-          "Castigo divino"
-        ],
-        "3": [
-          "Subclase de Paladín",
-          "Salud divina"
-        ],
-        "4": [
-          "Mejora de característica"
-        ],
-        "5": [
-          "Ataque adicional"
-        ],
-        "6": [
-          "Aura de protección"
-        ],
-        "10": [
-          "Aura de coraje"
-        ],
-        "11": [
-          "Castigo radiante"
-        ],
-        "14": [
-          "Toque purificador"
-        ],
-        "18": [
-          "Mejora de auras"
-        ],
-        "19": [
-          "Mejora de característica"
-        ]
-      }
+      ]
     },
     {
       "nombre": "Explorador",
@@ -1387,20 +1410,78 @@
         "Inteligencia"
       ],
       "tipo_conjurador": "ninguno",
+      "rasgos": {
+        "1": [
+          "Ataque furtivo",
+          "Jerga de ladrones",
+          "Maestría con armas",
+          "Pericia"
+        ],
+        "2": [
+          "Acción astuta"
+        ],
+        "3": [
+          "Puntería certera"
+        ],
+        "4": [
+          "Mejora de característica"
+        ],
+        "5": [
+          "Esquiva asombrosa",
+          "Golpe astuto"
+        ],
+        "6": [
+          "Pericia"
+        ],
+        "7": [
+          "Evasión",
+          "Talentos fiables"
+        ],
+        "8":[
+          "Mejora de característica"
+        ],
+        "10":[
+          "Mejora de característica"
+        ],
+        "11": [
+          "Golpe astuto mejorado"
+        ],
+        "12":[
+          "Mejora de Característica"
+        ],
+        "14": [
+          "Golpes taimados"
+        ],
+        "15": [
+          "Mente escurridiza"
+        ],
+        "16":[
+          "Mejora de Característica"
+        ],
+        "18": [
+          "Elusivo"
+        ],
+        "19": [
+          "Don épico"
+        ],
+        "20": [
+          "Golpe de suerte"
+        ]
+      },
       "subclases": [
         {
-          "nombre": "Ladronzuelo / Ladrón (2024)",
+          "nombre": "Ladrón (2024)",
           "tipo_conjurador": "ninguno",
           "niveles": {
             "3": [
               "Manos rápidas",
-              "Trabajo del tejado"
+              "Balconero"
             ],
             "9": [
               "Sigilo supremo"
             ],
             "13": [
-              "Usar objeto mágico"
+              "Usar objetos mágicos"
             ],
             "17": [
               "Reflejos de ladrón"
@@ -1412,14 +1493,14 @@
           "tipo_conjurador": "ninguno",
           "niveles": {
             "3": [
-              "Competencias de asesino",
+              "Herramientas de asesino",
               "Asesinar"
             ],
             "9": [
-              "Infiltración experta"
+              "Pericia en inflintrarse"
             ],
             "13": [
-              "Impostor"
+              "Envenenar armas"
             ],
             "17": [
               "Golpe mortal"
@@ -1432,13 +1513,13 @@
           "niveles": {
             "3": [
               "Lanzamiento de conjuros",
-              "Mano de mago ladina"
+              "Destreza con mano de mago"
             ],
             "9": [
               "Emboscada mágica"
             ],
             "13": [
-              "Distracción versátil"
+              "Embaucador versátil"
             ],
             "17": [
               "Ladrón de conjuros"
@@ -1446,21 +1527,21 @@
           }
         },
         {
-          "nombre": "Cuchillo Psiónico / Soulknife (Tasha)",
+          "nombre": "Rebanaalmas (2024)",
           "tipo_conjurador": "ninguno",
           "niveles": {
             "3": [
-              "Hojas psiónicas",
+              "Cuchillas psíquicas",
               "Poder psiónico"
             ],
             "9": [
-              "Hojas de alma"
+              "Cuchillas del alma"
             ],
             "13": [
               "Velo psíquico"
             ],
             "17": [
-              "Rendición mental"
+              "Desgarro mental"
             ]
           }
         },
@@ -1470,63 +1551,20 @@
           "niveles": {
             "3": [
               "Susurros de la tumba",
-              "Lamentos de los muertos"
+              "Lamentos de ultratumba"
             ],
             "9": [
-              "Foco de fichas de alma"
+              "Recuerdos de los difuntos"
             ],
             "13": [
               "Paseo fantasmal"
             ],
             "17": [
-              "Amigos de la tumba"
+              "Amigo de la muerte"
             ]
           }
         }
-      ],
-      "rasgos": {
-        "1": [
-          "Ataque furtivo",
-          "Jerga de ladrones",
-          "Pericia"
-        ],
-        "2": [
-          "Acción astuta"
-        ],
-        "3": [
-          "Subclase de Pícaro"
-        ],
-        "4": [
-          "Mejora de característica"
-        ],
-        "5": [
-          "Esquiva asombrosa"
-        ],
-        "6": [
-          "Pericia (2)"
-        ],
-        "7": [
-          "Evasión"
-        ],
-        "11": [
-          "Talento fiable"
-        ],
-        "14": [
-          "Sentido ciego"
-        ],
-        "15": [
-          "Mente resbaladiza"
-        ],
-        "18": [
-          "Evasión elusiva"
-        ],
-        "19": [
-          "Mejora de característica"
-        ],
-        "20": [
-          "Golpe de suerte"
-        ]
-      }
+      ]
     },
     {
       "nombre": "Hechicero",
@@ -1536,40 +1574,80 @@
         "Carisma"
       ],
       "tipo_conjurador": "completo",
+      "rasgos": {
+        "1": [
+          "Lanzamiento de conjuros",
+          "Hechicería innata"
+        ],
+        "2": [
+          "Fuente de magia",
+          "Metamagia"
+        ],
+        "4": [
+          "Mejora de característica"
+        ],
+        "5": [
+          "Recuperación mágica"
+        ],
+        "7":[
+          "Encarnación mágica"
+        ],
+        "8":[
+          "Mejora de característica"
+        ],
+        "10":[
+          "Metamagia"
+        ],
+        "12":[
+          "Mejora de Característica"
+        ],
+        "16":[
+          "Mejora de Característica"
+        ],
+        "17":[
+          "Metamagia"
+        ],
+        "19":[
+          "Don épico"
+        ],
+        "20": [
+          "Apoteosis arcana"
+        ]
+      },
       "subclases": [
         {
           "nombre": "Magia Salvaje (2024)",
           "niveles": {
             "3": [
-              "Oleada de magia salvaje",
+              "Sobrecarga de magia salvaje",
               "Mareas de caos"
             ],
             "6": [
-              "Predecir el caos"
+              "Doblegar la suerte"
             ],
             "14": [
               "Caos controlado"
             ],
             "18": [
-              "Bombardeo de conjuros"
+              "Sobrecarga domada"
             ]
           }
         },
         {
-          "nombre": "Linaje Dracónico (2024)",
+          "nombre": "Hechicería dracónica (2024)",
           "niveles": {
             "3": [
-              "Resiliencia dracónica",
-              "Ancestro dracónico"
+              "Resistencia dracónica",
+              "Conjuros dracónicos"
             ],
             "6": [
               "Afinidad elemental"
             ],
             "14": [
-              "Alas dracónicas"
+              "Alas de dragón"
             ],
             "18": [
-              "Presencia dracónica"
+              "Compañero dragón"
             ]
           }
         },
@@ -1581,13 +1659,14 @@
               "Conjuros psiónicos"
             ],
             "6": [
-              "Defensa psiónica"
+              "Defensas psíquicas",
+              "Hechicería psiónica"
             ],
             "14": [
-              "Forma de carne revelada"
+              "Revelación en carne"
             ],
             "18": [
-              "Implosión de deformación"
+              "Implosión deformadora"
             ]
           }
         },
@@ -1595,43 +1674,21 @@
           "nombre": "Hechicería Mecánica (2024)",
           "niveles": {
             "3": [
-              "Manifestación mecánica",
-              "Conjuros de relojería"
+              "Restablecer equilibrio",
+              "Conjuros mecánicos"
             ],
             "6": [
-              "Baluarte de orden"
+              "Bastión de la ley"
             ],
             "14": [
-              "Trance de la ley"
+              "Trance de orden"
             ],
             "18": [
-              "Cavalcade de reloj"
+              "Cabalgata mecánica"
             ]
           }
         }
-      ],
-      "rasgos": {
-        "1": [
-          "Lanzamiento de conjuros",
-          "Innate Sorcery"
-        ],
-        "2": [
-          "Fuente de magia"
-        ],
-        "3": [
-          "Subclase de Hechicero",
-          "Metamagia"
-        ],
-        "4": [
-          "Mejora de característica"
-        ],
-        "5": [
-          "Innate Sorcery mejorado"
-        ],
-        "20": [
-          "Apoteosis de hechicero"
-        ]
-      }
+      ]
     },
     {
       "nombre": "Brujo",
@@ -1813,118 +1870,142 @@
         "1": [
           "Lanzamiento de conjuros",
           "Recuperación arcana",
-          "Trucos diestros"
+          "Adepto en rituales"
         ],
         "2": [
-          "Estudio académico"
-        ],
-        "3": [
-          "Subclase de Mago"
+          "Académico"
         ],
         "4": [
           "Mejora de característica"
         ],
         "5": [
-          "Memoria de conjuros"
+          "Memorizar conjuro"
         ],
-        "18": [
-          "Maestría en conjuros"
-        ],
-        "19": [
+        "8":[
           "Mejora de característica"
         ],
+        "12":[
+          "Mejora de Característica"
+        ],
+        "16":[
+          "Mejora de Característica"
+        ],
+        "18": [
+          "Maestría sobre conjuros"
+        ],
+        "19": [
+          "Don épico"
+        ],
         "20": [
-          "Firma de conjuros"
+          "Conjuros característicos"
         ]
       },
       "subclases": [
         {
-          "nombre": "Escuela de Evocación (2024)",
+          "nombre": "Evocador (2024)",
           "niveles": {
             "3": [
-              "Saber de evocación",
-              "Esculpir conjuros"
+              "Experto en evocación",
+              "Truco potente"
             ],
             "6": [
-              "Evocador potente"
+              "Esculpir conjuros"
             ],
             "10": [
               "Evocación potenciada"
             ],
             "14": [
-              "Sobrecarga"
+              "Sobrecanalizar"
             ]
           }
         },
         {
-          "nombre": "Escuela de Abjuración (2024)",
+          "nombre": "Abjurador (2024)",
           "niveles": {
             "3": [
-              "Saber de abjuración",
-              "Resguardo arcano"
+              "Experto en abjuración",
+              "Salvaguarda arcana"
             ],
             "6": [
-              "Resguardo proyectado"
+              "Salvaguarda proyectada"
             ],
             "10": [
-              "Abjuración mejorada"
+              "Rompeconjuros"
             ],
             "14": [
-              "Resistencia al hechizo"
+              "Resistencia a conjuros"
             ]
           }
         },
         {
-          "nombre": "Escuela de Adivinación (2024)",
+          "nombre": "Adivino (2024)",
           "niveles": {
             "3": [
-              "Saber de adivinación",
-              "Portento"
+              "Experto en adivinación",
+              "Presagio"
             ],
             "6": [
+              "Adivino avezado"
+            ],
+            "10": [
               "El tercer ojo"
             ],
-            "10": [
-              "Portento mayor"
-            ],
             "14": [
-              "Adivino experto"
+              "Presagio mayor"
             ]
           }
         },
         {
-          "nombre": "Escuela de Ilusión (2024)",
+          "nombre": "Ilusionista (2024)",
           "niveles": {
             "3": [
-              "Saber de ilusión",
-              "Ilusión menor mejorada"
+              "Experto en ilusión",
+              "Ilusiones mejoradas"
             ],
             "6": [
-              "Ilusiones maleables"
+              "Criaturas fantasmales"
             ],
             "10": [
               "Yo ilusorio"
             ],
             "14": [
-              "Ilusiones ilusorias"
+              "Realidad ilusoria"
             ]
           }
         },
         {
-          "nombre": "Cantor de la Hoja / Bladesinging (Tasha)",
+          "nombre": "Cantor de la Hoja (Tasha)",
           "niveles": {
             "3": [
-              "Entrenamiento de guerra",
-              "Canto de la hoja"
+              "Entrenarse en la guerra y la canción",
+              "Canción de la hoja"
             ],
             "6": [
-              "Ataque adicional arcano"
+              "Ataque adicional"
             ],
             "10": [
               "Canción de defensa"
             ],
             "14": [
-              "Canción de victoria"
+              "Canción de la victoria"
+            ]
+          }
+        },
+        {
+          "nombre": "Escriba (Tasha)",
+          "niveles": {
+            "3":[
+              "Pluma mágica",
+              "Libro de conjuros despertado"
+            ],
+            "6":[
+              "Manifestar mente"
+            ],
+            "10":[
+              "Maestro escribiente"
+            ],
+            "14":[
+              "Comunión con la palabra"
             ]
           }
         }
@@ -1938,22 +2019,71 @@
         "Inteligencia"
       ],
       "tipo_conjurador": "medio-bonus",
+      "rasgos": {
+        "1": [
+          "Arreglos mágicos",
+          "Lanzamiento de conjuros"
+        ],
+        "2": [
+          "Imbuir objeto"
+        ],
+        "3": [
+          "Herramienta adecuada para la tarea"
+        ],
+        "4": [
+          "Mejora de característica"
+        ],
+        "6": [
+          "Pericia con herramientas"
+        ],
+        "7": [
+          "Destello de genio"
+        ],
+        "8":[
+          "Mejora de característica"
+        ],
+        "10":[
+          "Versado en objetos mágicos"
+        ],
+        "11": [
+          "Objeto guardaconjuros"
+        ],
+        "12":[
+          "Mejora de Característica"
+        ],
+        "14":[
+          "Experto en objetos mágicos"
+        ],
+        "16":[
+          "Mejora de Característica"
+        ],
+        "18":[
+          "Maestro de los objetos mágicos"
+        ],
+        "19":[
+          "Don épico"
+        ],
+        "20": [
+          "Alma del artífice"
+        ]
+      },
       "subclases": [
         {
           "nombre": "Alquimista",
           "niveles": {
             "3": [
-              "Saber de alquimista",
+              "Herramientas de alquimista",
+              "Conjuros de alquimista",
               "Elixir experimental"
             ],
             "5": [
-              "Alquimista de renombre"
+              "Experto en alquimia"
             ],
             "9": [
-              "Reactivos reconstituyentes"
+              "Reactivos restablecedores"
             ],
             "15": [
-              "Maestría química"
+              "Dominio de la química"
             ]
           }
         },
@@ -1962,7 +2092,9 @@
           "niveles": {
             "3": [
               "Herramientas de armero",
-              "Modelo de armadura"
+              "Armadura arcana",
+              "Conjuros de armero",
+              "Modelos de armadura"
             ],
             "5": [
               "Ataque adicional"
@@ -1971,7 +2103,7 @@
               "Modificaciones de armadura"
             ],
             "15": [
-              "Efecto perfeccionado"
+              "Armadura perfeccionada"
             ]
           }
         },
@@ -1980,66 +2112,41 @@
           "niveles": {
             "3": [
               "Herramientas de artillero",
-              "Cañón arcano"
+              "Cañón sobrenatural",
+              "Conjuros de artillero"
             ],
             "5": [
               "Arma de fuego arcana"
             ],
             "9": [
-              "Fuego explosivo"
+              "Cañón explosivo"
             ],
             "15": [
-              "Defensa fortificada"
+              "Posición fortificada"
             ]
           }
         },
         {
-          "nombre": "Guardián de batalla",
+          "nombre": "Herrero de batalla",
           "niveles": {
             "3": [
-              "Competencias de batalla",
-              "Defensor de acero"
+              "Herramientas de herrero de batalla",
+              "Defensor de acero",
+              "Listo para el combate",
+              "Conjuros de herrero de batalla"
             ],
             "5": [
               "Ataque adicional"
             ],
             "9": [
-              "Jolt arcano"
+              "Descarga arcana"
             ],
             "15": [
               "Defensor mejorado"
             ]
           }
         }
-      ],
-      "rasgos": {
-        "1": [
-          "Artilugios mágicos",
-          "Lanzamiento de conjuros"
-        ],
-        "2": [
-          "Infundir objeto"
-        ],
-        "3": [
-          "Especialidad de artífice",
-          "Herramienta adecuada"
-        ],
-        "4": [
-          "Mejora de característica"
-        ],
-        "6": [
-          "Experto en herramientas"
-        ],
-        "7": [
-          "Destello de genialidad"
-        ],
-        "11": [
-          "Objeto de almacenamiento de conjuros"
-        ],
-        "20": [
-          "Alma del artilugio"
-        ]
-      }
+      ]
     }
   ],
   "especies": [
