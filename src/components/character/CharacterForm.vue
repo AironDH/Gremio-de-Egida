@@ -149,6 +149,7 @@ const formData = ref({
     dadosGolpeActuales: {},
     ca: 10,
     velocidad: 9,
+    inspiracion: false,
     estadoPersonalizado: "",
     estadosFijos: [],
     modificadoresIniciativa: [],

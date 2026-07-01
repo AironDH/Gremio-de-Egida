@@ -78,9 +78,80 @@
                     </div>
                   </div>
                 </div>
+
+                <div 
+                  v-if="(tipo === 'Clase' || tipo === 'Subclase') && obtenerInfoRasgo(rasgo)?.opciones" 
+                  class="trait-options-action"
+                >
+                  <button 
+                    type="button" 
+                    class="btn-manage-options" 
+                    @click="rasgoActivoModal = rasgo; mostrarModalOpciones = true"
+                  >
+                    Gestionar Opciones 
+                    <span class="options-badge">
+                      {{ (opcionesRasgos[rasgo.nombre] || []).length }}/{{ calcularLimiteOpciones(rasgo) }}
+                    </span>
+                  </button>
+                </div>
               </template>
             </li>
           </ul>
+        </div>
+      </div>
+    </div>
+
+    <div 
+      v-if="mostrarModalOpciones && rasgoActivoModal" 
+      class="modal-overlay" 
+      @click.self="mostrarModalOpciones = false"
+    >
+      <div class="modal-content options-modal">
+        <div class="modal-header">
+          <div class="modal-titles">
+            <h3>{{ rasgoActivoModal.nombre }}</h3>
+            <span class="options-counter">
+              Seleccionadas: {{ (opcionesRasgos[rasgoActivoModal.nombre] || []).length }} de {{ calcularLimiteOpciones(rasgoActivoModal) }}
+            </span>
+          </div>
+          <button type="button" class="btn-close-modal" @click="mostrarModalOpciones = false">&times;</button>
+        </div>
+        
+        <div class="options-grid">
+          <div 
+            v-for="opcion in obtenerInfoRasgo(rasgoActivoModal).opciones" 
+            :key="opcion.nombre"
+            class="option-card"
+            :class="{ 
+              'is-selected': (opcionesRasgos[rasgoActivoModal.nombre] || []).includes(opcion.nombre),
+              'is-disabled': !cumpleRequisitos(opcion, rasgoActivoModal) || 
+                             ( (opcionesRasgos[rasgoActivoModal.nombre] || []).length >= calcularLimiteOpciones(rasgoActivoModal) && !(opcionesRasgos[rasgoActivoModal.nombre] || []).includes(opcion.nombre) )
+            }"
+            @click="cumpleRequisitos(opcion, rasgoActivoModal) && toggleOpcion(opcion.nombre, rasgoActivoModal)"
+          >
+            <div class="option-card-header">
+              <h4>{{ opcion.nombre }}</h4>
+              <input 
+                type="checkbox" 
+                :checked="(opcionesRasgos[rasgoActivoModal.nombre] || []).includes(opcion.nombre)"
+                :disabled="!cumpleRequisitos(opcion, rasgoActivoModal) || ((opcionesRasgos[rasgoActivoModal.nombre] || []).length >= calcularLimiteOpciones(rasgoActivoModal) && !(opcionesRasgos[rasgoActivoModal.nombre] || []).includes(opcion.nombre))"
+                @click.stop.prevent="cumpleRequisitos(opcion, rasgoActivoModal) && toggleOpcion(opcion.nombre, rasgoActivoModal)"
+              >
+            </div>
+            
+            <p class="option-effect">{{ opcion.efecto }}</p>
+            
+            <div v-if="opcion.costo_activacion" class="option-cost">
+              <strong>Costo:</strong> {{ opcion.costo_activacion }}
+            </div>
+            
+            <div v-if="!cumpleRequisitos(opcion, rasgoActivoModal)" class="option-warning">
+              ⚠️ Requiere: 
+              <span v-if="opcion.requisitos.nivel">Nivel {{ opcion.requisitos.nivel }}</span>
+              <span v-if="opcion.requisitos.nivel && opcion.requisitos.rasgo_requerido"> | </span>
+              <span v-if="opcion.requisitos.rasgo_requerido">{{ opcion.requisitos.rasgo_requerido }}</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -100,15 +171,22 @@ const props = defineProps({
   clasesPersonaje: {
     type: Array,
     default: () => []
+  },
+  opcionesRasgos: {
+    type: Object,
+    default: () => ({})
   }
 })
+
+const emit = defineEmits(['update:opcionesRasgos'])
 
 // === Estado de los Acordeones ===
 const gruposContraidos = ref({
   Raza: false,
   Clase: false,
   Subclase: false,
-  Dotes: false
+  Dotes: false,
+  Opciones: false // <-- Nuevo grupo para el template
 })
 
 const toggleGrupo = (tipo) => {
@@ -157,21 +235,113 @@ const cerrarTooltip = (id) => {
 const obtenerInfoRasgo = (rasgo) => {
   if (!rasgo || !props.clasesPersonaje || props.clasesPersonaje.length === 0) return null
 
-  // Normalizamos las clases actuales del personaje a minúsculas para evitar fallos por mayúsculas
   const nombresClasesActivas = props.clasesPersonaje
     .map(c => c.nombre?.toLowerCase())
     .filter(Boolean)
 
-  // Iteramos sobre las llaves del JSON (ej: "Bárbaro", "Pícaro")
   for (const [claseJson, listaRasgos] of Object.entries(datosRasgosClase)) {
     if (nombresClasesActivas.includes(claseJson.toLowerCase())) {
-      // Si el personaje tiene esta clase, buscamos el rasgo por nombre dentro de su array
       const rasgoEncontrado = listaRasgos.find(r => r.nombre === rasgo.nombre)
       if (rasgoEncontrado) return rasgoEncontrado
     }
   }
 
   return null
+}
+
+// === Lógica de Opciones Especiales de Clase ===
+const mostrarModalOpciones = ref(false)
+const rasgoActivoModal = ref(null)
+
+const obtenerNivelClasePorRasgo = (rasgo) => {
+  if (!rasgo) return 0
+  
+  // 1. Intentar coincidencia directa por origen (ej. si el origen dice "Bárbaro" o "Camino del Berserker")
+  for (const clase of props.clasesPersonaje) {
+    if (clase.nombre === rasgo.origen || clase.subclase === rasgo.origen) {
+      return clase.nivel
+    }
+  }
+  
+  // 2. Fallback: buscar a qué clase pertenece en el JSON
+  const nombresClasesActivas = props.clasesPersonaje.map(c => c.nombre?.toLowerCase()).filter(Boolean)
+  for (const [claseJson, listaRasgos] of Object.entries(datosRasgosClase)) {
+    if (nombresClasesActivas.includes(claseJson.toLowerCase())) {
+      if (listaRasgos.some(r => r.nombre === rasgo.nombre)) {
+        const claseEncontrada = props.clasesPersonaje.find(c => c.nombre?.toLowerCase() === claseJson.toLowerCase())
+        if (claseEncontrada) return claseEncontrada.nivel
+      }
+    }
+  }
+  return 0
+}
+
+const calcularLimiteOpciones = (rasgo) => {
+  const infoJson = obtenerInfoRasgo(rasgo)
+  if (!infoJson || !infoJson['nro-opciones']) return 0
+
+  const nivelClase = obtenerNivelClasePorRasgo(rasgo)
+  let limite = 0
+
+  // Ordenamos los niveles numéricamente (ej: ["2", "5", "11"])
+  const nivelesCambio = Object.keys(infoJson['nro-opciones']).map(Number).sort((a, b) => a - b)
+  
+  for (const nivelClave of nivelesCambio) {
+    if (nivelClase >= nivelClave) {
+      limite = infoJson['nro-opciones'][nivelClave]
+    } else {
+      break
+    }
+  }
+  
+  return limite
+}
+
+const cumpleRequisitos = (opcion, rasgo = rasgoActivoModal.value) => {
+  if (!opcion.requisitos) return true
+  
+  let cumple = true
+  
+  if (opcion.requisitos.nivel) {
+    const nivelClase = obtenerNivelClasePorRasgo(rasgo)
+    if (nivelClase < opcion.requisitos.nivel) cumple = false
+  }
+  
+  if (opcion.requisitos.rasgo_requerido) {
+    const tieneRasgo = props.rasgos.some(r => r.nombre.toLowerCase() === opcion.requisitos.rasgo_requerido.toLowerCase())
+    if (!tieneRasgo) cumple = false
+  }
+  
+  return cumple
+}
+
+const toggleOpcion = (nombreOpcion, rasgo = rasgoActivoModal.value) => {
+  if (!rasgo) return
+
+  const limite = calcularLimiteOpciones(rasgo)
+  const opcionesActualizadas = JSON.parse(JSON.stringify(props.opcionesRasgos)) // Copia para no mutar props directamente
+  
+  if (!opcionesActualizadas[rasgo.nombre]) {
+    opcionesActualizadas[rasgo.nombre] = []
+  }
+  
+  const seleccionadas = opcionesActualizadas[rasgo.nombre]
+  const index = seleccionadas.indexOf(nombreOpcion)
+  
+  if (index !== -1) {
+    seleccionadas.splice(index, 1) // Quitar si ya está seleccionada
+  } else {
+    if (seleccionadas.length < limite) {
+      seleccionadas.push(nombreOpcion) // Añadir si hay cupo
+    }
+  }
+  
+  // Si quitamos todas las opciones, eliminamos la llave para mantener limpio el objeto
+  if (seleccionadas.length === 0) {
+    delete opcionesActualizadas[rasgo.nombre]
+  }
+  
+  emit('update:opcionesRasgos', opcionesActualizadas)
 }
 
 // === Directivas ===
@@ -320,7 +490,7 @@ const vOutsideClick = {
   border-radius: 3px;
 }
 /* =========================================
-   NUEVAS CLASES PARA TOOLTIPS DE RASGOS
+   CLASES PARA TOOLTIPS DE RASGOS
    ========================================= */
 
 /* Contenedor de la fila para alinear el título del rasgo y el botón */
@@ -428,5 +598,224 @@ const vOutsideClick = {
   color: #bdc3c7; /* Un gris claro para separar la etiqueta del valor */
   display: inline-block;
   min-width: 70px;
+}
+
+/* =========================================
+   CLASES PARA OPCIONES DE CLASE
+   ========================================= */
+
+/* Botón de Gestionar Opciones (Secundario y sutil) */
+.trait-options-action {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed #e0e0e0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-manage-options {
+  background-color: #f5f5f5;
+  color: #555;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.btn-manage-options:hover {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.options-badge {
+  background-color: var(--color-primary, #7b1fa2);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* =========================================
+   MODAL DE OPCIONES (Superposición y Contenedor)
+   ========================================= */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.options-modal {
+  background: #fff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 650px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  padding: 1.5rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.modal-titles h3 {
+  margin: 0 0 0.25rem 0;
+  color: var(--color-primary, #7b1fa2);
+}
+
+.options-counter {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: bold;
+}
+
+.btn-close-modal {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  line-height: 1;
+}
+
+.btn-close-modal:hover {
+  color: #333;
+}
+
+/* =========================================
+   TARJETAS DE OPCIONES (Grid y Estados)
+   ========================================= */
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  overflow-y: auto;
+  padding-right: 0.5rem; /* Espacio para la barra de scroll */
+}
+
+@media (min-width: 600px) {
+  .options-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Estado 1: Normal */
+.option-card {
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.option-card:hover:not(.is-disabled) {
+  border-color: #bdbdbd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.option-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  gap: 0.5rem;
+}
+
+.option-card-header h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.2;
+}
+
+.option-card-header input[type="checkbox"] {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary, #7b1fa2);
+  flex-shrink: 0;
+}
+
+.option-effect {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #555;
+  margin: 0 0 0.5rem 0;
+  flex-grow: 1; /* Empuja el costo y la advertencia hacia abajo */
+}
+
+.option-cost {
+  font-size: 0.8rem;
+  background: #e0e0e0;
+  color: #333;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+/* Estado 2: Seleccionado */
+.option-card.is-selected {
+  background: #f4ecf7; /* Tono morado muy claro */
+  border-color: var(--color-primary, #7b1fa2);
+  box-shadow: 0 0 0 1px var(--color-primary, #7b1fa2);
+}
+
+.option-card.is-selected .option-card-header h4 {
+  color: var(--color-primary, #7b1fa2);
+}
+
+/* Estado 3: Bloqueado / Requisitos no cumplidos */
+.option-card.is-disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  background: #f5f5f5;
+  border-color: #e0e0e0;
+  filter: grayscale(20%);
+}
+
+.option-card.is-disabled:hover {
+  border-color: #e0e0e0;
+  box-shadow: none;
+}
+
+.option-card.is-disabled .option-card-header input[type="checkbox"] {
+  cursor: not-allowed;
+}
+
+/* Texto de Advertencia (Rojo/Naranja sutil) */
+.option-warning {
+  margin-top: auto; /* Se asegura de ir siempre al fondo de la tarjeta */
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #d35400; 
+  font-weight: bold;
+  border-top: 1px dashed #d35400;
 }
 </style>
