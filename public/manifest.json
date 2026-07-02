@@ -6,17 +6,18 @@
   "background_color": "#c084fc",
   "theme_color": "#000000",
   "icons": [
-    {
-      "src": "/src/assets/images/icons/gremio-web-icon.png",
-      "sizes": "128x128",
-      "type": "image/png",
-      "purpose": "any"
-    },
+    
     {
       "src": "/src/assets/images/icons/gremio-app-icon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    },
+    {
+      "src": "/src/assets/images/icons/gremio-web-icon.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
