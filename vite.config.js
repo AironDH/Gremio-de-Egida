@@ -18,21 +18,21 @@ export default defineConfig({
         start_url: '/',
         icons: [
           {
-            src: 'gremio-192.png', // No se usa '/' al inicio si usas el plugin
+            src: 'gremio-192.svg', // No se usa '/' al inicio si usas el plugin
             sizes: '192x192',
-            type: 'image/png',
+            type: 'image/svg',
             purpose: 'any'
           },
           {
-            src: 'gremio-app-icon.png',
-            sizes: '512x512',
-            type: 'image/png',
+            src: 'gremio-app-icon.svg',
+            sizes: '500x500',
+            type: 'image/svg',
             purpose: 'any'
           },
           {
-            src: 'gremio-app-icon.png',
-            sizes: '512x512',
-            type: 'image/png',
+            src: 'gremio-app-icon.svg',
+            sizes: '500x500',
+            type: 'image/svg',
             purpose: 'maskable' // Iconos de Android
           }
         ]
