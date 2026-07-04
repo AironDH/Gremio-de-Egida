@@ -20,19 +20,19 @@ export default defineConfig({
           {
             src: 'gremio-192.svg', // No se usa '/' al inicio si usas el plugin
             sizes: '192x192',
-            type: 'image/svg',
+            type: 'image/svg+xml',
             purpose: 'any'
           },
           {
             src: 'gremio-app-icon.svg',
             sizes: '500x500',
-            type: 'image/svg',
+            type: 'image/svg+xml',
             purpose: 'any'
           },
           {
             src: 'gremio-app-icon.svg',
             sizes: '500x500',
-            type: 'image/svg',
+            type: 'image/svg+xml',
             purpose: 'maskable' // Iconos de Android
           }
         ]

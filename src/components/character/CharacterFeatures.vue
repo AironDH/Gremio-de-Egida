@@ -55,6 +55,30 @@
         <label>Bonificador Competencia</label>
         <div class="combat-value pb-value">+{{ combateCalculado.pb }}</div>
       </div>
+
+      <label class="combat-box inspiration-box" :class="{ 'is-active': inspiracion }">
+        <span class="inspiration-title">Inspiración</span>
+        <input type="checkbox" v-model="inspiracion" class="hidden-checkbox" />
+        
+        <div class="d20-container">
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 24 24" 
+            class="d20-icon" 
+            fill="none" 
+            stroke="currentColor" 
+            stroke-width="1.5" 
+            stroke-linecap="round" 
+            stroke-linejoin="round"
+          >
+            <polygon points="12 2 22 8 22 16 12 22 2 16 2 8 12 2"></polygon>
+            <polyline points="2 8 12 13 22 8"></polyline>
+            <line x1="12" y1="13" x2="12" y2="22"></line>
+            <polyline points="2 16 12 13 7.5 2"></polyline>
+            <polyline points="22 16 12 13 16.5 2"></polyline>
+          </svg>
+        </div>
+      </label>
     </div>
   </div>
 </template>
@@ -66,10 +90,16 @@ const props = defineProps({
   ca: { type: Number, required: true },
   velocidad: { type: Number, required: true },
   combateCalculado: { type: Object, required: true },
-  modificadoresIniciativa: { type: Array, default: () => [] }
+  modificadoresIniciativa: { type: Array, default: () => [] },
+  inspiracion: { type: Boolean, default: false }
 })
 
-const emit = defineEmits(['update:ca', 'update:velocidad', 'update:modificadoresIniciativa'])
+const emit = defineEmits([
+  'update:ca',
+  'update:velocidad', 
+  'update:modificadoresIniciativa',
+  'update:inspiracion'
+])
 
 const mostrarOpcionesIniciativa = ref(false)
 
@@ -81,6 +111,11 @@ const ca = computed({
 const velocidad = computed({
   get: () => props.velocidad,
   set: (value) => emit('update:velocidad', value)
+})
+
+const inspiracion = computed({
+  get: () => props.inspiracion,
+  set: (value) => emit('update:inspiracion', value)
 })
 
 // Cálculo dinámico de casillas redondeando hacia abajo de manera segura
@@ -114,8 +149,91 @@ const formatearModificador = (valor) => {
 }
 .combat-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
+  /* Reducimos el minmax a 110px para asegurar que entren los 5 elementos */
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 0.75rem; /* Gap ligeramente reducido */
+}
+
+.combat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem; /* Reducimos el padding interior para ganar espacio */
+  background: var(--color-background, #f5f0e8);
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  position: relative;
+}
+
+/* Reducimos la fuente de los títulos para evitar recortes */
+.combat-box label,
+.inspiration-title {
+  font-weight: bold;
+  font-size: 0.75rem; 
+  margin-bottom: 0.5rem;
+  color: var(--color-text, #212121);
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+/* =========================================
+   TARJETA DE INSPIRACIÓN
+   ========================================= */
+
+.inspiration-box {
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ocultamos el checkbox de forma accesible */
+.hidden-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Contenedor y diseño base del D20 */
+.d20-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  margin-top: 0.25rem;
+}
+
+.d20-icon {
+  width: 38px;
+  height: 38px;
+  color: var(--color-text-secondary, #757575);
+  fill: transparent;
+  /* Transición fluida con un leve efecto de rebote */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+/* =========================================
+   ESTADO ACTIVO (CON INSPIRACIÓN)
+   ========================================= */
+
+.inspiration-box.is-active {
+  background-color: rgba(241, 196, 15, 0.1); /* Fondo dorado muy sutil */
+  border-color: #f1c40f;
+  box-shadow: 0 0 10px rgba(241, 196, 15, 0.25);
+}
+
+.inspiration-box.is-active .inspiration-title {
+  color: #d35400; /* Título en tono cálido/dorado oscuro */
+}
+
+.inspiration-box.is-active .d20-icon {
+  color: #d35400; /* Borde del dado */
+  fill: #f1c40f; /* Relleno dorado brillante */
+  transform: scale(1.15) rotate(10deg); /* Animación de celebración */
+  filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.2));
 }
 .combat-box {
   display: flex;

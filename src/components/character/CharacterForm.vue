@@ -14,6 +14,7 @@
     <CharacterFeatures 
       v-model:ca="formData.ca" 
       v-model:velocidad="formData.velocidad" 
+      v-model:inspiracion="formData.inspiracion"
       v-model:modificadoresIniciativa="formData.modificadoresIniciativa"
       :combateCalculado="combateCalculado" 
       class="ancho-medio"
