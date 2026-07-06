@@ -34,6 +34,9 @@ export const useCharacterStore = defineStore('character', {
             const importados = JSON.parse(e.target.result)
             const lista = Array.isArray(importados) ? importados : [importados]
             
+            const nuevos = []
+            const duplicados = []
+            
             lista.forEach(p => {
               // 1. Migración de formato antiguo a nuevo si es necesario
               const clasesArray = p.clases || [
@@ -44,7 +47,7 @@ export const useCharacterStore = defineStore('character', {
                 }
               ];
 
-              const nuevoPersonaje = {
+              const personajeProcesado = {
                 ...p,
                 id: p.id || uuidv4(),
                 nombre: p.nombre || 'Héroe sin nombre',
@@ -55,15 +58,22 @@ export const useCharacterStore = defineStore('character', {
               }
 
               // 2. Limpieza de propiedades legadas para que no se exporten
-              delete nuevoPersonaje.clase
-              delete nuevoPersonaje.nivel
-              delete nuevoPersonaje.subclase
+              delete personajeProcesado.clase
+              delete personajeProcesado.nivel
+              delete personajeProcesado.subclase
 
-              this.personajes.push(nuevoPersonaje)
+              // 3. Verificación de colisión de IDs
+              const existe = this.personajes.some(existente => existente.id === personajeProcesado.id)
+              
+              if (existe) {
+                duplicados.push(personajeProcesado)
+              } else {
+                nuevos.push(personajeProcesado)
+              }
             })
             
-            this.guardarEnLocalStorage()
-            resolve(true)
+            // Resolvemos la promesa entregando los arreglos separados, sin mutar el estado aún
+            resolve({ nuevos, duplicados })
           } catch (error) {
             reject(new Error('Formato de JSON inválido'))
           }
@@ -71,6 +81,36 @@ export const useCharacterStore = defineStore('character', {
         lector.onerror = () => reject(new Error('Error al leer el archivo'))
         lector.readAsText(archivo)
       })
+    },
+
+    procesarImportacionFinal(nuevos, resolucionesDuplicados) {
+      // 1. Insertar directamente los personajes que no tienen conflicto
+      if (nuevos && nuevos.length > 0) {
+        this.personajes.push(...nuevos)
+      }
+
+      // 2. Procesar las decisiones tomadas sobre los conflictos
+      if (resolucionesDuplicados && resolucionesDuplicados.length > 0) {
+        resolucionesDuplicados.forEach(({ personaje, decision }) => {
+          if (decision === 'sobreescribir') {
+            const index = this.personajes.findIndex(p => p.id === personaje.id)
+            if (index !== -1) {
+              this.personajes[index] = personaje
+            }
+          } else if (decision === 'duplicar') {
+            const personajeDuplicado = {
+              ...personaje,
+              id: uuidv4(),
+              nombre: `${personaje.nombre} (copia)`
+            }
+            this.personajes.push(personajeDuplicado)
+          }
+          // Si la decisión es 'omitir', no se hace ninguna acción
+        })
+      }
+
+      // 3. Guardar el estado final en LocalStorage
+      this.guardarEnLocalStorage()
     },
     
     exportarPersonajes() {

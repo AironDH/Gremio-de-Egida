@@ -5,8 +5,60 @@
     <link rel="icon" type="image/svg+xml" href="/gremio-192.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gremio de Égida</title>
+
+    <style>
+    /* Estilos globales mínimos para la pantalla de carga */
+    .fake-loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #f5f0e8; /* El color de fondo de tu app */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    /* Animación opcional para que el engranaje o icono haga un pulso sutil */
+    .loader-icon {
+      width: 25rem;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 1; }
+    }
+
+    /* Clase que añadiremos con JS para desaparecer el loader */
+    .fake-loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  </style>
   </head>
   <body>
+
+    <div id="loading-screen" class="fake-loader">
+    <img src="/public/gremio-home-icon.svg" class="loader-icon" alt="Cargando..." />
+    </div>
+
+    <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('loading-screen');
+        if (loader) {
+          loader.classList.add('hidden');
+          // Opcional: removerlo del DOM por completo tras la transición de CSS (0.5s)
+          setTimeout(() => loader.remove(), 500);
+        }
+      }, 1000); // 1000 milisegundos = 1 segundo
+    });
+    </script>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
