@@ -1,15 +1,63 @@
 <template>
   <div class="home-view">
     <header class="home-view__header">
-      <h1><img src="/public/gremio-home-icon.svg" alt="Logo del gremio" class="logo"> Gremio de Égida</h1>
+      <h1><img src="/public/gremio-home-icon.svg" alt="Logo del gremio" class="logo">Gremio de Égida</h1>
+      
       <div class="home-view__global-actions">
-        <BaseButton variant="secondary" @click="exportarDatos">
-          Exportar Lista
-        </BaseButton>
-        <label class="custom-file-upload">
-          Importar Ficha
-          <input type="file" accept=".json" @change="importarDatos" />
-        </label>
+        <!-- Acciones Locales -->
+        <div class="action-group">
+          <BaseButton variant="secondary" @click="exportarDatos">
+            Exportar Local
+          </BaseButton>
+          <label class="custom-file-upload">
+            Importar Local
+            <input type="file" accept=".json" @change="importarDatos" />
+          </label>
+        </div>
+
+        <div class="action-divider"></div>
+
+        <!-- Acciones en la Nube (Google Drive) -->
+        <div class="action-group cloud-group">
+          <!-- Estado: No Autenticado -->
+          <button 
+            v-if="!googleStore.usuarioAutenticado" 
+            class="btn-cloud btn-cloud--connect" 
+            @click="googleStore.iniciarSesion"
+          >
+            Conectar Drive
+          </button>
+          
+          <!-- Estado: Autenticado -->
+          <template v-else>
+            <button 
+              class="btn-cloud btn-cloud--action" 
+              @click="manejadorGuardarNube" 
+              :disabled="cargandoNube"
+            >
+              {{ cargandoNube ? 'Guardando...' : 'Guardar en Nube' }}
+            </button>
+            <button 
+              class="btn-cloud btn-cloud--action" 
+              @click="manejadorCargarNube" 
+              :disabled="cargandoNube"
+            >
+              {{ cargandoNube ? 'Cargando...' : 'Cargar desde Nube' }}
+            </button>
+            <button 
+              class="btn-cloud btn-cloud--disconnect" 
+              @click="googleStore.cerrarSesion" 
+              title="Cerrar sesión de Google Drive"
+              :disabled="cargandoNube"
+            >
+              ✕
+            </button>
+          </template>
+        </div>
+
+        <div class="action-divider"></div>
+
+        <!-- Nueva Acción -->
         <BaseButton variant="primary" @click="crearNuevoPersonaje">
           Nuevo Personaje
         </BaseButton>
@@ -85,6 +133,7 @@ import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useCharacterStore } from '../stores/useCharacterStore'
 import { useDataStore } from '../stores/useDataStore'
+import { useGoogleDriveStore } from '../stores/useGoogleDriveStore'
 import BaseButton from '../components/common/BaseButton.vue'
 import SearchBar from '../components/character/SearchBar.vue'
 import CharacterCard from '../components/character/CharacterCard.vue'
@@ -92,6 +141,7 @@ import CharacterCard from '../components/character/CharacterCard.vue'
 const router = useRouter()
 const characterStore = useCharacterStore()
 const dataStore = useDataStore()
+const googleStore = useGoogleDriveStore()
 
 const filtroTexto = ref('')
 const filtroClase = ref('')
@@ -103,6 +153,9 @@ const personajesNuevosPendientes = ref([])
 const resoluciones = ref([])
 const aplicarATodos = ref(false)
 
+// Estado de carga para bloquear UI durante peticiones a Google
+const cargandoNube = ref(false)
+
 const conflictoActual = computed(() => colaConflictos.value[0])
 
 const calcularNivelTotal = (clases) => {
@@ -112,24 +165,20 @@ const calcularNivelTotal = (clases) => {
 
 const resolverConflicto = (decision) => {
   if (aplicarATodos.value) {
-    // Aplica la misma decisión a toda la cola restante
     colaConflictos.value.forEach(personaje => {
       resoluciones.value.push({ personaje, decision })
     })
     colaConflictos.value = []
   } else {
-    // Aplica la decisión solo al personaje actual y avanza
     resoluciones.value.push({ personaje: conflictoActual.value, decision })
     colaConflictos.value.shift()
   }
 
-  // Si se vacía la cola, ejecutamos la importación final
   if (colaConflictos.value.length === 0) {
     mostrarModalConflicto.value = false
     characterStore.procesarImportacionFinal(personajesNuevosPendientes.value, resoluciones.value)
     alert('Ficha(s) procesada(s) e importada(s) con éxito.')
     
-    // Reseteo de estados
     personajesNuevosPendientes.value = []
     resoluciones.value = []
     aplicarATodos.value = false
@@ -138,6 +187,9 @@ const resolverConflicto = (decision) => {
 // =====================================================
 
 onMounted(async () => {
+  // Inicializamos las APIs de Google apenas la vista de inicio cargue
+  await googleStore.inicializarGoogle()
+
   if (!dataStore.gameData) {
     await dataStore.fetchAllData()
   }
@@ -175,6 +227,7 @@ const manejadorEliminar = (id) => {
   }
 }
 
+// === ACCIONES LOCALES ===
 const exportarDatos = () => {
   characterStore.exportarPersonajes()
 }
@@ -184,25 +237,67 @@ const importarDatos = async (event) => {
   if (!archivo) return
   
   try {
-    // Ahora el store nos devuelve dos arreglos separados
     const { nuevos, duplicados } = await characterStore.importarPersonajes(archivo)
     
     if (duplicados && duplicados.length > 0) {
-      // Llenamos la cola y abrimos el modal
       personajesNuevosPendientes.value = nuevos
       colaConflictos.value = duplicados
       resoluciones.value = []
       aplicarATodos.value = false
       mostrarModalConflicto.value = true
     } else {
-      // Si no hay duplicados, guardamos directamente
       characterStore.procesarImportacionFinal(nuevos, [])
       alert('Ficha(s) procesada(s) e importada(s) con éxito.')
     }
   } catch (err) {
     alert('Error crítico: El archivo seleccionado no cuenta con un esquema estructural JSON de personaje válido.')
   } finally {
-    event.target.value = '' // Resetea el elemento de entrada de archivos
+    event.target.value = ''
+  }
+}
+
+// === ACCIONES EN LA NUBE (GOOGLE DRIVE) ===
+const manejadorGuardarNube = async () => {
+  if (characterStore.personajes.length === 0) {
+    return alert('No hay personajes en el gremio para guardar en la nube.');
+  }
+
+  cargandoNube.value = true;
+  try {
+    await googleStore.guardarEnNube(characterStore.personajes);
+    alert('¡Respaldo sincronizado exitosamente en Google Drive!');
+  } catch (error) {
+    alert('Ocurrió un problema al guardar en la nube: ' + (error.message || 'Revisa tu conexión o permisos.'));
+  } finally {
+    cargandoNube.value = false;
+  }
+}
+
+const manejadorCargarNube = async () => {
+  cargandoNube.value = true;
+  try {
+    const datosJson = await googleStore.cargarDesdeNube();
+    
+    // Transformamos el JSON devuelto en un Blob para inyectarlo en el FileReader existente
+    const archivoVirtual = new Blob([JSON.stringify(datosJson)], { type: 'application/json' });
+    
+    // Lo procesamos exactamente igual que si el usuario hubiera seleccionado un archivo local
+    const { nuevos, duplicados } = await characterStore.importarPersonajes(archivoVirtual);
+    
+    if (duplicados && duplicados.length > 0) {
+      personajesNuevosPendientes.value = nuevos;
+      colaConflictos.value = duplicados;
+      resoluciones.value = [];
+      aplicarATodos.value = false;
+      mostrarModalConflicto.value = true;
+    } else {
+      characterStore.procesarImportacionFinal(nuevos, []);
+      alert('Fichas recuperadas desde Google Drive con éxito.');
+    }
+  } catch (error) {
+    alert('Error al recuperar datos: ' + (error.message || 'No se encontró un archivo de respaldo o la conexión falló.'));
+  } finally {
+    cargandoNube.value = false;
   }
 }
 </script>
@@ -404,5 +499,84 @@ const importarDatos = async (event) => {
 }
 .logo{
   height: 2rem;
+}
+
+/* =========================================
+   GRUPOS DE ACCIONES Y SEPARADORES
+   ========================================= */
+.action-group {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.action-divider {
+  width: 2px;
+  height: 28px;
+  background-color: #e0e0e0;
+  margin: 0 0.25rem;
+}
+
+/* =========================================
+   BOTONES DE GOOGLE DRIVE (NUBE)
+   ========================================= */
+.cloud-group {
+  background-color: #f4f8ff;
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--border-radius, 4px);
+  border: 1px solid #cce3ff;
+}
+
+.btn-cloud {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: var(--border-radius, 4px);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.btn-cloud:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-cloud--connect {
+  background-color: #ffffff;
+  color: #1a73e8; /* Azul estilo Google */
+  border: 1px solid #1a73e8;
+}
+
+.btn-cloud--connect:hover {
+  background-color: #e8f0fe;
+}
+
+.btn-cloud--action {
+  background-color: #1a73e8;
+  color: #ffffff;
+  border: 1px solid #1a73e8;
+}
+
+.btn-cloud--action:hover:not(:disabled) {
+  background-color: #1557b0;
+  border-color: #1557b0;
+}
+
+.btn-cloud--disconnect {
+  background-color: transparent;
+  color: #5f6368;
+  padding: 0.5rem;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.btn-cloud--disconnect:hover:not(:disabled) {
+  background-color: #e8eaed;
+  color: #d32f2f;
 }
 </style>
