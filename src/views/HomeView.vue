@@ -1,7 +1,7 @@
 <template>
   <div class="home-view">
     <header class="home-view__header">
-      <h1><img src="/public/gremio-home-icon.svg" alt="Logo del gremio" class="logo">Gremio de Égida</h1>
+      <h1><img src="/public/gremio-home-icon.svg" alt="Logo del gremio" class="logo"> Gremio de Égida</h1>
       
       <div class="home-view__global-actions">
         <!-- Acciones Locales -->
@@ -498,7 +498,7 @@ const manejadorCargarNube = async () => {
   color: white;
 }
 .logo{
-  height: 2rem;
+  width: 4rem;
 }
 
 /* =========================================
