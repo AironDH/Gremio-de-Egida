@@ -1763,53 +1763,91 @@
     ],
     "Dibujante": [
         {
-        "nombre": "Inspiración artística",
-        "efecto": "Acción adicional: otorgas un dado (d6, escala a d8/d10/d12 en niveles 5/10/15) a una criatura a 18 m que vea tu creación (glifo, boceto o símbolo). Durante 1 hora, al fallar una prueba de d20, tira el dado y suma al resultado (se gasta).",
-        "activacion": "acción adicional",
-        "usos": "igual a modificador por Carisma (mínimo 1); recuperas en descanso largo",
-        "duracion": "1 hora o hasta que se gaste el dado"
+        "nombre": "Paleta arcana",
+        "efecto": "Dados de Paleta (d6, escala a d8/d10/d12 en niveles 5/10/15). Acción adicional: gasta y tira un dado para: Boceto de Vitalidad (aliado a 18 m recibe PG temporales = dado + Carisma + nivel de dibujante) o Mancha de Tinta (enemigo a 18 m resta el dado a su próxima tirada de ataque antes de tu siguiente turno).",
+        "activacion": "acción adicional (gasta 1 dado)",
+        "usos": "igual a bonificador por competencia + 1; recuperas en descanso largo",
+        "duracion": "PG temporales: hasta que se pierdan; penalización: hasta el siguiente turno del objetivo"
     },
     {
         "nombre": "Lanzamiento de conjuros",
-        "efecto": "Conoces 2 trucos (cambias 1 al subir nivel, +1 en niveles 4 y 10). Preparas conjuros de nivel 1+ según columna 'Conjuros preparados' (máximo nivel según espacios). Cambias 1 al subir nivel. Aptitud: Carisma. Canalizador: herramientas de artesano o pincel gigante.",
+        "efecto": "Conoces 2 trucos (cambias 1 al subir nivel, +1 en niveles 4 y 10). Cuaderno de Bocetos con 6 conjuntos iniciales, añades 2 al subir nivel. Preparas conjuntos de nivel 1+ según columna 'Conjuros preparados' (máximo nivel según espacios). Cambias preparados tras descanso largo (1 min por nivel de conjuro). Aptitud: Carisma. Canalizador: herramientas de artesano o pincel gigante.",
         "activacion": "pasiva; lanzar conjuros requiere la acción apropiada",
         "usos": "trucos: ilimitados; espacios de conjuro: según tabla, recuperas en descanso largo",
         "duracion": "preparación: permanente hasta cambio; efectos de conjuros según cada conjuro"
     },
     {
-        "nombre": "Pinceladas de poder",
-        "efecto": "Crear talismanes (1 minuto, gasta espacio de conjuro de nivel 1+ y pergamino de 1 po). Máximo = Carisma (mínimo 1), el más antiguo se desvanece si excedes. Entregas a otra criatura (solo 1 a la vez). Efectos al activarse (se consume): Enfoque Arcano (en ataque/salvación, suma Carisma; si es ataque con arma, +1d8 radiante por nivel del espacio) o Protección Divina (reacción al ser objetivo: PG temporales = 5 × nivel del espacio + Carisma, duran hasta pérdida o descanso largo; ventaja en salvaciones contra asustado, hechizado y poseído mientras los tenga).",
-        "activacion": "acción/parte de acción (Enfoque) o reacción (Protección) al usar el talismán",
-        "usos": "ilimitados (limitado por espacios de conjuro y número máximo de talismanes existentes)",
-        "duracion": "talismán: permanente hasta que se use, te mueras, o excedas el máximo; PG temporales: hasta pérdida o descanso largo; efectos de Enfoque: instantáneos"
+        "nombre": "Lanzamiento ritual",
+        "efecto": "Lanzas conjuros de dibujante con etiqueta 'ritual' desde tu Cuaderno de Bocetos sin necesidad de tenerlos preparados. El tiempo de lanzamiento aumenta en 10 minutos, durante los cuales usas tu canalizador mágico para plasmar la magia.",
+        "activacion": "al lanzar un conjuro ritual (desde el cuaderno, sin preparar)",
+        "usos": "ilimitados",
+        "duracion": "según el conjuro ritual (el tiempo de lanzamiento se extiende)"
     },
     {
-        "nombre": "Pericia especializada",
-        "efecto": "Ganas pericia en dos habilidades de tu elección. En nivel 9, ganas pericia en otras dos habilidades.",
-        "activacion": "pasiva",
+        "nombre": "Pinceladas de poder",
+        "efecto": "Creación de talismanes (1 minuto, gastas un espacio de conjuro de nivel 1+ y un pergamino de 1 po) usando pincel o herramienta. Máximo de talismanes activos = modificador por Carisma. Deben llevarse de forma visible. Al activarse, el talismán se consume instantáneamente tras resolver el efecto.",
+        "activacion": "1 minuto de trabajo (creación); activación por parte del portador (según efectos específicos que se detallan en otros rasgos)",
+        "usos": "creación: ilimitada (gasta espacios de conjuro); activación: 1 vez por talismán (se consume)",
+        "duracion": "talismanes: permanentes hasta que se activen, superes el máximo o mueras (los efectos específicos tienen su propia duración)",
+        "nro-opciones":{
+            "2":2
+        },
+        "opciones":[
+            {
+            "nombre": "Enfoque Arcano",
+            "efecto": "Sin acción, al hacer un ataque o que un enemigo haga TS contra tus habilidades, suma tu mod Carisma a esa tirada. Si es un ataque que impacta, inflige +1d8 de daño radiante por nivel del espacio de conjuro gastado al crear el objeto.",
+            "costo_activacion": "sin acción (al realizar el ataque/TS), requiere haber gastado un espacio de conjuro al crear el objeto",
+            "requisitos": null
+  },
+  {
+            "nombre": "Protección Divina",
+            "efecto": "Reacción al recibir daño o hacer una salvación: obtienes THP = 5 × nivel del espacio gastado + mod Carisma. Mientras tengas estos THP, tienes ventaja en TS para evitar/terminar los estados Asustado o Hechizado.",
+            "costo_activacion": "1 reacción, requiere haber gastado un espacio de conjuro al crear el objeto",
+            "requisitos": null
+  }
+        ]
+    },
+    {
+        "nombre": "Ojo del creador",
+        "efecto": "Ventaja en Investigación para detectar ilusiones, pasadizos ocultos o falsificaciones. Puedes dejar mensajes o marcas invisibles con pigmentos, solo visibles por magia o para otro Dibujante.",
+        "activacion": "pasiva; al crear marcas (uso de pigmentos)",
         "usos": "ilimitados",
-        "duracion": "permanente"
+        "duracion": "permanente; marcas hasta que se revelen"
     },
     {
         "nombre": "Fuente de inspiración",
-        "efecto": "Recuperas todos los usos de Inspiración artística en descanso corto o largo. Puedes gastar un espacio de conjuro (sin acción) para recuperar un uso gastado.",
-        "activacion": "pasiva al descansar; gastar espacio no requiere acción",
-        "usos": "ilimitados (según espacios disponibles)",
+        "efecto": "Recuperas todos los Dados de Paleta en descanso corto o largo. Una vez por descanso largo, gastas un espacio de conjuro (nivel 1+, sin acción) para recuperar 1 Dado de Paleta.",
+        "activacion": "al descansar (recuperación); sin acción (gastar espacio de conjuro)",
+        "usos": "recuperación: ilimitada (en cada descanso); gastar espacio: 1 vez por descanso largo",
         "duracion": "instantáneo"
     },
     {
-        "nombre": "Runa de contrahechizo",
-        "efecto": "Reacción cuando tú o aliado a 9 m falláis salvación contra efecto de asustado o hechizado: repetís la salvación con ventaja.",
-        "activacion": "reacción al fallar la salvación",
-        "usos": "ilimitados (1 reacción por ronda)",
+        "nombre": "Sello de infortunio",
+        "efecto": "Reacción cuando una criatura a 18 m hace una tirada de salvación: gastas y tiras un Dado de Paleta y restas el resultado a su salvación.",
+        "activacion": "reacción al ver una criatura a 18 m hacer una tirada de salvación",
+        "usos": "ilimitados (gasta 1 Dado de Paleta por uso)",
         "duracion": "instantáneo"
     },
     {
-        "nombre": "Simbología arcana universal",
-        "efecto": "Al subir nivel y aumentar conjuros preparados, puedes elegir los nuevos de listas de dibujante, clérigo, druida o mago. También al sustituir un conjuro preparado, puedes hacerlo de esas listas.",
-        "activacion": "al preparar o sustituir conjuros (al subir nivel)",
-        "usos": "según número de conjuros que puedas preparar/sustituir",
-        "duracion": "permanente (hasta que cambies los conjuros)"
+        "nombre": "Memoria eidética del creador",
+        "efecto": "Recuerdas con exactitud cualquier texto, rostro, paisaje, glifo o mapa visto en el último año; puedes dibujar réplicas perfectas. Además, al lanzar conjuros que inscriben glifos/runas/símbolos (ej. Boca mágica, Glifo custodio, Símbolo), el coste en materiales se reduce a la mitad y el tiempo de lanzamiento se reduce a la mitad (si es >1 acción).",
+        "activacion": "pasiva (memoria); al lanzar conjuros de inscripción (beneficios)",
+        "usos": "ilimitados",
+        "duracion": "permanente; los beneficios aplican a cada lanzamiento de esos conjuros"
+    },
+    {
+        "nombre": "Lienzo de batalla",
+        "efecto": "Acción mágica (gastas espacio de conjuro de nivel 3+, concentración): creas aura cilíndrica de 9 m de radio y altura, centrada en ti, 1 min. Refugio Estético: al activar y como acción adicional en turnos siguientes, eliges aliados en el aura (hasta Carisma) para darles PG temporales = tirada de Dado de Paleta. Trazos Engañosos: área es terreno difícil para enemigos; aliados tienen ventaja en salvaciones contra derribado.",
+        "activacion": "acción mágica (gasta espacio de nivel 3+); acción adicional (refugio)",
+        "usos": "ilimitados (gasta un espacio de conjuro por uso; requiere concentración)",
+        "duracion": "1 minuto o hasta perder concentración"
+    },
+    {
+        "nombre": "Perfección del medio",
+        "efecto": "Tu Dado de Paleta se convierte en d12. Ya no necesitas pergaminos ni oro para crear Pinceladas de Poder; puedes crearlos en el aire como medallones de cristal tintado o pintarlos sobre armadura/ropa. El tiempo de creación de un talismán se reduce a una acción estándar (sigue requiriendo el gasto del espacio de conjuro).",
+        "activacion": "pasiva (mejora permanente); al crear un talismán (acción estándar)",
+        "usos": "ilimitados",
+        "duracion": "permanente (dado); los talismanes creados siguen las reglas de Pinceladas de poder"
     },
     {
         "nombre": "Inspiración maestra",
@@ -1826,81 +1864,109 @@
         "duracion": "según cada conjuro"
     },
     {
-    "nombre": "Partícula de potencial",
-    "efecto": "Al dar Inspiración artística, creas partícula que orbita al receptor hasta que se gaste el dado. Al usarlo: en prueba de característica, tira el dado dos veces y elige; en ataque, objetivo y criaturas a 1,5 m (tu elección) hacen salvación de Constitución o reciben daño contundente igual al dado; en salvación, receptor gana PG temporales = dado + Carisma.",
-    "activacion": "al conceder un dado de Inspiración artística (creación); al usar el dado (efecto adicional)",
-    "usos": "ilimitados (cada vez que concedes Inspiración)",
-    "duracion": "la partícula dura hasta que se gaste el dado de Inspiración; los efectos adicionales son instantáneos"
-},
-{
-    "nombre": "Obra de la creación",
-    "efecto": "Acción: creas objeto no mágico (valor ≤ 20 × nivel de dibujante, tamaño Mediano o menor; en nivel 6 Grande, en nivel 14 Enorme) en espacio vacío a 3 m. Apariencia de dibujo en tinta, olor a tinta. Desaparece tras horas = competencia.",
-    "activacion": "acción",
-    "usos": "1 vez; recuperas en descanso largo o gastando espacio de conjuro de nivel 2+; solo 1 objeto a la vez",
-    "duracion": "horas = bonificador por competencia (o hasta que crees otro)"
-},
-{
-        "nombre": "Dibujo animado",
-        "efecto": "Acción: animas objeto no mágico Grande o menor a 9 m (usa perfil Objeto Animado, BC). Amistoso, obedece, dura 1 hora o hasta 0 PG o tu muerte. Comparte iniciativa (turno tras ti). En su turno solo esquiva, salvo que uses acción adicional para ordenar otra acción. Si incapacitado, elige su acción. Al usar Inspiración artística, puedes dar órdenes como parte de esa misma acción adicional.",
-        "activacion": "acción (animar); acción adicional (ordenar) o parte de Inspiración",
-        "usos": "1 vez; recuperas en descanso largo o gastando espacio de nivel 3+; solo 1 objeto a la vez",
+        "nombre": "Partícula de potencial",
+        "efecto": "Al usar Boceto de Vitalidad (Paleta Arcana), creas partícula que orbita al aliado 1 min. Al usarla: prueba de característica (tira Dado de Paleta y suma, puedes repetir y elegir mejor), ataque (objetivo y criaturas a 1,5 m hacen salvación Constitución o daño radiante igual al Dado de Paleta), salvación (tira Dado de Paleta y suma).",
+        "activacion": "al otorgar PG temporales con Boceto de Vitalidad (creación); al hacer prueba/ataque/salvación (consumo)",
+        "usos": "ilimitados (1 partícula por uso de Boceto de Vitalidad)",
+        "duracion": "1 minuto o hasta consumirse"
+    },
+    {
+        "nombre": "Obra de la creación",
+        "efecto": "Acción mágica: creas objeto no mágico (tamaño Mediano o menor; en nivel 6 Grande, en 14 Enorme) en espacio a 3 m, valor ≤ 20 × nivel. Desaparece tras horas = competencia.",
+        "activacion": "acción mágica",
+        "usos": "1 vez; recuperas en descanso largo o gastando espacio de nivel 2+; solo 1 objeto a la vez",
+        "duracion": "horas = bonificador por competencia"
+    },
+    {
+        "nombre": "Boceto viviente",
+        "efecto": "Acción mágica (gastas Dado de Paleta): creas boceto animado (perfil Objeto Animado) en espacio a 9 m, amistoso, obedece, dura 1h o 0 PG o tu muerte. Comparte iniciativa (turno tras ti). Solo esquiva a menos que uses acción adicional para ordenar. Sincronía: al usar Paleta Arcana, puedes ordenarlo como parte de esa misma acción adicional.",
+        "activacion": "acción mágica (gasta 1 Dado de Paleta); acción adicional (ordenar)",
+        "usos": "1 vez; recuperas en descanso largo o gastando espacio de nivel 3+; solo 1 a la vez",
         "duracion": "1 hora, hasta 0 PG o hasta tu muerte"
     },
     {
         "nombre": "Cénit creativo",
-        "efecto": "Al usar Obra de la creación, creas múltiples objetos = mod Carisma (mínimo 2). Solo uno puede ser del tamaño máximo; el resto Pequeño o Diminuto. Ya no estás limitado por valor en po.",
+        "efecto": "Al usar Obra de la creación, creas múltiples objetos = modificador por Carisma (mínimo 2). Solo uno puede ser del tamaño máximo; el resto Pequeño o Diminuto. Ya no estás limitado por valor en po.",
         "activacion": "al usar Obra de la creación",
         "usos": "aplica a cada uso de Obra de la creación (limitado por ese rasgo)",
         "duracion": "depende de los objetos creados (horas = competencia)"
     },
     {
-    "nombre": "Trazo estructural",
-    "efecto": "Gastas Inspiración artística para: Línea de Fuerza (muro de energía de 3 m × 1,5 m a 18 m, da cobertura media; tú designas criaturas que lo ignoran) o Glifo de Confinamiento (área circular de 1,5 m a 9 m; criaturas que entren o empiecen turno hacen salvación de Destreza o velocidad 0 hasta inicio de su siguiente turno). Ganas competencia con herramientas de cartógrafo; estudiando 1 min un área, creas mapa esquemático que revela ubicación de puertas secretas y criaturas no ocultas mágicamente.",
-    "activacion": "acción (dibujar efecto, gasta Inspiración); 1 minuto de estudio (cartografía)",
-    "usos": "efectos: ilimitados (gasta 1 dado de Inspiración por uso); cartografía: ilimitada",
-    "duracion": "efectos: 1 minuto o hasta reutilizar el rasgo; mapa: esquemático (duración no especificada, se asume hasta que se use o se desvanezca según DM)"
-},
-{
-    "nombre": "Plataforma de tinta",
-    "efecto": "Acción (gastas Inspiración artística): creas estructura de tinta sólida de hasta cubo de 1,5 m (3 m en nivel 10, 4,5 m en nivel 14) en espacio vacío a 18 m. CA 14, PG = 10 + (5 × nivel), inmune a veneno y psíquico, soporta 226 kg; si excede o 0 PG, se desmorona. Fija, dura 10 min.",
-    "activacion": "acción (gasta 1 Inspiración artística)",
-    "usos": "igual a modificador por Carisma (mínimo 1); recuperas en descanso largo",
-    "duracion": "10 minutos o hasta que se destruya o reutilices el rasgo"
-},
-{
-    "nombre": "Geometría suprema",
-    "efecto": "Acción (gastas 2 usos de Inspiración artística): alteras terreno en cubo de 12 m a 36 m. Eliges: Trinchera (zanja de 3 m ancho y profundidad, terreno difícil, cobertura media); Muro (pared de 6×3×0,5 m, CA 15, 50 PG); Colapso (radio 6 m, terreno muy difícil, criaturas que entren o empiecen turno hacen salvación Destreza o caen tumbadas); Geometría desorientadora (terreno difícil, enemigos tienen desventaja en ataques que requieran ver al objetivo). Los cambios duran 10 min, vuelven a la normalidad en 1d10 rondas.",
-    "activacion": "acción (gasta 2 usos de Inspiración artística)",
-    "usos": "1 vez; recuperas en descanso largo",
-    "duracion": "10 minutos (vuelve a la normalidad en 1d10 rondas al terminar)"
-},
-{
+        "nombre": "Trazo estructural",
+        "efecto": "Gastas Dado de Paleta para: Línea de Fuerza (muro de energía de 3×1,5 m a 18 m, da cobertura media; designas criaturas que lo ignoran) o Glifo de Confinamiento (área circular de 1,5 m a 9 m; criaturas que entren o empiecen turno hacen salvación Destreza o velocidad 0 hasta inicio de su siguiente turno). Ganas competencia con herramientas de cartógrafo; estudiando 1 min un área, creas mapa esquemático que revela ubicación de puertas secretas y criaturas no ocultas mágicamente.",
+        "activacion": "acción (gasta 1 Dado de Paleta); 1 minuto de estudio (cartografía)",
+        "usos": "efectos: ilimitados (gasta 1 Dado por uso); cartografía: ilimitada",
+        "duracion": "efectos: 1 minuto o hasta reutilizar; mapa: esquemático (duración no especificada)"
+    },
+    {
+        "nombre": "Plataforma de tinta",
+        "efecto": "Acción (gastas Dado de Paleta): creas estructura de tinta sólida de hasta cubo de 1,5 m (3 m en nivel 10, 4,5 m en nivel 14) en espacio vacío a 18 m. CA 14, PG = 10 + (5 × nivel), inmune a veneno y psíquico, soporta peso (226/453/907 kg según nivel). Fija, dura 10 min.",
+        "activacion": "acción (gasta 1 Dado de Paleta)",
+        "usos": "ilimitados (gasta 1 Dado por uso)",
+        "duracion": "10 minutos o hasta reutilizar"
+    },
+    {
+        "nombre": "Geometría suprema",
+        "efecto": "Acción (gastas 2 Dados de Paleta): alteras terreno en cubo de 12 m a 36 m. Eliges: Trinchera (zanja de 3 m ancho y profundidad, terreno difícil, cobertura media); Muro (6×3×0,5 m, CA 15, 50 PG); Colapso (radio 6 m, terreno muy difícil, criaturas que entren o empiecen turno hacen salvación Destreza o caen tumbadas); Geometría Desorientadora (terreno difícil, enemigos tienen desventaja en ataques que requieran ver al objetivo). Los cambios duran 10 min, vuelven a la normalidad en 1d10 rondas.",
+        "activacion": "acción (gasta 2 Dados de Paleta)",
+        "usos": "1 vez; recuperas en descanso largo",
+        "duracion": "10 minutos (vuelve a la normalidad en 1d10 rondas al terminar)"
+    },
+    {
         "nombre": "Retrato vivo",
-        "efecto": "Ventaja en Engaño y Persuasión contra la criatura retratada. Reacción al ser impactado por ella: obtienes resistencia al daño de ese ataque (antes de la tirada), el retrato se destruye.",
-        "activacion": "acción (gasta 1 Inspiración Artística), requiere observar 1 minuto a la criatura",
-        "usos": "gasta 1 Inspiración; 1 retrato activo a la vez",
+        "efecto": "Acción (gastas Paleta Arcana): dibujas retrato de criatura observada 1 min. Mientras lo tengas: ventaja en Engaño y Persuasión contra ella. Reacción al ser impactado por ella: obtienes resistencia a ese ataque (antes de daño), el retrato se destruye.",
+        "activacion": "acción (gasta 1 Dado de Paleta); reacción al ser impactado",
+        "usos": "gasta 1 Dado de Paleta; 1 retrato activo a la vez",
         "duracion": "24 horas o hasta que tú o el sujeto muera, o crees otro retrato"
     },
     {
         "nombre": "Disfraz de tinta",
-        "efecto": "Lanzas disfrazarse sin concentración y duración 8 horas usando herramientas de artesano como componente adicional. Es ilusión física; otros pueden hacer Investigación contra tu CD para notar que es ilusión (sin ver la forma real). Siempre tienes preparado disfrazarse (no cuenta para máximo).",
+        "efecto": "Lanzas disfrazarse con duración 8 horas usando herramientas de artesano. Es ilusión física; otros pueden hacer Investigación vs tu CD para notar que es ilusión (sin ver la forma real). Siempre tienes preparado disfrazarse (no cuenta para máximo).",
         "activacion": "al lanzar disfrazarse (aplicas el beneficio)",
         "usos": "ilimitados (gasta espacio de conjuro normalmente)",
-        "duracion": "8 horas (sin concentración)"
+        "duracion": "8 horas"
     },
     {
         "nombre": "Retrato cautivador",
-        "efecto": "Al lanzar hechizar persona o sueño mostrando/dibujando un retrato del objetivo, gastas Inspiración artística y sumas el dado (d6/d8/d10/d12 según nivel) a la CD del conjuro. Siempre tienes preparado sueño (no cuenta para máximo).",
-        "activacion": "al lanzar hechizar persona o sueño (mostrando/dibujando retrato)",
-        "usos": "gasta 1 dado de Inspiración por lanzamiento; sueño disponible siempre",
-        "duracion": "instantáneo (efecto en la CD)"
+        "efecto": "Al lanzar hechizar persona o sueño mostrando/dibujando retrato del objetivo, gastas Paleta Arcana y el objetivo resta el resultado del dado a su salvación. Siempre tienes preparado sueño (no cuenta para máximo).",
+        "activacion": "al lanzar hechizar persona o sueño (gasta 1 Dado de Paleta)",
+        "usos": "ilimitados (gasta 1 Dado por lanzamiento)",
+        "duracion": "instantáneo (penaliza la salvación)"
     },
     {
         "nombre": "Captura de esencia",
-        "efecto": "1 hora con objetivo dispuesto e inmóvil, gastas Inspiración. Crea Retrato de Esencia (1 activo). Mientras lo tengas: puedes localizar criatura (ritual sin componentes, mismo plano); si el sujeto muere, su alma queda anclada 7 días, puedes usar el retrato como diamante de 1000 po para resurrección (se consume). Pasados 7 días sin usar, pierde magia.",
-        "activacion": "ritual de 1 hora (gasta 1 Inspiración)",
+        "efecto": "1 hora con objetivo dispuesto, gastas Paleta Arcana. Creas Retrato de Esencia (1 activo). Mientras lo tengas: puedes localizar criatura (ritual sin componentes, mismo plano); si el sujeto muere, su alma queda anclada 7 días, puedes usar el retrato como diamante de 1000 po para resurrección (se consume). Pasados 7 días sin usar, pierde magia.",
+        "activacion": "ritual de 1 hora (gasta 1 Dado de Paleta)",
         "usos": "1 retrato activo a la vez; si creas otro, el anterior pierde magia",
         "duracion": "localización: mientras tengas el retrato; anclaje: 7 días tras la muerte; resurrección: instantánea (consume el retrato)"
+    },
+    {
+        "nombre": "Trazos de resonancia",
+        "efecto": "Al impactar con ataque/truco o enemigo falle salvación, gastas Dado de Paleta como acción adicional para colocar runa (dura hasta inicio de tu siguiente turno o detonación). Pigmento Ígneo: aliado que golpea +daño de fuego = dado + Carisma/Inteligencia. Pigmento de Quiebre: aliado obtiene bonificador a ataque = mitad del dado; si impacta, enemigo resta ese valor a su siguiente salvación. Pigmento de Sifón: aliado que lanza conjuro contra marcado, el lanzador o tú ganan PG temporales = dado + nivel de dibujante.",
+        "activacion": "acción adicional tras impactar o enemigo falle salvación (gasta 1 Dado de Paleta)",
+        "usos": "ilimitados (gasta 1 Dado por uso)",
+        "duracion": "hasta el inicio de tu siguiente turno o hasta detonación"
+    },
+    {
+        "nombre": "Composición fluida",
+        "efecto": "Reacción cuando un aliado detona una runa de Trazos de Resonancia: cambias el pigmento por cualquier otro conocido justo antes de que el efecto se aplique.",
+        "activacion": "reacción al detonarse una runa",
+        "usos": "ilimitados (1 reacción por ronda)",
+        "duracion": "instantáneo"
+    },
+    {
+        "nombre": "Gama expandida",
+        "efecto": "Añade opciones a Trazos de Resonancia: Pigmento de Vendaval (aliado impacta, objetivo +daño de trueno = dado; aliado se mueve 4,5 m sin AOs del marcado) y Pigmento Viscoso (aliado impacta, objetivo +daño de ácido = dado; velocidad -4,5 m y pierde vuelo hasta inicio de tu siguiente turno).",
+        "activacion": "al usar Trazos de Resonancia (opciones adicionales)",
+        "usos": "ilimitados (gasta Dados de Paleta según el rasgo base)",
+        "duracion": "efectos hasta el inicio de tu siguiente turno (el movimiento del aliado es instantáneo)"
+    },
+    {
+        "nombre": "Obra maestra colectiva",
+        "efecto": "Acción (gastas 2 Dados de Paleta): marcas hasta 3 criaturas a 9 m con Trazos de Resonancia diferentes (sin gastar más dados). La primera detonación provoca reacción en cadena: las otras 2 runas infligen la mitad de su efecto automáticamente a sus objetivos.",
+        "activacion": "acción (gasta 2 Dados de Paleta)",
+        "usos": "ilimitados (gasta 2 Dados por uso)",
+        "duracion": "instantáneo (las runas duran según Trazos de Resonancia)"
     }
     ],
     "Druida": [

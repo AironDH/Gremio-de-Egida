@@ -501,12 +501,13 @@
       "tipo_conjurador": "completo",
       "rasgos": {
         "1": [
-          "Inspiración artística",
-          "Lanzamiento de conjuros"
+          "Paleta Arcana",
+          "Lanzamiento de conjuros",
+          "Lanzamiento Ritual"
         ],
         "2": [
           "Pinceladas de poder",
-          "Pericia"
+          "Ojo del Creador"
         ],
         "4": [
           "Mejora de característica"
@@ -515,19 +516,22 @@
           "Fuente de inspiración"
         ],
         "7": [
-          "Runa de Contrahechizo"
+          "Sello de infortunio"
         ],
         "8": [
           "Mejora de característica"
         ],
         "9": [
-          "Pericia"
+          "Memoria eidética del creador"
         ],
         "10": [
-          "Simbología Arcana Universal"
+          "Lienzo de batalla"
         ],
         "12": [
           "Mejora de Característica"
+        ],
+        "15":[
+          "Perfección del medio"
         ],
         "16": [
           "Mejora de Característica"
@@ -551,7 +555,7 @@
               "Obra de la creación"
             ],
             "6": [
-              "Dibujo animado"
+              "Boceto viviente"
             ],
             "14": [
               "Cénit creativo"
@@ -585,6 +589,21 @@
             "14": [
               "Captura de escencia"
           ]
+          }
+        },
+        {
+          "nombre": "Estilo Vinculante",
+          "niveles":{
+            "3":[
+              "Trazos de resonancia"
+            ],
+            "6":[
+              "Composición fluida",
+              "Gama expandida"
+            ],
+            "14":[
+              "Obra maestra colectiva"
+            ]
           }
         }
       ]
