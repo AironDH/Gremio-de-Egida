@@ -1,0 +1,90 @@
+{
+    "idiomas": {
+        "estándar": [
+          "Común",
+          "Lenguaje de signos común",
+          "Dracónido",
+          "Enano",
+          "Elfo",
+          "Gigante",
+          "Gnomo",
+          "Goblin",
+          "Mediano",
+          "Orco"
+        ],
+        "exóticos": [
+          "Abisal",
+          "Celestial",
+          "Druídico",
+          "Habla de las profundidades",
+          "Infernal",
+          "Primordial",
+          "Silvano",
+          "Infracomún",
+          "Jerga de ladrones"
+        ]
+    },
+    "armas":[
+        "sencillas",
+        "marciales",
+        "ligeras",
+        "sutiles",
+        "cortantes",
+        "arma de pacto"
+    ],
+    "armaduras":[
+        "ligeras",
+        "medias",
+        "pesadas",
+        "escudos"
+    ],
+    "herramientas": {
+    "herramientas_de_artesano": [
+      "Suministros de alquimista",
+      "Suministros de cervecero",
+      "Herramientas de calígrafo",
+      "Herramientas de carpintero",
+      "Herramientas de cartógrafo",
+      "Herramientas de zapatero",
+      "Utensilios de cocina",
+      "Herramientas de soplador de vidrio",
+      "Herramientas de joyero",
+      "Herramientas de peletero",
+      "Herramientas de albañil",
+      "Suministros de pintor",
+      "Herramientas de alfarero",
+      "Herramientas de herrero",
+      "Herramientas de hojalatero",
+      "Herramientas de tejedor",
+      "Herramientas de tallador de madera"
+    ],
+    "juegos": [
+      "Juego de dados",
+      "Ajedrez dragón",
+      "Juego de cartas",
+      "Apuesta de los tres dragones"
+    ],
+    "instrumentos_musicales": [
+      "Gaita",
+      "Tambor",
+      "Salterio",
+      "Flauta",
+      "Cuerno",
+      "Laúd",
+      "Lira",
+      "Flauta de pan",
+      "Chirimía",
+      "Viola"
+    ],
+    "otras_herramientas": [
+      "Kit de disfraz",
+      "Kit de falsificación",
+      "Kit de herboristería",
+      "Herramientas de navegación",
+      "Kit de envenenador",
+      "Herramientas de ladrón",
+      "Vehículos (terrestres)",
+      "Vehículos (acuáticos)"
+    ]
+  }
+}

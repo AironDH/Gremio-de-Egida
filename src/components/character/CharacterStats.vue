@@ -16,13 +16,14 @@
         <div class="saving-throw">
           <label 
             :title="esSalvacionClase(nombre) ? 'Activo por clase principal' : ''"
-            :class="{ 'label-bloqueada': esSalvacionClase(nombre) }"
+            :class="{ 'label-activa':esSalvacionActiva(nombre), 'label-bloqueada': esSalvacionClase(nombre) }"
           >
             <input 
               type="checkbox" 
               :checked="esSalvacionActiva(nombre)"
               :disabled="esSalvacionClase(nombre)"
               @change="toggleSalvacion(nombre, $event)"
+              class="hide"
             />
             Salvación: <strong>{{ formatearModificador(salvacionesCalculadas[nombre]) }}</strong>
           </label>
@@ -92,7 +93,7 @@ const formatearModificador = (valor) => {
 }
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   gap: 0.1rem;
 }
 .stat-box {
@@ -130,6 +131,12 @@ const formatearModificador = (valor) => {
   gap: 0.25rem;
 }
 
+/* Indicador visual para las salvaciones activadas */
+.label-activa {
+  cursor: help;
+  color: var(--color-secondary, #478bda);
+}
+
 /* Indicador visual para las salvaciones bloqueadas por clase */
 .label-bloqueada {
   cursor: help;
@@ -137,5 +144,17 @@ const formatearModificador = (valor) => {
 }
 .label-bloqueada input {
   cursor: help;
+}
+/* Esconder el check de salvaciones */
+.hide{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 </style>

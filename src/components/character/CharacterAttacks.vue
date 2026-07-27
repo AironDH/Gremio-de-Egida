@@ -8,6 +8,16 @@
     </div>
 
     <div class="attacks-list">
+
+      <div v-if="ataques.length > 0" class="attacks-header">
+        <div class="item-name">Nombre</div>
+        <div class="item-bonus">Atk.</div>
+        <div class="item-damage">Daño</div>
+        <div class="item-type">Tipos</div>
+        <div class="item-notes">Notas</div>
+        <div class="item-action"></div> <!-- Espacio vacío para alinear con el botón X -->
+      </div>
+
       <div v-for="(ataque, index) in ataques" :key="ataque.id" class="attack-item">
         <input class="item-name" type="text" v-model="ataque.nombre" placeholder="Nombre" required />
         <input class="item-bonus" type="text" v-model="ataque.bonAtaque" placeholder="Bon. de Ataque" />
@@ -121,6 +131,7 @@ const eliminarAtaque = (index) => {
   border-radius: var(--border-radius, 4px);
   margin-bottom: 1rem;
 }
+
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -129,39 +140,66 @@ const eliminarAtaque = (index) => {
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
 }
+
 .section-title {
   margin: 0;
   color: var(--color-primary, #7b1fa2);
 }
+
 .attacks-list {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
+
+/* === NUEVO DISEÑO GRID === */
+.attacks-header,
 .attack-item {
-  display: flex;
+  display: grid;
+  /* minmax(0, Xfr) asegura que los inputs puedan encogerse y no desborden */
+  grid-template-columns: minmax(0, 2fr) 45px 70px 140px minmax(0, 3fr) 40px;
   gap: 0.5rem;
   align-items: center;
 }
-.attack-item input, .attack-item select {
+
+.attacks-header {
+  font-weight: bold;
+  color: var(--color-text-secondary, #666);
+  font-size: 0.9rem;
+  padding: 0 0.25rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.attack-item input, 
+.attack-item select {
+  width: 100%; /* Ahora el ancho lo dicta la columna del Grid */
+  box-sizing: border-box;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-.item-name { flex: 2; }
-.item-bonus { width: 60px; }
-.item-damage { width: 60px; }
-.item-notes { flex: 3; }
 
 .type-selector-wrapper {
   position: relative;
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  width: 100%;
 }
+
 .item-type { 
-  width: 140px; 
+  flex: 1; /* Toma el espacio disponible dentro del wrapper (dejando lugar al botón) */
+  min-width: 0;
 }
+
+.item-action {
+  display: flex;
+  justify-content: flex-end;
+}
+/* ========================= */
+
 .info-btn {
   background: var(--color-primary-light, #ae52d4);
   color: white;
@@ -174,7 +212,9 @@ const eliminarAtaque = (index) => {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0; /* Evita que el botón se encoja en el grid */
 }
+
 .tooltip {
   position: absolute;
   top: 110%;
@@ -189,6 +229,7 @@ const eliminarAtaque = (index) => {
   z-index: 10;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
+
 .tooltip::before {
   content: '';
   position: absolute;
@@ -199,16 +240,28 @@ const eliminarAtaque = (index) => {
   border-style: solid;
   border-color: transparent transparent #333 transparent;
 }
+
 .empty-state {
   text-align: center;
   padding: 1rem;
   color: var(--color-text-secondary, #757575);
   font-style: italic;
 }
+
+/* === ADAPTACIÓN MÓVIL === */
 @media (max-width: 800px) {
-  .attack-item {
-    flex-wrap: wrap;
+  .attacks-header {
+    display: none; /* Ocultamos el header porque la tabla se divide en varias filas */
   }
-  .item-name, .item-notes { flex: 1 1 100%; }
+  
+  .attack-item {
+    /* Atk, Daño, Tipo y Acción quedan ordenados en la fila del medio */
+    grid-template-columns: 75px 75px 1fr auto;
+  }
+  
+  .item-name, 
+  .item-notes { 
+    grid-column: 1 / -1; /* Ocupan toda la fila completa de inicio a fin */
+  }
 }
 </style>

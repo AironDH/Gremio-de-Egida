@@ -12,6 +12,40 @@
         />
       </div>
 
+      <div class="form-group">
+        <label for="Exp">Puntos de Experiencia</label>
+        <input 
+          id="experiencia" 
+          type="int" 
+          v-model="datos.exp"
+        />
+      </div>
+
+      
+      <div class="form-group">
+        <label for="alineamiento">Alineamiento</label>
+        <select id="tamano" v-model="datos.alineamiento" required>
+          <option value="legal-bueno">Legal Bueno</option>
+          <option value="legal-neutral">Legal Neutral</option>
+          <option value="legal-maligno">Legal Malo</option>
+          <option value="neutral-bueno">Neutral Bueno</option>
+          <option value="neutral">Neutral Puro</option>
+          <option value="neutral-maligno">Neutral Malo</option>
+          <option value="caotico-bueno">Caótico Bueno</option>
+          <option value="caotico-neutral">Caótico Neutral</option>
+          <option value="caotico-maligno">Caótico Malo</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="estado">Estado del Personaje</label>
+        <select id="estado" v-model="datos.estadoPersonaje" required>
+          <option value="vivo">Vivo</option>
+          <option value="muerto">Muerto</option>
+          <option value="retirado">Retirado</option>
+        </select>
+      </div>
+
       <div class="form-group full-width class-container">
         <div class="class-header">
           <label>Clases y Niveles</label>
@@ -128,6 +162,9 @@
           </option>
         </select>
       </div>
+
+
+
     </div>
   </div>
 </template>

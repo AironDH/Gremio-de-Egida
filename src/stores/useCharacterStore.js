@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import { v4 as uuidv4 } from 'uuid'
+import { generarPersonajeBase } from '../utils/esquemaPersonaje.js'
 
 export const useCharacterStore = defineStore('character', {
   state: () => ({
@@ -47,8 +48,10 @@ export const useCharacterStore = defineStore('character', {
                 }
               ];
 
+              // 2. Fusión con la fuente de la verdad (Molde Base)
               const personajeProcesado = {
-                ...p,
+                ...generarPersonajeBase(), // Inyecta la estructura base y los nuevos arreglos vacíos
+                ...p, // Sobrescribe con los datos existentes del JSON cargado
                 id: p.id || uuidv4(),
                 nombre: p.nombre || 'Héroe sin nombre',
                 especie: p.especie || 'Humano',
@@ -57,12 +60,12 @@ export const useCharacterStore = defineStore('character', {
                 clases: clasesArray // Asignamos el arreglo multiclase
               }
 
-              // 2. Limpieza de propiedades legadas para que no se exporten
+              // 3. Limpieza de propiedades legadas para que no se exporten
               delete personajeProcesado.clase
               delete personajeProcesado.nivel
               delete personajeProcesado.subclase
 
-              // 3. Verificación de colisión de IDs
+              // 4. Verificación de colisión de IDs
               const existe = this.personajes.some(existente => existente.id === personajeProcesado.id)
               
               if (existe) {

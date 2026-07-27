@@ -63,6 +63,14 @@
       :capacidadCargaCalculada="capacidadCargaCalculada"
       class="ancho-medio"
     />
+    
+    <CharacterProficiencies
+      v-model:competenciasArmas="formData.competenciasArmas"
+      v-model:competenciasArmaduras="formData.competenciasArmaduras"
+      v-model:herramientas="formData.herramientas"
+      v-model:idiomas="formData.idiomas"
+      class="ancho-medio"
+    />
 
     <!-- Libro de Hechizos -->
     <CharacterSpells 
@@ -70,6 +78,7 @@
       :clasesPersonaje="formData.clases"
       class="ancho-total"
     />
+
 
     <CharacterTraits 
       :rasgos="rasgosPersonaje" 
@@ -112,11 +121,13 @@ import CharacterAttacks from './CharacterAttacks.vue'
 import CharacterSkills from './CharacterSkills.vue'
 import CharacterFeatures from './CharacterFeatures.vue'
 import CharacterResources from './CharacterResources.vue'
-import CharacterSpells from './CharacterSpells.vue' // <-- IMPORTADO
+import CharacterSpells from './CharacterSpells.vue'
+import CharacterProficiencies from './CharacterProficiencies.vue'
 import { useCharacterCalculations } from '../../composables/useCharacterCalculations.js'
 import LevelUpAlert from './LevelUpAlert.vue'
 import LevelUpModal from './LevelUpModal.vue'
 import CharacterTraits from './CharacterTraits.vue'
+import { generarPersonajeBase } from '../../utils/esquemaPersonaje.js';
 
 // Importaciones de datos estáticos y composables
 import datosMundo from '../../data/data.json'
@@ -133,92 +144,9 @@ const props = defineProps({
 
 const emit = defineEmits(['guardar', 'cancelar'])
 
+const formData = ref(generarPersonajeBase())
+
 const esEdicion = ref(false)
-const formData = ref({
-    id: '',
-    nombre: '',
-    clases: [
-        { nombre: '', nivel: 1, subclase: '' } 
-    ],
-    especie: '',
-    raza: '',
-    trasfondo: '',
-    tamano: 'mediano',
-    puntosVidaMax: 10,
-    puntosVidaActuales: 10,
-    pgTemp: 0,
-    dadosGolpeActuales: {},
-    ca: 10,
-    velocidad: 9,
-    inspiracion: false,
-    estadoPersonalizado: "",
-    estadosFijos: [],
-    modificadoresIniciativa: [],
-    dotes: [],
-    ataques: [],
-    hechizos: [],
-    equipo: [
-      {
-        "id": "c8be5d5a-51eb-4adb-b11c-42217d0e6c10",
-        "nombre": "Piezas de Oro",
-        "cantidad": 0,
-        "peso": 0.01,
-        "notas": ""
-      }
-    ],
-    mejoras: [],
-    recursosPersonalizados: [], // Array de objetos { nombre, actual, maximo }
-    
-    recursosMagicos: {
-      estandar: {}, // Guardará los slots actuales de la forma { "1": 4, "2": 2 }
-      pacto: {}     // Guardará los slots actuales de pacto de la forma { "slots": 2, "slot_level": 1 }
-    },
-    opcionesRasgos: {},
-    caracteristicasBase: { 
-        fuerza: 10, 
-        destreza: 10, 
-        constitucion: 10, 
-        inteligencia: 10, 
-        sabiduria: 10, 
-        carisma: 10 
-    },
-    salvaciones: { 
-        fuerza: false, 
-        destreza: false, 
-        constitucion: false, 
-        inteligencia: false, 
-        sabiduria: false, 
-        carisma: false 
-    },
-    habilidades: { 
-        atletismo: 'sin_competencia', 
-        acrobacias: 'sin_competencia', 
-        juego_de_manos: 'sin_competencia', 
-        sigilo: 'sin_competencia', 
-        conocimiento_arcano: 'sin_competencia', 
-        historia: 'sin_competencia', 
-        investigacion: 'sin_competencia', 
-        naturaleza: 'sin_competencia', 
-        religion: 'sin_competencia', 
-        trato_con_animales: 'sin_competencia', 
-        medicina: 'sin_competencia', 
-        percepcion: 'sin_competencia', 
-        perspicacia: 'sin_competencia', 
-        supervivencia: 'sin_competencia', 
-        intimidacion: 'sin_competencia', 
-        interpretacion: 'sin_competencia', 
-        persuasion: 'sin_competencia', 
-        engano: 'sin_competencia' 
-    },
-    personalidad: { 
-        rasgosPersonalidad: '', 
-        ideales: '', 
-        vinculos: '', 
-        defectos: '', 
-        apariencia: '', 
-        historia: '' 
-    }
-})
 
 // Inicializamos el motor de niveles y dotes
 const { 

@@ -74,6 +74,48 @@ La aplicación es completamente "Data-Driven". Las reglas mecánicas se extraen 
 
 ---
 
+## ☁️ Integración con Google Drive (Sincronización en la Nube)
+
+Esta aplicación permite a los jugadores guardar y cargar copias de seguridad de los personajes de su gremio directamente en su cuenta de Google Drive. 
+
+Para mantener el Drive del usuario organizado y proteger los datos, la aplicación utiliza la carpeta especial `appDataFolder` de la API de Google. El archivo de respaldo (`gremio_egida_backup.json`) se almacena de forma oculta y segura, previniendo modificaciones accidentales. Al cargar los datos desde la nube, el sistema de la aplicación detectará automáticamente si hay choques con personajes existentes locales y abrirá un asistente para resolver los conflictos (Sobreescribir, Duplicar u Omitir).
+
+### ⚙️ Configuración del Entorno (Desarrolladores)
+
+Si has clonado este repositorio y deseas ejecutar el proyecto localmente con la funcionalidad de la nube activa, necesitarás generar y configurar tus propias credenciales de Google.
+
+**1. Habilitar la API:**
+* Accede a [Google Cloud Console](https://console.cloud.google.com/) y crea un nuevo proyecto.
+* En "API y servicios" > "Biblioteca", busca y habilita la **Google Drive API**.
+
+**2. Pantalla de Consentimiento OAuth:**
+* Configura la pantalla de consentimiento para usuarios **Externos**.
+* En la sección de Permisos (Scopes), debes añadir explícitamente el siguiente: `https://www.googleapis.com/auth/drive.appdata`
+* Mientras tu app de Google esté en modo prueba, asegúrate de añadir tu correo en la lista de "Usuarios de prueba".
+
+**3. Obtener las Credenciales:**
+* En "Credenciales", crea un nuevo **ID de cliente de OAuth** seleccionando "Aplicación web".
+* En "Orígenes autorizados de JavaScript", añade la URL donde corre tu entorno de desarrollo local (ej. `http://localhost:5173`). No incluyas una barra diagonal al final.
+* Copia el **Client ID** generado.
+
+**4. Archivo de Variables de Entorno (`.env`):**
+* En la raíz del proyecto (junto a `package.json` y `vite.config.js`), crea un archivo llamado exactamente `.env`
+* Pega tu Client ID asignándolo a la siguiente variable (sin comillas):
+  ```env
+  VITE_GOOGLE_CLIENT_ID=tu-client-id-largo-12345.apps.googleusercontent.com
+* Seguridad: El archivo .env ya está contemplado en el .gitignore para evitar que tus credenciales se expongan en repositorios públicos. Nunca subas este archivo a GitHub.
+
+5. Despliegue en Producción (Netlify, Vercel, etc.):
+
+* Al subir tu proyecto a producción, el archivo .env no se subirá.
+
+* Debes ir al panel de configuración de tu servicio de hosting (ej. Site configuration > Environment variables en Netlify) y añadir la misma variable VITE_GOOGLE_CLIENT_ID con tu credencial.
+
+* Asegúrate de disparar un nuevo Deploy (compilación) para que la plataforma inyecte la variable en el código final.
+
+
+---
+
 ## Configuración y Despliegue
 
 Asegúrate de tener [Node.js](https://nodejs.org/) instalado.
