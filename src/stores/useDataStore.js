@@ -1,33 +1,35 @@
 import { defineStore } from 'pinia'
 
+// Importamos los JSON directamente (Vite los resuelve automáticamente)
+// Ajusta la ruta relativa '../data/...' dependiendo de dónde esté este script
+import dataJson from '../data/data.json'
+import espaciosConjuroJson from '../data/espacios-conjuro.json'
+import hechizosJson from '../data/hechizos.json'
+
 export const useDataStore = defineStore('data', {
   state: () => ({
-    gameData: null, // Para data.json (clases, especies, etc.)
-    spellSlots: null, // Para espacios-conjuro.json
-    spells: [], // Para hechizos.json
+    // Ya podemos inicializar el estado directamente con los datos
+    gameData: dataJson, 
+    spellSlots: espaciosConjuroJson, 
+    spells: hechizosJson, 
     loading: false,
     error: null
   }),
   
   actions: {
+    // Mantenemos la función como async para no romper los componentes 
+    // que actualmente estén usando: await store.fetchAllData()
     async fetchAllData() {
       this.loading = true
-      this.error = null
       
       try {
-        // Asumiendo que los archivos JSON se colocarán en public/data/ 
-        // o son importados directamente si están en src/data/
-        const [dataRes, slotsRes, spellsRes] = await Promise.all([
-          fetch('src/data/data.json').then(res => res.json()),
-          fetch('src/data/espacios-conjuro.json').then(res => res.json()),
-          fetch('src/data/hechizos.json').then(res => res.json())
-        ])
-        
-        this.gameData = dataRes
-        this.spellSlots = slotsRes
-        this.spells = spellsRes
+        // Los datos ya están cargados por los imports, 
+        // pero mantenemos la lógica por compatibilidad.
+        this.gameData = dataJson
+        this.spellSlots = espaciosConjuroJson
+        this.spells = hechizosJson
       } catch (err) {
-        console.error('Error cargando los datos estáticos:', err)
+        console.error('Error procesando los datos:', err)
         this.error = 'No se pudieron cargar los datos del juego.'
       } finally {
         this.loading = false
