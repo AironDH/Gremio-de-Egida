@@ -1,5 +1,7 @@
 <template>
-  <form @submit.prevent="guardarPersonaje" class="character-form" ref="formRef">
+  <form @submit.prevent="guardarPersonaje" class="character-form">
+    
+    <!-- Cabecera Intacta -->
     <div class="character-form__header ancho-total">
       <h2>{{ esEdicion ? 'Editar Personaje' : 'Nuevo Personaje' }}</h2>
       <div class="actions">
@@ -8,89 +10,142 @@
       </div>
     </div>
 
+    <!-- Navegación de Pestañas -->
+    <nav class="tabs-nav ancho-total">
+      <button 
+        type="button" 
+        class="menu-movil-btn" 
+        @click="menuMovilAbierto = !menuMovilAbierto"
+      >
+        ☰ Menú de Pestañas
+      </button>
+      <ul class="tabs-lista" :class="{ 'abierto': menuMovilAbierto }">
+        <li 
+          v-for="pestana in pestañas" 
+          :key="pestana.id"
+          :class="{ 'activa': pestanaActiva === pestana.id }"
+          @click="cambiarPestana(pestana.id)"
+        >
+          {{ pestana.nombre }}
+        </li>
+      </ul>
+    </nav>
 
-    <CharacterBasicInfo v-model="formData" class="ancho-medio"/>
+    <!-- Contenedor Grid Dinámico -->
+    <div class="masonry-grid ancho-total" ref="gridRef">
+      
+      <!-- ================= PESTAÑA: INFORMACIÓN ================= -->
+      <CharacterBasicInfo 
+        v-if="pestanaActiva === 'informacion'" 
+        v-model="formData" 
+        class="ancho-medio"
+      />
 
-    <CharacterFeatures 
-      v-model:ca="formData.ca" 
-      v-model:velocidad="formData.velocidad" 
-      v-model:inspiracion="formData.inspiracion"
-      v-model:modificadoresIniciativa="formData.modificadoresIniciativa"
-      :combateCalculado="combateCalculado" 
-      class="ancho-medio"
-    />
+      <CharacterStats 
+        v-if="pestanaActiva === 'informacion'"
+        v-model:caracteristicas="formData.caracteristicasBase" 
+        v-model:salvaciones="formData.salvaciones"
+        :salvacionesCalculadas="salvacionesCalculadas"
+        :salvacionesClasePrincipal="salvacionesClasePrincipal" 
+        class="ancho-medio"
+      />
 
-    <CharacterStats 
-      v-model:caracteristicas="formData.caracteristicasBase" 
-      v-model:salvaciones="formData.salvaciones"
-      :salvacionesCalculadas="salvacionesCalculadas"
-      :salvacionesClasePrincipal="salvacionesClasePrincipal" 
-      class="ancho-medio"
-    />
+      <CharacterSkills 
+        v-if="pestanaActiva === 'informacion'"
+        v-model="formData.habilidades" 
+        :habilidadesCalculadas="habilidadesCalculadas" 
+        class="ancho-medio"
+      />
 
-    <CharacterSkills 
-      v-model="formData.habilidades" 
-      :habilidadesCalculadas="habilidadesCalculadas" 
-      class="ancho-medio"
-    />
-
-    <CharacterHealth 
-      v-model:vidaMaxima="formData.puntosVidaMax"
-      v-model:vidaActual="formData.puntosVidaActuales"
-      v-model:vidaTemporal="formData.pgTemp"
-      v-model:dadosGolpeActuales="formData.dadosGolpeActuales"
-      v-model:estadosFijos="formData.estadosFijos"
-      v-model:estadoPersonalizado="formData.estadoPersonalizado"
-      :dadosGolpeMaximos="dadosGolpeMaximos"
-      class="ancho-medio"
-    />
-
-    <CharacterResources 
-      v-model="formData"
-      :espaciosEstandarMax="espaciosEstandar"
-      :espaciosPactoMax="espaciosPacto"
-      @reset-estandar="resetearMagiaEstandar"
-      @reset-pacto="resetearMagiaPacto"
-      @reset-personalizados="resetearRecursosPersonalizados"
-      class="ancho-medio"
-    />
-
-    <CharacterAttacks v-model="formData.ataques" class="ancho-medio" />
-
-    <CharacterEquipment 
-      v-model="formData.equipo" 
-      :pesoActualEquipado="pesoActualEquipado"
-      :capacidadCargaCalculada="capacidadCargaCalculada"
-      class="ancho-medio"
-    />
-    
-    <CharacterProficiencies
-      v-model:competenciasArmas="formData.competenciasArmas"
-      v-model:competenciasArmaduras="formData.competenciasArmaduras"
-      v-model:herramientas="formData.herramientas"
-      v-model:idiomas="formData.idiomas"
-      class="ancho-medio"
-    />
-
-    <!-- Libro de Hechizos -->
-    <CharacterSpells 
-      v-model="formData.hechizos" 
-      :clasesPersonaje="formData.clases"
-      class="ancho-total"
-    />
+      <CharacterProficiencies
+        v-if="pestanaActiva === 'informacion'"
+        v-model:competenciasArmas="formData.competenciasArmas"
+        v-model:competenciasArmaduras="formData.competenciasArmaduras"
+        v-model:herramientas="formData.herramientas"
+        v-model:idiomas="formData.idiomas"
+        class="ancho-medio"
+      />
 
 
-    <CharacterTraits 
-      :rasgos="rasgosPersonaje" 
-      :clasesPersonaje="formData.clases" 
-      v-model:opcionesRasgos="formData.opcionesRasgos"
-      class="columna-1"
-    />
+      <!-- ================= PESTAÑA: RASGOS ================= -->
+      <CharacterTraits 
+        v-if="pestanaActiva === 'rasgos'"
+        :rasgos="rasgosPersonaje" 
+        :clasesPersonaje="formData.clases" 
+        v-model:opcionesRasgos="formData.opcionesRasgos"
+        class="ancho-total"
+      />
 
-    <CharacterPersonality v-model="formData.personalidad" class="ancho-3"/>
 
+      <!-- ================= PESTAÑA: COMBATE ================= -->
+      <CharacterFeatures 
+        v-if="pestanaActiva === 'combate'"
+        v-model:ca="formData.ca" 
+        v-model:velocidad="formData.velocidad" 
+        v-model:inspiracion="formData.inspiracion"
+        v-model:modificadoresIniciativa="formData.modificadoresIniciativa"
+        :combateCalculado="combateCalculado" 
+        class="ancho-medio"
+      />
+
+      <CharacterHealth 
+        v-if="pestanaActiva === 'combate'"
+        v-model:vidaMaxima="formData.puntosVidaMax"
+        v-model:vidaActual="formData.puntosVidaActuales"
+        v-model:vidaTemporal="formData.pgTemp"
+        v-model:dadosGolpeActuales="formData.dadosGolpeActuales"
+        v-model:estadosFijos="formData.estadosFijos"
+        v-model:estadoPersonalizado="formData.estadoPersonalizado"
+        :dadosGolpeMaximos="dadosGolpeMaximos"
+        class="ancho-medio"
+      />
+
+      <CharacterResources 
+        v-if="pestanaActiva === 'combate'"
+        v-model="formData"
+        :espaciosEstandarMax="espaciosEstandar"
+        :espaciosPactoMax="espaciosPacto"
+        @reset-estandar="resetearMagiaEstandar"
+        @reset-pacto="resetearMagiaPacto"
+        @reset-personalizados="resetearRecursosPersonalizados"
+        class="ancho-medio"
+      />
+
+      <CharacterAttacks 
+        v-if="pestanaActiva === 'combate'"
+        v-model="formData.ataques" 
+        class="ancho-medio" 
+      />
+
+      <CharacterSpells 
+        v-if="pestanaActiva === 'combate'"
+        v-model="formData.hechizos" 
+        :clasesPersonaje="formData.clases"
+        class="ancho-total"
+      />
+
+
+      <!-- ================= PESTAÑA: INVENTARIO ================= -->
+      <CharacterEquipment 
+        v-if="pestanaActiva === 'inventario'"
+        v-model="formData.equipo" 
+        :pesoActualEquipado="pesoActualEquipado"
+        :capacidadCargaCalculada="capacidadCargaCalculada"
+        class="ancho-total"
+      />
+
+
+      <!-- ================= PESTAÑA: HISTORIA ================= -->
+      <CharacterPersonality 
+        v-if="pestanaActiva === 'historia'"
+        v-model="formData.personalidad" 
+        class="ancho-total"
+      />
+
+    </div>
   </form>
 
+  <!-- Alertas y Modales Globales -->
   <LevelUpAlert 
     :requiereMejora="requiereMejora"
     :claseTrigger="claseTrigger"
@@ -147,6 +202,25 @@ const emit = defineEmits(['guardar', 'cancelar'])
 const formData = ref(generarPersonajeBase())
 
 const esEdicion = ref(false)
+
+// ==========================================
+// LÓGICA DE PESTAÑAS (NUEVO)
+// ==========================================
+const pestanaActiva = ref('informacion')
+const menuMovilAbierto = ref(false)
+
+const pestañas = [
+  { id: 'informacion', nombre: 'Información' },
+  { id: 'rasgos', nombre: 'Rasgos' },
+  { id: 'combate', nombre: 'Combate' },
+  { id: 'inventario', nombre: 'Inventario' },
+  { id: 'historia', nombre: 'Historia' }
+]
+
+const cambiarPestana = (id) => {
+  pestanaActiva.value = id
+  menuMovilAbierto.value = false
+}
 
 // Inicializamos el motor de niveles y dotes
 const { 
@@ -209,7 +283,7 @@ const {
   pesoActualEquipado,
   salvacionesClasePrincipal,
   dadosGolpeMaximos 
-      } = useCharacterCalculations(formData)
+} = useCharacterCalculations(formData)
 
 onMounted(() => {
   if (props.personajeInicial) {
@@ -227,7 +301,7 @@ const guardarPersonaje = () => {
       ----------------------------
 */
 
-const formRef = ref(null);
+const gridRef = ref(null); // Cambiado de formRef a gridRef
 let resizeObserver = null;
 let mutationObserver = null;
 
@@ -261,8 +335,8 @@ onMounted(async () => {
     }
   };
 
-  if (formRef.value) {
-    const hijosIniciales = formRef.value.children;
+  if (gridRef.value) {
+    const hijosIniciales = gridRef.value.children;
     for (let hijo of hijosIniciales) {
       observarHijo(hijo);
     }
@@ -279,7 +353,7 @@ onMounted(async () => {
       }
     });
 
-    mutationObserver.observe(formRef.value, { childList: true });
+    mutationObserver.observe(gridRef.value, { childList: true });
   }
 });
 
@@ -293,7 +367,9 @@ onBeforeUnmount(() => {
 .character-form {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
+
 .character-form__header {
   display: flex;
   justify-content: space-between;
@@ -301,15 +377,18 @@ onBeforeUnmount(() => {
   padding-bottom: 1rem;
   border-bottom: 2px solid var(--color-primary-light, #ae52d4);
 }
+
 .character-form__header h2 {
   margin: 0;
   color: var(--color-primary, #7b1fa2);
 }
+
 .actions {
   display: flex;
   gap: 1rem;
 }
-.alerta{
+
+.alerta {
   position: fixed;
   top: 0;
   left: 0;
@@ -320,35 +399,190 @@ onBeforeUnmount(() => {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
-/* 🖥️ Pantallas Grandes (Escritorio / 1920px - 4 Columnas) */
+/* ==========================================
+   NAVEGACIÓN DE PESTAÑAS (MÓVIL POR DEFECTO)
+   ========================================== */
+.tabs-nav {
+  position: relative;
+  width: 100%;
+  z-index: 100;
+  margin-bottom: 1rem;
+}
+
+/* Botón Hamburguesa */
+.menu-movil-btn {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-primary, #7b1fa2);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.menu-movil-btn:hover {
+  background-color: var(--color-primary-dark, #4a148c);
+}
+
+/* Lista Desplegable (Móvil) */
+.tabs-lista {
+  display: none; /* Oculto por defecto */
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--color-surface, #ffffff);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #eaeaea;
+}
+
+.tabs-lista.abierto {
+  display: block; /* Se muestra al alternar el booleano en el template */
+}
+
+/* Elementos de la lista (Pestañas) */
+.tabs-lista li {
+  width: 100%;
+  text-align: left;
+  padding: 1rem 1.5rem;
+  background: transparent;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 1rem;
+  color: var(--color-text-primary, #444);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabs-lista li:last-child {
+  border-bottom: none;
+}
+
+/* Feedback al pasar el ratón en móvil */
+.tabs-lista li:hover {
+  background: var(--color-surface-variant, #f8f9fa);
+  padding-left: 2rem; 
+  color: var(--color-primary, #7b1fa2);
+}
+
+/* Estado activo en móvil */
+.tabs-lista li.activa {
+  background: var(--color-primary-light, #ae52d4);
+  color: white;
+  font-weight: bold;
+}
+
+.tabs-lista li.activa:hover {
+  padding-left: 1.5rem; /* Resetea el padding del hover si está activo */
+}
+
+/* ==========================================
+   GRID MASONRY (DISPOSICIÓN MÓVIL)
+   ========================================== */
+.masonry-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ==========================================
+   🖥️ TABLETS Y ESCRITORIO (MENÚ HORIZONTAL)
+   ========================================== */
+@media (min-width: 992px) {
+  
+  .menu-movil-btn {
+    display: none; /* Ocultamos la hamburguesa */
+  }
+  
+  /* Contenedor tipo píldora (Segmented Control) */
+  .tabs-lista {
+    display: flex !important; /* Forzamos la vista horizontal */
+    flex-direction: row;
+    position: static;
+    background: #f0f4f8; 
+    padding: 0.5rem;
+    border-radius: 12px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+    border: none;
+    gap: 0.5rem;
+    margin-top: 0;
+  }
+  
+  .tabs-lista li {
+    flex: 1; /* Distribuye el espacio equitativamente */
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    color: #666;
+    display: block;
+    width: 100%;
+  }
+
+  /* Feedback hover en escritorio */
+  .tabs-lista li:hover {
+    background: rgba(0, 0, 0, 0.03);
+    padding-left: 1rem; /* Sobrescribimos la animación de móvil */
+    color: var(--color-primary, #7b1fa2);
+  }
+
+  /* Pestaña Activa en escritorio: Efecto tarjeta levantada */
+  .tabs-lista li.activa {
+    background: #ffffff;
+    color: var(--color-primary, #7b1fa2);
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .tabs-lista li.activa:hover {
+    padding-left: 1rem;
+  }
+}
+
+/* ==========================================
+   🖥️ PANTALLAS GRANDES (MASONRY GRID 4 COLUMNAS)
+   ========================================== */
 @media (min-width: 1200px) {
-  .character-form {
+  .masonry-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
     grid-auto-rows: 10px;                  
     gap: 10px;                           
-    padding: 10px;
+    padding: 10px 0;
     align-items: start;
   }
 
-  .ancho-total {
+  /* Las clases de ancho ahora aplican a los hijos directos del grid */
+  .masonry-grid > .ancho-total {
     grid-column: span 4;
-    grid-row-end: span 3; 
   }
 
-  .ancho-medio {
+  .masonry-grid > .ancho-medio {
     grid-column: span 2; 
   }
 
-  .ancho-3{
+  .masonry-grid > .ancho-3 {
     grid-column: span 3;
   }
 
-  .character-form > :not(.ancho-total):not(.ancho-medio):not(.ancho-3) {
+  .masonry-grid > :not(.ancho-total):not(.ancho-medio):not(.ancho-3) {
     grid-column: span 1;
   }
 
-  .columna-1{
+  .masonry-grid > .columna-1 {
     grid-column: 1 !important;
   }
 }
